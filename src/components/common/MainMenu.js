@@ -4,6 +4,9 @@ import {
   listingItems,
   propertyItems,
   pageItems,
+  rentItems,
+  buyItems,
+  cyprusItems,
 } from "@/data/navItems";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -26,27 +29,38 @@ const MainMenu = () => {
         setTopMenu("blog");
       }
     });
-    pageItems.forEach((elm) => {
+    rentItems.forEach((elm) => {
       if (elm.href.split("/")[1] == pathname.split("/")[1]) {
-        setTopMenu("pages");
+        setTopMenu("rent");
       }
     });
-    propertyItems.forEach((item) =>
-      item.subMenuItems.forEach((elm) => {
-        if (elm.href.split("/")[1] == pathname.split("/")[1]) {
-          setTopMenu("property");
-          setSubmenu(item.label);
-        }
-      })
-    );
-    listingItems.forEach((item) =>
-      item.submenu.forEach((elm) => {
-        if (elm.href.split("/")[1] == pathname.split("/")[1]) {
-          setTopMenu("listing");
-          setSubmenu(item.title);
-        }
-      })
-    );
+    buyItems.forEach((elm) => {
+      if (elm.href.split("/")[1] == pathname.split("/")[1]) {
+        setTopMenu("buy");
+      }
+    });
+
+    cyprusItems.forEach((elm) => {
+      if (elm.href.split("/")[1] == pathname.split("/")[1]) {
+        setTopMenu("cyprus");
+      }
+    });
+    // propertyItems.forEach((item) =>
+    //   item.subMenuItems.forEach((elm) => {
+    //     if (elm.href.split("/")[1] == pathname.split("/")[1]) {
+    //       setTopMenu("property");
+    //       setSubmenu(item.label);
+    //     }
+    //   })
+    // );
+    // listingItems.forEach((item) =>
+    //   item.submenu.forEach((elm) => {
+    //     if (elm.href.split("/")[1] == pathname.split("/")[1]) {
+    //       setTopMenu("listing");
+    //       setSubmenu(item.title);
+    //     }
+    //   })
+    // );
   }, []);
 
   const handleActive = (link) => {
@@ -76,7 +90,80 @@ const MainMenu = () => {
       </li>
       {/* End homeItems */}
 
-      <li className="megamenu_style dropitem">
+      <li className="visible_list dropitem">
+        <a className="list-item" href="/about">
+          <span className={topMenu == "pages" ? "title menuActive" : "title"}>
+            About Us
+          </span>
+          {/* <span className="arrow"></span> */}
+        </a>
+        {/* <ul className="sub-menu">
+          {pageItems.map((item, index) => (
+            <li key={index}>
+              <Link className={`${handleActive(item.href)}`} href={item.href}>
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul> */}
+      </li>
+
+      <li className="visible_list dropitem">
+        <a className="list-item" href="#">
+          <span className={topMenu == "home" ? "title menuActive" : "title"}>
+            Buy
+          </span>
+          <span className="arrow"></span>
+        </a>
+        {/* Level Two*/}
+        <ul className="sub-menu">
+          {buyItems.map((item, index) => (
+            <li key={index}>
+              <Link className={`${handleActive(item.href)}`} href={item.href}>
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </li>
+
+      <li className="visible_list dropitem">
+        <a className="list-item" href="#">
+          <span className={topMenu == "home" ? "title menuActive" : "title"}>
+            Rent
+          </span>
+          <span className="arrow"></span>
+        </a>
+        {/* Level Two*/}
+        <ul className="sub-menu">
+          {rentItems.map((item, index) => (
+            <li key={index}>
+              <Link className={`${handleActive(item.href)}`} href={item.href}>
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </li>
+      {/* <li className="visible_list dropitem">
+        <a className="list-item" href="#">
+          <span className={topMenu == "home" ? "title menuActive" : "title"}>
+            Cyprus
+          </span>
+          <span className="arrow"></span>
+        </a>
+        <ul className="sub-menu">
+          {cyprusItems.map((item, index) => (
+            <li key={index}>
+              <Link className={`${handleActive(item.href)}`} href={item.href}>
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </li> */}
+
+      {/* <li className="megamenu_style dropitem">
         <a className="list-item" href="#">
           <span className={topMenu == "listing" ? "title menuActive" : "title"}>
             Listing
@@ -102,10 +189,10 @@ const MainMenu = () => {
             </li>
           ))}
         </ul>
-      </li>
+      </li> */}
       {/* End listings */}
 
-      <li className="visible_list dropitem">
+      {/* <li className="visible_list dropitem">
         <a className="list-item" href="#">
           <span
             className={topMenu == "property" ? "title menuActive" : "title"}
@@ -142,13 +229,13 @@ const MainMenu = () => {
             </li>
           ))}
         </ul>
-      </li>
+      </li> */}
       {/* End property Items */}
 
       <li className="visible_list dropitem">
         <a className="list-item" href="#">
           <span className={topMenu == "blog" ? "title menuActive" : "title"}>
-            Blog
+            Blogs / News
           </span>
           <span className="arrow"></span>
         </a>
@@ -165,13 +252,13 @@ const MainMenu = () => {
       {/* End blog Items */}
 
       <li className="visible_list dropitem">
-        <a className="list-item" href="#">
+        <a className="list-item" href="/faq">
           <span className={topMenu == "pages" ? "title menuActive" : "title"}>
-            Pages
+            FAQ
           </span>
-          <span className="arrow"></span>
+          {/* <span className="arrow"></span> */}
         </a>
-        <ul className="sub-menu">
+        {/* <ul className="sub-menu">
           {pageItems.map((item, index) => (
             <li key={index}>
               <Link className={`${handleActive(item.href)}`} href={item.href}>
@@ -179,7 +266,24 @@ const MainMenu = () => {
               </Link>
             </li>
           ))}
-        </ul>
+        </ul> */}
+      </li>
+      <li className="visible_list dropitem">
+        <a className="list-item" href="/contact">
+          <span className={topMenu == "pages" ? "title menuActive" : "title"}>
+            Contact Us
+          </span>
+          {/* <span className="arrow"></span> */}
+        </a>
+        {/* <ul className="sub-menu">
+          {pageItems.map((item, index) => (
+            <li key={index}>
+              <Link className={`${handleActive(item.href)}`} href={item.href}>
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul> */}
       </li>
       {/* End pages Items */}
     </ul>

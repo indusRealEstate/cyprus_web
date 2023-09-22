@@ -23,6 +23,8 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", changeBackground);
     };
+
+    // #f79727
   }, []);
 
   return (
@@ -42,7 +44,7 @@ const Header = () => {
                       <Image
                         width={138}
                         height={44}
-                        src="/images/header-logo.svg"
+                        src="/images/pafilia-logo.svg"
                         alt="Header Logo"
                       />
                     </Link>
@@ -50,7 +52,7 @@ const Header = () => {
                       <Image
                         width={138}
                         height={44}
-                        src="/images/header-logo2.svg"
+                        src="/images/pafilia-logo.svg"
                         alt="Header Logo"
                       />
                     </Link>
@@ -65,7 +67,7 @@ const Header = () => {
 
               <div className="col-auto">
                 <div className="d-flex align-items-center">
-                  <a
+                  {/* <a
                     href="#"
                     className="login-info d-flex align-items-center"
                     data-bs-toggle="modal"
@@ -74,12 +76,12 @@ const Header = () => {
                   >
                     <i className="far fa-user-circle fz16 me-2" />{" "}
                     <span className="d-none d-xl-block">Login / Register</span>
-                  </a>
+                  </a> */}
                   <Link
                     className="ud-btn add-property menu-btn bdrs12 mx-2 mx-xl-4"
-                    href="/dashboard-add-property"
+                    href=""
                   >
-                    Add Property
+                    More Info
                     <i className="fal fa-arrow-right-long" />
                   </Link>
                   <a

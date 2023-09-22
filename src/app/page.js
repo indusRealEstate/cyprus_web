@@ -1,14 +1,14 @@
-import Home_V1 from "./(home)/home-v1/page";
+import Home from "./home/page";
 import Wrapper from "./layout-wrapper/wrapper";
 
 export const metadata = {
-  title: "Home v1 || Homez - Real Estate NextJS Template",
+  title: "International Properties",
 };
 
 export default function MainRoot() {
   return (
     <Wrapper>
-      <Home_V1 />
+      <Home />
     </Wrapper>
   );
 }

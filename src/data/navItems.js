@@ -1,14 +1,15 @@
 export const homeItems = [
-  { href: "/", label: "Home v1" },
-  { href: "/home-v2", label: "Home v2" },
-  { href: "/home-v3", label: "Home v3" },
-  { href: "/home-v4", label: "Home v4" },
-  { href: "/home-v5", label: "Home v5" },
-  { href: "/home-v6", label: "Home v6" },
-  { href: "/home-v7", label: "Home v7" },
-  { href: "/home-v8", label: "Home v8" },
-  { href: "/home-v9", label: "Home v9" },
-  { href: "/home-v10", label: "Home v10" },
+  // { href: "/", label: "Home v1" },
+  // { href: "/home-v2", label: "Home v2" },
+  // { href: "/home-v3", label: "Home v3" },
+  // { href: "/home-v4", label: "Home v4" },
+  // { href: "/home-v5", label: "Home v5" },
+  { href: "/#main", label: "Home" },
+  { href: "/#flagship-prop", label: "Flagship Collection" },
+  // { href: "/home-v7", label: "Home v7" },
+  // { href: "/home-v8", label: "Home v8" },
+  // { href: "/home-v9", label: "Home v9" },
+  // { href: "/home-v10", label: "Home v10" },
 ];
 
 export const listingItems = [
@@ -95,11 +96,32 @@ export const propertyItems = [
   },
 ];
 
-export const blogItems = [
+export const buyItems = [
   { href: "/blog-list-v1", label: "Blog List V1" },
   { href: "/blog-list-v2", label: "Blog List V2" },
   { href: "/blog-list-v3", label: "Blog List V3" },
   { href: "/blogs/2", label: "Blog Single" },
+];
+
+export const rentItems = [
+  { href: "/blog-list-v1", label: "Blog List V1" },
+  { href: "/blog-list-v2", label: "Blog List V2" },
+  { href: "/blog-list-v3", label: "Blog List V3" },
+  { href: "/blogs/2", label: "Blog Single" },
+];
+
+export const cyprusItems = [
+  { href: "/blog-list-v1", label: "Blog List V1" },
+  { href: "/blog-list-v2", label: "Blog List V2" },
+  { href: "/blog-list-v3", label: "Blog List V3" },
+  { href: "/blogs/2", label: "Blog Single" },
+];
+
+export const blogItems = [
+  { href: "/blog-list-v1", label: "Blogs" },
+  { href: "/blog-list-v2", label: "News" },
+  // { href: "/blog-list-v3", label: "Blog List V3" },
+  // { href: "/blogs/2", label: "Blog Single" },
 ];
 
 export const pageItems = [

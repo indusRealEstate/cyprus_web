@@ -11,7 +11,7 @@ const Hero = () => {
           Live with your family
         </h2>
         <p className="hero-text text-white fz15 animate-up-2">
-          Let’s find a home that’s perfect for you
+          Developing world-class properties for personal living and investment
         </p>
         <HeroContent />
       </div>
