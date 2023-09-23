@@ -9,12 +9,16 @@ import "swiper/swiper-bundle.min.css";
 import React, { useEffect, useState } from "react";
 
 const FeaturedListings = () => {
+  var formatter = new Intl.NumberFormat(undefined, {
+    style: "currency",
+    currency: "EUR",
+  });
   const [data, setData] = useState([]);
   useEffect(() => {
     getAllListings().then((res) => {
       setData(res);
     });
-  });
+  }, []);
   return (
     <>
       <Swiper
@@ -55,7 +59,9 @@ const FeaturedListings = () => {
                       width={382}
                       height={248}
                       className="w-100 h-100 cover"
-                      src={listing.image}
+                      src={`https://indusmanagement.ae/api/media/listings/${
+                        listing.prop_id
+                      }/media/${JSON.parse(listing.images)[0]}`}
                       alt="listings"
                     />
                     {/* <div className="sale-sticker-wrap">
@@ -67,12 +73,12 @@ const FeaturedListings = () => {
                     )}
                   </div> */}
                     <div className="list-price">
-                      {listing.price} / <span>mo</span>
+                      {formatter.format(listing.price)}
                     </div>
                   </div>
                   <div className="list-content">
                     <h6 className="list-title">
-                      <Link href="/single-v4/1">{listing.project_name}</Link>
+                      <Link href={"/single-v4/" + listing.prop_id}>{`${listing.unit_no}, ${listing.property}`}</Link>
                     </h6>
                     <p className="list-text">{listing.location}</p>
                     <div className="list-meta d-flex align-items-center">
@@ -89,7 +95,11 @@ const FeaturedListings = () => {
                     </div>
                     <hr className="mt-2 mb-2" />
                     <div className="list-meta2 d-flex justify-content-between align-items-center">
-                      <span className="for-what">For Rent</span>
+                      <span className="for-what">
+                        {listing.unit_purpose == "sale"
+                          ? "For Sale"
+                          : "For Rent"}
+                      </span>
                       <div className="icons d-flex align-items-center">
                         <a href="#">
                           <span className="flaticon-fullscreen" />
