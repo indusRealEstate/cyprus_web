@@ -1,3 +1,4 @@
+
 import MobileMenu from "@/components/common/mobile-menu";
 import About from "@/components/home/home-v6/About";
 import Agents from "@/components/home/home-v6/Agents";
@@ -17,6 +18,8 @@ export const metadata = {
 };
 
 const Home = () => {
+  
+
   return (
     <>
       {/* Main Header Nav */}

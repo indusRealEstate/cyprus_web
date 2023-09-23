@@ -1,12 +1,20 @@
 "use client";
+import { getAllListings } from "@/api";
 import listings from "@/data/listings";
 import Image from "next/image";
 import Link from "next/link";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
+import React, { useEffect, useState } from "react";
 
 const FeaturedListings = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    getAllListings().then((res) => {
+      setData(res);
+    });
+  });
   return (
     <>
       <Swiper
@@ -37,66 +45,71 @@ const FeaturedListings = () => {
           },
         }}
       >
-        {listings.slice(0, 5).map((listing) => (
-          <SwiperSlide key={listing.id}>
-            <div className="item">
-              <div className="listing-style1">
-                <div className="list-thumb">
-                  <Image
-                    width={382}
-                    height={248}
-                    className="w-100 h-100 cover"
-                    src={listing.image}
-                    alt="listings"
-                  />
-                  <div className="sale-sticker-wrap">
-                    {listing.forRent && (
+        {data.prop != undefined ? (
+          data.prop.map((listing) => (
+            <SwiperSlide key={listing.id}>
+              <div className="item">
+                <div className="listing-style1">
+                  <div className="list-thumb">
+                    <Image
+                      width={382}
+                      height={248}
+                      className="w-100 h-100 cover"
+                      src={listing.image}
+                      alt="listings"
+                    />
+                    {/* <div className="sale-sticker-wrap">
+                    {listing.highlight && (
                       <div className="list-tag rounded-0 fz12">
                         <span className="flaticon-electricity" />
                         FEATURED
                       </div>
                     )}
+                  </div> */}
+                    <div className="list-price">
+                      {listing.price} / <span>mo</span>
+                    </div>
                   </div>
-                  <div className="list-price">
-                    {listing.price} / <span>mo</span>
-                  </div>
-                </div>
-                <div className="list-content">
-                  <h6 className="list-title">
-                    <Link href="/grid-full-3-col">{listing.title}</Link>
-                  </h6>
-                  <p className="list-text">{listing.location}</p>
-                  <div className="list-meta d-flex align-items-center">
-                    <a href="#">
-                      <span className="flaticon-bed" /> {listing.bed} bed
-                    </a>
-                    <a href="#">
-                      <span className="flaticon-shower" /> {listing.bath} bath
-                    </a>
-                    <a href="#">
-                      <span className="flaticon-expand" /> {listing.sqft} sqft
-                    </a>
-                  </div>
-                  <hr className="mt-2 mb-2" />
-                  <div className="list-meta2 d-flex justify-content-between align-items-center">
-                    <span className="for-what">For Rent</span>
-                    <div className="icons d-flex align-items-center">
+                  <div className="list-content">
+                    <h6 className="list-title">
+                      <Link href="/single-v4/1">{listing.project_name}</Link>
+                    </h6>
+                    <p className="list-text">{listing.location}</p>
+                    <div className="list-meta d-flex align-items-center">
                       <a href="#">
-                        <span className="flaticon-fullscreen" />
+                        <span className="flaticon-bed" /> {listing.bed} bed
                       </a>
                       <a href="#">
-                        <span className="flaticon-new-tab" />
+                        <span className="flaticon-shower" /> {listing.bath} bath
                       </a>
                       <a href="#">
-                        <span className="flaticon-like" />
+                        <span className="flaticon-expand" />{" "}
+                        {listing.total_area} sqft
                       </a>
+                    </div>
+                    <hr className="mt-2 mb-2" />
+                    <div className="list-meta2 d-flex justify-content-between align-items-center">
+                      <span className="for-what">For Rent</span>
+                      <div className="icons d-flex align-items-center">
+                        <a href="#">
+                          <span className="flaticon-fullscreen" />
+                        </a>
+                        <a href="#">
+                          <span className="flaticon-new-tab" />
+                        </a>
+                        <a href="#">
+                          <span className="flaticon-like" />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
+            </SwiperSlide>
+          ))
+        ) : (
+          <div></div>
+        )}
       </Swiper>
     </>
   );
