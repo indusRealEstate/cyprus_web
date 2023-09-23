@@ -1,12 +1,11 @@
 "use client";
 import { getAllListings } from "@/api";
-import listings from "@/data/listings";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
-import React, { useEffect, useState } from "react";
 
 const FeaturedListings = () => {
   var formatter = new Intl.NumberFormat(undefined, {
@@ -19,6 +18,7 @@ const FeaturedListings = () => {
       setData(res);
     });
   }, []);
+
   return (
     <>
       <Swiper
@@ -78,7 +78,9 @@ const FeaturedListings = () => {
                   </div>
                   <div className="list-content">
                     <h6 className="list-title">
-                      <Link href={"/single-v4/" + listing.prop_id}>{`${listing.unit_no}, ${listing.property}`}</Link>
+                      <Link
+                        href={"/property-details/" + listing.prop_id}
+                      >{`${listing.unit_no}, ${listing.property}`}</Link>
                     </h6>
                     <p className="list-text">{listing.location}</p>
                     <div className="list-meta d-flex align-items-center">
