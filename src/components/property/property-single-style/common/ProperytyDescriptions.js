@@ -1,17 +1,9 @@
 import React from "react";
 
-const ProperytyDescriptions = () => {
+const ProperytyDescriptions = ({ desc }) => {
   return (
     <>
-      <p className="text mb10">
-        This 3-bed with a loft, 2-bath home in the gated community of The
-        Hideout has it all. From the open floor plan to the abundance of light
-        from the windows, this home is perfect for entertaining. The living room
-        and dining room have vaulted ceilings and a beautiful fireplace. You
-        will love spending time on the deck taking in the beautiful views. In
-        the kitchen, you&apos;ll find stainless steel appliances and a tile
-        backsplash, as well as a breakfast bar.
-      </p>
+      <p className="text mb10">{new String(desc).substring(0, 403)}..</p>
       <div className="agent-single-accordion">
         <div className="accordion accordion-flush" id="accordionFlushExample">
           <div className="accordion-item">
@@ -24,12 +16,7 @@ const ProperytyDescriptions = () => {
             >
               <div className="accordion-body p-0">
                 <p className="text">
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the class. This is the first item&apos;s accordion
-                  body you get groundbreaking performance and amazing battery
-                  life. Add to that a stunning Liquid Retina XDR display, the
-                  best camera and audio ever in a Mac notebook, and all the
-                  ports you need.
+                {new String(desc).substring(403)}
                 </p>
               </div>
             </div>

@@ -31,7 +31,7 @@ const PropertyHeader = ({ id, data }) => {
             >
               <i className="far fa-clock pe-2" />
               {Number(new Date().getFullYear()) -
-                Number(data.yearBuilding)}{" "}
+                Number(data.year_built)}{" "}
               years ago
             </a>
             <a className="ff-heading ml10 ml0-sm fz15" href="#">

@@ -8,7 +8,6 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "swiper/swiper-bundle.min.css";
 
 const GalleryBox = ({ id, images }) => {
-  const data = listings.filter((elm) => elm.id == id)[0] || listings[0];
 
   const imageUrls = images != undefined ? JSON.parse(images) : [];
   const loadingUrls = [1, 2, 3];

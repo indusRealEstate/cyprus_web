@@ -1,10 +1,11 @@
 import React from "react";
 
-const PropertyFeaturesAminites = () => {
+const PropertyFeaturesAminites = ({ data }) => {
+  const all_features = data != undefined ? JSON.parse(data) : [];
   const featuresAmenitiesData = [
-    ["Air Conditioning", "Barbeque", "Dryer", "Gym"],
-    ["Lawn", "Microwave", "Outdoor Shower", "Refrigerator"],
-    ["Swimming Pool", "TV Cable", "Washer", "WiFi6"],
+    all_features.slice(0,4),
+    all_features.slice(4,8),
+    all_features.slice(8,12),
   ];
 
   return (
