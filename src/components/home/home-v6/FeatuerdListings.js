@@ -129,7 +129,12 @@ const FeaturedListings = () => {
                     <div className="list-content">
                       <h6 className="list-title">
                         <Link
-                          href={"/property-details/" + listing.prop_id}
+                          href={{
+                            pathname: "/property-details",
+                            query: {
+                              id: listing.prop_id,
+                            },
+                          }}
                         >{`${listing.unit_no}, ${listing.property}`}</Link>
                       </h6>
                       <p className="list-text">{listing.location}</p>
