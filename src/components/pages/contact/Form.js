@@ -19,8 +19,9 @@ const Form = () => {
   const [isEmail, checkEmail] = React.useState(true);
   const [firstNameValid, checkFirstName] = React.useState(true);
   const [lastNameValid, checkLastName] = React.useState(true);
+  const [errorMessage, setError] = React.useState();
   const onlyEmail = /^([A-Za-z])+@+.+[A-Za-z]\w+/g;
-  const onlyText = /^([A-Za-z])\w+/g;
+  const onlyText = /^([A-Za-z])/g;
 
 
   useEffect(() => {
@@ -39,12 +40,12 @@ const Form = () => {
       if (formData.first_name.length > 0 && formData.last_name.length > 0 && formData.email.length > 0 && formData.message.length > 0) {
         if (!formData.first_name.match(onlyText)) {
           checkFirstName(false);
-          throw new Error("First only can contain lettes and space");
+          throw new Error("First name only can contain lettes and space");
         }
 
         if (!formData.last_name.match(onlyText)) {
           checkLastName(false);
-          throw new Error("Last only can contain lettes and space");
+          throw new Error("Last name only can contain lettes and space");
         }
         if (!formData.email.match(onlyEmail)) {
           checkEmail(false);
@@ -72,6 +73,7 @@ const Form = () => {
       }
     } catch (error) {
       console.log("Error occur " + error.message);
+      setError(error.message);
     }
   }
 
@@ -80,6 +82,14 @@ const Form = () => {
   return (
 
     <form className="form-style1" id="contact-form">
+
+      {
+        errorMessage != undefined && !dataUbmites ?
+          <Alert severity="error">
+            <AlertTitle>Error</AlertTitle>
+            <strong>{errorMessage}</strong>
+          </Alert> : ""
+      }
 
       {
         dataUbmites ?
@@ -97,7 +107,7 @@ const Form = () => {
             </label>
             <input
               type="text"
-              className={firstNameValid ? "form-control" : "form-control border border-danger"}
+              className={firstNameValid && formData.first_name != undefined ? "form-control" : "form-control border border-danger"}
               placeholder="Your Name"
               required
               onChange={(event) => setFormData({ ...formData, first_name: event.target.value })}
@@ -113,7 +123,7 @@ const Form = () => {
             </label>
             <input
               type="text"
-              className={lastNameValid ? "form-control" : "form-control border border-danger"}
+              className={lastNameValid && formData.last_name != undefined ? "form-control" : "form-control border border-danger"}
               placeholder="Your Name"
               required
               onChange={(event) => setFormData({ ...formData, last_name: event.target.value })}
@@ -127,7 +137,7 @@ const Form = () => {
             <label className="heading-color ff-heading fw600 mb10">Email</label>
             <input
               type="email"
-              className={isEmail ? "form-control" : "form-control border border-danger"}
+              className={isEmail && formData.email != undefined ? "form-control" : "form-control border border-danger"}
               placeholder="Your Name"
               required
               onChange={(event) => setFormData({ ...formData, email: event.target.value })}
