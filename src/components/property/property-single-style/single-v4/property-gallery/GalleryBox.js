@@ -3,16 +3,14 @@ import listings from "@/data/listings";
 import Image from "next/image";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Skeleton } from "@mui/material";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "swiper/swiper-bundle.min.css";
 
-const GalleryBox = ({id}) => {
-  const data = listings.filter((elm) => elm.id == id)[0] || listings[0];
-  const imageUrls = [
-    "/images/listings/listing-single-slide1.jpg",
-    "/images/listings/listing-single-slide2.jpg",
-    
-    "/images/listings/listing-single-slide3.jpg",
-  ];
+const GalleryBox = ({ id, images }) => {
+
+  const imageUrls = images != undefined ? JSON.parse(images) : [];
+  const loadingUrls = [1, 2, 3];
 
   return (
     <>
@@ -28,19 +26,40 @@ const GalleryBox = ({id}) => {
         initialSlide={1}
         loop={true}
       >
-        {imageUrls.map((imageUrl, index) => (
-          <SwiperSlide key={index}>
-            <div className="item">
-              <Image
+        {imageUrls.length == 0
+          ? loadingUrls.map((url, index) => (
+              <SwiperSlide key={index}>
+                <div className="item">
+                  <Skeleton variant="rectangular" width={1170} height={600} />
+                </div>
+              </SwiperSlide>
+            ))
+          : imageUrls.map((imageUrl, index) => (
+              <SwiperSlide key={index}>
+                <div className="item">
+                  <LazyLoadImage
+                    src={`https://indusmanagement.ae/api/media/listings/${id}/media/${imageUrl}`}
+                    className="bdrs12 w-100 h-100 cover"
+                    width={1170}
+                    height={600}
+                    alt="Image Alt"
+                    style={{
+                      "max-height": "40rem",
+                    }}
+                  />
+                  {/* <Image
                 width={1170}
                 height={600}
                 className="bdrs12 w-100 h-100 cover"
-                src={imageUrl}
+                src={`https://indusmanagement.ae/api/media/listings/${id}/media/${imageUrl}`}
                 alt={`Image ${index + 1}`}
-              />
-            </div>
-          </SwiperSlide>
-        ))}
+                style={{
+                  "max-height": "45rem",
+                }}
+              /> */}
+                </div>
+              </SwiperSlide>
+            ))}
       </Swiper>
 
       <div className="rounded-arrow arrowY-center-position">

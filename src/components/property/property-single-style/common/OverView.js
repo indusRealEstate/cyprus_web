@@ -1,9 +1,8 @@
 import listings from "@/data/listings";
 import React from "react";
 
-
-const OverView = ({id}) => {
-  const data = listings.filter((elm) => elm.id == id)[0] || listings[0];
+const OverView = ({ id, data }) => {
+  // const data = listings.filter((elm) => elm.id == id)[0] || listings[0];
   const overviewData = [
     {
       icon: "flaticon-bed",
@@ -18,28 +17,27 @@ const OverView = ({id}) => {
     {
       icon: "flaticon-event",
       label: "Year Built",
-      value: data.yearBuilding,
+      value: data.year_built,
     },
     {
       icon: "flaticon-garage",
       label: "Garage",
-      value: "2",
+      value: data.parking,
       xs: true,
     },
     {
       icon: "flaticon-expand",
       label: "Sqft",
-      value: data.sqft,
+      value: data.total_area,
       xs: true,
     },
     {
       icon: "flaticon-home-1",
       label: "Property Type",
-      value: data.propertyType,
+      value: data.unit_type,
     },
   ];
-  
- 
+
   return (
     <>
       {overviewData.map((item, index) => (

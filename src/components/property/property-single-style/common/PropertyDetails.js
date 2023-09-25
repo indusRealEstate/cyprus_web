@@ -1,49 +1,53 @@
 import React from "react";
 
-const PropertyDetails = () => {
+const PropertyDetails = ({ data }) => {
+  var formatter = new Intl.NumberFormat(undefined, {
+    style: "currency",
+    currency: "EUR",
+  });
   const columns = [
     [
       {
         label: "Property ID",
-        value: "RT48",
+        value: data.prop_id,
       },
       {
         label: "Price",
-        value: "$252,000",
+        value: formatter.format(data.price),
       },
       {
         label: "Property Size",
-        value: "1500 Sq Ft",
+        value: data.total_area + " Sqft",
       },
       {
         label: "Bathrooms",
-        value: "3",
+        value: data.bath,
       },
       {
         label: "Bedrooms",
-        value: "2",
+        value: data.bed,
       },
     ],
     [
       {
         label: "Garage",
-        value: "2",
+        value: data.parking,
       },
       {
         label: "Garage Size",
-        value: "200 SqFt",
+        value: data.parking_area + " Sqft",
       },
       {
         label: "Year Built",
-        value: "2022",
+        value: data.year_built,
       },
       {
         label: "Property Type",
-        value: "Apartment",
+        value: data.unit_type,
       },
       {
         label: "Property Status",
-        value: "For Sale",
+        value: data.unit_purpose == "sale" ? "For Sale" : "For Rent",
       },
     ],
   ];
