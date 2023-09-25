@@ -87,7 +87,6 @@ const FeaturedListings = () => {
                       className="list-thumb"
                       style={{
                         height: "15rem",
-                        // "object-fit": "cover",
                       }}
                     >
                       {!loaded.includes(listing.id) && (
@@ -95,7 +94,7 @@ const FeaturedListings = () => {
                           // sx={{ bgcolor: "grey.100" }}
                           variant="rectangular"
                           width={382}
-                          height={248}
+                          height={240}
                         />
                       )}
                       <Image
