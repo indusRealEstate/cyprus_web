@@ -25,16 +25,16 @@ import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useEffect, useState } from "react";
 
-export const metadata = {
-  title: "International Properties",
-};
+// export const metadata = {
+//   title: "International Properties",
+// };
 
 const PropertyDetailsPage = ({ params }) => {
   const [data, setData] = useState("");
   useEffect(() => {
     getPropertyDetails(params.id).then((res) => {
       setData(res);
-    });
+    }); 
   }, []);
 
   if (data == "") {
