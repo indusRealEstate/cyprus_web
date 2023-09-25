@@ -220,6 +220,12 @@ li {
 }
 
 /* All Type Of Footer Styles */
+.footer-main{
+  background-image: url(/_next/static/media/footer-bg.7ff26d56.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .footer-style1 {
   background-color: var(--headings-color);
 }
@@ -493,10 +499,10 @@ li {
 }
 
 .agent-image{
-  width: 20vw;
-  height: 25vh;
+  width: 217;
+  height: 248;
   object-fit: cover;
-  object-position: top;
+  object-position: -90px 20%;
 }
 
 .about-main::before {

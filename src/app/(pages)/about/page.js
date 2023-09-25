@@ -231,7 +231,8 @@ const About = () => {
       {/* Our CTA */}
 
       {/* Start Our Footer */}
-      <section className="footer-style1 pt60 pb-0">
+      {/* footer-style1  */}
+      <section className="footer-main pt60 pb-0">
         <Footer />
       </section>
       {/* End Our Footer */}
