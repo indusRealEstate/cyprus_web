@@ -4,7 +4,8 @@ import Link from "next/link";
 const CallToActions = () => {
   return (
     <section className="our-cta pt0">
-      <div className="cta-banner bgc-f7 mx-auto maxw1600 pt120 pt60-md pb120 pb60-md bdrs12 position-relative mx20-lg">
+      {/* bgc-f7 */}
+      <div className="cta-banner  mx-auto maxw1600 pt120 pt60-md pb120 pb60-md bdrs12 position-relative mx20-lg">
         <div className="img-box-5">
           <Image
             width={193}

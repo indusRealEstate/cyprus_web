@@ -1,3 +1,4 @@
+"use client";
 import CallToActions from "@/components/common/CallToActions";
 import DefaultHeader from "@/components/common/DefaultHeader";
 import Partner from "@/components/common/Partner";
@@ -9,12 +10,43 @@ import FunFact from "@/components/pages/about/FunFact";
 import Mission from "@/components/pages/about/Mission";
 import Image from "next/image";
 import Link from "next/link";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import { getExclusiveAgents } from "@/api/pages/about";
+
 
 export const metadata = {
   title: "About  || Homez - Real Estate NextJS Template",
 };
 
 const About = () => {
+
+  const [agentData, setAgentData] = useState("nothing");
+  const [dataLoaded, setDataLoaded] = useState(false);
+
+  // const getAllData = () => {
+  //   try {
+  //     // const response = await axios.get("/api/pages/about");`
+  //     getAboutPage().then((res) => {
+  //       setData(res);
+  //       console.log(res);
+  //     });
+
+  //   } catch (error) {
+  //     console.log("Error occur " + error.message);
+  //   }
+  // }
+
+  useEffect(() => {
+    // getAllData();
+    getExclusiveAgents().then((res) => {
+      setAgentData(res);
+      setDataLoaded(true);
+      // console.log(res);
+    });
+  }, [])
+
+
   return (
     <>
       {/* Main Header Nav */}
@@ -26,7 +58,7 @@ const About = () => {
       {/* End Mobile Nav  */}
 
       {/* Breadcrumb Sections */}
-      <section className="breadcumb-section2 p-0">
+      <section className="about-main p-0 ">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -49,7 +81,7 @@ const About = () => {
           <div className="row" data-aos="fade-up" data-aos-delay="300">
             <div className="col-lg-6">
               <h2>
-                We&apos;re on a Mission to Change{" "}
+                We&apos;re on a Mission to Change
                 <br className="d-none d-lg-block" /> View of Real Estate Field.
               </h2>
             </div>
@@ -85,8 +117,8 @@ const About = () => {
                   width={1206}
                   height={515}
                   priority
-                  className="w-100 h-100 cover"
-                  src="/images/about/about-page-banner.jpg"
+                  className="about-banner"
+                  src="/images/about/Real/Minthis_photo_Cleone_pool.webp"
                   alt="about banner"
                 />
               </div>
@@ -143,7 +175,7 @@ const About = () => {
 
       {/* Abut intro */}
       <section className="pt30 pb-0">
-        <div className="cta-banner3 bgc-thm-light mx-auto maxw1600 pt100 pt60-lg pb90 pb60-lg bdrs24 position-relative overflow-hidden mx20-lg">
+        <div className="about-feature-banner bgc-thm-light mx-auto maxw1600 pt100 pt60-lg pb90 pb60-lg bdrs24 position-relative overflow-hidden mx20-lg">
           <div className="container">
             <div className="row">
               <div
@@ -172,7 +204,7 @@ const About = () => {
       {/* Abut intro */}
 
       {/* Our Partners */}
-      <section className="our-partners">
+      {/* <section className="our-partners">
         <div className="container">
           <div className="row">
             <div className="col-lg-12" data-aos="fade-up">
@@ -191,7 +223,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* End Our Partners */}
 
       {/* Our CTA */}
@@ -199,7 +231,8 @@ const About = () => {
       {/* Our CTA */}
 
       {/* Start Our Footer */}
-      <section className="footer-style1 pt60 pb-0">
+      {/* footer-style1  */}
+      <section className="footer-main pt60 pb-0">
         <Footer />
       </section>
       {/* End Our Footer */}
