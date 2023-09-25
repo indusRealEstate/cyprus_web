@@ -1,3 +1,6 @@
+import getExclusiveAgents from "@/api/pages/about";
+
+
 module.exports = [
   {
     id: 1,

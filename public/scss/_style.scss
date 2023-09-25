@@ -74,6 +74,7 @@ Tag: advanced search, agency, agent, classified, directory, house, listing, prop
   --container-width: 1290px;
   --divder-space: 200px;
   --headings-color: #181a20;
+  --white-color: #fff;
 }
 
 /* Mixins */
@@ -464,6 +465,60 @@ li {
   height: 450px;
 }
 
+.about-main {
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: url(../images/about/Real/Minthis_neighbourhood.webp);
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 450px;
+  .container {
+    position: relative;
+    z-index: 20;
+    .row {
+      .col-lg-12 {
+        .breadcumb-style1 {
+          .title .breadcumb-list {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.agent-image{
+  width: 20vw;
+  height: 25vh;
+  object-fit: cover;
+  object-position: top;
+}
+
+.about-main::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #22272f5e;
+  z-index: 10;
+}
+
+.about-banner{
+  height: 70vh !important;
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+  background: none;
+  border-radius: 10px;
+}
+
 .breadcumb-section3 {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -487,6 +542,7 @@ li {
   position: relative;
 }
 .breadcumb-style1 .title {
+  color: #fff;
   letter-spacing: 0.02em;
 }
 .breadcumb-style1 .breadcumb-list {
@@ -494,7 +550,7 @@ li {
 }
 .breadcumb-style1 .breadcumb-list a {
   display: inline-block;
-  color: var(--headings-color);
+  color: var(--white-color);
   font-family: var(--title-font-family);
   font-weight: 400;
   position: relative;
@@ -4839,6 +4895,18 @@ section {
 
 .cta-banner2 {
   position: relative;
+}
+
+.about-feature-banner::before{
+  background-image: url("../images/about/Real/Minthis_CGI_Ezousa Suites_communal pool.webp");
+  background-size: cover;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 42%;
 }
 
 .cta-banner3:before {
