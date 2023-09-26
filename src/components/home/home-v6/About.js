@@ -46,7 +46,8 @@ const About = () => {
                 width={270}
                 height={350}
                 className="img-1"
-                src="/images/about/about-1.jpg"
+                style={{objectFit:"cover",objectPosition:"bottom"}}
+                src="/images/home/ONE_photo_pool area.webp"
                 alt="about"
               />
             </div>
@@ -55,7 +56,8 @@ const About = () => {
                 width={370}
                 height={520}
                 className="img-1"
-                src="/images/about/about-2.jpg"
+                style={{objectFit:"cover",objectPosition:"bottom"}}
+                src="/images/home/Konia Green TC_Full_V2.webp"
                 alt="about"
               />
             </div>

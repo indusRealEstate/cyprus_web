@@ -3844,7 +3844,7 @@ li {
 
 /*Home 6 Banner*/
 .home-banner-style6 {
-  background-image: url(../images/home/home-6.jpg);
+  // background-image: url(../images/home/home-6.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
@@ -10293,7 +10293,9 @@ input:focus-visible {
 .text-thm3 {
   color: #5bbb7b;
 }
-
+.bg-off-white{
+  background-color: #f7f7f7;
+}
 .bgc-thm-light {
   background-color: rgba(235, 103, 83, 0.05);
 }

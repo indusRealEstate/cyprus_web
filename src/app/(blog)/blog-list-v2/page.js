@@ -26,10 +26,10 @@ const BlogV2 = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="breadcumb-style1">
-                <h2 className="title">Blog</h2>
-                <div className="breadcumb-list">
-                  <a href="#">Home</a>
-                  <a href="#">Blog</a>
+                <h2 className="title text-dark">Blog</h2>
+                <div className="breadcumb-list text-dark">
+                  <a href="#" className="text-dark">Home</a>
+                  <a href="#" className="text-dark">Blog</a>
                 </div>
               </div>
             </div>
