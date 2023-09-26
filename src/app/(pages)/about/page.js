@@ -14,16 +14,6 @@ export const metadata = {
 };
 
 const About = () => {
-  // const [agentData, setAgentData] = useState("nothing");
-  // const [dataLoaded, setDataLoaded] = useState(false);
-
-  // useEffect(() => {
-  //   getExclusiveAgents().then((res) => {
-  //     setAgentData(res);
-  //     setDataLoaded(true);
-  //   });
-  // }, []);
-
   return (
     <>
       {/* Main Header Nav */}

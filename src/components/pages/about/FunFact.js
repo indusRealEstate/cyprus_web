@@ -1,10 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CountUp from "react-countup";
-import { useInView } from "react-intersection-observer";
-import Link from "next/link";
-import { getAllListing } from "@/api/pages/getAllListiings.js";
 
 const FunFact = () => {
   const funFacts = [
@@ -24,17 +21,6 @@ const FunFact = () => {
       text: "Happy Customer",
     },
   ];
-
-  const [allPropertiesCount, setAllPropertiesCount] = useState();
-  const [dataLoaded, setDataloaded] = useState(false);
-  useEffect(() => {
-    getAllListing().then((res)=>{
-      setAllPropertiesCount(res);
-      setDataloaded(true);
-      console.log(res);
-    })
-  }, [])
-
 
   return (
     <>
