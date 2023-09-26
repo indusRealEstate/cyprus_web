@@ -1,5 +1,6 @@
 import MobileMenu from "@/components/common/mobile-menu";
 import About from "@/components/home/home-v6/About";
+// import Agents from "@/components/home/home-v6/Agents";
 import Agents from "@/components/home/home-v6/Agents";
 import ExploreCities from "@/components/home/home-v6/ExploreCities";
 import FeaturedListings from "@/components/home/home-v6/FeatuerdListings";
@@ -11,6 +12,7 @@ import Footer from "@/components/home/home-v6/footer";
 import Hero from "@/components/home/home-v6/hero";
 import Image from "next/image";
 import Link from "next/link";
+import Funfact2 from "@/components/home/home-v6/Funfact2";
 
 export const metadata = {
   title: "International Properties",
@@ -58,8 +60,60 @@ const Home = () => {
       </section>
       {/* End Home Banner Style V6 */}
 
+      {/* Our Funfact */}
+      <section className="bg-off-white pb90 pb30-md">
+        {/* <Image
+          width={146}
+          height={276}
+          className="funfact-floating-img1 d-none d-lg-block "
+          src="/images/resource/h7-bg-1.png"
+          alt="illustration"
+        />
+        <Image
+          width={240}
+          height={181}
+          className="funfact-floating-img2 wow zoomIn d-none d-lg-block "
+          src="/images/resource/h7-bg-2.png"
+          alt="illustration"
+        /> */}
+        <div className="container">
+          <div className="row align-items-center">
+            <div
+              className="col-md-6 col-xl-5 wow fadeInRight"
+              data-wow-delay="100ms"
+            >
+              <div className="cta-style6 mb30-sm"  data-aos="fade-up">
+                <h2 className="cta-title mb25">
+                  More than 20 Years of Real{" "}
+                  <br className="d-none d-lg-block" /> Estate Experience
+                </h2>
+                <p className="cta-text fz15 mb25">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed{" "}
+                  <br className="d-none d-lg-block" /> do eiusmod tempor
+                  incididunt.
+                </p>
+                <a href="/contact" className="ud-btn btn-dark bdrs0">
+                  Get Started <i className="fal fa-arrow-right-long" />
+                </a>
+              </div>
+            </div>
+            <div
+              className="col-md-6 col-xl-6 offset-xl-1 wow fadeInLeft"
+              data-wow-delay="300ms"
+            >
+              <div className="row align-items-center">
+                <Funfact2 />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* End Our Funfact */}
+
+      
+
       {/* Explore Apartment Home */}
-      <section className="pb90 pb30-md">
+      {/* <section className="pb90 pb30-md">
         <div className="container">
           <div className="row">
             <div className="col-xl-6" data-aos="fade-up" data-aos-delay="100">
@@ -86,7 +140,7 @@ const Home = () => {
                 />
               </div>
             </div>
-            {/* End .col-6 */}
+           
 
             <div className="col-xl-6" data-aos="fade-up" data-aos-delay="300">
               <div className="row">
@@ -95,11 +149,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Explore Apartment Home */}
 
       {/* Featured Properties */}
-      <section id="flagship-prop" className="our-testimonial pt-0">
+      <section id="flagship-prop" className="our-testimonial pt-5 mt-5">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 mx-auto" data-aos-delay="300ms">

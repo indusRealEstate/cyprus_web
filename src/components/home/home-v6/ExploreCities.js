@@ -9,38 +9,38 @@ const ExploreCities = () => {
   const cities = [
     {
       id: 1,
-      name: "Los Angeles",
-      image: "/images/listings/city-listing-1.jpg",
+      name: "Paphos",
+      image: "/images/listings/Paphos.webp",
       number: 12,
     },
     {
       id: 2,
-      name: "Miami",
-      image: "/images/listings/city-listing-1.jpg",
+      name: "Limassol",
+      image: "/images/listings/Limassol.webp",
       number: 8,
     },
     {
       id: 3,
-      name: "New York",
-      image: "/images/listings/city-listing-1.jpg",
+      name: "Larnaca",
+      image: "/images/listings/Larnaca.webp",
       number: 15,
     },
     {
       id: 4,
-      name: "Chicago",
-      image: "/images/listings/city-listing-1.jpg",
+      name: "Nicosia",
+      image: "/images/listings/Nicosia.jpg",
       number: 10,
     },
     {
       id: 5,
-      name: "Los Angeles",
-      image: "/images/listings/city-listing-1.jpg",
+      name: "Ayia Napa",
+      image: "/images/listings/Ayia Napa.webp",
       number: 12,
     },
     {
       id: 6,
-      name: "Miami",
-      image: "/images/listings/city-listing-1.jpg",
+      name: "Protaras",
+      image: "/images/listings/Protaras.webp",
       number: 8,
     },
     // Add more cities if needed
@@ -83,7 +83,7 @@ const ExploreCities = () => {
                     <Image
                       width={279}
                       height={279}
-                      className="w-100 h-100 cover"
+                      style={{objectFit:"cover",objectPosition:"center"}}
                       src={city.image}
                       alt="city listings"
                     />
