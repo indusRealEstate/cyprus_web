@@ -1,5 +1,6 @@
 import MobileMenu from "@/components/common/mobile-menu";
 import About from "@/components/home/home-v6/About";
+// import Agents from "@/components/home/home-v6/Agents";
 import Agents from "@/components/home/home-v6/Agents";
 import ExploreCities from "@/components/home/home-v6/ExploreCities";
 import FeaturedListings from "@/components/home/home-v6/FeatuerdListings";
