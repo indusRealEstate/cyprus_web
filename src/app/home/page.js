@@ -37,6 +37,7 @@ const Home = () => {
           loop
           autoPlay
           muted
+          preload="auto"
         >
           <source
             src={"/video/sample.webm"}

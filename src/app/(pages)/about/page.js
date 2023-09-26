@@ -1,7 +1,5 @@
-"use client";
 import CallToActions from "@/components/common/CallToActions";
 import DefaultHeader from "@/components/common/DefaultHeader";
-import Partner from "@/components/common/Partner";
 import Footer from "@/components/common/default-footer";
 import MobileMenu from "@/components/common/mobile-menu";
 import Agents from "@/components/pages/about/Agents";
@@ -10,42 +8,21 @@ import FunFact from "@/components/pages/about/FunFact";
 import Mission from "@/components/pages/about/Mission";
 import Image from "next/image";
 import Link from "next/link";
-import axios from "axios";
-import React, { useState, useEffect } from "react";
-import { getExclusiveAgents } from "@/api/pages/about";
-
 
 export const metadata = {
-  title: "About  || Homez - Real Estate NextJS Template",
+  title: "International Properties",
 };
 
 const About = () => {
+  // const [agentData, setAgentData] = useState("nothing");
+  // const [dataLoaded, setDataLoaded] = useState(false);
 
-  const [agentData, setAgentData] = useState("nothing");
-  const [dataLoaded, setDataLoaded] = useState(false);
-
-  // const getAllData = () => {
-  //   try {
-  //     // const response = await axios.get("/api/pages/about");`
-  //     getAboutPage().then((res) => {
-  //       setData(res);
-  //       console.log(res);
-  //     });
-
-  //   } catch (error) {
-  //     console.log("Error occur " + error.message);
-  //   }
-  // }
-
-  useEffect(() => {
-    // getAllData();
-    getExclusiveAgents().then((res) => {
-      setAgentData(res);
-      setDataLoaded(true);
-      // console.log(res);
-    });
-  }, [])
-
+  // useEffect(() => {
+  //   getExclusiveAgents().then((res) => {
+  //     setAgentData(res);
+  //     setDataLoaded(true);
+  //   });
+  // }, []);
 
   return (
     <>
@@ -118,7 +95,7 @@ const About = () => {
                   height={515}
                   priority
                   className="about-banner"
-                  src="/images/about/Real/Minthis_photo_Cleone_pool.webp"
+                  src="/images/about/Real/compressed_neighbourhood.webp"
                   alt="about banner"
                 />
               </div>

@@ -16,20 +16,14 @@ const FeaturedListings = () => {
     currency: "EUR",
   });
   const [data, setData] = useState([]);
-  const [loaded, setLoaded] = useState([]);
+  const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     getAllListings().then((res) => {
       setData(res);
     });
   }, []);
 
-  const addIdToArray = (id) => {
-    if (loaded.length == 0) {
-      setLoaded([id]);
-    } else {
-      setLoaded(loaded.concat([id]));
-    }
-  };
+  var all_imgs_id = [];
 
   if (data.length == 0) {
     return (
@@ -89,7 +83,7 @@ const FeaturedListings = () => {
                         height: "15rem",
                       }}
                     >
-                      {!loaded.includes(listing.id) && (
+                      {loaded == false && (
                         <Skeleton
                           // sx={{ bgcolor: "grey.100" }}
                           variant="rectangular"
@@ -97,12 +91,12 @@ const FeaturedListings = () => {
                           height={240}
                         />
                       )}
-                      <Image
+                      <img
                         id={listing.id}
                         width={382}
                         height={248}
                         className={`${
-                          !loaded.includes(listing.id)
+                          loaded == false
                             ? "opacity-0 position-absolute w-100 h-100 cover"
                             : "opacity-100 w-100 h-100 cover"
                         }}`}
@@ -111,7 +105,15 @@ const FeaturedListings = () => {
                           listing.prop_id
                         }/media/${JSON.parse(listing.images)[0]}`}
                         alt="listings"
-                        onLoadingComplete={() => addIdToArray(listing.id)}
+                        onLoad={() => {
+                          if (!all_imgs_id.includes(listing.id)) {
+                            all_imgs_id.push(listing.id);
+                          }
+
+                          if (all_imgs_id.length == data.prop.length) {
+                            setLoaded(true);
+                          }
+                        }}
                       />
                       {/* <div className="sale-sticker-wrap">
                       {listing.highlight && (
