@@ -34,7 +34,7 @@ const PropertyDetailsPage = () => {
     getPropertyDetails(params).then((res) => {
       setData(res);
     });
-  }, []);
+  }, [data]);
 
   return (
     <>
@@ -144,7 +144,10 @@ const PropertyDetailsPage = () => {
                   <div className="ps-widget bgc-white bdrs12 default-box-shadow2 p30 mb30 ">
                     <h4 className="title fz17 mb30">Video</h4>
                     <div className="row">
-                      <PropertyVideo allImages={data.images} id={data.prop_id}/>
+                      <PropertyVideo
+                        allImages={data.images}
+                        id={data.prop_id}
+                      />
                     </div>
                   </div>
                   {/* End .ps-widget */}
@@ -238,7 +241,7 @@ const PropertyDetailsPage = () => {
                         <h6 className="title fz17 mb30">
                           Get More Information
                         </h6>
-                        <ContactWithAgent agentId={data.listed_agent_id}/>
+                        <ContactWithAgent agentId={data.listed_agent_id} />
                       </div>
                     </div>
                   </div>

@@ -34,12 +34,11 @@ import { useState, useEffect } from "react";
 // ];
 
 const FloorPlans = ({ floorDataRaw, id }) => {
-  const [loading, setLoading] = useState(true);
   const floorData = JSON.parse(floorDataRaw);
 
-  useEffect(() => {}, [loading]);
+  const [loaded, setLoaded] = useState([]);
 
-  var allImgs = [];
+  useEffect(() => {}, [loaded]);
 
   return (
     <div className="accordion" id="accordionExample">
@@ -89,7 +88,7 @@ const FloorPlans = ({ floorDataRaw, id }) => {
             data-parent="#accordionExample"
           >
             <div className="accordion-body text-center">
-              {loading && (
+              {!loaded.includes(index) && (
                 <Skeleton
                   // sx={{ bgcolor: "grey.100" }}
                   variant="rectangular"
@@ -101,18 +100,16 @@ const FloorPlans = ({ floorDataRaw, id }) => {
                 width={736}
                 height={544}
                 className={`${
-                  loading
+                  !loaded.includes(index)
                     ? "opacity-0 position-absolute w-100 h-100 cover"
                     : "opacity-100 w-100 h-100 cover"
                 }}`}
                 src={`https://indusmanagement.ae/api/media/listings/${id}/floorplan/${floorPlan.img}`}
                 alt="listing figureout"
                 onLoad={() => {
-                  if (!allImgs.includes(index)) {
-                    allImgs.push(index);
-                  }
-                  if (allImgs.length == floorData.length) {
-                    setLoading(false);
+                  if (!loaded.includes(index)) {
+                    loaded.push(index);
+                    setLoaded(loaded);
                   }
                 }}
               />

@@ -13,7 +13,7 @@ const ContactWithAgent = ({ agentId }) => {
     getAgentDetails(agentId).then((res) => {
       setData(res);
     });
-  }, []);
+  }, [data]);
 
   return (
     <>
@@ -74,7 +74,12 @@ const ContactWithAgent = ({ agentId }) => {
                 </a>
               </div>
               <Link
-                href="/agent-single/3"
+                href={{
+                  pathname: "/agent-details",
+                  query: {
+                    id: data.agent_id,
+                  },
+                }}
                 className="text-decoration-underline fw600"
               >
                 View Listings
@@ -83,7 +88,15 @@ const ContactWithAgent = ({ agentId }) => {
           </div>
 
           <div className="d-grid">
-            <Link href="/agent-single/3" className="ud-btn btn-white2">
+            <Link
+              href={{
+                pathname: "/agent-details",
+                query: {
+                  id: data.agent_id,
+                },
+              }}
+              className="ud-btn btn-white2"
+            >
               Contact Agent
               <i className="fal fa-arrow-right-long" />
             </Link>

@@ -5,27 +5,13 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
-import { forwardRef, useImperativeHandle } from "react";
 
-const GalleryBox = forwardRef(({ id, images }) => {
+const GalleryBox = ({ id, images }) => {
   const loadingUrls = [1, 2, 3];
+  const imageUrls = images != undefined ? JSON.parse(images) : [];
 
   const [loaded, setLoaded] = useState([]);
-  const [imageUrls, setImgsUrls] = useState([]);
-  
-  useImperativeHandle(ref, () => ({
-    childFunction1() {
-      console.log('child function 1 called');
-    },
-    childFunction2() {
-      console.log('child function 2 called');
-    },
-  }));
-  const setImgsToVariable = () => {
-    setImgsUrls(JSON.parse(images));
-  };
 
-  useEffect(() => {}, [imageUrls]);
   useEffect(() => {}, [loaded]);
 
   return (
@@ -105,6 +91,6 @@ const GalleryBox = forwardRef(({ id, images }) => {
       {/* End .col for navigation  */}
     </>
   );
-});
+};
 
 export default GalleryBox;

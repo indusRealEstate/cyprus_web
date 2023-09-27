@@ -1,9 +1,8 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const ListingItems = ({data}) => {
+const ListingItems = ({ data }) => {
   return (
     <>
       {data?.map((listing) => (
@@ -14,7 +13,9 @@ const ListingItems = ({data}) => {
                 width={382}
                 height={248}
                 className="w-100 h-100 cover"
-                src={listing.image}
+                src={`https://indusmanagement.ae/api/media/listings/${
+                  listing.prop_id
+                }/media/${JSON.parse(listing.images)[0]}`}
                 alt="listings"
               />
               <div className="sale-sticker-wrap">
@@ -32,7 +33,14 @@ const ListingItems = ({data}) => {
             </div>
             <div className="list-content">
               <h6 className="list-title">
-                <Link href={`/single-v1/${listing.id}`}>{listing.title}</Link>
+                <Link
+                  href={{
+                    pathname: "/property-details",
+                    query: {
+                      id: listing.prop_id,
+                    },
+                  }}
+                >{`${listing.unit_no}, ${listing.property}`}</Link>
               </h6>
               <p className="list-text">{listing.location}</p>
               <div className="list-meta d-flex align-items-center">
@@ -43,12 +51,14 @@ const ListingItems = ({data}) => {
                   <span className="flaticon-shower" /> {listing.bath} bath
                 </a>
                 <a href="#">
-                  <span className="flaticon-expand" /> {listing.sqft} sqft
+                  <span className="flaticon-expand" /> {listing.total_area} sqft
                 </a>
               </div>
               <hr className="mt-2 mb-2" />
               <div className="list-meta2 d-flex justify-content-between align-items-center">
-                <span className="for-what">For Rent</span>
+                <span className="for-what">
+                  {listing.unit_purpose == "sale" ? "For Sale" : "For Rent"}
+                </span>
                 <div className="icons d-flex align-items-center">
                   <a href="#">
                     <span className="flaticon-fullscreen" />
