@@ -1,12 +1,12 @@
 "use client";
+import { getAllBlogs } from "@/api/pages/blogs";
 import Pagination from "@/components/blog/Pagination";
 import Blog from "@/components/blog/blog-list-v2/Blog";
 import BlogSidebar from "@/components/blog/sidebar";
 import DefaultHeader from "@/components/common/DefaultHeader";
 import Footer from "@/components/common/default-footer";
 import MobileMenu from "@/components/common/mobile-menu";
-import axios from "axios";
-import { useEffect, useState, setState } from "react";
+import { useEffect, useState } from "react";
 
 export const metadata = {
   title: "Blog List v2  || Homez - Real Estate NextJS Template",
@@ -15,30 +15,26 @@ export const metadata = {
 const BlogV2 = () =>
 {
   const [ blogData, setBlogData ] = useState();
-  const [ page, setPage ] = useState( {
-    limit: 2,
-    pageNumber: 1
-  } );
 
-  const getAllBlogs = async () =>
-  {
-    console.log( page );
-    const response = await axios.post( "https://indusmanagement.ae/api/pages/blogs/getAllBlogs.php", page );
-    console.log( response.data );
-    setBlogData( response.data );
-    // console.log( "PAfge " + blogData );
-  }
+
 
   const getThePage = ( page ) =>
   {
-    console.log( page );
-    setPage( { ...page, currentPage: page } )
-    getAllBlogs();
+    // console.log( page );
+    getAllBlogs( 6, page ).then( res =>
+    {
+      setBlogData( res.data )
+    } );
   }
 
   useEffect( () =>
   {
-    getAllBlogs();
+    getAllBlogs( 6, 1 ).then( ( res ) =>
+    {
+      setBlogData( res.data )
+      console.log( res );
+    } )
+    // setBlogData( getAllBlogs( 6, 1 ).data );
   }, [] )
 
 

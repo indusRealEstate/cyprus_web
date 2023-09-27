@@ -1,71 +1,26 @@
 "use client";
 import { useEffect, useState } from "react";
+import PaginationMUI from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
 
 const Pagination = ( { count, onPageChange } ) =>
 {
-  const totalPages = count;
-  const [ page, setPage ] = useState();
-  const [ currentPage, setCurrentPage ] = useState( 0 ); // Current active page
-  // onPageChange( page );
+  // console.log( count );
+  const totalPages = Math.ceil( count / 6 );
 
-  const handlePrevious = () =>
+
+  const getPageNumber = ( number ) =>
   {
-    setCurrentPage( ( prevPage ) => prevPage - 1 );
-  };
+    onPageChange( number );
+  }
 
-  const handleNext = () =>
-  {
-    setCurrentPage( ( prevPage ) => prevPage );
-  };
-
-  const renderPaginationItems = () =>
-  {
-    const paginationItems = [];
-
-    paginationItems.push(
-      <li className="page-item" key="previous">
-        <button
-          className="page-link"
-          onClick={ handlePrevious }
-          disabled={ currentPage === 1 }
-        >
-          <span className="fas fa-angle-left" />
-        </button>
-      </li>
-    );
-
-    for ( let page = 1; page <= totalPages; page++ )
-    {
-
-      paginationItems.push(
-        <li
-          className={ `page-item ${currentPage === page - 1 ? "active" : ""}` }
-          aria-current={ currentPage === page - 1 ? "page" : undefined }
-          key={ page }
-        >
-          <button className="page-link" onClick={ () => setPage( page - 1 ) }>
-            { page }
-          </button>
-        </li>
-      );
-    }
-
-    paginationItems.push(
-      <li className="page-item" key="next">
-        <button
-          className="page-link"
-          onClick={ handleNext }
-          disabled={ currentPage === totalPages }
-        >
-          <span className="fas fa-angle-right" />
-        </button>
-      </li>
-    );
-
-    return paginationItems;
-  };
-
-  return <ul className="page_navigation mt20">{ renderPaginationItems() }</ul>;
+  return (
+    <>
+      <Stack spacing={ 2 }>
+        <PaginationMUI count={ totalPages } variant="outlined" shape="rounded" onChange={ ( event, value ) => getPageNumber( value ) } />
+      </Stack>
+    </>
+  );
 };
 
 export default Pagination;

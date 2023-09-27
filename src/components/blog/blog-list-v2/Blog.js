@@ -1,28 +1,16 @@
-"use client";
+import Box from "@mui/material/Box";
+import CircularProgress from "@mui/material/CircularProgress";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import CircularProgress from "@mui/material/CircularProgress";
-import Box from "@mui/material/Box";
+import { useRouter } from "next/navigation";
 
 const Blog = ( { blogs } ) =>
 {
-  // const [ blogData, setBlogData ] = useState();
-  // const [ month, setMonth ] = useState();
-  // const [ day, setMDay ] = useState();
-
-  // useEffect( () =>
-  // {
-  //   if ( prop != undefined )
-  //   {
-  //     setBlogData( prop )
-
-  //   }
-  //   console.log( "Blog" + prop );
-
-  // }, [] )
-
-  console.log( blogs )
+  const router = useRouter()
+  const viewBlog = ( id ) =>
+  {
+    router.push( "/blogs/" + id );
+  }
 
   return (
     <>
@@ -46,6 +34,8 @@ const Blog = ( { blogs } ) =>
             <div
               className="blog-style1 list-style bgc-white d-block d-md-flex align-items-xl-center"
               key={ index }
+              style={ { cursor: "pointer" } }
+              onClick={ ( event ) => viewBlog( item.id ) }
             >
               <div className="blog-img flex-shrink-0">
                 <Image

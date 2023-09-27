@@ -1,16 +1,12 @@
 
 'use client'
-
-
 import React, { useEffect, useState } from 'react'
 import TopFilter from './TopFilter'
-
-
-
-
 import AllAgents from './agents/AllAgents';
 import agents from '@/data/agents';
 import PaginationTwo from '../listing/PaginationTwo';
+
+
 export default function FilteringAgent() {
     const [filteredData, setFilteredData] = useState([]);
     const [currentSortingOption, setCurrentSortingOption] = useState('Newest')
