@@ -1,5 +1,5 @@
 "use client";
-import { getExclusiveAgents } from "@/api/pages/about";
+import { getExclusiveAgents } from "@/api/pages/agents";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -12,21 +12,14 @@ import Box from "@mui/material/Box";
 
 const Agents = () => {
   const [agentData, setAgentData] = useState([]);
-  const [loaded, setLoaded] = useState(true);
+  const [loaded, setLoaded] = useState([]);
 
+  useEffect(() => {}, [loaded]);
   useEffect(() => {
     getExclusiveAgents().then((res) => {
       setAgentData(res);
     });
-  }, []);
-
-  var all_imgs_id = [];
-  const onImageFullyLoaded = (id) => {
-    all_imgs_id.push(id);
-    if (all_imgs_id.length == agentData.length) {
-      setLoaded(false);
-    }
-  };
+  }, [agentData]);
 
   if (agentData.length == 0) {
     return (
@@ -88,7 +81,7 @@ const Agents = () => {
                         height: "240px",
                       }}
                     >
-                      {loaded && (
+                      {!loaded.includes(data.agent_id) && (
                         <Skeleton
                           // sx={{ bgcolor: "grey.100" }}
                           variant="rectangular"
@@ -101,13 +94,18 @@ const Agents = () => {
                         width={217}
                         height={248}
                         className={`${
-                          loaded
+                          !loaded.includes(data.agent_id)
                             ? "opacity-0 position-absolute w-100 h-100 cover"
                             : "opacity-100 w-100 h-100 cover"
                         }}`}
                         src={`https://indusmanagement.ae/api/media/agents/${data.agent_id}/${data.image}`}
                         alt="agent team"
-                        onLoad={() => onImageFullyLoaded(data.id)}
+                        onLoad={() => {
+                          if (!loaded.includes(data.agent_id)) {
+                            loaded.push(data.agent_id);
+                            setLoaded(loaded);
+                          }
+                        }}
                       />
                     </div>
                     <div className="team-content pt20">

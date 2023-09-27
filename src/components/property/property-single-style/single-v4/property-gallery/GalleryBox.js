@@ -1,16 +1,32 @@
 "use client";
-import listings from "@/data/listings";
-import Image from "next/image";
+import { Skeleton } from "@mui/material";
+import { useEffect, useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Skeleton } from "@mui/material";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import "swiper/swiper-bundle.min.css";
+import { forwardRef, useImperativeHandle } from "react";
 
-const GalleryBox = ({ id, images }) => {
-
-  const imageUrls = images != undefined ? JSON.parse(images) : [];
+const GalleryBox = forwardRef(({ id, images }) => {
   const loadingUrls = [1, 2, 3];
+
+  const [loaded, setLoaded] = useState([]);
+  const [imageUrls, setImgsUrls] = useState([]);
+  
+  useImperativeHandle(ref, () => ({
+    childFunction1() {
+      console.log('child function 1 called');
+    },
+    childFunction2() {
+      console.log('child function 2 called');
+    },
+  }));
+  const setImgsToVariable = () => {
+    setImgsUrls(JSON.parse(images));
+  };
+
+  useEffect(() => {}, [imageUrls]);
+  useEffect(() => {}, [loaded]);
 
   return (
     <>
@@ -37,14 +53,27 @@ const GalleryBox = ({ id, images }) => {
           : imageUrls.map((imageUrl, index) => (
               <SwiperSlide key={index}>
                 <div className="item">
+                  {!loaded.includes(index) && (
+                    <Skeleton variant="rectangular" width={1170} height={640} />
+                  )}
                   <LazyLoadImage
                     src={`https://indusmanagement.ae/api/media/listings/${id}/media/${imageUrl}`}
-                    className="bdrs12 w-100 h-100 cover"
+                    className={`${
+                      !loaded.includes(index)
+                        ? "opacity-0 position-absolute bdrs12 w-100 h-100 cover"
+                        : "opacity-100 bdrs12 w-100 h-100 cover"
+                    }}`}
                     width={1170}
                     height={600}
                     alt="Image Alt"
                     style={{
-                      "max-height": "40rem",
+                      maxHeight: "40rem",
+                    }}
+                    onLoad={() => {
+                      if (!loaded.includes(index)) {
+                        loaded.push(index);
+                        setLoaded(loaded);
+                      }
                     }}
                   />
                   {/* <Image
@@ -76,6 +105,6 @@ const GalleryBox = ({ id, images }) => {
       {/* End .col for navigation  */}
     </>
   );
-};
+});
 
 export default GalleryBox;

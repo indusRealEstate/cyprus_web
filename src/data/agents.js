@@ -1,4 +1,4 @@
-import getExclusiveAgents from "@/api/pages/about";
+import getExclusiveAgents from "@/api/pages/agents";
 
 
 module.exports = [

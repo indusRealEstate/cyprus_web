@@ -23,12 +23,12 @@ import PropertyHeader from "@/components/property/property-single-style/single-v
 import PropertyGallery from "@/components/property/property-single-style/single-v4/property-gallery";
 import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const PropertyDetailsPage = () => {
   const searchParams = useSearchParams();
-  const params = searchParams.get('id');
+  const params = searchParams.get("id");
   const [data, setData] = useState("");
   useEffect(() => {
     getPropertyDetails(params).then((res) => {
@@ -121,23 +121,30 @@ const PropertyDetailsPage = () => {
                   </div>
                 </div> */}
                   {/* End .ps-widget */}
-
-                  <div className="ps-widget bgc-white bdrs12 default-box-shadow2 p30 mb30 overflow-hidden position-relative">
-                    <h4 className="title fz17 mb30">Floor Plans</h4>
-                    <div className="row">
-                      <div className="col-md-12">
-                        <div className="accordion-style1 style2">
-                          <FloorPlans />
+                  {data.floorplan != "" ? (
+                    <div className="ps-widget bgc-white bdrs12 default-box-shadow2 p30 mb30 overflow-hidden position-relative">
+                      <h4 className="title fz17 mb30">Floor Plans</h4>
+                      <div className="row">
+                        <div className="col-md-12">
+                          <div className="accordion-style1 style2">
+                            <FloorPlans
+                              floorDataRaw={data.floorplan}
+                              id={data.prop_id}
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  ) : (
+                    <div></div>
+                  )}
+
                   {/* End .ps-widget */}
 
                   <div className="ps-widget bgc-white bdrs12 default-box-shadow2 p30 mb30 ">
                     <h4 className="title fz17 mb30">Video</h4>
                     <div className="row">
-                      <PropertyVideo />
+                      <PropertyVideo allImages={data.images} id={data.prop_id}/>
                     </div>
                   </div>
                   {/* End .ps-widget */}
@@ -231,7 +238,7 @@ const PropertyDetailsPage = () => {
                         <h6 className="title fz17 mb30">
                           Get More Information
                         </h6>
-                        <ContactWithAgent />
+                        <ContactWithAgent agentId={data.listed_agent_id}/>
                       </div>
                     </div>
                   </div>

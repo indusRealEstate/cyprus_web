@@ -1,43 +1,52 @@
-import React from "react";
+"use client";
+import { Skeleton } from "@mui/material";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
-const floorPlanData = [
-  {
-    id: "first-floor",
-    title: "First Floor",
-    size: "1267 Sqft",
-    bedrooms: "2",
-    bathrooms: "2",
-    price: "$920,99",
-    imageSrc: "/images/listings/listing-single-1.png",
-  },
-  {
-    id: "second-floor",
-    title: "Second Floor",
-    size: "1267 Sqft",
-    bedrooms: "2",
-    bathrooms: "2",
-    price: "$920,99",
-    imageSrc: "/images/listings/listing-single-1.png",
-  },
-  {
-    id: "third-floor",
-    title: "Third Floor",
-    size: "1267 Sqft",
-    bedrooms: "2",
-    bathrooms: "2",
-    price: "$920,99",
-    imageSrc: "/images/listings/listing-single-1.png",
-  },
-];
+// const floorPlanData = [
+//   {
+//     id: "first-floor",
+//     title: "First Floor",
+//     size: "1267 Sqft",
+//     bedrooms: "2",
+//     bathrooms: "2",
+//     price: "$920,99",
+//     imageSrc: "/images/listings/listing-single-1.png",
+//   },
+//   {
+//     id: "second-floor",
+//     title: "Second Floor",
+//     size: "1267 Sqft",
+//     bedrooms: "2",
+//     bathrooms: "2",
+//     price: "$920,99",
+//     imageSrc: "/images/listings/listing-single-1.png",
+//   },
+//   {
+//     id: "third-floor",
+//     title: "Third Floor",
+//     size: "1267 Sqft",
+//     bedrooms: "2",
+//     bathrooms: "2",
+//     price: "$920,99",
+//     imageSrc: "/images/listings/listing-single-1.png",
+//   },
+// ];
 
-const FloorPlans = () => {
+const FloorPlans = ({ floorDataRaw, id }) => {
+  const [loading, setLoading] = useState(true);
+  const floorData = JSON.parse(floorDataRaw);
+
+  useEffect(() => {}, [loading]);
+
+  var allImgs = [];
+
   return (
     <div className="accordion" id="accordionExample">
-      {floorPlanData.map((floorPlan, index) => (
+      {floorData.map((floorPlan, index) => (
         <div
           className={`accordion-item ${index === 1 ? "active" : ""}`}
-          key={floorPlan.id}
+          key={floorPlan.type}
         >
           <h2 className="accordion-header" id={`heading${index}`}>
             <button
@@ -49,8 +58,8 @@ const FloorPlans = () => {
               aria-controls={`collapse${index}`}
             >
               <span className="w-100 d-md-flex align-items-center">
-                <span className="mr10-sm">{floorPlan.title}</span>
-                <span className="ms-auto d-md-flex align-items-center justify-content-end">
+                <span className="mr10-sm">{floorPlan.type}</span>
+                {/* <span className="ms-auto d-md-flex align-items-center justify-content-end">
                   <span className="me-2 me-md-4">
                     <span className="fw600">Size:</span>
                     <span className="text">{floorPlan.size}</span>
@@ -67,7 +76,7 @@ const FloorPlans = () => {
                     <span className="fw600">Price</span>
                     <span className="text">{floorPlan.price}</span>
                   </span>
-                </span>
+                </span> */}
               </span>
             </button>
           </h2>
@@ -80,12 +89,32 @@ const FloorPlans = () => {
             data-parent="#accordionExample"
           >
             <div className="accordion-body text-center">
-              <Image
+              {loading && (
+                <Skeleton
+                  // sx={{ bgcolor: "grey.100" }}
+                  variant="rectangular"
+                  width={736}
+                  height={544}
+                />
+              )}
+              <img
                 width={736}
                 height={544}
-                className="w-100 h-100 cover"
-                src={floorPlan.imageSrc}
+                className={`${
+                  loading
+                    ? "opacity-0 position-absolute w-100 h-100 cover"
+                    : "opacity-100 w-100 h-100 cover"
+                }}`}
+                src={`https://indusmanagement.ae/api/media/listings/${id}/floorplan/${floorPlan.img}`}
                 alt="listing figureout"
+                onLoad={() => {
+                  if (!allImgs.includes(index)) {
+                    allImgs.push(index);
+                  }
+                  if (allImgs.length == floorData.length) {
+                    setLoading(false);
+                  }
+                }}
               />
             </div>
           </div>

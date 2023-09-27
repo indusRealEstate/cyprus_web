@@ -30,3 +30,5 @@ export async function getPropertyDetails(prop_id) {
 
   return res.data;
 }
+
+

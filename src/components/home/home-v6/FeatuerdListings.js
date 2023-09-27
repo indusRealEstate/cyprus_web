@@ -16,14 +16,14 @@ const FeaturedListings = () => {
     currency: "EUR",
   });
   const [data, setData] = useState([]);
-  const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded] = useState([]);
+
+  useEffect(() => {}, [loaded]);
   useEffect(() => {
     getAllListings().then((res) => {
       setData(res);
     });
-  }, []);
-
-  var all_imgs_id = [];
+  }, [data]);
 
   if (data.length == 0) {
     return (
@@ -83,7 +83,7 @@ const FeaturedListings = () => {
                         height: "15rem",
                       }}
                     >
-                      {loaded == false && (
+                      {!loaded.includes(listing.id) && (
                         <Skeleton
                           // sx={{ bgcolor: "grey.100" }}
                           variant="rectangular"
@@ -96,7 +96,7 @@ const FeaturedListings = () => {
                         width={382}
                         height={248}
                         className={`${
-                          loaded == false
+                          !loaded.includes(listing.id)
                             ? "opacity-0 position-absolute w-100 h-100 cover"
                             : "opacity-100 w-100 h-100 cover"
                         }}`}
@@ -106,12 +106,9 @@ const FeaturedListings = () => {
                         }/media/${JSON.parse(listing.images)[0]}`}
                         alt="listings"
                         onLoad={() => {
-                          if (!all_imgs_id.includes(listing.id)) {
-                            all_imgs_id.push(listing.id);
-                          }
-
-                          if (all_imgs_id.length == data.prop.length) {
-                            setLoaded(true);
+                          if (!loaded.includes(listing.id)) {
+                            loaded.push(listing.id);
+                            setLoaded(loaded);
                           }
                         }}
                       />
