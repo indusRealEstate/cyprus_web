@@ -5,14 +5,11 @@ import Agents from "@/components/home/home-v6/Agents";
 import ExploreCities from "@/components/home/home-v6/ExploreCities";
 import FeaturedListings from "@/components/home/home-v6/FeatuerdListings";
 import FeatureProperties from "@/components/home/home-v6/FeatureProperties";
-import FindHomeBlock from "@/components/home/home-v6/FindHomeBlock";
+import Funfact2 from "@/components/home/home-v6/Funfact2";
 import Header from "@/components/home/home-v6/Header";
 import Testimonial from "@/components/home/home-v6/Testimonial";
 import Footer from "@/components/home/home-v6/footer";
 import Hero from "@/components/home/home-v6/hero";
-import Image from "next/image";
-import Link from "next/link";
-import Funfact2 from "@/components/home/home-v6/Funfact2";
 
 export const metadata = {
   title: "International Properties",
@@ -39,6 +36,7 @@ const Home = () => {
           loop
           autoPlay
           muted
+          preload="auto"
         >
           <source
             src={"/video/sample.webm"}
@@ -180,7 +178,7 @@ const Home = () => {
       {/* End Featured Properties */}
 
       {/* Featured Listings */}
-      <section className="pt-0 pb80 pb30-md">
+      <section id="featured-listings" className="pt-0 pb80 pb30-md">
         <div className="container">
           <div className="row  justify-content-between align-items-center">
             <div className="col-auto">
@@ -236,7 +234,7 @@ const Home = () => {
       {/* End Featured Listings */}
 
       {/* Property Cities */}
-      <section className="pt0 pb90 pb50-md">
+      <section id="explore-cities" className="pt0 pb90 pb50-md">
         <div className="container">
           <div className="row  justify-content-between align-items-center">
             <div className="col-auto">
@@ -351,7 +349,7 @@ const Home = () => {
       {/* Pricing Section Area */}
 
       {/* Exclusive Agents */}
-      <section className="pt0 pb80 pb50-md">
+      <section id="exlusive-agents" className="pt0 pb80 pb50-md">
         <div className="container">
           <div className="row  justify-content-between align-items-center">
             <div className="col-auto">

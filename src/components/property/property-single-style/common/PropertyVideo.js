@@ -3,20 +3,27 @@ import React, { useState } from "react";
 import ModalVideo from "react-modal-video";
 import "node_modules/react-modal-video/scss/modal-video.scss";
 
-const PropertyVideo = () => {
+const PropertyVideo = ({ allImages, id }) => {
   const [isOpen, setOpen] = useState(false);
+
+  const bgImage = JSON.parse(allImages)[3];
 
   return (
     <>
       <ModalVideo
         channel="youtube"
         isOpen={isOpen}
-        videoId="oqNZOOWF8qM"
+        videoId="OTXwNmfM08w"
         onClose={() => setOpen(false)}
       />
 
       <div className="col-md-12">
-        <div className="property_video bdrs12 w-100">
+        <div
+          className="property_video bdrs12 w-100"
+          style={{
+            backgroundImage: `url(https://indusmanagement.ae/api/media/listings/${id}/media/${bgImage})`,
+          }}
+        >
           <button
             className="video_popup_btn mx-auto popup-img"
             onClick={() => setOpen(true)}

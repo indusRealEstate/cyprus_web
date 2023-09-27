@@ -3,6 +3,7 @@ import GalleryBox from "./GalleryBox";
 import Map from "./Map";
 import RealMapView from "./RealMapView";
 
+
 const PropertyGallery = ({ id, images }) => {
   return (
     <>

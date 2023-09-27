@@ -17,19 +17,13 @@ const FeaturedListings = () => {
   });
   const [data, setData] = useState([]);
   const [loaded, setLoaded] = useState([]);
+
+  useEffect(() => {}, [loaded]);
   useEffect(() => {
     getAllListings().then((res) => {
       setData(res);
     });
-  }, []);
-
-  const addIdToArray = (id) => {
-    if (loaded.length == 0) {
-      setLoaded([id]);
-    } else {
-      setLoaded(loaded.concat([id]));
-    }
-  };
+  }, [data]);
 
   if (data.length == 0) {
     return (
@@ -87,7 +81,6 @@ const FeaturedListings = () => {
                       className="list-thumb"
                       style={{
                         height: "15rem",
-                        // "object-fit": "cover",
                       }}
                     >
                       {!loaded.includes(listing.id) && (
@@ -95,10 +88,10 @@ const FeaturedListings = () => {
                           // sx={{ bgcolor: "grey.100" }}
                           variant="rectangular"
                           width={382}
-                          height={248}
+                          height={240}
                         />
                       )}
-                      <Image
+                      <img
                         id={listing.id}
                         width={382}
                         height={248}
@@ -112,7 +105,12 @@ const FeaturedListings = () => {
                           listing.prop_id
                         }/media/${JSON.parse(listing.images)[0]}`}
                         alt="listings"
-                        onLoadingComplete={() => addIdToArray(listing.id)}
+                        onLoad={() => {
+                          if (!loaded.includes(listing.id)) {
+                            loaded.push(listing.id);
+                            setLoaded(loaded);
+                          }
+                        }}
                       />
                       {/* <div className="sale-sticker-wrap">
                       {listing.highlight && (
@@ -129,7 +127,12 @@ const FeaturedListings = () => {
                     <div className="list-content">
                       <h6 className="list-title">
                         <Link
-                          href={"/property-details/" + listing.prop_id}
+                          href={{
+                            pathname: "/property-details",
+                            query: {
+                              id: listing.prop_id,
+                            },
+                          }}
                         >{`${listing.unit_no}, ${listing.property}`}</Link>
                       </h6>
                       <p className="list-text">{listing.location}</p>
