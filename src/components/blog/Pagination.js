@@ -1,42 +1,50 @@
 "use client";
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 
-const Pagination = () => {
-  const totalPages = 6; // Total number of pages
-  const [currentPage, setCurrentPage] = useState(2); // Current active page
+const Pagination = ( { count, onPageChange } ) =>
+{
+  const totalPages = count;
+  const [ page, setPage ] = useState();
+  const [ currentPage, setCurrentPage ] = useState( 0 ); // Current active page
+  // onPageChange( page );
 
-  const handlePrevious = () => {
-    setCurrentPage((prevPage) => prevPage - 1);
+  const handlePrevious = () =>
+  {
+    setCurrentPage( ( prevPage ) => prevPage - 1 );
   };
 
-  const handleNext = () => {
-    setCurrentPage((prevPage) => prevPage + 1);
+  const handleNext = () =>
+  {
+    setCurrentPage( ( prevPage ) => prevPage );
   };
 
-  const renderPaginationItems = () => {
+  const renderPaginationItems = () =>
+  {
     const paginationItems = [];
 
     paginationItems.push(
       <li className="page-item" key="previous">
         <button
           className="page-link"
-          onClick={handlePrevious}
-          disabled={currentPage === 1}
+          onClick={ handlePrevious }
+          disabled={ currentPage === 1 }
         >
           <span className="fas fa-angle-left" />
         </button>
       </li>
     );
 
-    for (let page = 1; page <= totalPages; page++) {
+    for ( let page = 1; page <= totalPages; page++ )
+    {
+
       paginationItems.push(
         <li
-          className={`page-item ${currentPage === page ? "active" : ""}`}
-          aria-current={currentPage === page ? "page" : undefined}
-          key={page}
+          className={ `page-item ${currentPage === page - 1 ? "active" : ""}` }
+          aria-current={ currentPage === page - 1 ? "page" : undefined }
+          key={ page }
         >
-          <button className="page-link" onClick={() => setCurrentPage(page)}>
-            {page}
+          <button className="page-link" onClick={ () => setPage( page - 1 ) }>
+            { page }
           </button>
         </li>
       );
@@ -46,8 +54,8 @@ const Pagination = () => {
       <li className="page-item" key="next">
         <button
           className="page-link"
-          onClick={handleNext}
-          disabled={currentPage === totalPages}
+          onClick={ handleNext }
+          disabled={ currentPage === totalPages }
         >
           <span className="fas fa-angle-right" />
         </button>
@@ -57,7 +65,7 @@ const Pagination = () => {
     return paginationItems;
   };
 
-  return <ul className="page_navigation mt20">{renderPaginationItems()}</ul>;
+  return <ul className="page_navigation mt20">{ renderPaginationItems() }</ul>;
 };
 
 export default Pagination;
