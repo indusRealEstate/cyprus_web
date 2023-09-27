@@ -3,7 +3,6 @@ import { getPropertyDetails } from "@/api";
 import DefaultHeader from "@/components/common/DefaultHeader";
 import Footer from "@/components/common/default-footer";
 import MobileMenu from "@/components/common/mobile-menu";
-import EnergyClass from "@/components/property/property-single-style/common/EnergyClass";
 import FloorPlans from "@/components/property/property-single-style/common/FloorPlans";
 import HomeValueChart from "@/components/property/property-single-style/common/HomeValueChart";
 import MortgageCalculator from "@/components/property/property-single-style/common/MortgageCalculator";
@@ -15,25 +14,22 @@ import PropertyFeaturesAminites from "@/components/property/property-single-styl
 import PropertyNearby from "@/components/property/property-single-style/common/PropertyNearby";
 import PropertyVideo from "@/components/property/property-single-style/common/PropertyVideo";
 import ProperytyDescriptions from "@/components/property/property-single-style/common/ProperytyDescriptions";
-import ReviewBoxForm from "@/components/property/property-single-style/common/ReviewBoxForm";
 import VirtualTour360 from "@/components/property/property-single-style/common/VirtualTour360";
-import WalkScore from "@/components/property/property-single-style/common/WalkScore";
 import InfoWithForm from "@/components/property/property-single-style/common/more-info";
 import PropertyViews from "@/components/property/property-single-style/common/property-view";
-import AllReviews from "@/components/property/property-single-style/common/reviews";
 import ContactWithAgent from "@/components/property/property-single-style/sidebar/ContactWithAgent";
 import ScheduleTour from "@/components/property/property-single-style/sidebar/ScheduleTour";
 import PropertyHeader from "@/components/property/property-single-style/single-v4/PropertyHeader";
 import PropertyGallery from "@/components/property/property-single-style/single-v4/property-gallery";
-import { useEffect, useState } from "react";
-import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
+import CircularProgress from "@mui/material/CircularProgress";
+import { useEffect, useState } from "react";
 
 export const metadata = {
   title: "International Properties",
 };
 
-const SingleV4 = ({ params }) => {
+const PropertyDetailsPage = ({ params }) => {
   const [data, setData] = useState("");
   useEffect(() => {
     getPropertyDetails(params.id).then((res) => {
@@ -304,4 +300,4 @@ const SingleV4 = ({ params }) => {
   }
 };
 
-export default SingleV4;
+export default PropertyDetailsPage;
