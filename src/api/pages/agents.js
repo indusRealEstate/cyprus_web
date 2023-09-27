@@ -1,5 +1,5 @@
-import { NextResponse, NextRequest } from "next/server";
 import axios from "axios";
+import { NextResponse, NextRequest } from "next/server";
 
 export async function getExclusiveAgents() {
   const res = await fetch(
