@@ -19,6 +19,25 @@ export async function getAllListings() {
   return await res.json();
 }
 
+export async function getAllListingsByFilter(filters, pageNumber) {
+  const res = await fetch(
+    "https://indusmanagement.ae/api/listings/get_all_listings_filter.php",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        limit: "9",
+        pageNumber: pageNumber,
+        filters: filters,
+      }),
+    }
+  );
+
+  return await res.json();
+}
+
 export async function getPropertyDetails(prop_id) {
   const res = await axios
     .post("https://indusmanagement.ae/api/listings/get_property_details.php", {
@@ -30,5 +49,3 @@ export async function getPropertyDetails(prop_id) {
 
   return res.data;
 }
-
-

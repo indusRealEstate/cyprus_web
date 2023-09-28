@@ -1,59 +1,59 @@
 /** @format */
 
-'use client';
-import { values } from '@/data/mobileMenuItems';
-import Select from 'react-select';
+"use client";
+import { values } from "@/data/mobileMenuItems";
+import Select from "react-select";
 
-const Location = ({ filterFunctions, allCities }) => {
-	const locationOptions = allCities.map((city) => ({
-		value: city.city,
-		label: city.city,
-	}));
+const Location = ({ filterFunctions }) => {
+  // const locationOptions = allCities.map((city) => ({
+  // 	value: city.city,
+  // 	label: city.city,
+  // }));
 
-	// const locationOptions = [
-	// 	{ value: 'All Cities', label: 'All Cities' },
-	// 	{ value: 'California', label: 'California' },
-	// 	{ value: 'Los Angeles', label: 'Los Angeles' },
+  const locationOptions = [
+    { value: "All Cities", label: "All Cities" },
+    { value: "California", label: "California" },
+    { value: "Los Angeles", label: "Los Angeles" },
 
-	// 	{ value: 'New York', label: 'New York' },
-	// 	{ value: 'San Diego', label: 'San Diego' },
-	// 	{ value: 'San Francisco', label: 'San Francisco' },
-	// 	{ value: 'Texas', label: 'Texas' },
-	// ];
+    { value: "New York", label: "New York" },
+    { value: "San Diego", label: "San Diego" },
+    { value: "San Francisco", label: "San Francisco" },
+    { value: "Texas", label: "Texas" },
+  ];
 
-	// console.log(locationOptions);
+  // console.log(locationOptions);
 
-	const customStyles = {
-		option: (styles, { isFocused, isSelected, isHovered }) => {
-			return {
-				...styles,
-				backgroundColor: isSelected
-					? '#eb6753'
-					: isHovered
-					? '#eb675312'
-					: isFocused
-					? '#eb675312'
-					: undefined,
-			};
-		},
-	};
+  const customStyles = {
+    option: (styles, { isFocused, isSelected, isHovered }) => {
+      return {
+        ...styles,
+        backgroundColor: isSelected
+          ? "#eb6753"
+          : isHovered
+          ? "#eb675312"
+          : isFocused
+          ? "#eb675312"
+          : undefined,
+      };
+    },
+  };
 
-	return (
-		<Select
-			defaultValue={[locationOptions[0]]}
-			name='colors'
-			styles={customStyles}
-			options={locationOptions}
-			className='select-custom'
-			classNamePrefix='select'
-			required
-			value={{
-				value: filterFunctions.location,
-				label: filterFunctions.location,
-			}}
-			onChange={(e) => filterFunctions?.handlelocation(e.value)}
-		/>
-	);
+  return (
+    <Select
+      defaultValue={[locationOptions[0]]}
+      name="colors"
+      styles={customStyles}
+      options={locationOptions}
+      className="select-custom"
+      classNamePrefix="select"
+      required
+      value={{
+        value: filterFunctions.location,
+        label: filterFunctions.location,
+      }}
+      onChange={(e) => filterFunctions?.handlelocation(e.value)}
+    />
+  );
 };
 
 export default Location;

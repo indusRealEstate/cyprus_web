@@ -15,22 +15,17 @@ const AdvanceFilterModal = ({ filterFunctions }) => {
   }, [min, max]);
 
   const catOptions = [
-    { value: "Houses", label: "Houses" },
+    { value: "house", label: "Houses" },
 
-    { value: "Office", label: "Office" },
-    { value: "Apartments", label: "Apartments" },
-    { value: "Villa", label: "Villa" },
+    { value: "office", label: "Office" },
+    { value: "apartment", label: "Apartments" },
+    { value: "villa", label: "Villa" },
   ];
 
   const locationOptions = [
     { value: "All Cities", label: "All Cities" },
-    { value: "California", label: "California" },
-    { value: "Los Angeles", label: "Los Angeles" },
-    { value: "New Jersey", label: "New Jersey" },
-    { value: "New York", label: "New York" },
-    { value: "San Diego", label: "San Diego" },
-    { value: "San Francisco", label: "San Francisco" },
-    { value: "Texas", label: "Texas" },
+    { value: "Minthis Street", label: "Minthis Street" },
+    { value: "Paphos", label: "Paphos" },
   ];
 
   const customStyles = {

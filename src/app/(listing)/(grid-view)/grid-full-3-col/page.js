@@ -1,17 +1,32 @@
+"use client";
+import { getAllListingsByFilter } from "@/api";
 import DefaultHeader from "@/components/common/DefaultHeader";
 
 import Footer from "@/components/common/default-footer";
 import MobileMenu from "@/components/common/mobile-menu";
 
 import ProperteyFiltering from "@/components/listing/grid-view/grid-full-3-col/ProperteyFiltering";
-
-import React from "react";
+import { useEffect, useState } from "react";
+import Box from "@mui/material/Box";
+import CircularProgress from "@mui/material/CircularProgress";
+import { useSearchParams } from "next/navigation";
 
 export const metadata = {
   title: "Gird Full 3 Column || Homez - Real Estate NextJS Template",
 };
 
 const GridFull3Col = () => {
+  const searchParams = useSearchParams();
+  const [allData, setAllData] = useState([]);
+  const [prop_for, setPropFor] = useState("");
+
+  useEffect(() => {
+    setPropFor(searchParams.get("type"));
+    getAllListingsByFilter({}, 1).then((res) => {
+      setAllData(res.prop);
+    });
+  }, [allData, prop_for]);
+
   return (
     <>
       {/* Main Header Nav */}
@@ -28,10 +43,31 @@ const GridFull3Col = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="breadcumb-style1">
-                <h2 className="title">New York Homes for Sale</h2>
+                <h2
+                  className="title"
+                  style={{
+                    color: "black",
+                  }}
+                >
+                  All Properties
+                </h2>
                 <div className="breadcumb-list">
-                  <a href="#">Home</a>
-                  <a href="#">For Rent</a>
+                  <a
+                    href="#"
+                    style={{
+                      color: "black",
+                    }}
+                  >
+                    Home
+                  </a>
+                  <a
+                    href="#"
+                    style={{
+                      color: "black",
+                    }}
+                  >
+                    {prop_for == "buy" ? "For Sale" : "For Rent"}
+                  </a>
                 </div>
                 <a
                   className="filter-btn-left mobile-filter-btn d-block d-lg-none"
@@ -50,7 +86,27 @@ const GridFull3Col = () => {
       {/* End Breadcumb Sections */}
 
       {/* Property Filtering */}
-      <ProperteyFiltering/>
+      {allData.length != 0 ? (
+        <ProperteyFiltering
+          listings={allData}
+          prop_for={
+            prop_for != null ? (prop_for == "buy" ? "Buy" : "Rent") : "All"
+          }
+        />
+      ) : (
+        <Box
+          sx={{
+            display: "flex",
+            height: "30rem",
+            width: "100%",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <CircularProgress />
+        </Box>
+      )}
+
       {/* Property Filtering */}
 
       {/* Start Our Footer */}

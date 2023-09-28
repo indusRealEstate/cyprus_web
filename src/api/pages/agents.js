@@ -1,5 +1,3 @@
-/** @format */
-
 import axios from "axios";
 import { NextResponse, NextRequest } from "next/server";
 
@@ -41,7 +39,23 @@ export async function getAllAgents(page, limit) {
       console.log(error);
     });
 
-  return await res;
+  return res;
+}
+
+export async function getAgentListingsLimited4(agent_id, prop_for) {
+  const res = await axios
+    .post(
+      "https://indusmanagement.ae/api/agents/get_agent_listed_properties_limited.php",
+      {
+        agent_id: agent_id,
+        prop_for: prop_for,
+      }
+    )
+    .catch((error) => {
+      console.log(error);
+    });
+
+  return res.data;
 }
 
 export async function getDealingCities() {
@@ -51,5 +65,5 @@ export async function getDealingCities() {
       console.log(error);
     });
 
-  return await res;
+  return res;
 }
