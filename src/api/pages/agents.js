@@ -1,3 +1,5 @@
+/** @format */
+
 import axios from "axios";
 import { NextResponse, NextRequest } from "next/server";
 
@@ -27,18 +29,27 @@ export async function getAgentDetails(agent_id) {
   return res.data;
 }
 
-export async function getAgentListingsLimited4(agent_id, prop_for) {
+export async function getAllAgents(page, limit) {
+  const data = {
+    pageNumber: page,
+    limit: limit,
+  };
+
   const res = await axios
-    .post(
-      "https://indusmanagement.ae/api/agents/get_agent_listed_properties_limited.php",
-      {
-        agent_id: agent_id,
-        prop_for: prop_for,
-      }
-    )
-    .catch(function (error) {
+    .post("https://indusmanagement.ae/api/agents/get_all_agents.php", data)
+    .catch((error) => {
       console.log(error);
     });
 
-  return res.data;
+  return await res;
+}
+
+export async function getDealingCities() {
+  const res = await axios
+    .get("https://indusmanagement.ae/api/agents/get_all_dealing_cities.php")
+    .catch((error) => {
+      console.log(error);
+    });
+
+  return await res;
 }

@@ -1,3 +1,5 @@
+/** @format */
+
 "use client";
 import { getExclusiveAgents } from "@/api/pages/agents";
 import Image from "next/image";
@@ -97,7 +99,7 @@ const Agents = () => {
                         />
                       )}
 
-                      <img
+                      <Image
                         width={217}
                         height={248}
                         className={`${
