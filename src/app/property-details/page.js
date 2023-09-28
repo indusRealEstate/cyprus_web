@@ -147,17 +147,18 @@ const PropertyDetailsPage = () => {
                       <PropertyVideo
                         allImages={data.images}
                         id={data.prop_id}
+                        video={data.video}
                       />
                     </div>
                   </div>
                   {/* End .ps-widget */}
 
-                  <div className="ps-widget bgc-white bdrs12 default-box-shadow2 p30 mb30 overflow-hidden position-relative">
+                  {/* <div className="ps-widget bgc-white bdrs12 default-box-shadow2 p30 mb30 overflow-hidden position-relative">
                     <h4 className="title fz17 mb30">360° Virtual Tour</h4>
                     <div className="row">
                       <VirtualTour360 />
                     </div>
-                  </div>
+                  </div> */}
                   {/* End .ps-widget */}
 
                   <div className="ps-widget bgc-white bdrs12 default-box-shadow2 p30 mb30 overflow-hidden position-relative">
@@ -189,11 +190,11 @@ const PropertyDetailsPage = () => {
                   </div>
                   {/* End .ps-widget */}
 
-                  <div className="ps-widget bgc-white bdrs12 default-box-shadow2 p30 mb30 overflow-hidden position-relative">
+                  {/* <div className="ps-widget bgc-white bdrs12 default-box-shadow2 p30 mb30 overflow-hidden position-relative">
                     <div className="row">
                       <PropertyViews />
                     </div>
-                  </div>
+                  </div> */}
                   {/* End .ps-widget */}
 
                   <div className="ps-widget bgc-white bdrs12 default-box-shadow2 p30 mb30 overflow-hidden position-relative">
@@ -206,7 +207,7 @@ const PropertyDetailsPage = () => {
 
                   <div className="ps-widget bgc-white bdrs12 default-box-shadow2 p30 mb30 overflow-hidden position-relative">
                     <h4 className="title fz17 mb30">Get More Information</h4>
-                    <InfoWithForm />
+                    <InfoWithForm agentId={data.listed_agent_id} />
                   </div>
                   {/* End .ps-widget */}
 

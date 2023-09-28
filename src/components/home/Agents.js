@@ -72,7 +72,14 @@ const Agents = () => {
           {agentData.map((data, index) => (
             <SwiperSlide key={index}>
               <div className="item" key={index}>
-                <Link href={`/agent-single/${data.agent_id}`}>
+                <Link
+                  href={{
+                    pathname: "/agent-details",
+                    query: {
+                      id: data.agent_id,
+                    },
+                  }}
+                >
                   <div className="team-style1">
                     <div
                       className="team-img"

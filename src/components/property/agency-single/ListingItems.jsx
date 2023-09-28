@@ -107,7 +107,15 @@ export default function ListingItemsContainer({ agentId }) {
         {/* End tab-content */}
 
         <div className="d-grid pb30 bdrb1">
-          <Link href="/single-v1/4" className="ud-btn btn-white2">
+          <Link
+            href={{
+              pathname: "/grid-full-3-col",
+              query: {
+                agentId: agentId,
+              },
+            }}
+            className="ud-btn btn-white2"
+          >
             Show all {allListingsCount} property
             <i className="fal fa-arrow-right-long" />
           </Link>

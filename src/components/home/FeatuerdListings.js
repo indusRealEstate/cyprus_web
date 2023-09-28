@@ -87,7 +87,7 @@ const FeaturedListings = () => {
                         <Skeleton
                           // sx={{ bgcolor: "grey.100" }}
                           variant="rectangular"
-                          width={382}
+                          width={420}
                           height={240}
                         />
                       )}
@@ -133,7 +133,7 @@ const FeaturedListings = () => {
                               id: listing.prop_id,
                             },
                           }}
-                        >{`${listing.unit_no}, ${listing.property}`}</Link>
+                        >{`${listing.property}`}</Link>
                       </h6>
                       <p className="list-text">{listing.location}</p>
                       <div className="list-meta d-flex align-items-center">

@@ -77,13 +77,21 @@ const ExploreCities = () => {
         {cities.map((city) => (
           <SwiperSlide key={city.id}>
             <div className="item">
-              <Link href="/map-v3">
+              <Link href="/map-v2">
                 <div className="feature-style2 mb30">
-                  <div className="feature-img">
+                  <div
+                    className="feature-img"
+                    style={{
+                      minHeight: "279px",
+                    }}
+                  >
                     <Image
                       width={279}
                       height={279}
-                      style={{objectFit:"cover",objectPosition:"center"}}
+                      className="w-100 h-100 cover"
+                      style={{
+                        minHeight: "279px",
+                      }}
                       src={city.image}
                       alt="city listings"
                     />

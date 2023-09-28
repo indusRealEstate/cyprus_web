@@ -14,6 +14,8 @@ import { useSearchParams } from "next/navigation";
 
 import { Skeleton } from "@mui/material";
 import { useEffect, useState } from "react";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 
 export const metadata = {
   title: "Agent Single || Homez - Real Estate NextJS Template",
@@ -143,7 +145,22 @@ const AgentDetailsPage = ({}) => {
               </div>
               {/* End .row */}
 
-              <ListingItemsContainer agentId={data.agent_id} />
+              {data.agent_id == undefined ? (
+                <Box
+                  sx={{
+                    display: "flex",
+                    height: "15rem",
+                    width: "100%",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <CircularProgress size={30} />
+                </Box>
+              ) : (
+                <ListingItemsContainer agentId={data.agent_id} />
+              )}
+
               {/* <div className="row">
                 <div className="col-lg-12">
                   <AllReviews />

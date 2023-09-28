@@ -1,15 +1,15 @@
 import MobileMenu from "@/components/common/mobile-menu";
-import About from "@/components/home/home-v6/About";
-// import Agents from "@/components/home/home-v6/Agents";
-import Agents from "@/components/home/home-v6/Agents";
-import ExploreCities from "@/components/home/home-v6/ExploreCities";
-import FeaturedListings from "@/components/home/home-v6/FeatuerdListings";
-import FeatureProperties from "@/components/home/home-v6/FeatureProperties";
-import Funfact2 from "@/components/home/home-v6/Funfact2";
-import Header from "@/components/home/home-v6/Header";
-import Testimonial from "@/components/home/home-v6/Testimonial";
-import Footer from "@/components/home/home-v6/footer";
-import Hero from "@/components/home/home-v6/hero";
+import About from "@/components/home/About";
+// import Agents from "@/components/home/Agents";
+import Agents from "@/components/home/Agents";
+import ExploreCities from "@/components/home/ExploreCities";
+import FeaturedListings from "@/components/home/FeatuerdListings";
+import FeatureProperties from "@/components/home/FeatureProperties";
+import Funfact2 from "@/components/home/Funfact2";
+import Header from "@/components/home/Header";
+import Testimonial from "@/components/home/Testimonial";
+import Footer from "@/components/home/footer";
+import Hero from "@/components/home/hero";
 
 export const metadata = {
   title: "International Properties",
@@ -79,7 +79,7 @@ const Home = () => {
               className="col-md-6 col-xl-5 wow fadeInRight"
               data-wow-delay="100ms"
             >
-              <div className="cta-style6 mb30-sm"  data-aos="fade-up">
+              <div className="cta-style6 mb30-sm" data-aos="fade-up">
                 <h2 className="cta-title mb25">
                   More than 20 Years of Real{" "}
                   <br className="d-none d-lg-block" /> Estate Experience
@@ -106,8 +106,6 @@ const Home = () => {
         </div>
       </section>
       {/* End Our Funfact */}
-
-      
 
       {/* Explore Apartment Home */}
       {/* <section className="pb90 pb30-md">
@@ -358,7 +356,7 @@ const Home = () => {
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                <h2 className="title">Our Exclusive Agetns</h2>
+                <h2 className="title">Our Exclusive Agents</h2>
                 <p className="paragraph">
                   Aliquam lacinia diam quis lacus euismod
                 </p>

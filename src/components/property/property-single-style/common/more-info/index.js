@@ -2,7 +2,7 @@
 import Select from "react-select";
 import SingleAgentInfo from "./SingleAgentInfo";
 
-const InfoWithForm = () => {
+const InfoWithForm = ({ agentId }) => {
   const inqueryType = [
     { value: "Engineer", label: "Engineer" },
     { value: "Doctor", label: "Doctor" },
@@ -28,7 +28,7 @@ const InfoWithForm = () => {
 
   return (
     <>
-      <SingleAgentInfo />
+      <SingleAgentInfo agentId={agentId} />
 
       <div className="row">
         <div className="col-md-12">
