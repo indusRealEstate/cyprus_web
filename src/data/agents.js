@@ -1,5 +1,3 @@
-import getExclusiveAgents from "@/api/pages/agents";
-
 
 module.exports = [
   {
