@@ -6,7 +6,7 @@ import Bathroom from "./Bathroom";
 import Amenities from "./Amenities";
 import { useEffect, useState } from "react";
 
-const AdvanceFilterModal = ({ filterFunctions }) => {
+const AdvanceFilterModal = ({ filterFunctions, currentPropertyType }) => {
   const [min, setMin] = useState(0);
   const [max, setMax] = useState();
 
@@ -15,8 +15,8 @@ const AdvanceFilterModal = ({ filterFunctions }) => {
   }, [min, max]);
 
   const catOptions = [
+    { value: "all", label: "All" },
     { value: "house", label: "Houses" },
-
     { value: "office", label: "Office" },
     { value: "apartment", label: "Apartments" },
     { value: "villa", label: "Villa" },
@@ -78,7 +78,15 @@ const AdvanceFilterModal = ({ filterFunctions }) => {
                 <h6 className="list-title">Type</h6>
                 <div className="form-style2 input-group">
                   <Select
-                    defaultValue={[catOptions[1]]}
+                    defaultValue={
+                      currentPropertyType != null
+                        ? [
+                            catOptions.find(
+                              (op) => op.value == currentPropertyType[0]
+                            ),
+                          ]
+                        : [catOptions[0]]
+                    }
                     name="colors"
                     options={catOptions}
                     styles={customStyles}

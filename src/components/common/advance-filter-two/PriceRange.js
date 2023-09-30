@@ -3,13 +3,13 @@ import React, { useState } from "react";
 import InputRange from "react-input-range";
 import "react-input-range/lib/css/index.css";
 
-const PriceRange = ({filterFunctions}) => {
-  const [price, setPrice] = useState({ value: { min: 20, max: 70987 } });
+const PriceRange = ({ filterFunctions }) => {
+  const [price, setPrice] = useState({ value: { min: 1500, max: 10000000 } });
 
   // price range handler
   const handleOnChange = (value) => {
     setPrice({ value });
-    filterFunctions?.handlepriceRange([value.min,value.max])
+    filterFunctions?.handlepriceRange([value.min, value.max]);
   };
 
   return (
@@ -17,12 +17,13 @@ const PriceRange = ({filterFunctions}) => {
       <div className="range-wrapper">
         <InputRange
           formatLabel={() => ``}
-          maxValue={100000}
-          minValue={0}
-
-          value={{min:filterFunctions?.priceRange[0],max:filterFunctions?.priceRange[1]}}
+          maxValue={10000000}
+          minValue={1500}
+          value={{
+            min: filterFunctions?.priceRange[0],
+            max: filterFunctions?.priceRange[1],
+          }}
           onChange={(value) => handleOnChange(value)}
-
           id="slider"
         />
         <div className="d-flex align-items-center">

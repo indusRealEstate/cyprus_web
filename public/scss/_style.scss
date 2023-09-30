@@ -4112,11 +4112,21 @@ li {
 }
 
 .property-banner-style1 {
-	background-image: url(../images/listings/listing-banner-1.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, #01141f, #ffffff00);
+    opacity: 0.8;
+  }
 }
 .property-banner-style1 .inner-style1 {
 	-webkit-box-align: center;
@@ -8085,14 +8095,14 @@ li.mm-listitem:focus {
 	z-index: 2;
 }
 .advance-search-tab .nav.nav-tabs {
-	background-color: #ffffff;
-	border-bottom: 1px solid #dddddd;
-	border-radius: 12px 12px 0 0;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	max-width: 240px;
-	width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dddddd;
+  border-radius: 12px 12px 0 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 190px;
+  width: 100%;
 }
 .advance-search-tab .nav-item {
 	overflow: hidden;

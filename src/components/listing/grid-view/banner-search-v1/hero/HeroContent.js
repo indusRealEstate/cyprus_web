@@ -1,17 +1,23 @@
 "use client";
 import React, { useState } from "react";
 
-const HeroContent = ({filterFunctions}) => {
-  const [activeTab, setActiveTab] = useState("buy");
+const HeroContent = ({
+  filterFunctions,
+  currentActiveTab,
+  currentSearchQuery,
+}) => {
+  const [activeTab, setActiveTab] = useState(currentActiveTab);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
+    window.history.replaceState(null, "", `/search-results/?prop_type=${tab}`);
+    filterFunctions.setListingStatus(tab == "rent" ? "Rent" : "Buy");
   };
 
   const tabs = [
     { id: "buy", label: "Buy" },
     { id: "rent", label: "Rent" },
-    { id: "sold", label: "Sold" },
+    // { id: "sold", label: "Sold" },
   ];
 
   return (
@@ -46,7 +52,11 @@ const HeroContent = ({filterFunctions}) => {
                           className="form-control bgc-f7 bdrs12"
                           type="text"
                           name="search"
-                          onChange={(e)=>filterFunctions && filterFunctions.setSearchQuery(e.target.value)}
+                          defaultValue={currentSearchQuery}
+                          onChange={(e) =>
+                            filterFunctions &&
+                            filterFunctions.setSearchQuery(e.target.value)
+                          }
                           placeholder={`Enter an address, neighborhood, city, or ZIP code for ${tab.label}`}
                         />
                       </div>

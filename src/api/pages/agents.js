@@ -58,6 +58,21 @@ export async function getAgentListingsLimited4(agent_id, prop_for) {
   return res.data;
 }
 
+export async function getAllAgentListings(agent_id) {
+  const res = await axios
+    .post(
+      "https://indusmanagement.ae/api/agents/get_agent_listed_properties_all.php",
+      {
+        agent_id: agent_id,
+      }
+    )
+    .catch((error) => {
+      console.log(error);
+    });
+
+  return res.data;
+}
+
 export async function getDealingCities() {
   const res = await axios
     .get("https://indusmanagement.ae/api/agents/get_all_dealing_cities.php")

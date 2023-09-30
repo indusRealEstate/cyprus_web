@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 const HeroContent = () => {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState("buy");
+  const [searchValue, setSearchValue] = useState("");
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -13,7 +14,7 @@ const HeroContent = () => {
   const tabs = [
     { id: "buy", label: "Buy" },
     { id: "rent", label: "Rent" },
-    { id: "sold", label: "Sold" },
+    // { id: "sold", label: "Sold" },
   ];
 
   return (
@@ -48,6 +49,9 @@ const HeroContent = () => {
                           className="form-control bgc-f7 bdrs12"
                           type="text"
                           name="search"
+                          onChange={(e) => {
+                            setSearchValue(e.currentTarget.value);
+                          }}
                           placeholder={`Enter an address, neighborhood, city, or ZIP code for ${tab.label}`}
                         />
                       </div>
@@ -69,7 +73,15 @@ const HeroContent = () => {
                     <button
                       className="advance-search-icon ud-btn btn-thm ms-4"
                       type="button"
-                      onClick={() => router.push("/grid-full-2-col")}
+                      onClick={() => {
+                        if (searchValue != "") {
+                          router.push(
+                            `/search-results?prop_type=${tab.id}&search_text=${searchValue}`
+                          );
+                        } else {
+                          router.push(`/search-results?prop_type=${tab.id}`);
+                        }
+                      }}
                     >
                       <span className="flaticon-search" />
                     </button>
