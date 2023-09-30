@@ -63,7 +63,6 @@ export default function ProperteyFiltering({ listings, prop_for }) {
   };
 
   const handlelistingStatus = (elm) => {
-    window.history.replaceState(null, "", "/grid-full-3-col/");
     setListingStatus((pre) => (pre == elm ? "All" : elm));
   };
 
@@ -129,8 +128,12 @@ export default function ProperteyFiltering({ listings, prop_for }) {
   };
 
   useEffect(() => {
-    // setListingStatus(prop_for);
-    // console.log(listingStatus);
+    // if (prop_for != listingStatus) {
+    //   console.log(prop_for);
+    //   console.log(listingStatus);
+    //   // setListingStatus(prop_for);
+    //   handlelistingStatus(prop_for);
+    // }
     const refItems = listings.filter((elm) => {
       if (listingStatus == "All") {
         return true;
@@ -144,10 +147,14 @@ export default function ProperteyFiltering({ listings, prop_for }) {
     let filteredArrays = [];
 
     if (propertyTypes.length > 0) {
-      const filtered = refItems.filter((elm) =>
-        propertyTypes.includes(elm.unit_type)
-      );
-      filteredArrays = [...filteredArrays, filtered];
+      if (propertyTypes[0] != "all") {
+        const filtered = refItems.filter((elm) => {
+          return propertyTypes.includes(elm.unit_type);
+        });
+        filteredArrays = [...filteredArrays, filtered];
+      } else {
+        filteredArrays = [refItems];
+      }
     }
 
     filteredArrays = [
@@ -220,22 +227,14 @@ export default function ProperteyFiltering({ listings, prop_for }) {
     setPageNumber(1);
     if (currentSortingOption == "Newest") {
       const sorted = [...filteredData].sort(
-        (a, b) => a.yearBuilding - b.yearBuilding
+        (a, b) => a.year_built - b.year_built
       );
       setSortedFilteredData(sorted);
     } else if (currentSortingOption.trim() == "Price Low") {
-      const sorted = [...filteredData].sort(
-        (a, b) =>
-          a.price.split("$")[1].split(",").join("") -
-          b.price.split("$")[1].split(",").join("")
-      );
+      const sorted = [...filteredData].sort((a, b) => a.price - b.price);
       setSortedFilteredData(sorted);
     } else if (currentSortingOption.trim() == "Price High") {
-      const sorted = [...filteredData].sort(
-        (a, b) =>
-          b.price.split("$")[1].split(",").join("") -
-          a.price.split("$")[1].split(",").join("")
-      );
+      const sorted = [...filteredData].sort((a, b) => b.price - a.price);
       setSortedFilteredData(sorted);
     } else {
       setSortedFilteredData(filteredData);

@@ -4,7 +4,7 @@ import { getAgentListingsLimited4 } from "@/api/pages/agents";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import ListingItems from "../ListingItems";
-export default function ListingItemsContainer({ agentId }) {
+export default function ListingItemsContainer({ agentId, agentName }) {
   const [currentCategory, setCurrentCategory] = useState("All");
   const [pageData, setPageData] = useState([]);
   const [allListingsCount, setAllListingsCount] = useState([]);
@@ -109,9 +109,10 @@ export default function ListingItemsContainer({ agentId }) {
         <div className="d-grid pb30 bdrb1">
           <Link
             href={{
-              pathname: "/grid-full-3-col",
+              pathname: "/agent-properties",
               query: {
                 agentId: agentId,
+                name: agentName,
               },
             }}
             className="ud-btn btn-white2"

@@ -19,7 +19,7 @@ export async function getAllListings() {
   return await res.json();
 }
 
-export async function getAllListingsByFilter(filters, pageNumber) {
+export async function getAllListingsByFilter(filters, pageNumber, limit) {
   const res = await fetch(
     "https://indusmanagement.ae/api/listings/get_all_listings_filter.php",
     {
@@ -28,7 +28,7 @@ export async function getAllListingsByFilter(filters, pageNumber) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        limit: "9",
+        limit: limit,
         pageNumber: pageNumber,
         filters: filters,
       }),

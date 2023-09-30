@@ -95,11 +95,10 @@ const MainMenu = () => {
       {/* End homeItems */}
 
       <li className="visible_list dropitem">
-        <Link className="list-item" href="/about">
+        <Link className="list-item" href="/all-properties">
           <span className={topMenu == "pages" ? "title menuActive" : "title"}>
-            About Us
+            All Listings
           </span>
-          {/* <span className="arrow"></span> */}
         </Link>
         {/* <ul className="sub-menu">
           {pageItems.map((item, index) => (
@@ -113,15 +112,7 @@ const MainMenu = () => {
       </li>
 
       <li className="visible_list dropitem">
-        <Link
-          className="list-item"
-          href={{
-            pathname: "/grid-full-3-col",
-            query: {
-              type: "buy",
-            },
-          }}
-        >
+        <Link className="list-item" href="/sale-properties">
           <span className={topMenu == "home" ? "title menuActive" : "title"}>
             Buy
           </span>
@@ -140,15 +131,7 @@ const MainMenu = () => {
       </li>
 
       <li className="visible_list dropitem">
-        <Link
-          className="list-item"
-          href={{
-            pathname: "/grid-full-3-col",
-            query: {
-              type: "rent",
-            },
-          }}
-        >
+        <Link className="list-item" href="/rent-properties">
           <span className={topMenu == "home" ? "title menuActive" : "title"}>
             Rent
           </span>
@@ -252,7 +235,7 @@ const MainMenu = () => {
       </li> */}
       {/* End property Items */}
 
-      <li className="visible_list dropitem">
+      {/* <li className="visible_list dropitem">
         <a className="list-item" href="#">
           <span className={topMenu == "blog" ? "title menuActive" : "title"}>
             Blogs / News
@@ -268,7 +251,7 @@ const MainMenu = () => {
             </li>
           ))}
         </ul>
-      </li>
+      </li> */}
       {/* End blog Items */}
 
       <li className="visible_list dropitem">

@@ -9,23 +9,17 @@ import { useRouter } from "next/navigation";
 const AdvanceFilterModal = () => {
   const router = useRouter();
   const catOptions = [
-    { value: "Banking", label: "Apartments" },
-    { value: "Bungalow", label: "Bungalow" },
-    { value: "Houses", label: "Houses" },
-    { value: "Loft", label: "Loft" },
-    { value: "Office", label: "Office" },
-    { value: "Townhome", label: "Townhome" },
-    { value: "Villa", label: "Villa" },
+    { value: "house", label: "Houses" },
+
+    { value: "office", label: "Office" },
+    { value: "apartment", label: "Apartments" },
+    { value: "villa", label: "Villa" },
   ];
+
   const locationOptions = [
     { value: "All Cities", label: "All Cities" },
-    { value: "California", label: "California" },
-    { value: "Los Angeles", label: "Los Angeles" },
-    { value: "New Jersey", label: "New Jersey" },
-    { value: "New York", label: "New York" },
-    { value: "San Diego", label: "San Diego" },
-    { value: "San Francisco", label: "San Francisco" },
-    { value: "Texas", label: "Texas" },
+    { value: "Minthis Street", label: "Minthis Street" },
+    { value: "Paphos", label: "Paphos" },
   ];
 
   const customStyles = {
@@ -78,7 +72,7 @@ const AdvanceFilterModal = () => {
                 <h6 className="list-title">Type</h6>
                 <div className="form-style2 input-group">
                   <Select
-                    defaultValue={[catOptions[1]]}
+                    defaultValue={[catOptions[0]]}
                     name="colors"
                     options={catOptions}
                     styles={customStyles}
@@ -194,7 +188,12 @@ const AdvanceFilterModal = () => {
             <u>Reset all filters</u>
           </button>
           <div className="btn-area">
-            <button data-bs-dismiss="modal" type="submit" className="ud-btn btn-thm" onClick={() => router.push("/map-v1")} >
+            <button
+              data-bs-dismiss="modal"
+              type="submit"
+              className="ud-btn btn-thm"
+              onClick={() => router.push("/map-v1")}
+            >
               <span className="flaticon-search align-text-top pr10" />
               Search
             </button>

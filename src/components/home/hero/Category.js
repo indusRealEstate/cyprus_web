@@ -13,7 +13,12 @@ const Category = () => {
       {categories.map((category, index) => (
         <Link
           key={index}
-          href="/map-v2"
+          href={{
+            pathname: "/search-results",
+            query: {
+              category: category.text,
+            },
+          }}
           className="d-flex align-items-center text-white ff-heading me-4"
         >
           <i className={`icon mr10 ${category.icon}`} /> {category.text}

@@ -158,7 +158,10 @@ const AgentDetailsPage = ({}) => {
                   <CircularProgress size={30} />
                 </Box>
               ) : (
-                <ListingItemsContainer agentId={data.agent_id} />
+                <ListingItemsContainer
+                  agentId={data.agent_id}
+                  agentName={`${data.fname} ${data.lname}`}
+                />
               )}
 
               {/* <div className="row">

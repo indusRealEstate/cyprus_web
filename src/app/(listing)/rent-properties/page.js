@@ -6,26 +6,22 @@ import Footer from "@/components/common/default-footer";
 import MobileMenu from "@/components/common/mobile-menu";
 
 import ProperteyFiltering from "@/components/listing/grid-view/grid-full-3-col/ProperteyFiltering";
-import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
-import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export const metadata = {
   title: "Gird Full 3 Column || Homez - Real Estate NextJS Template",
 };
 
 const GridFull3Col = () => {
-  const searchParams = useSearchParams();
   const [allData, setAllData] = useState([]);
-  const [prop_for, setPropFor] = useState("");
 
   useEffect(() => {
-    setPropFor(searchParams.get("type"));
-    getAllListingsByFilter({}, 1).then((res) => {
+    getAllListingsByFilter({}, 1, 9).then((res) => {
       setAllData(res.prop);
     });
-  }, [allData, prop_for]);
+  }, [allData]);
 
   return (
     <>
@@ -66,7 +62,7 @@ const GridFull3Col = () => {
                       color: "black",
                     }}
                   >
-                    {prop_for == "buy" ? "For Sale" : "For Rent"}
+                    For Rent
                   </a>
                 </div>
                 <a
@@ -87,12 +83,7 @@ const GridFull3Col = () => {
 
       {/* Property Filtering */}
       {allData.length != 0 ? (
-        <ProperteyFiltering
-          listings={allData}
-          prop_for={
-            prop_for != null ? (prop_for == "buy" ? "Buy" : "Rent") : "All"
-          }
-        />
+        <ProperteyFiltering listings={allData} prop_for="Rent" />
       ) : (
         <Box
           sx={{

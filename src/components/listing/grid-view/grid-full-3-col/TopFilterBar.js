@@ -19,7 +19,7 @@ const TopFilterBar = ({
       <div className="col-xl-9 d-none d-lg-block">
         <div className="dropdown-lists">
           <ul className="p-0 text-center text-xl-start">
-            <li className="list-inline-item position-relative">
+            {/* <li className="list-inline-item position-relative">
               <button
                 type="button"
                 className="open-btn mb15 dropdown-toggle"
@@ -49,7 +49,7 @@ const TopFilterBar = ({
                   </button>
                 </div>
               </div>
-            </li>
+            </li> */}
             {/* End li Listing Status */}
 
             <li className="list-inline-item position-relative">
