@@ -103,8 +103,12 @@ Tag: advanced search, agency, agent, classified, directory, house, listing, prop
 		width: inherit !important;
 	}
 	.width-100 {
-		width: 100%;
+		width: 100% !important;
 	}
+	.height-50{
+		height: 50vh !important;
+	}
+
 }
 /* Mixins */
 /* Typography Styles */
