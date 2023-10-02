@@ -29,11 +29,11 @@ const AdvanceFilterModal = () => {
       return {
         ...styles,
         backgroundColor: isSelected
-          ? "#eb6753"
+          ? "#89ada3"
           : isHovered
-          ? "#eb675312"
+          ? "#e7f7f3"
           : isFocused
-          ? "#eb675312"
+          ? "#89ada3"
           : undefined,
       };
     },
