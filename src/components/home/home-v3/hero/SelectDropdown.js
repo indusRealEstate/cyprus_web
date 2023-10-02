@@ -1,48 +1,46 @@
 "use client";
 import Select from "react-select";
 
-const LookingFor = () => {
-  const inqueryType = [
+const SelectDropdown = () => {
+  const catOptions = [
     { value: "Apartments", label: "Apartments" },
     { value: "Bungalow", label: "Bungalow" },
     { value: "Houses", label: "Houses" },
+    { value: "Loft", label: "Loft" },
     { value: "Office", label: "Office" },
-    { value: "TownHome", label: "TownHome" },
+    { value: "Townhome", label: "Townhome" },
     { value: "Villa", label: "Villa" },
   ];
 
   const customStyles = {
-    control: (provided) => ({
-      ...provided,
-      background: "none",
-    }),
     option: (styles, { isFocused, isSelected, isHovered }) => {
       return {
         ...styles,
         backgroundColor: isSelected
-          ? "#89ada3"
+          ? "#eb6753"
           : isHovered
           ? "#eb675312"
           : isFocused
-          ? "#89ada3"
+          ? "#eb675312"
           : undefined,
       };
     },
   };
+
   return (
     <>
       <Select
-        defaultValue={[inqueryType[0]]}
+        defaultValue={[catOptions[0]]}
         name="colors"
-        options={inqueryType}
+        options={catOptions}
         styles={customStyles}
-        className="text-start select-borderless"
+        className="text-start select-borderless btn-light"
         classNamePrefix="select"
         required
-        isClearable={false}
+        isSearchable={false}
       />
     </>
   );
 };
 
-export default LookingFor;
+export default SelectDropdown;

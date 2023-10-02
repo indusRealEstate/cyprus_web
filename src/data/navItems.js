@@ -5,6 +5,7 @@ export const homeItems = [
   // { href: "/home-v4", label: "Home v4" },
   // { href: "/home-v5", label: "Home v5" },
   { href: "/#main", label: "Home" },
+  { href: "/#why-cyprus", label: "Why Cyprus" },
   { href: "/#flagship-prop", label: "Flagship Collection" },
   { href: "/#featured-listings", label: "Featured Listings" },
   { href: "/#explore-cities", label: "Explore Cities" },

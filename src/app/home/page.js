@@ -11,6 +11,7 @@ import Funfact2 from "@/components/home/Funfact2";
 import Header from "@/components/home/Header";
 import Testimonial from "@/components/home/Testimonial";
 import Footer from "@/components/home/footer";
+import WhyChoose from "@/components/home/home-v3/why-choose";
 import Hero from "@/components/home/home-v5/Hero";
 import FilterWithProperties from "@/components/home/home-v5/filter-with-property";
 
@@ -73,6 +74,17 @@ const Home = () => {
         {/* End .container */}
       </section>
       {/* End Home Banner Style V6 */}
+      <section id="why-cyprus">
+        <div className="container">
+          <div
+            className="row align-items-md-center"
+            data-aos="fade-left"
+            data-aos-delay="100"
+          >
+            <WhyChoose />
+          </div>
+        </div>
+      </section>
 
       {/* Our Funfact */}
       {/* <section className="bg-off-white pb90 pb30-md">

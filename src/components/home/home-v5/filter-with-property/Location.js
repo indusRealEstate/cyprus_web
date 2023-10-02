@@ -3,10 +3,9 @@ import Select from "react-select";
 
 const Location = () => {
   const inqueryType = [
-    { value: "New York", label: "New York" },
-    { value: "Los Angeles", label: "Los Angeles" },
-    { value: "London", label: "London" },
-    { value: "Paris", label: "Paris" },
+    { value: "all", label: "All Cities" },
+    { value: "paphos", label: "Paphos" },
+    { value: "limassol", label: "Limassol" },
   ];
 
   const customStyles = {
@@ -14,11 +13,11 @@ const Location = () => {
       return {
         ...styles,
         backgroundColor: isSelected
-          ? "#eb6753"
+          ? "#89ada3"
           : isHovered
           ? "#eb675312"
           : isFocused
-          ? "#eb675312"
+          ? "#89ada3"
           : undefined,
       };
     },
