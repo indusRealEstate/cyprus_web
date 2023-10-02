@@ -1,7 +1,9 @@
-"use client";
-import { Skeleton } from "@mui/material";
-import Image from "next/image";
-import { useState, useEffect } from "react";
+/** @format */
+
+'use client';
+import { Skeleton } from '@mui/material';
+import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 // const floorPlanData = [
 //   {
@@ -34,31 +36,33 @@ import { useState, useEffect } from "react";
 // ];
 
 const FloorPlans = ({ floorDataRaw, id }) => {
-  const floorData = JSON.parse(floorDataRaw);
+	const floorData = JSON.parse(floorDataRaw);
 
-  const [loaded, setLoaded] = useState([]);
+	const [loaded, setLoaded] = useState([]);
 
-  useEffect(() => {}, [loaded]);
+	useEffect(() => {}, [loaded]);
 
-  return (
-    <div className="accordion" id="accordionExample">
-      {floorData.map((floorPlan, index) => (
-        <div
-          className={`accordion-item ${index === 1 ? "active" : ""}`}
-          key={floorPlan.type}
-        >
-          <h2 className="accordion-header" id={`heading${index}`}>
-            <button
-              className={`accordion-button ${index === 1 ? "" : "collapsed"}`}
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target={`#collapse${index}`}
-              aria-expanded={index === 1 ? "true" : "false"}
-              aria-controls={`collapse${index}`}
-            >
-              <span className="w-100 d-md-flex align-items-center">
-                <span className="mr10-sm">{floorPlan.type}</span>
-                {/* <span className="ms-auto d-md-flex align-items-center justify-content-end">
+	return (
+		<div
+			className='accordion'
+			id='accordionExample'>
+			{floorData.map((floorPlan, index) => (
+				<div
+					className={`accordion-item ${index === 1 ? 'active' : ''}`}
+					key={floorPlan.type}>
+					<h2
+						className='accordion-header'
+						id={`heading${index}`}>
+						<button
+							className={`accordion-button ${index === 1 ? '' : 'collapsed'}`}
+							type='button'
+							data-bs-toggle='collapse'
+							data-bs-target={`#collapse${index}`}
+							aria-expanded={index === 1 ? 'true' : 'false'}
+							aria-controls={`collapse${index}`}>
+							<span className='w-100 d-md-flex align-items-center'>
+								<span className='mr10-sm'>{floorPlan.type}</span>
+								{/* <span className="ms-auto d-md-flex align-items-center justify-content-end">
                   <span className="me-2 me-md-4">
                     <span className="fw600">Size:</span>
                     <span className="text">{floorPlan.size}</span>
@@ -76,49 +80,48 @@ const FloorPlans = ({ floorDataRaw, id }) => {
                     <span className="text">{floorPlan.price}</span>
                   </span>
                 </span> */}
-              </span>
-            </button>
-          </h2>
-          <div
-            id={`collapse${index}`}
-            className={`accordion-collapse collapse ${
-              index === 1 ? "show" : ""
-            }`}
-            aria-labelledby={`heading${index}`}
-            data-parent="#accordionExample"
-          >
-            <div className="accordion-body text-center">
-              {!loaded.includes(index) && (
-                <Skeleton
-                  // sx={{ bgcolor: "grey.100" }}
-                  variant="rectangular"
-                  width={736}
-                  height={544}
-                />
-              )}
-              <img
-                width={736}
-                height={544}
-                className={`${
-                  !loaded.includes(index)
-                    ? "opacity-0 position-absolute w-100 h-100 cover"
-                    : "opacity-100 w-100 h-100 cover"
-                }}`}
-                src={`https://premium-realtor.com/api/media/listings/${id}/floorplan/${floorPlan.img}`}
-                alt="listing figureout"
-                onLoad={() => {
-                  if (!loaded.includes(index)) {
-                    loaded.push(index);
-                    setLoaded(loaded);
-                  }
-                }}
-              />
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
+							</span>
+						</button>
+					</h2>
+					<div
+						id={`collapse${index}`}
+						className={`accordion-collapse collapse ${
+							index === 1 ? 'show' : ''
+						}`}
+						aria-labelledby={`heading${index}`}
+						data-parent='#accordionExample'>
+						<div className='accordion-body text-center'>
+							{!loaded.includes(index) && (
+								<Skeleton
+									// sx={{ bgcolor: "grey.100" }}
+									variant='rectangular'
+									width={736}
+									height={544}
+								/>
+							)}
+							<img
+								width={736}
+								height={544}
+								className={`${
+									!loaded.includes(index)
+										? 'opacity-0 position-absolute w-100 h-100 cover'
+										: 'opacity-100 w-100 h-100 cover'
+								}}`}
+								src={`https://premium-realtor.com/api/media/listings/${id}/floorplan/${floorPlan.img}`}
+								alt='listing figureout'
+								onLoad={() => {
+									if (!loaded.includes(index)) {
+										loaded.push(index);
+										setLoaded(loaded);
+									}
+								}}
+							/>
+						</div>
+					</div>
+				</div>
+			))}
+		</div>
+	);
 };
 
 export default FloorPlans;

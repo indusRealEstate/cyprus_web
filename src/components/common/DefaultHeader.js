@@ -1,3 +1,5 @@
+/** @format */
+
 "use client";
 
 import MainMenu from "@/components/common/MainMenu";
