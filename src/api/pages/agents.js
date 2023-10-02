@@ -82,5 +82,5 @@ export async function getDealingCities() {
 			console.log(error);
 		});
 
-	return res;
+	return res.data;
 }

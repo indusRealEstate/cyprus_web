@@ -1,59 +1,73 @@
 /** @format */
 
-"use client";
-import { values } from "@/data/mobileMenuItems";
-import Select from "react-select";
+'use client';
+import { values } from '@/data/mobileMenuItems';
+import Select from 'react-select';
+import { getDealingCities } from '@/api/pages/agents';
+import React, { useLayoutEffect, useState } from 'react';
 
 const Location = ({ filterFunctions }) => {
-  // const locationOptions = allCities.map((city) => ({
-  // 	value: city.city,
-  // 	label: city.city,
-  // }));
+	//
+	const [allCities, setAllCities] = useState([]);
+	getDealingCities().then((item) => {
+		setAllCities(item);
+	});
 
-  const locationOptions = [
-    { value: "All Cities", label: "All Cities" },
-    { value: "California", label: "California" },
-    { value: "Los Angeles", label: "Los Angeles" },
+	const locationOptions = allCities.map((city) => ({
+		value: city.city,
+		label: city.city,
+	}));
 
-    { value: "New York", label: "New York" },
-    { value: "San Diego", label: "San Diego" },
-    { value: "San Francisco", label: "San Francisco" },
-    { value: "Texas", label: "Texas" },
-  ];
+	// const locationOptions = [
+	// 	{ value: 'All Cities', label: 'All Cities' },
+	// 	{ value: 'California', label: 'California' },
+	// 	{ value: 'Los Angeles', label: 'Los Angeles' },
 
-  // console.log(locationOptions);
+	// 	{ value: 'New York', label: 'New York' },
+	// 	{ value: 'San Diego', label: 'San Diego' },
+	// 	{ value: 'San Francisco', label: 'San Francisco' },
+	// 	{ value: 'Texas', label: 'Texas' },
+	// ];
 
-  const customStyles = {
-    option: (styles, { isFocused, isSelected, isHovered }) => {
-      return {
-        ...styles,
-        backgroundColor: isSelected
-          ? "#eb6753"
-          : isHovered
-          ? "#eb675312"
-          : isFocused
-          ? "#eb675312"
-          : undefined,
-      };
-    },
-  };
+	// console.log(locationOptions);
 
-  return (
-    <Select
-      defaultValue={[locationOptions[0]]}
-      name="colors"
-      styles={customStyles}
-      options={locationOptions}
-      className="select-custom"
-      classNamePrefix="select"
-      required
-      value={{
-        value: filterFunctions.location,
-        label: filterFunctions.location,
-      }}
-      onChange={(e) => filterFunctions?.handlelocation(e.value)}
-    />
-  );
+	const customStyles = {
+		option: (styles, { isFocused, isSelected, isHovered }) => {
+			return {
+				...styles,
+				backgroundColor: isSelected
+					? '#89ada3'
+					: isHovered
+					? '#89ada312'
+					: isFocused
+					? '#89ada312'
+					: undefined,
+			};
+		},
+	};
+
+	return (
+		<>
+			{allCities != undefined ? (
+				<Select
+					defaultValue={[locationOptions[0]]}
+					name='colors'
+					styles={customStyles}
+					options={locationOptions}
+					className='select-custom'
+					classNamePrefix='select'
+					required
+					value={{
+						value: filterFunctions.location,
+						label: filterFunctions.location,
+					}}
+					onChange={(e) => filterFunctions?.handlelocation(e.value)}
+				/>
+			) : (
+				''
+			)}
+		</>
+	);
 };
 
 export default Location;

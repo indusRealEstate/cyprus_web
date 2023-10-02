@@ -1,13 +1,12 @@
 /** @format */
 
 'use client';
-import React, { useEffect, useState } from 'react';
-import TopFilter from './TopFilter';
-import AllAgents from './agents/AllAgents';
 import agents from '@/data/agents';
-import PaginationTwo from '../listing/PaginationTwo';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import { useEffect, useState } from 'react';
+import TopFilter from './TopFilter';
+import AllAgents from './agents/AllAgents';
 
 export default function FilteringAgent({
 	data,

@@ -28,6 +28,7 @@ const MobileMenu = () => {
 			}>
 			<div className='mobile-menu'>
 				<div className='header innerpage-style'>
+
 					<div className='menu_and_widgets'>
 						<div className='mobile_menu_bar d-flex justify-content-between align-items-center'>
 							<a
