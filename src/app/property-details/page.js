@@ -70,7 +70,7 @@ const PropertyDetailsPage = () => {
 
           {/* Property Slider Gallery */}
           <section className="pt20 pb60 bgc-white">
-            <PropertyGallery id={params} images={data.images} />
+            <PropertyGallery id={params} images={data.images} /> 
           </section>
           {/* End Property Slider Gallery */}
 

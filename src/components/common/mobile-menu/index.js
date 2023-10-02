@@ -49,7 +49,8 @@ const MobileMenu = () => {
 								<Image
 									width={138}
 									height={44}
-									src='/images/header-logo2.svg'
+									priority={true}
+									src='/images/logo/logo-dark.svg'
 									alt='logo'
 								/>
 							</Link>
@@ -76,7 +77,7 @@ const MobileMenu = () => {
 							aria-label='Close'>
 							<span className='far fa-times'></span>
 						</div>
-						<h4 className='title'>Welcome to Cyprus</h4>
+						<h4 className='title text-default-green'>Premium Realtor</h4>
 					</div>
 					{/* End header */}
 

@@ -3,12 +3,18 @@
 import agents from '@/data/agents';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Skeleton } from '@mui/material';
 
 const AllAgents = ({ data }) => {
-	const [loaded, setLoaded] = React.useState([]);
-	React.useEffect(() => {}, [loaded]);
+	const [loaded, setLoaded] = useState([]);
+	const getLoadedImages = (event, agent) => {
+		if (!loaded.includes(agent.agent_id)) {
+			loaded.push(agent.agent_id);
+			setLoaded(loaded);
+		}
+	};
+	useEffect(() => {}, [loaded]);
 	return (
 		<>
 			{data.map((agent) => (
@@ -30,30 +36,32 @@ const AllAgents = ({ data }) => {
 										variant='rectangular'
 										width={217}
 										height={248}
-										className='bdrs12 cover'
+										className='bdrs12 cover  height-25-mobile w-100 height-25-mobile w-100'
 									/>
 								)}
 								<img
 									width={210}
 									height={240}
-									// className='bdrs12 cover'
 									style={{
 										objectFit: 'cover',
 										objectPosition: 'top',
 									}}
 									className={`${
 										!loaded.includes(agent.agent_id)
-											? 'opacity-0 position-absolute bdrs12 cover'
-											: 'opacity-100 bdrs12 cover'
+											? 'opacity-0 position-absolute bdrs12 cover height-25-mobile w-100'
+											: 'opacity-100 bdrs12 cover height-25-mobile w-100 position-relative'
 									}}`}
 									src={`https://premium-realtor.com/api/media/agents/${agent.agent_id}/${agent.image}`}
 									alt='agents'
-									onLoad={() => {
-										if (!loaded.includes(agent.agent_id)) {
-											loaded.push(agent.agent_id);
-											setLoaded(loaded);
-										}
+									onLoad={(event) => {
+										getLoadedImages(event, agent);
 									}}
+									// onLoad={(event) => {
+									// 	if (!loaded.includes(agent.agent_id)) {
+									// 		loaded.push(agent.agent_id);
+									// 		setLoaded(loaded);
+									// 	}
+									// }}
 								/>
 							</Link>
 						</div>
