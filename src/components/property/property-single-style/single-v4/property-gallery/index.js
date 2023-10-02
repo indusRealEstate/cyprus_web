@@ -82,7 +82,7 @@ const PropertyGallery = ({ id, images }) => {
 								data-aos='fade-up'
 								data-aos-delay='300'>
 								<div className='col-lg-12'>
-									<div className='ps-v4-hero-slider h-100'>
+									<div className='ps-v4-hero-slider h-100 position-relative'>
 										<GalleryBox
 											id={id}
 											images={images}

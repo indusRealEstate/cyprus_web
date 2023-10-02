@@ -43,21 +43,26 @@ const GalleryBox = ({ id, images }) => {
 					  ))
 					: imageUrls.map((imageUrl, index) => (
 							<SwiperSlide key={index}>
-								<div className='item'>
+								<div className='item height-50'>
 									{!loaded.includes(index) && (
 										<Skeleton
 											variant='rectangular'
 											className='width-100 height-50'
+											style={{
+												width: 'auto',
+												height: '640px',
+												borderRadius: '15px',
+											}}
 											width={1170}
 											height={640}
 										/>
 									)}
 									<LazyLoadImage
-										src={`https://indusmanagement.ae/api/media/listings/${id}/media/${imageUrl}`}
+										src={`https://premium-realtor.com/api/media/listings/${id}/media/${imageUrl}`}
 										className={`${
 											!loaded.includes(index)
 												? 'opacity-0 position-absolute bdrs12 w-100 h-100 cover'
-												: 'opacity-100 bdrs12 w-100 h-100 cover'
+												: 'opacity-100 bdrs12 w-100 h-100 cover position-relative height-50'
 										}}`}
 										width={1170}
 										height={600}
@@ -76,7 +81,7 @@ const GalleryBox = ({ id, images }) => {
                 width={1170}
                 height={600}
                 className="bdrs12 w-100 h-100 cover"
-                src={`https://indusmanagement.ae/api/media/listings/${id}/media/${imageUrl}`}
+                src={`https://premium-realtor.com/api/media/listings/${id}/media/${imageUrl}`}
                 alt={`Image ${index + 1}`}
                 style={{
                   "max-height": "45rem",
