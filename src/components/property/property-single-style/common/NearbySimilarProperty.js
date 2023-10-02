@@ -121,9 +121,9 @@ const NearbySimilarProperty = () => {
                         </div>
                       )}
                     </div> */}
-                      <div className="list-price">
+                      {/* <div className="list-price">
                         {formatter.format(listing.price)}
-                      </div>
+                      </div> */}
                     </div>
                     <div className="list-content">
                       <h6 className="list-title">

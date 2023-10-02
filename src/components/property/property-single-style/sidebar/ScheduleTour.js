@@ -111,10 +111,10 @@ const ScheduleTour = () => {
 
                 <div className="col-md-12">
                   <div className="d-grid">
-                    <button type="submit" className="ud-btn btn-thm">
+                    <a type="submit" className="ud-btn btn-thm" href="">
                       Submit a Tour Request
                       <i className="fal fa-arrow-right-long" />
-                    </button>
+                    </a>
                   </div>
                 </div>
                 {/* End .col-12 */}

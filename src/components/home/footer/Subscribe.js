@@ -1,4 +1,8 @@
+"use client";
+import { useRouter } from "next/navigation";
+
 const Subscribe = () => {
+  const route = useRouter();
   return (
     <div className="mailchimp-style1 white-version">
       <input
@@ -9,7 +13,14 @@ const Subscribe = () => {
           color: "black",
         }}
       />
-      <button type="submit">Subscribe</button>
+      <button
+        type="submit"
+        onClick={() => {
+          route.push("/#main");
+        }}
+      >
+        Subscribe
+      </button>
     </div>
   );
 };
