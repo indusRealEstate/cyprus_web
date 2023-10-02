@@ -104,7 +104,7 @@ const FloorPlans = ({ floorDataRaw, id }) => {
                     ? "opacity-0 position-absolute w-100 h-100 cover"
                     : "opacity-100 w-100 h-100 cover"
                 }}`}
-                src={`https://indusmanagement.ae/api/media/listings/${id}/floorplan/${floorPlan.img}`}
+                src={`https://premium-realtor.com/api/media/listings/${id}/floorplan/${floorPlan.img}`}
                 alt="listing figureout"
                 onLoad={() => {
                   if (!loaded.includes(index)) {

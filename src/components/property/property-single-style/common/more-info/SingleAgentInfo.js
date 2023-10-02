@@ -40,7 +40,7 @@ const SingleAgentInfo = ({ agentId }) => {
                     ? "opacity-0 position-absolute w90"
                     : "opacity-100 w90"
                 }}`}
-                src={`https://indusmanagement.ae/api/media/agents/${data.agent_id}/${data.image}`}
+                src={`https://premium-realtor.com/api/media/agents/${data.agent_id}/${data.image}`}
                 alt="agent"
                 onLoadingComplete={() => setImageLoading(false)}
               />

@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function getAllListings() {
   const res = await fetch(
-    "https://indusmanagement.ae/api/listings/get_all_listings.php",
+    "https://premium-realtor.com/api/listings/get_all_listings.php",
     {
       method: "POST",
       headers: {
@@ -21,7 +21,7 @@ export async function getAllListings() {
 
 export async function getAllListingsByFilter(filters, pageNumber, limit) {
   const res = await fetch(
-    "https://indusmanagement.ae/api/listings/get_all_listings_filter.php",
+    "https://premium-realtor.com/api/listings/get_all_listings_filter.php",
     {
       method: "POST",
       headers: {
@@ -40,7 +40,7 @@ export async function getAllListingsByFilter(filters, pageNumber, limit) {
 
 export async function getPropertyDetails(prop_id) {
   const res = await axios
-    .post("https://indusmanagement.ae/api/listings/get_property_details.php", {
+    .post("https://premium-realtor.com/api/listings/get_property_details.php", {
       prop_id: prop_id,
     })
     .catch(function (error) {

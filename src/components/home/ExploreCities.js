@@ -79,7 +79,7 @@ const ExploreCities = () => {
             <div className="item">
               <Link
                 href={{
-                  pathname: "/map-result",
+                  pathname: "/search-results",
                   query: {
                     city: city.name,
                   },

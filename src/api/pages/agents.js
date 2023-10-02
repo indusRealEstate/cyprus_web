@@ -3,7 +3,7 @@ import { NextResponse, NextRequest } from "next/server";
 
 export async function getExclusiveAgents() {
   const res = await fetch(
-    "https://indusmanagement.ae/api/agents/get_all_exclusive_agents.php",
+    "https://premium-realtor.com/api/agents/get_all_exclusive_agents.php",
     {
       method: "POST",
       headers: {
@@ -17,7 +17,7 @@ export async function getExclusiveAgents() {
 
 export async function getAgentDetails(agent_id) {
   const res = await axios
-    .post("https://indusmanagement.ae/api/agents/get_agent_details.php", {
+    .post("https://premium-realtor.com/api/agents/get_agent_details.php", {
       agent_id: agent_id,
     })
     .catch(function (error) {
@@ -34,7 +34,7 @@ export async function getAllAgents(page, limit) {
   };
 
   const res = await axios
-    .post("https://indusmanagement.ae/api/agents/get_all_agents.php", data)
+    .post("https://premium-realtor.com/api/agents/get_all_agents.php", data)
     .catch((error) => {
       console.log(error);
     });
@@ -45,7 +45,7 @@ export async function getAllAgents(page, limit) {
 export async function getAgentListingsLimited4(agent_id, prop_for) {
   const res = await axios
     .post(
-      "https://indusmanagement.ae/api/agents/get_agent_listed_properties_limited.php",
+      "https://premium-realtor.com/api/agents/get_agent_listed_properties_limited.php",
       {
         agent_id: agent_id,
         prop_for: prop_for,
@@ -61,7 +61,7 @@ export async function getAgentListingsLimited4(agent_id, prop_for) {
 export async function getAllAgentListings(agent_id) {
   const res = await axios
     .post(
-      "https://indusmanagement.ae/api/agents/get_agent_listed_properties_all.php",
+      "https://premium-realtor.com/api/agents/get_agent_listed_properties_all.php",
       {
         agent_id: agent_id,
       }
@@ -75,7 +75,7 @@ export async function getAllAgentListings(agent_id) {
 
 export async function getDealingCities() {
   const res = await axios
-    .get("https://indusmanagement.ae/api/agents/get_all_dealing_cities.php")
+    .get("https://premium-realtor.com/api/agents/get_all_dealing_cities.php")
     .catch((error) => {
       console.log(error);
     });

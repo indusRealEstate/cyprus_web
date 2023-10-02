@@ -107,7 +107,7 @@ const Agents = () => {
                             ? "opacity-0 position-absolute w-100 h-100 cover"
                             : "opacity-100 w-100 h-100 cover"
                         }}`}
-                        src={`https://indusmanagement.ae/api/media/agents/${data.agent_id}/${data.image}`}
+                        src={`https://premium-realtor.com/api/media/agents/${data.agent_id}/${data.image}`}
                         alt="agent team"
                         onLoad={() => {
                           if (!loaded.includes(data.agent_id)) {
@@ -140,7 +140,7 @@ const Agents = () => {
                         height={248}
                         loading="lazy"
                         className="agent-image"
-                        src={`https://indusmanagement.ae/assets/agents/${data.image}`}
+                        src={`https://premium-realtor.com/assets/agents/${data.image}`}
                         alt="agent team"
                       />
                     </div>

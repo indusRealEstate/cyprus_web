@@ -43,7 +43,7 @@ const GalleryBox = ({ id, images }) => {
                     <Skeleton variant="rectangular" width={1170} height={640} />
                   )}
                   <LazyLoadImage
-                    src={`https://indusmanagement.ae/api/media/listings/${id}/media/${imageUrl}`}
+                    src={`https://premium-realtor.com/api/media/listings/${id}/media/${imageUrl}`}
                     className={`${
                       !loaded.includes(index)
                         ? "opacity-0 position-absolute bdrs12 w-100 h-100 cover"
@@ -66,7 +66,7 @@ const GalleryBox = ({ id, images }) => {
                 width={1170}
                 height={600}
                 className="bdrs12 w-100 h-100 cover"
-                src={`https://indusmanagement.ae/api/media/listings/${id}/media/${imageUrl}`}
+                src={`https://premium-realtor.com/api/media/listings/${id}/media/${imageUrl}`}
                 alt={`Image ${index + 1}`}
                 style={{
                   "max-height": "45rem",

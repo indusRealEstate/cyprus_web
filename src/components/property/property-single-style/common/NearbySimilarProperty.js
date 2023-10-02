@@ -100,7 +100,7 @@ const NearbySimilarProperty = () => {
                             : "opacity-100 w-100 h-100 cover"
                         }}`}
                         // className="w-100 h-100 cover"
-                        src={`https://indusmanagement.ae/api/media/listings/${
+                        src={`https://premium-realtor.com/api/media/listings/${
                           listing.prop_id
                         }/media/${JSON.parse(listing.images)[0]}`}
                         alt="listings"

@@ -21,7 +21,7 @@ const PropertyVideo = ({ allImages, id, video }) => {
         <div
           className="property_video bdrs12 w-100"
           style={{
-            backgroundImage: `url('https://indusmanagement.ae/api/media/listings/${id}/media/${bgImage}')`,
+            backgroundImage: `url('https://premium-realtor.com/api/media/listings/${id}/media/${bgImage}')`,
           }}
         >
           <button

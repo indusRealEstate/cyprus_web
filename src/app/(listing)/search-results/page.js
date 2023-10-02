@@ -21,11 +21,29 @@ const BannerSearchV1 = () => {
   const [prop_type, setPropType] = useState("");
   const [search_text, setSearchText] = useState("");
 
+  const [priceRange, setPriceRange] = useState("");
+  const [bed, setBed] = useState("");
+  const [bath, setBath] = useState("");
+  const [location, setLocation] = useState("");
+  const [sqft, setSqft] = useState("");
+  const [amenities, setAmenities] = useState("");
+  const [city, setCity] = useState("");
+
   useEffect(() => {
-    // console.log(search_text);
     setPropFor(searchParams.get("prop_type"));
     setPropType(searchParams.get("category"));
     setSearchText(searchParams.get("search_text"));
+
+    setPriceRange(searchParams.get("price"));
+    setBed(searchParams.get("bed"));
+    setBath(searchParams.get("bath"));
+    setLocation(searchParams.get("location"));
+    setSqft(searchParams.get("sqft"));
+    setAmenities(searchParams.get("amenities"));
+    setCity(searchParams.get("city"));
+
+    // console.log(prop_type);
+
     getAllListingsByFilter({}, 1, 8).then((res) => {
       setAllData(res.prop);
     });

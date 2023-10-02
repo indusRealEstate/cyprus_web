@@ -1,4 +1,4 @@
-const Amenities = () => {
+const Amenities = ({ filterFunctions }) => {
   const amenities = [
     [
       { label: "Attic" },
@@ -32,6 +32,16 @@ const Amenities = () => {
                   <input
                     type="checkbox"
                     defaultChecked={amenity.defaultChecked}
+                    checked={filterFunctions?.categories.includes(
+                      amenity.label
+                    )}
+                    onChange={() =>
+                      filterFunctions?.setCategories((pre) =>
+                        pre.includes(amenity.label)
+                          ? [...pre.filter((el) => el != amenity.label)]
+                          : [...pre, amenity.label]
+                      )
+                    }
                   />
                   <span className="checkmark" />
                 </label>

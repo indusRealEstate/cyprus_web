@@ -45,7 +45,7 @@ const AllAgents = ({ data }) => {
                       ? "opacity-0 position-absolute bdrs12 cover"
                       : "opacity-100 bdrs12 cover"
                   }}`}
-                  src={`https://indusmanagement.ae/api/media/agents/${agent.agent_id}/${agent.image}`}
+                  src={`https://premium-realtor.com/api/media/agents/${agent.agent_id}/${agent.image}`}
                   alt="agents"
                   onLoad={() => {
                     if (!loaded.includes(agent.agent_id)) {

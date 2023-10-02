@@ -8,7 +8,7 @@ const SingleAgentCta = ({ id, agentDetails }) => {
   const agentData = {
     name: agentDetails.fname + " " + agentDetails.lname,
     company: "Indus Real Estate",
-    img: `https://indusmanagement.ae/api/media/agents/${agentDetails.agent_id}/${agentDetails.image}`,
+    img: `https://premium-realtor.com/api/media/agents/${agentDetails.agent_id}/${agentDetails.image}`,
     // reviews: "5.0 • 49 Reviews",
     phone1: agentDetails.phone,
     phone2: agentDetails.email,
