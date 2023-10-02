@@ -1,11 +1,11 @@
-const Bathroom = () => {
+const Bathroom = ({ filterFunctions }) => {
   const bathOptions = [
-    { id: "yany", label: "any" },
-    { id: "yoneplus", label: "1+" },
-    { id: "ytwoplus", label: "2+" },
-    { id: "ythreeplus", label: "3+" },
-    { id: "yfourplus", label: "4+" },
-    { id: "yfiveplus", label: "5+" },
+    { id: "yany", label: "any", value: 0 },
+    { id: "yoneplus", label: "1+", value: 1 },
+    { id: "ytwoplus", label: "2+", value: 2 },
+    { id: "ythreeplus", label: "3+", value: 3 },
+    { id: "yfourplus", label: "4+", value: 4 },
+    { id: "yfiveplus", label: "5+", value: 5 },
   ];
 
   return (
@@ -16,7 +16,8 @@ const Bathroom = () => {
             id={option.id}
             name="ybath"
             type="radio"
-            defaultChecked // Set the first option as defaultChecked
+            defaultChecked
+            onChange={(e) => filterFunctions.setBathroms(option.value)}
           />
           <label htmlFor={option.id}>{option.label}</label>
         </div>

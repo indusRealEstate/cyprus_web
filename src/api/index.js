@@ -23,7 +23,7 @@ export async function getAllListings() {
 
 export async function getAllListingsByFilter(filters, pageNumber, limit) {
 	const res = await fetch(
-		'https://https://premium-realtor.com//api/listings/get_all_listings_filter.php',
+		'https://premium-realtor.com/api/listings/get_all_listings_filter.php',
 		{
 			method: 'POST',
 			headers: {

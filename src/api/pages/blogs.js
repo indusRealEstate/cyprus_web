@@ -1,14 +1,12 @@
 /** @format */
 
-import axios from 'axios';
-
 export async function getAllBlogs(limit, pageNumber) {
 	const obj = {
 		limit: limit,
 		pageNumber: pageNumber,
 	};
 	const response = await axios.post(
-		'https://hpremium-realtor.com/api/blogs/getAllBlogs.php',
+		'https://premium-realtor.com/api/blogs/getAllBlogs.php',
 		obj
 	);
 	// console.log( response.data );

@@ -43,16 +43,10 @@ const GalleryBox = ({ id, images }) => {
 					  ))
 					: imageUrls.map((imageUrl, index) => (
 							<SwiperSlide key={index}>
-								<div className='item height-50'>
+								<div className='item'>
 									{!loaded.includes(index) && (
 										<Skeleton
 											variant='rectangular'
-											className='width-100 height-50'
-											style={{
-												width: 'auto',
-												height: '640px',
-												borderRadius: '15px',
-											}}
 											width={1170}
 											height={640}
 										/>
@@ -62,7 +56,7 @@ const GalleryBox = ({ id, images }) => {
 										className={`${
 											!loaded.includes(index)
 												? 'opacity-0 position-absolute bdrs12 w-100 h-100 cover'
-												: 'opacity-100 bdrs12 w-100 h-100 cover position-relative height-50'
+												: 'opacity-100 bdrs12 w-100 h-100 cover'
 										}}`}
 										width={1170}
 										height={600}

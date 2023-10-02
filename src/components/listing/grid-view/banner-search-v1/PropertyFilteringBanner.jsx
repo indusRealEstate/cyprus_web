@@ -103,13 +103,9 @@ export default function PropertyFilteringBanner({
     setyearBuild(elm);
   };
   const handlecategories = (elm) => {
-    if (elm == "All") {
-      setCategories(listings);
-    } else {
-      setCategories((pre) =>
-        pre.includes(elm) ? [...pre.filter((el) => el != elm)] : [...pre, elm]
-      );
-    }
+    setCategories((pre) =>
+      pre.includes(elm) ? [...pre.filter((el) => el != elm)] : [...pre, elm]
+    );
   };
   const filterFunctions = {
     handlelistingStatus,

@@ -5,10 +5,12 @@ import Bedroom from "./Bedroom";
 import Bathroom from "./Bathroom";
 import Amenities from "./Amenities";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const AdvanceFilterModal = () => {
   const router = useRouter();
   const catOptions = [
+    { value: "all", label: "All" },
     { value: "house", label: "Houses" },
 
     { value: "office", label: "Office" },
@@ -37,6 +39,31 @@ const AdvanceFilterModal = () => {
     },
   };
 
+  const [propertyTypes, setPropertyTypes] = useState(["all"]);
+  const [priceRange, setPriceRange] = useState([1500, 10000000]);
+  const [bedrooms, setBedrooms] = useState(0);
+  const [bathroms, setBathroms] = useState(0);
+  const [location, setLocation] = useState("All Cities");
+  const [squirefeet, setSquirefeet] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [min, setMin] = useState(0);
+  const [max, setMax] = useState();
+
+  useEffect(() => {
+    filterFunctions?.setSquirefeet([min, max]);
+  }, [min, max]);
+
+  const filterFunctions = {
+    setPropertyTypes,
+    setPriceRange,
+    setBedrooms,
+    setBathroms,
+    setLocation,
+    setSquirefeet,
+    setCategories,
+    categories,
+  };
+
   return (
     <div className="modal-dialog modal-dialog-centered modal-lg">
       <div className="modal-content">
@@ -59,7 +86,7 @@ const AdvanceFilterModal = () => {
               <div className="widget-wrapper">
                 <h6 className="list-title mb20">Price Range</h6>
                 <div className="range-slider-style modal-version">
-                  <PriceRange />
+                  <PriceRange filterFunctions={filterFunctions} />
                 </div>
               </div>
             </div>
@@ -79,6 +106,7 @@ const AdvanceFilterModal = () => {
                     className="select-custom"
                     classNamePrefix="select"
                     required
+                    onChange={(e) => filterFunctions.setPropertyTypes(e.value)}
                   />
                 </div>
               </div>
@@ -106,7 +134,7 @@ const AdvanceFilterModal = () => {
               <div className="widget-wrapper">
                 <h6 className="list-title">Bedrooms</h6>
                 <div className="d-flex">
-                  <Bedroom />
+                  <Bedroom filterFunctions={filterFunctions} />
                 </div>
               </div>
             </div>
@@ -116,7 +144,7 @@ const AdvanceFilterModal = () => {
               <div className="widget-wrapper">
                 <h6 className="list-title">Bathrooms</h6>
                 <div className="d-flex">
-                  <Bathroom />
+                  <Bathroom filterFunctions={filterFunctions} />
                 </div>
               </div>
             </div>
@@ -137,6 +165,7 @@ const AdvanceFilterModal = () => {
                     className="select-custom"
                     classNamePrefix="select"
                     required
+                    onChange={(e) => filterFunctions.setLocation(e.value)}
                   />
                 </div>
               </div>
@@ -153,6 +182,7 @@ const AdvanceFilterModal = () => {
                         type="text"
                         className="form-control"
                         placeholder="Min."
+                        onChange={(e) => setMin(e.target.value)}
                       />
                     </div>
                     <span className="dark-color">-</span>
@@ -161,6 +191,7 @@ const AdvanceFilterModal = () => {
                         type="text"
                         className="form-control"
                         placeholder="Max"
+                        onChange={(e) => setMax(e.target.value)}
                       />
                     </div>
                   </div>
@@ -177,7 +208,7 @@ const AdvanceFilterModal = () => {
                 <h6 className="list-title mb10">Amenities</h6>
               </div>
             </div>
-            <Amenities />
+            <Amenities filterFunctions={filterFunctions} />
           </div>
         </div>
         {/* End modal body */}
@@ -192,7 +223,33 @@ const AdvanceFilterModal = () => {
               data-bs-dismiss="modal"
               type="submit"
               className="ud-btn btn-thm"
-              onClick={() => router.push("/map-v1")}
+              onClick={() => {
+                if (squirefeet != [0, undefined]) {
+                  console.log(squirefeet);
+                  router.push(
+                    `/search-results?price=${priceRange}&category=${propertyTypes}&bed=${bedrooms}&bath=${bathroms}&location=${location.replace(
+                      / /,
+                      "+"
+                    )}&sqft=${squirefeet}&amenities=${categories.map((c) =>
+                      c.replace(/ /, "+")
+                    )}`
+                  );
+                } else if (categories.length != 0) {
+                  router.push(
+                    `/search-results?price=${priceRange}&category=${propertyTypes}&bed=${bedrooms}&bath=${bathroms}&location=${location.replace(
+                      / /,
+                      "+"
+                    )}&amenities=${categories.map((c) => c.replace(/ /, "+"))}`
+                  );
+                } else {
+                  router.push(
+                    `/search-results?price=${priceRange}&category=${propertyTypes}&bed=${bedrooms}&bath=${bathroms}&location=${location.replace(
+                      / /,
+                      "+"
+                    )}`
+                  );
+                }
+              }}
             >
               <span className="flaticon-search align-text-top pr10" />
               Search

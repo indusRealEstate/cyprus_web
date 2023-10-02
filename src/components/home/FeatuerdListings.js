@@ -22,13 +22,6 @@ const FeaturedListings = () => {
 
 	console.log(data);
 
-	useEffect(() => {}, [loaded]);
-	useEffect(() => {
-		getAllListings().then((res) => {
-			setData(res);
-		});
-	}, [data]);
-
 	if (data.length == 0) {
 		return (
 			<>

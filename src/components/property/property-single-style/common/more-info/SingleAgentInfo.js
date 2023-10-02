@@ -48,40 +48,24 @@ const SingleAgentInfo = ({ agentId }) => {
 								}}`}
 								src={`https://premium-realtor.com/api/media/agents/${data.agent_id}/${data.image}`}
 								alt='agent'
-								style={{
-									borderRadius: '50rem',
-									objectFit: 'cover',
-									objectPosition: 'center',
-								}}
 								onLoadingComplete={() => setImageLoading(false)}
 							/>
 						</div>
 						<div className='single-contant ml30 ml0-xs'>
 							<h6 className='title mb-1'>{agentData.name}</h6>
-							<div
-								className='agent-meta mb10 d-md-flex align-items-center'
-								style={{
-									display: 'flex',
-									flexWrap: 'wrap',
-								}}>
+							<div className='agent-meta mb10 d-md-flex align-items-center'>
 								{agentData.phoneNumbers.map((phoneNumber, index) => (
 									<a
 										key={index}
 										className='text fz15 pe-2 bdrr1'
-										href='#'
-										style={{
-											margin: '10px 0px',
-										}}>
+										href='#'>
 										<i className='flaticon-call pe-1 ps-1' />
 										{phoneNumber}
 									</a>
 								))}
 								<a
 									className='text fz15 ps-2'
-									href='#'
-									style={{
-										margin: '10px 0px',
-									}}>
+									href='#'>
 									<i className='flaticon-whatsapp pe-1' />
 									WhatsApp
 								</a>
@@ -91,10 +75,7 @@ const SingleAgentInfo = ({ agentId }) => {
 									<a
 										key={index}
 										className='mr20'
-										href='#'
-										style={{
-											margin: '10px 0px',
-										}}>
+										href='#'>
 										<i className={`fab fa-${social}`} />
 									</a>
 								))}

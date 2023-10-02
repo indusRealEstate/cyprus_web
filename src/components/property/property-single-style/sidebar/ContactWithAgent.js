@@ -71,13 +71,8 @@ const ContactWithAgent = ({ agentId }) => {
 								className={`${
 									imgloading
 										? 'opacity-0 position-absolute w90'
-										: 'opacity-100 w90 rounded-circle'
+										: 'opacity-100 w90'
 								}}`}
-								style={{
-									borderRadius: '50rem',
-									objectFit: 'cover',
-									objectPosition: 'center',
-								}}
 								src={`https://premium-realtor.com/api/media/agents/${data.agent_id}/${data.image}`}
 								alt='avatar'
 								onLoadingComplete={() => setImageLoading(false)}

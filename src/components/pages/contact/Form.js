@@ -52,15 +52,134 @@ const Form = () => {
 					throw new Error('First name only can contain lettes and space');
 				}
 
-				if (!formData.last_name.match(onlyText)) {
-					checkLastName(false);
-					throw new Error('Last name only can contain lettes and space');
-				}
-				if (!formData.email.match(onlyEmail)) {
-					checkEmail(false);
-					throw new Error('Use the correct email fromat');
-				}
+				return (
+					<form
+						className='form-style1'
+						id='contact-form'>
+						{errorMessage != undefined && !dataUbmites ? (
+							<Alert severity='error'>
+								<AlertTitle>Error</AlertTitle>
+								<strong>{errorMessage}</strong>
+							</Alert>
+						) : (
+							''
+						)}
 
+						{dataUbmites ? (
+							<Alert severity={alertSeverity}>
+								<AlertTitle>{alertTitle}</AlertTitle>
+								<strong>{alertMsg}</strong>
+							</Alert>
+						) : (
+							''
+						)}
+						<div className='row'>
+							<div className='col-lg-12'>
+								<div className='mb20'>
+									<label className='heading-color ff-heading fw600 mb10'>
+										First Name
+									</label>
+									<input
+										type='text'
+										className={
+											firstNameValid && formData.first_name != undefined
+												? 'form-control'
+												: 'form-control border border-danger'
+										}
+										placeholder='Your Name'
+										required
+										onChange={(event) =>
+											setFormData({
+												...formData,
+												first_name: event.target.value,
+											})
+										}
+									/>
+								</div>
+							</div>
+							{/* End .col-lg-12 */}
+
+							<div className='col-lg-12'>
+								<div className='mb20'>
+									<label className='heading-color ff-heading fw600 mb10'>
+										Last Name
+									</label>
+									<input
+										type='text'
+										className={
+											lastNameValid && formData.last_name != undefined
+												? 'form-control'
+												: 'form-control border border-danger'
+										}
+										placeholder='Your Name'
+										required
+										onChange={(event) =>
+											setFormData({
+												...formData,
+												last_name: event.target.value,
+											})
+										}
+									/>
+								</div>
+							</div>
+							{/* End .col-lg-12 */}
+
+							<div className='col-md-12'>
+								<div className='mb20'>
+									<label className='heading-color ff-heading fw600 mb10'>
+										Email
+									</label>
+									<input
+										type='email'
+										className={
+											isEmail && formData.email != undefined
+												? 'form-control'
+												: 'form-control border border-danger'
+										}
+										placeholder='Your Name'
+										required
+										onChange={(event) =>
+											setFormData({ ...formData, email: event.target.value })
+										}
+									/>
+								</div>
+							</div>
+							{/* End .col-lg-12 */}
+
+							<div className='col-md-12'>
+								<div className='mb10'>
+									<label className='heading-color ff-heading fw600 mb10'>
+										Message
+									</label>
+									<textarea
+										cols={30}
+										rows={4}
+										placeholder='There are many variations of passages.'
+										defaultValue={''}
+										required
+										onChange={(event) =>
+											setFormData({ ...formData, message: event.target.value })
+										}
+									/>
+								</div>
+							</div>
+							{/* End .col-lg-12 */}
+
+							<div className='col-md-12'>
+								<div className='d-grid'>
+									<button
+										type='submit'
+										className='ud-btn btn-thm'
+										onClick={(event) => onSubmitForm(event)}
+										disabled={!btnDisable}>
+										Submit
+										<i className='fal fa-arrow-right-long' />
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				);
 				const response = await axios.post(
 					'https://premium-realtor.com/api/forms/contactFrom.php',
 					formData
