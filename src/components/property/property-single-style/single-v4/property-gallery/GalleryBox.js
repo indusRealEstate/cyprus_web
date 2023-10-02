@@ -43,10 +43,11 @@ const GalleryBox = ({ id, images }) => {
 					  ))
 					: imageUrls.map((imageUrl, index) => (
 							<SwiperSlide key={index}>
-								<div className='item'>
+								<div className='item height-50'>
 									{!loaded.includes(index) && (
 										<Skeleton
 											variant='rectangular'
+											className='height-50 bdrs12 width-inherit'
 											width={1170}
 											height={640}
 										/>
@@ -55,8 +56,8 @@ const GalleryBox = ({ id, images }) => {
 										src={`https://premium-realtor.com/api/media/listings/${id}/media/${imageUrl}`}
 										className={`${
 											!loaded.includes(index)
-												? 'opacity-0 position-absolute bdrs12 w-100 h-100 cover'
-												: 'opacity-100 bdrs12 w-100 h-100 cover'
+												? 'opacity-0 position-absolute bdrs12 w-100 cover height-50'
+												: 'opacity-100 bdrs12 w-100 cover height-50 position-relative'
 										}}`}
 										width={1170}
 										height={600}
