@@ -2,7 +2,7 @@
 
 "use client";
 import DefaultHeader from "@/components/common/DefaultHeader";
-import Footer from "@/components/common/default-footer";
+import Footer from "@/components/home/footer";
 import MobileMenu from "@/components/common/mobile-menu";
 import FilteringAgent from "@/components/property/FilteringAgent";
 import { getAllAgents } from "@/api/pages/agents";
@@ -113,7 +113,7 @@ const Agents = () => {
       {/* End Agent Section Area */}
 
       {/* Start Our Footer */}
-      <section className="footer-style1 pt60 pb-0">
+      <section className="footer-style1 at-home6 pt60 pb-0">
         <Footer />
       </section>
       {/* End Our Footer */}

@@ -160,7 +160,7 @@ a,
 }
 a:hover,
 .btn:hover {
-  color: #eb6753;
+  color: #1d4439;
 }
 a:active,
 a:focus,
@@ -1238,7 +1238,8 @@ li {
   top: -40px;
 }
 .listing-style1 .list-tag {
-  background-color: #eb6753;
+  // border: 1px solid #7ea69a;
+  background-color: #89ada3;
   border-radius: 6px;
   color: #ffffff;
   font-family: var(--title-font-family);
@@ -4841,10 +4842,10 @@ section {
 
 .scrollToHome {
   background-color: transparent;
-  border: 1px solid #eb6753;
+  border: 1px solid #1d4439;
   border-radius: 50%;
   bottom: 45px;
-  color: #eb6753;
+  color: #1d4439;
   display: block;
   height: 50px;
   line-height: 50px;
@@ -4854,9 +4855,9 @@ section {
   text-decoration: none;
   width: 50px;
   z-index: 9;
-  -webkit-box-shadow: 0px 1px 4px 0px rgba(36, 65, 231, 0.3);
-  -o-box-shadow: 0px 1px 4px 0px rgba(36, 65, 231, 0.3);
-  box-shadow: 0px 1px 4px 0px rgba(36, 65, 231, 0.3);
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(36, 231, 117, 0.3);
+  -o-box-shadow: 0px 1px 4px 0px rgba(36, 231, 130, 0.3);
+  box-shadow: 0px 1px 4px 0px rgba(36, 231, 117, 0.3);
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -4866,7 +4867,7 @@ section {
 }
 
 .scrollToHome:hover {
-  background-color: #eb6753;
+  background-color: #1d4439;
   color: #ffffff;
 }
 
@@ -8574,7 +8575,7 @@ li.mm-listitem:focus {
   width: 54px;
 }
 .ps-v4-hero-tab .nav-link.active {
-  background-color: #eb6753;
+  background-color: #89ada3;
 }
 .ps-v4-hero-tab.at-v5 .nav-pills {
   right: 0;
@@ -8615,7 +8616,7 @@ li.mm-listitem:focus {
   box-shadow: 0px 1px 4px rgba(24, 26, 32, 0.07);
 }
 .mbp_pagination .page-item.active .page-link {
-  background-color: #eb6753;
+  background-color: #89ada3;
   color: #ffffff;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -10409,7 +10410,7 @@ input:focus-visible {
 }
 
 .text-thm {
-  color: #eb6753;
+  color: #89ada3;
 }
 
 .text-thm2 {

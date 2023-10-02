@@ -2,7 +2,7 @@
 import { getAllListingsByFilter } from "@/api";
 import DefaultHeader from "@/components/common/DefaultHeader";
 
-import Footer from "@/components/common/default-footer";
+import Footer from "@/components/home/footer";
 import MobileMenu from "@/components/common/mobile-menu";
 
 import ProperteyFiltering from "@/components/listing/grid-view/grid-full-3-col/ProperteyFiltering";
@@ -46,9 +46,9 @@ const GridFull3Col = () => {
                     color: "black",
                   }}
                 >
-                  All Properties
+                  Properties For Sale
                 </h2>
-                <div className="breadcumb-list">
+                {/* <div className="breadcumb-list">
                   <a
                     href="#"
                     style={{
@@ -65,7 +65,7 @@ const GridFull3Col = () => {
                   >
                     For Sale
                   </a>
-                </div>
+                </div> */}
                 <a
                   className="filter-btn-left mobile-filter-btn d-block d-lg-none"
                   data-bs-toggle="offcanvas"
@@ -102,7 +102,7 @@ const GridFull3Col = () => {
       {/* Property Filtering */}
 
       {/* Start Our Footer */}
-      <section className="footer-style1 pt60 pb-0">
+      <section className="footer-style1 at-home6 pt60 pb-0">
         <Footer />
       </section>
       {/* End Our Footer */}

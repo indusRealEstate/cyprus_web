@@ -1,6 +1,6 @@
 import CallToActions from "@/components/common/CallToActions";
 import DefaultHeader from "@/components/common/DefaultHeader";
-import Footer from "@/components/common/default-footer";
+import Footer from "@/components/home/footer";
 import MobileMenu from "@/components/common/mobile-menu";
 import Faq1 from "@/components/pages/faq/Faq1";
 import Faq2 from "@/components/pages/faq/Faq2";
@@ -70,7 +70,7 @@ const Faq = () => {
       {/* Our CTA */}
 
       {/* Start Our Footer */}
-      <section className="footer-style1 pt60 pb-0">
+      <section className="footer-style1 at-home6 pt60 pb-0">
         <Footer />
       </section>
       {/* End Our Footer */}
