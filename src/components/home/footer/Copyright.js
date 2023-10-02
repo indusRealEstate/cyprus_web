@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
         {/* End .col-sm-6 */}
 
-        <div className="col-sm-6">
+        {/* <div className="col-sm-6">
           <div className="text-center text-lg-end">
             <p className="footer-menu ff-heading text-gray">
               {footerMenuItems.map((item, index) => (
@@ -53,7 +53,7 @@ const Footer = () => {
               ))}
             </p>
           </div>
-        </div>
+        </div> */}
         {/* End .col-sm-6 */}
       </div>
     </div>

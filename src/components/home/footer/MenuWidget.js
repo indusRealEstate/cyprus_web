@@ -5,31 +5,27 @@ const MenuWidget = () => {
     {
       title: "Popular Search",
       links: [
-        { label: "Apartment for Rent", href: "#" },
-        { label: "Apartment Low to Hide", href: "#" },
-        { label: "Offices for Buy", href: "#" },
-        { label: "Offices for Rent", href: "#" },
+        { label: "Townhouses", href: "#" },
+        { label: "Appartments", href: "#" },
+        { label: "Homes", href: "#" },
+        { label: "Villa", href: "#" },
       ],
     },
     {
       title: "Quick Links",
       links: [
-        { label: "Terms of Use", href: "#" },
-        { label: "Privacy Policy", href: "#" },
-        { label: "Pricing Plans", href: "#" },
-        { label: "Our Services", href: "#" },
-        { label: "Contact Support", href: "#" },
-        { label: "Careers", href: "#" },
+        { label: "Why Cyprus", href: "#" },
+        { label: "Property Collections", href: "#" },
+        { label: "Contact Us", href: "#" },
+        { label: "All Properties", href: "#" },
         { label: "FAQs", href: "#" },
       ],
     },
     {
       title: "Discover",
       links: [
-        { label: "Miami", href: "#" },
-        { label: "Los Angeles", href: "#" },
-        { label: "Chicago", href: "#" },
-        { label: "New York", href: "#" },
+        { label: "Paphos", href: "#" },
+        { label: "Limassol", href: "#" },
       ],
     },
   ];

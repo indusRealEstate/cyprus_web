@@ -1,5 +1,3 @@
-/** @format */
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,14 +15,14 @@ const About = () => {
             className="about-box-1 pe-4 mt100 mt0-lg mb30-lg "
             data-aos="fade-left"
           >
-            <h2 className="title mb30 text-align-center-in-mobile">
+            <h2 className="title mb30">
               Let’s find the right selling option for you
             </h2>
-            <p className="text mb25 fz15 text-align-center-in-mobile">
+            <p className="text mb25 fz15">
               As the complexity of buildings to increase, the field of
               architecture
             </p>
-            <div className="list-style1 mb50 text-align-center-in-mobile">
+            <div className="list-style1 mb50">
               <ul>
                 {featureList.map((list, index) => (
                   <li key={index}>
@@ -34,16 +32,9 @@ const About = () => {
                 ))}
               </ul>
             </div>
-            <div className="row mobile-justify-content-center">
-              <div className="col-8 mobile-mx-auto d-flex">
-                <Link
-                  href={`/contact`}
-                  className="ud-btn btn-white2 mobile-mx-auto"
-                >
-                  Learn More<i className="fal fa-arrow-right-long"></i>
-                </Link>
-              </div>
-            </div>
+            <Link href="/single-v1/2" className="ud-btn btn-white2">
+              Learn More<i className="fal fa-arrow-right-long"></i>
+            </Link>
           </div>
         </div>
         {/* End .col-6 */}
@@ -55,25 +46,20 @@ const About = () => {
                 width={270}
                 height={350}
                 className="img-1"
-                style={{ objectFit: "cover", objectPosition: "bottom" }}
-                src="/images/home/ONE_photo_pool area.webp"
+                src="/images/about/about-1.jpg"
                 alt="about"
               />
             </div>
-            <div className="img-box-2 list-inline-item me-0 width-100">
+            <div className="img-box-2 list-inline-item me-0">
               <Image
                 width={370}
                 height={520}
-                className="img-1 width-inherit"
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "bottom",
-                }}
-                src="/images/home/Konia Green TC_Full_V2.webp"
+                className="img-1"
+                src="/images/about/about-2.jpg"
                 alt="about"
               />
             </div>
-            {/* <div className="img-box-3">
+            <div className="img-box-3">
               <Image
                 width={276}
                 height={146}
@@ -81,7 +67,7 @@ const About = () => {
                 src="/images/about/about-1.png"
                 alt="about"
               />
-            </div> */}
+            </div>
             <div className="img-box-4">
               <Image
                 width={193}

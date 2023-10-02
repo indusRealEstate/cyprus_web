@@ -188,12 +188,12 @@ const PropertyDetailsPage = () => {
                 </div> */}
                   {/* End .ps-widget */}
 
-                  <div className="ps-widget bgc-white bdrs12 default-box-shadow2 p-3 mb30 overflow-hidden position-relative">
+                  {/* <div className="ps-widget bgc-white bdrs12 default-box-shadow2 p-3 mb30 overflow-hidden position-relative">
                     <h4 className="title fz17 mb30">Mortgage Calculator</h4>
                     <div className="row">
                       <MortgageCalculator />
                     </div>
-                  </div>
+                  </div> */}
                   {/* End .ps-widget */}
 
                   {/* <div className="ps-widget bgc-white bdrs12 default-box-shadow2 p30 mb30 overflow-hidden position-relative">
@@ -202,7 +202,7 @@ const PropertyDetailsPage = () => {
                     </div>
                   </div> */}
                   {/* End .ps-widget */}
-                  {screenWidth > 768 ? (
+                  {/* {screenWidth > 768 ? (
                     <div className="ps-widget bgc-white bdrs12 default-box-shadow2 p-3 mb30 overflow-hidden position-relative">
                       <h4 className="title fz17 mb30">Home Value</h4>
                       <div className="row">
@@ -211,7 +211,7 @@ const PropertyDetailsPage = () => {
                     </div>
                   ) : (
                     ""
-                  )}
+                  )} */}
 
                   {/* End .ps-widget */}
 
@@ -264,9 +264,7 @@ const PropertyDetailsPage = () => {
                 <div className="col-auto">
                   <div className="main-title">
                     <h2 className="title">Discover Our Featured Listings</h2>
-                    <p className="paragraph">
-                      Aliquam lacinia diam quis lacus euismod
-                    </p>
+                    <p className="paragraph">Explore related properties</p>
                   </div>
                 </div>
                 {/* End header */}

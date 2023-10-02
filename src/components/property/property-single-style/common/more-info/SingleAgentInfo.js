@@ -20,7 +20,7 @@ const SingleAgentInfo = ({ agentId }) => {
   const agentData = {
     id: 1,
     name: data.fname + " " + data.lname,
-    phoneNumbers: [data.phone, data.alternative_phone],
+    phoneNumbers: [data.phone],
     socialMedia: ["facebook", "twitter", "instagram", "linkedin"],
   };
 
@@ -63,7 +63,7 @@ const SingleAgentInfo = ({ agentId }) => {
 							/>
 						</div> */}
             <div className="single-contant ml30 ml0-xs">
-              <h6 className="title mb-1">{agentData.name}</h6>
+              <h6 className="title mb-1">Aneet</h6>
               <div
                 className="agent-meta mb10 d-md-flex align-items-center"
                 style={{
@@ -76,7 +76,7 @@ const SingleAgentInfo = ({ agentId }) => {
                     key={index}
                     className="text fz15 pe-2 bdrr1"
                     // className='text fz15 pe-2 bdrr1'
-                    href="#"
+                    href="tel:+971552136536"
                     style={
                       screenWidth < 768
                         ? {
@@ -87,12 +87,12 @@ const SingleAgentInfo = ({ agentId }) => {
                     }
                   >
                     <i className="flaticon-call pe-1 ps-1" />
-                    {phoneNumber}
+                    +971552136536
                   </a>
                 ))}
                 <a
                   className="text fz15"
-                  href="#"
+                  href="https://wa.me/971552136536"
                   style={
                     screenWidth < 768
                       ? {

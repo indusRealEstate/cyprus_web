@@ -121,7 +121,7 @@ const InfoWithForm = ({ agentId }) => {
             {/* End .col */}
 
             <div className="btn-area mt20">
-              <button className="ud-btn btn-white2">
+              <button className="ud-btn btn-white2" onClick={() => {}}>
                 Request Information <i className="fal fa-arrow-right-long" />
               </button>
             </div>

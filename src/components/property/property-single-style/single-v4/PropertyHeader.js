@@ -25,7 +25,7 @@ const PropertyHeader = ({ id, data }) => {
               <i className="fas fa-circle fz10 pe-2" />
               For {data.unit_purpose == "rent" ? "Rent" : "Sale"}
             </a>
-            <a
+            {/* <a
               className="ff-heading bdrr1 fz15 pr10 ml10 ml0-sm bdrrn-sm"
               href="#"
             >
@@ -36,7 +36,7 @@ const PropertyHeader = ({ id, data }) => {
             <a className="ff-heading ml10 ml0-sm fz15" href="#">
               <i className="flaticon-fullscreen pe-2 align-text-top" />
               8721
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
@@ -46,9 +46,9 @@ const PropertyHeader = ({ id, data }) => {
         <div className="single-property-content">
           <div className="property-action text-lg-end">
             <div className="d-flex mb20 mb10-md align-items-center justify-content-lg-end">
-              <a className="icon mr10" href="#">
+              {/* <a className="icon mr10" href="#">
                 <span className="flaticon-like" />
-              </a>
+              </a> */}
               <a className="icon mr10" href="#">
                 <span className="flaticon-new-tab" />
               </a>
@@ -59,7 +59,7 @@ const PropertyHeader = ({ id, data }) => {
                 <span className="flaticon-printer" />
               </a>
             </div>
-            <h3 className="price mb-0">{formatter.format(data.price)}</h3>
+            {/* <h3 className="price mb-0">{formatter.format(data.price)}</h3> */}
             <p className="text space fz15">{data.total_area} Sqft</p>
           </div>
         </div>

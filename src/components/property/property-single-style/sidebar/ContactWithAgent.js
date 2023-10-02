@@ -76,13 +76,11 @@ const ContactWithAgent = ({ agentId }) => {
               />
             </div> */}
             <div className="single-contant ml20 ml0-xs">
-              <h6 className="title mb-1">
-                {data.fname} {data.lname}
-              </h6>
+              <h6 className="title mb-1">Aneet</h6>
               <div className="agent-meta mb10 d-md-flex align-items-center">
-                <a className="text fz15" href="#">
+                <a className="text fz15" href="tel:+971552136536">
                   <i className="flaticon-call pe-1" />
-                  {data.phone}
+                  +971552136536
                 </a>
               </div>
               {/* <Link
@@ -99,18 +97,10 @@ const ContactWithAgent = ({ agentId }) => {
           </div>
 
           <div className="d-grid">
-            <Link
-              href={{
-                pathname: "/agent-details",
-                query: {
-                  id: data.agent_id,
-                },
-              }}
-              className="ud-btn btn-white2"
-            >
+            <a href="tel:+971552136536" className="ud-btn btn-white2">
               Contact
               <i className="fal fa-arrow-right-long" />
-            </Link>
+            </a>
           </div>
         </>
       )}

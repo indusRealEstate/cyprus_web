@@ -11,7 +11,8 @@ import Funfact2 from "@/components/home/Funfact2";
 import Header from "@/components/home/Header";
 import Testimonial from "@/components/home/Testimonial";
 import Footer from "@/components/home/footer";
-import Hero from "@/components/home/hero";
+import Hero from "@/components/home/home-v5/Hero";
+import FilterWithProperties from "@/components/home/home-v5/filter-with-property";
 
 export const metadata = {
   title: "Premium Realtor | Explore International Properties",
@@ -29,7 +30,7 @@ const Home = () => {
       {/* End Mobile Nav  */}
 
       {/* Home Banner Style V6 */}
-      <section id="main" className="home-banner-style6 p0">
+      {/* <section id="main" className="home-banner-style6 p0">
         <video
           className="bg-video"
           id="vid"
@@ -42,7 +43,6 @@ const Home = () => {
         >
           <source
             src={"/video/sample.webm"}
-            // src={video}
             type="video/mp4"
           />
         </video>
@@ -54,8 +54,23 @@ const Home = () => {
               </div>
             </div>
           </div>
-          {/* End .container */}
         </div>
+      </section> */}
+      <div className="banner-wrapper position-relative">
+        <section className="thumbimg-countnumber-carousel p-0">
+          <Hero />
+        </section>
+      </div>
+      <section className="pt-0 pb110 bgc-f7 pb50-md">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <FilterWithProperties />
+            </div>
+          </div>
+          {/* End .row */}
+        </div>
+        {/* End .container */}
       </section>
       {/* End Home Banner Style V6 */}
 
@@ -188,7 +203,7 @@ const Home = () => {
               >
                 <h2 className="title">Discover Our Featured Listings</h2>
                 <p className="paragraph">
-                  Aliquam lacinia diam quis lacus euismod
+                  Explore Cyprus luxury homes with us.
                 </p>
               </div>
             </div>
@@ -243,9 +258,7 @@ const Home = () => {
                 data-aos-delay="100"
               >
                 <h2 className="title">Explore Cities</h2>
-                <p className="paragraph">
-                  Aliquam lacinia diam quis lacus euismod
-                </p>
+                <p className="paragraph">Search properties in these cities.</p>
               </div>
             </div>
             {/* End header */}
