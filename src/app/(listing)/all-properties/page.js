@@ -1,5 +1,5 @@
 "use client";
-import { getAllListingsByFilter } from "@/api";
+import { getAllListings, getAllListingsByFilter } from "@/api";
 import DefaultHeader from "@/components/common/DefaultHeader";
 
 import Footer from "@/components/home/footer";
@@ -18,9 +18,7 @@ const GridFull3Col = () => {
   const [allData, setAllData] = useState([]);
 
   useEffect(() => {
-    getAllListingsByFilter({}, 1, 9).then((res) => {
-      setAllData(res.prop);
-    });
+    getAllListings().then((res) => setAllData(res));
   }, [allData]);
 
   return (

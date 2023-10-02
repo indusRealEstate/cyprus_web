@@ -1,15 +1,14 @@
 "use client";
-import { getAllListingsByFilter } from "@/api";
+import { getAllListings } from "@/api";
 import DefaultHeader from "@/components/common/DefaultHeader";
 
-import Footer from "@/components/home/footer";
 import MobileMenu from "@/components/common/mobile-menu";
+import Footer from "@/components/home/footer";
 
 import ProperteyFiltering from "@/components/listing/grid-view/grid-full-3-col/ProperteyFiltering";
-import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
-import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export const metadata = {
   title: "Gird Full 3 Column || Homez - Real Estate NextJS Template",
@@ -19,9 +18,7 @@ const GridFull3Col = () => {
   const [allData, setAllData] = useState([]);
 
   useEffect(() => {
-    getAllListingsByFilter({}, 1, 9).then((res) => {
-      setAllData(res.prop);
-    });
+    getAllListings().then((res) => setAllData(res));
   }, [allData]);
 
   return (
