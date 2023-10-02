@@ -26,17 +26,23 @@ import PropertyGallery from '@/components/property/property-single-style/single-
 import Box from '@mui/material/Box';
 import CircularProgress from '@mui/material/CircularProgress';
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useLayoutEffect } from 'react';
 
 const PropertyDetailsPage = () => {
 	const searchParams = useSearchParams();
 	const params = searchParams.get('id');
 	const [data, setData] = useState('');
+
+	const [screenWidth, setScreenWidth] = useState();
 	useEffect(() => {
 		getPropertyDetails(params).then((res) => {
 			setData(res);
 		});
 	}, [data]);
+
+	useLayoutEffect(() => {
+		setScreenWidth(window.innerWidth);
+	}, [screenWidth]);
 
 	return (
 		<>
@@ -206,13 +212,17 @@ const PropertyDetailsPage = () => {
                     </div>
                   </div> */}
 									{/* End .ps-widget */}
-
-									<div className='ps-widget bgc-white bdrs12 default-box-shadow2 p-3 mb30 overflow-hidden position-relative'>
-										<h4 className='title fz17 mb30'>Home Value</h4>
-										<div className='row'>
-											<HomeValueChart />
+									{screenWidth > 768 ? (
+										<div className='ps-widget bgc-white bdrs12 default-box-shadow2 p-3 mb30 overflow-hidden position-relative'>
+											<h4 className='title fz17 mb30'>Home Value</h4>
+											<div className='row'>
+												<HomeValueChart />
+											</div>
 										</div>
-									</div>
+									) : (
+										''
+									)}
+
 									{/* End .ps-widget */}
 
 									<div className='ps-widget bgc-white bdrs12 default-box-shadow2 p-3 mb30 overflow-hidden position-relative'>

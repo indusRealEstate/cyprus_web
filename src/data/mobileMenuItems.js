@@ -22,8 +22,8 @@ module.exports = [
 		],
 	},
 	{
-		path: '/about',
-		label: 'About Us',
+		path: '/all-properties',
+		label: 'All Listings',
 		// subMenu: [{ path: '/about', label: 'About Us' }],
 	},
 	{
@@ -36,13 +36,13 @@ module.exports = [
 		label: 'Rent',
 		// subMenu: [{ path: '/about', label: 'About Us' }],
 	},
-	{
-		label: 'Blog/News',
-		subMenu: [
-			{ path: '/blog-list-v1/', label: 'Blog' },
-			{ path: '/blog-list-v2/', label: 'News' },
-		],
-	},
+	// {
+	// 	label: 'Blog/News',
+	// 	subMenu: [
+	// 		{ path: '/blog-list-v1/', label: 'Blog' },
+	// 		{ path: '/blog-list-v2/', label: 'News' },
+	// 	],
+	// },
 	{
 		label: 'FAQ',
 		path: '/faq/',

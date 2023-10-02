@@ -20,6 +20,8 @@ const FeaturedListings = () => {
 	const [data, setData] = useState([]);
 	const [loaded, setLoaded] = useState([]);
 
+	console.log(data);
+
 	useEffect(() => {}, [loaded]);
 	useEffect(() => {
 		getAllListings().then((res) => {
