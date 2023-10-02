@@ -18,7 +18,7 @@ const MenuWidget = () => {
         { label: "Pafilia Collections", href: "/#flagship-prop" },
         { label: "Contact Us", href: "/contact" },
         { label: "All Properties", href: "/all-properties" },
-        { label: "FAQs", href: "/faq" },
+        // { label: "FAQs", href: "/faq" },
       ],
     },
     {

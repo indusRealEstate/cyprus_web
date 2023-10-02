@@ -3,52 +3,69 @@ import React from "react";
 const PropertyNearby = () => {
   const tabsData = [
     {
-      title: "Education",
+      title: "Facilities",
       details: [
         {
           rating: "4",
-          schoolName: "South Londonderry Elementary School",
+          schoolName: "Clubhouse",
           grades: "PK-6",
           distance: "3.7 mi",
         },
         {
           rating: "5",
-          schoolName: "Londonderry Senior High School",
+          schoolName: "Wellness Spa",
           grades: "PK-6",
           distance: "3.7 mi",
         },
         {
           rating: "5",
-          schoolName: "Londonderry Middle School",
+          schoolName: "Monastry",
+          grades: "PK-6",
+          distance: "3.7 mi",
+        },
+        {
+          rating: "5",
+          schoolName: "The Plateia",
           grades: "PK-6",
           distance: "3.7 mi",
         },
       ],
     },
     {
-      title: "Health & Medical",
+      title: "Sports",
       details: [
-        { rating: "4", facilityName: "Health Facility 1", distance: "3.7 mi" },
-        { rating: "5", facilityName: "Health Facility 2", distance: "3.7 mi" },
-        { rating: "5", facilityName: "Health Facility 3", distance: "3.7 mi" },
+        { rating: "4", facilityName: "Golf Course", distance: "3.7 mi" },
+        {
+          rating: "5",
+          facilityName: "Outdoor Sports Park",
+          distance: "3.7 mi",
+        },
+        { rating: "5", facilityName: "Sports Ground", distance: "3.7 mi" },
+        { rating: "5", facilityName: "Equestrian Centre", distance: "3.7 mi" },
+        { rating: "5", facilityName: "Kids Club", distance: "3.7 mi" },
       ],
     },
     {
-      title: "Transportation",
+      title: "Others",
       details: [
         {
           rating: "4",
-          transportationName: "Transportation 1",
+          transportationName: "Vineyards",
           distance: "3.7 mi",
         },
         {
           rating: "5",
-          transportationName: "Transportation 2",
+          transportationName: "Stargazing",
           distance: "3.7 mi",
         },
         {
           rating: "5",
-          transportationName: "Transportation 3",
+          transportationName: "Driving Range",
+          distance: "3.7 mi",
+        },
+        {
+          rating: "5",
+          transportationName: "Ezousa Suites",
           distance: "3.7 mi",
         },
       ],
@@ -95,22 +112,22 @@ const PropertyNearby = () => {
                   key={detailIndex}
                   className="nearby d-sm-flex align-items-center mb20"
                 >
-                  <div className="rating dark-color mr15 ms-1 mt10-xs mb10-xs">
+                  {/* <div className="rating dark-color mr15 ms-1 mt10-xs mb10-xs">
                     <span className="fw600 fz14">{detail.rating}</span>
                     <span className="text fz14">/10</span>
-                  </div>
+                  </div> */}
                   <div className="details">
                     <p className="dark-color fw600 mb-0">
-                      {tab.title === "Education"
+                      {tab.title === "Facilities"
                         ? detail.schoolName
                         : detail.facilityName || detail.transportationName}
                     </p>
-                    <p className="text mb-0">
-                      {tab.title === "Education"
+                    {/* <p className="text mb-0">
+                      {tab.title === "Sports"
                         ? `Grades: ${detail.grades} Distance: ${detail.distance}`
                         : `Distance: ${detail.distance}`}
-                    </p>
-                    <div className="blog-single-review">
+                    </p> */}
+                    {/* <div className="blog-single-review">
                       <ul className="mb0 ps-0">
                         {[1, 2, 3, 4, 5].map((starIndex) => (
                           <li key={starIndex} className="list-inline-item me-0">
@@ -120,7 +137,7 @@ const PropertyNearby = () => {
                           </li>
                         ))}
                       </ul>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               ))}

@@ -95,6 +95,14 @@ const MainMenu = () => {
         </ul>
       </li>
       {/* End homeItems */}
+      <li className="visible_list dropitem">
+        <Link className="list-item" href="/#why-cyprus">
+          <span className={topMenu == "pages" ? "title menuActive" : "title"}>
+            Why Cyprus
+          </span>
+          {/* <span className="arrow"></span> */}
+        </Link>
+      </li>
 
       <li className="visible_list dropitem">
         <Link className="list-item" href="/all-properties">
@@ -246,12 +254,11 @@ const MainMenu = () => {
       {/* End blog Items */}
 
       <li className="visible_list dropitem">
-        <Link className="list-item" href="/faq">
+        {/* <Link className="list-item" href="/faq">
           <span className={topMenu == "pages" ? "title menuActive" : "title"}>
             FAQ
           </span>
-          {/* <span className="arrow"></span> */}
-        </Link>
+        </Link> */}
         {/* <ul className="sub-menu">
           {pageItems.map((item, index) => (
             <li key={index}>

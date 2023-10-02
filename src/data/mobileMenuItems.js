@@ -5,11 +5,15 @@ module.exports = [
     label: "Home",
     subMenu: [
       { path: "/", label: "Home" },
-      { path: "/#why-cyprus", label: "Why Cyprus" },
+      // { path: "/#why-cyprus", label: "Why Cyprus" },
       { path: "/#flagship-prop", label: "Flagship Collection" },
       { path: "/#featured-listings", label: "Featured Listings" },
       { path: "/#explore-cities", label: "Explore Cities" },
     ],
+  },
+  {
+    label: "Why Cyprus",
+    path: "/#why-cyprus",
   },
   {
     path: "/all-properties/",
@@ -28,10 +32,7 @@ module.exports = [
   // 		{ path: '/blog-list-v2/', label: 'News' },
   // 	],
   // },
-  {
-    label: "FAQ",
-    path: "/faq/",
-  },
+
   {
     label: "Contact Us",
     path: "/contact/",
