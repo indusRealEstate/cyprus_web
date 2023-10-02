@@ -32,9 +32,10 @@ const GalleryBox = ({ id, images }) => {
 				{imageUrls.length == 0
 					? loadingUrls.map((url, index) => (
 							<SwiperSlide key={index}>
-								<div className='item'>
+								<div className='item w-100'>
 									<Skeleton
 										variant='rectangular'
+										className='width-auto'
 										width={1170}
 										height={600}
 									/>
@@ -43,11 +44,11 @@ const GalleryBox = ({ id, images }) => {
 					  ))
 					: imageUrls.map((imageUrl, index) => (
 							<SwiperSlide key={index}>
-								<div className='item height-50'>
+								<div className='item height-50 w-100'>
 									{!loaded.includes(index) && (
 										<Skeleton
 											variant='rectangular'
-											className='height-50 bdrs12 width-inherit'
+											className='height-50 bdrs12 width-auto'
 											width={1170}
 											height={640}
 										/>

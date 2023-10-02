@@ -60,21 +60,8 @@ const Home = () => {
       {/* End Home Banner Style V6 */}
 
       {/* Our Funfact */}
-      <section className="bg-off-white pb90 pb30-md">
-        {/* <Image
-          width={146}
-          height={276}
-          className="funfact-floating-img1 d-none d-lg-block "
-          src="/images/resource/h7-bg-1.png"
-          alt="illustration"
-        />
-        <Image
-          width={240}
-          height={181}
-          className="funfact-floating-img2 wow zoomIn d-none d-lg-block "
-          src="/images/resource/h7-bg-2.png"
-          alt="illustration"
-        /> */}
+      {/* <section className="bg-off-white pb90 pb30-md">
+        
         <div className="container">
           <div className="row align-items-center">
             <div
@@ -118,7 +105,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* End Our Funfact */}
 
       {/* Explore Apartment Home */}
@@ -310,7 +297,7 @@ const Home = () => {
       {/*  <!-- End About Us --> */}
 
       {/* Our Testimonials */}
-      <section className="our-testimonial">
+      {/* <section className="our-testimonial">
         <div className="container">
           <div className="row">
             <div
@@ -326,7 +313,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-          {/* End .row */}
 
           <div className="row">
             <div
@@ -339,9 +325,8 @@ const Home = () => {
               </div>
             </div>
           </div>
-          {/* End .row */}
         </div>
-      </section>
+      </section> */}
 
       {/* Pricing Section Area */}
       {/* <section className="our-pricing pb90 pt-0">
@@ -361,7 +346,7 @@ const Home = () => {
       {/* Pricing Section Area */}
 
       {/* Exclusive Agents */}
-      <section id="exlusive-agents" className="pt0 pb80 pb50-md">
+      {/* <section id="exlusive-agents" className="pt0 pb80 pb50-md">
         <div className="container">
           <div className="row  justify-content-between align-items-center">
             <div className="col-auto">
@@ -376,7 +361,6 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            {/* End header */}
 
             <div className="col-auto mb30">
               <div className="row align-items-center justify-content-center">
@@ -385,24 +369,19 @@ const Home = () => {
                     <i className="far fa-arrow-left-long" />
                   </button>
                 </div>
-                {/* End prev */}
 
                 <div className="col-auto">
                   <div className="pagination swiper--pagination agent_pagination__active" />
                 </div>
-                {/* End pagination */}
 
                 <div className="col-auto">
                   <button className="agent_next__active swiper_button">
                     <i className="far fa-arrow-right-long" />
                   </button>
                 </div>
-                {/* End Next */}
               </div>
             </div>
-            {/* End .col for navigation and pagination */}
           </div>
-          {/* End .row */}
 
           <div className="row">
             <div className="col-lg-12" data-aos="fade-up" data-aos-delay="300">
@@ -412,7 +391,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Exclusive Agents */}
 
       {/* Our CTA */}

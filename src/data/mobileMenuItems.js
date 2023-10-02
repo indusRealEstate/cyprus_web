@@ -4,17 +4,7 @@ module.exports = [
 	{
 		label: 'Home',
 		subMenu: [
-			// { path: "/home-v1", label: "Home v1" },
-			// { path: "/home-v2", label: "Home v2" },
-			// { path: "/home-v3", label: "Home v3" },
-			// { path: "/home-v4", label: "Home v4" },
-			// { path: "/home-v5", label: "Home v5" },
-			// { path: "/home-v6", label: "Home v6" },
-			// { path: "/home-v7", label: "Home v7" },
-			// { path: "/home-v8", label: "Home v8" },
-			// { path: "/home-v9", label: "Home v9" },
-			// { path: "/home-v10", label: "Home v10" },
-			{ path: '/#main', label: 'Home' },
+			{ path: '/', label: 'Home' },
 			{ path: '/#flagship-prop', label: 'Flagship Collection' },
 			{ path: '/#featured-listings', label: 'Featured Listings' },
 			{ path: '/#explore-cities', label: 'Explore Cities' },
@@ -22,17 +12,17 @@ module.exports = [
 		],
 	},
 	{
-		path: '/all-properties',
+		path: '/all-properties/',
 		label: 'All Listings',
 		// subMenu: [{ path: '/about', label: 'About Us' }],
 	},
 	{
-		path: '/grid-full-3-col/?type=buy',
+		path: '/sale-properties/',
 		label: 'Buy',
 		// subMenu: [{ path: '/about', label: 'About Us' }],
 	},
 	{
-		path: '/grid-full-3-col/?type=rent',
+		path: '/rent-properties/',
 		label: 'Rent',
 		// subMenu: [{ path: '/about', label: 'About Us' }],
 	},
@@ -49,11 +39,11 @@ module.exports = [
 	},
 	{
 		label: 'Contact Us',
-		path: '/contact',
+		path: '/contact/',
 	},
 	{
 		label: 'Agents',
-		path: '/agents',
+		path: '/agents/',
 	},
 	// {
 	// 	label: 'Listings',

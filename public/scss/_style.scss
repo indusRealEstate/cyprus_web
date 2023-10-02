@@ -90,10 +90,23 @@ body {
   display: none;
 }
 
+.width-auto {
+  width: auto !important;
+}
+
+.text-default-green {
+  color: #1d4439 !important;
+}
 // main mobile css
 @media (max-width: 768px) {
   .hide-in-mobile {
     display: none !important;
+  }
+  .width-auto-mobile {
+    width: auto !important;
+  }
+  .height-25-mobile {
+    height: 25vh !important;
   }
   .text-align-center-in-mobile {
     text-align: center;
@@ -118,6 +131,7 @@ body {
   .width-inherit {
     width: inherit !important;
   }
+
   .height-50 {
     height: 50vh !important;
   }

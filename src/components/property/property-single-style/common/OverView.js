@@ -7,7 +7,7 @@ const OverView = ({ id, data }) => {
 	// const data = listings.filter((elm) => elm.id == id)[0] || listings[0];
 	const [screenWidth, setScreenWidth] = useState();
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		setScreenWidth(window.innerWidth);
 	}, [screenWidth]);
 

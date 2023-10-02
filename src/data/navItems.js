@@ -8,7 +8,7 @@ export const homeItems = [
   { href: "/#flagship-prop", label: "Flagship Collection" },
   { href: "/#featured-listings", label: "Featured Listings" },
   { href: "/#explore-cities", label: "Explore Cities" },
-  { href: "/#exlusive-agents", label: "Exclusive Agents" },
+  // { href: "/#exlusive-agents", label: "Exclusive Agents" },
   // { href: "/home-v7", label: "Home v7" },
   // { href: "/home-v8", label: "Home v8" },
   // { href: "/home-v9", label: "Home v9" },

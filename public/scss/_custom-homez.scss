@@ -1,3 +1,5 @@
+/** @format */
+
 html {
   scroll-behavior: smooth !important;
 }
@@ -116,7 +118,7 @@ html {
 // mobile menu
 .mobilie_header_nav {
   .hsidebar-header {
-    background: rgba(235, 103, 83, 0.07);
+    background: #89ada31c;
     .sidebar-close-icon {
       background-color: #89ada3;
       color: #fff;
@@ -139,10 +141,10 @@ html {
       height: 7px;
     }
     &.ps-sidebar-root .ps-menuitem-root.active > .ps-menu-button span {
-      color: #eb6753;
+      color: #89ada3;
     }
     .ps-menu-button.active {
-      color: #eb6753;
+      color: #89ada3;
     }
   }
 }
