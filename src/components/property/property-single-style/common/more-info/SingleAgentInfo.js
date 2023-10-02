@@ -4,11 +4,12 @@
 import { getAgentDetails } from '@/api/pages/agents';
 import React from 'react';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useLayoutEffect } from 'react';
 import { Skeleton } from '@mui/material';
 
 const SingleAgentInfo = ({ agentId }) => {
 	const [data, setData] = useState('');
+	const [screenWidth, setScreenWidth] = useState();
 	const [imgloading, setImageLoading] = useState(true);
 	useEffect(() => {
 		getAgentDetails(agentId).then((res) => {
@@ -23,6 +24,10 @@ const SingleAgentInfo = ({ agentId }) => {
 		socialMedia: ['facebook', 'twitter', 'instagram', 'linkedin'],
 	};
 
+	useLayoutEffect(() => {
+		setScreenWidth(window.innerWidth);
+	}, [screenWidth]);
+
 	return (
 		<>
 			{data == '' ? (
@@ -34,6 +39,9 @@ const SingleAgentInfo = ({ agentId }) => {
 							{imgloading && (
 								<Skeleton
 									variant='rectangular'
+									style={{
+										borderRadius: '50rem',
+									}}
 									width={90}
 									height={90}
 								/>
@@ -41,6 +49,9 @@ const SingleAgentInfo = ({ agentId }) => {
 							<Image
 								width={90}
 								height={90}
+								style={{
+									borderRadius: '50rem',
+								}}
 								className={`${
 									imgloading
 										? 'opacity-0 position-absolute w90'
@@ -53,19 +64,43 @@ const SingleAgentInfo = ({ agentId }) => {
 						</div>
 						<div className='single-contant ml30 ml0-xs'>
 							<h6 className='title mb-1'>{agentData.name}</h6>
-							<div className='agent-meta mb10 d-md-flex align-items-center'>
+							<div
+								className='agent-meta mb10 d-md-flex align-items-center'
+								style={{
+									display: 'flex',
+									flexWrap: 'wrap',
+								}}>
 								{agentData.phoneNumbers.map((phoneNumber, index) => (
 									<a
 										key={index}
 										className='text fz15 pe-2 bdrr1'
-										href='#'>
+										// className='text fz15 pe-2 bdrr1'
+										href='#'
+										style={
+											screenWidth < 768
+												? {
+														padding: '0px !important',
+														margin: '10px 0px',
+												  }
+												: {}
+										}>
 										<i className='flaticon-call pe-1 ps-1' />
 										{phoneNumber}
 									</a>
 								))}
 								<a
-									className='text fz15 ps-2'
-									href='#'>
+									className='text fz15'
+									href='#'
+									style={
+										screenWidth < 768
+											? {
+													margin: '10px 0px',
+													padding: '0px !important',
+											  }
+											: {
+													paddingLeft: '0.5rem',
+											  }
+									}>
 									<i className='flaticon-whatsapp pe-1' />
 									WhatsApp
 								</a>
@@ -75,7 +110,15 @@ const SingleAgentInfo = ({ agentId }) => {
 									<a
 										key={index}
 										className='mr20'
-										href='#'>
+										href='#'
+										style={
+											screenWidth < 768
+												? {
+														padding: '0px !important',
+														margin: '10px 0px',
+												  }
+												: {}
+										}>
 										<i className={`fab fa-${social}`} />
 									</a>
 								))}

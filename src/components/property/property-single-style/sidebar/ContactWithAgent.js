@@ -63,11 +63,17 @@ const ContactWithAgent = ({ agentId }) => {
 									variant='rectangular'
 									width={90}
 									height={90}
+									style={{
+										borderRadius: '50rem',
+									}}
 								/>
 							)}
 							<Image
 								width={90}
 								height={90}
+								style={{
+									borderRadius: '50rem',
+								}}
 								className={`${
 									imgloading
 										? 'opacity-0 position-absolute w90'
