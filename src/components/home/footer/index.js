@@ -16,9 +16,9 @@ const Footer = () => {
               <Link className="footer-logo" href="/">
                 <Image
                   width={138}
-                  height={44}
+                  height={55}
                   className="mb40"
-                  src="/images/pafilia-logo.svg"
+                  src="/images/logo/logo-light.svg"
                   alt="logo"
                 />
               </Link>
