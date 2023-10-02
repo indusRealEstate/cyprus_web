@@ -50,6 +50,9 @@ const MobileMenu = () => {
 									width={138}
 									height={44}
 									priority={true}
+									style={{
+										width: '20vw',
+									}}
 									src='/images/logo/logo-dark.svg'
 									alt='logo'
 								/>
