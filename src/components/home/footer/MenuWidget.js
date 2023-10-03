@@ -5,31 +5,27 @@ const MenuWidget = () => {
     {
       title: "Popular Search",
       links: [
-        { label: "Apartment for Rent", href: "#" },
-        { label: "Apartment Low to Hide", href: "#" },
-        { label: "Offices for Buy", href: "#" },
-        { label: "Offices for Rent", href: "#" },
+        { label: "Townhouses", href: "/search-results" },
+        { label: "Appartments", href: "/search-results" },
+        { label: "Homes", href: "/search-results" },
+        { label: "Villa", href: "/search-results" },
       ],
     },
     {
       title: "Quick Links",
       links: [
-        { label: "Terms of Use", href: "#" },
-        { label: "Privacy Policy", href: "#" },
-        { label: "Pricing Plans", href: "#" },
-        { label: "Our Services", href: "#" },
-        { label: "Contact Support", href: "#" },
-        { label: "Careers", href: "#" },
-        { label: "FAQs", href: "#" },
+        { label: "Why Cyprus", href: "/#why-cyprus" },
+        { label: "Pafilia Collections", href: "/#flagship-prop" },
+        { label: "Contact Us", href: "/contact" },
+        { label: "All Properties", href: "/all-properties" },
+        // { label: "FAQs", href: "/faq" },
       ],
     },
     {
       title: "Discover",
       links: [
-        { label: "Miami", href: "#" },
-        { label: "Los Angeles", href: "#" },
-        { label: "Chicago", href: "#" },
-        { label: "New York", href: "#" },
+        { label: "Paphos", href: "/search-results" },
+        { label: "Limassol", href: "/search-results" },
       ],
     },
   ];

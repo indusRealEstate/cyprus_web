@@ -109,44 +109,44 @@ html {
 }
 
 .rightside-hidden-bar .hsidebar-header .sidebar-close-icon {
-	&:hover {
-		background-color: #89ada3;
-		color: #fff;
-	}
+  &:hover {
+    background-color: #89ada3;
+    color: #fff;
+  }
 }
 
 // mobile menu
 .mobilie_header_nav {
-	.hsidebar-header {
-		background: #89ada31c;
-		.sidebar-close-icon {
-			background-color: #89ada3;
-			color: #fff;
-		}
-	}
+  .hsidebar-header {
+    background: #89ada31c;
+    .sidebar-close-icon {
+      background-color: #89ada3;
+      color: #fff;
+    }
+  }
 
-	.my-custom-class {
-		margin-bottom: 35px;
-		.ps-menu-root ul li {
-			font-size: 15px;
-			font-weight: 600;
-		}
-		.ps-menu-root > ul > li > .ps-menu-button {
-			padding-left: 30px;
-			padding-right: 30px;
-		}
-		&.ps-sidebar-root .css-honxw6,
-		&.ps-sidebar-root .css-jn69v9 {
-			width: 7px;
-			height: 7px;
-		}
-		&.ps-sidebar-root .ps-menuitem-root.active > .ps-menu-button span {
-			color: #89ada3;
-		}
-		.ps-menu-button.active {
-			color: #89ada3;
-		}
-	}
+  .my-custom-class {
+    margin-bottom: 35px;
+    .ps-menu-root ul li {
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .ps-menu-root > ul > li > .ps-menu-button {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    &.ps-sidebar-root .css-honxw6,
+    &.ps-sidebar-root .css-jn69v9 {
+      width: 7px;
+      height: 7px;
+    }
+    &.ps-sidebar-root .ps-menuitem-root.active > .ps-menu-button span {
+      color: #89ada3;
+    }
+    .ps-menu-button.active {
+      color: #89ada3;
+    }
+  }
 }
 
 // react slect css

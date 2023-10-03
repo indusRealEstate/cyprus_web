@@ -75,7 +75,7 @@ const InfoWithForm = ({ agentId }) => {
             </div>
             {/* End .col */}
 
-            <div className="col-md-6">
+            {/* <div className="col-md-6">
               <div className="widget-wrapper sideborder-dropdown">
                 <label className="heading-color ff-heading fw600 mb10">
                   I&apos;m a
@@ -93,7 +93,7 @@ const InfoWithForm = ({ agentId }) => {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* End .col */}
 
             <div className="col-md-12">
@@ -111,19 +111,19 @@ const InfoWithForm = ({ agentId }) => {
             </div>
             {/* End .col */}
 
-            <div className="checkbox-style1 d-block d-sm-flex align-items-center justify-content-between mb10">
+            {/* <div className="checkbox-style1 d-block d-sm-flex align-items-center justify-content-between mb10">
               <label className="custom_checkbox fz14 ff-heading">
                 By submitting this form I agree to Terms of Use
                 <input type="checkbox" />
                 <span className="checkmark" />
               </label>
-            </div>
+            </div> */}
             {/* End .col */}
 
             <div className="btn-area mt20">
-              <button className="ud-btn btn-white2">
+              <a className="ud-btn btn-white2" href="">
                 Request Information <i className="fal fa-arrow-right-long" />
-              </button>
+              </a>
             </div>
           </form>
         </div>

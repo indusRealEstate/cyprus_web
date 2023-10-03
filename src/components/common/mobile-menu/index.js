@@ -28,7 +28,6 @@ const MobileMenu = () => {
 			}>
 			<div className='mobile-menu'>
 				<div className='header innerpage-style'>
-
 					<div className='menu_and_widgets'>
 						<div className='mobile_menu_bar d-flex justify-content-between align-items-center'>
 							<a
@@ -51,9 +50,6 @@ const MobileMenu = () => {
 									width={138}
 									height={44}
 									priority={true}
-									style={{
-										width: '20vw',
-									}}
 									src='/images/logo/logo-dark.svg'
 									alt='logo'
 								/>
@@ -96,14 +92,14 @@ const MobileMenu = () => {
 								</div>
 								{/* End .row */}
 
-								<div className='row pt30 pb30 bdrt1'>
+								{/* <div className='row pt30 pb30 bdrt1'>
 									<div className='col-auto'>
 										<div className='social-style-sidebar d-flex align-items-center pl30'>
 											<h6 className='me-4 mb-0'>Follow us</h6>
 											<Social />
 										</div>
 									</div>
-								</div>
+								</div> */}
 							</div>
 							{/* hiddenbar_footer */}
 						</div>

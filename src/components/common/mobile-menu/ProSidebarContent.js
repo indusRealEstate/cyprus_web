@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 
 const ProSidebarContent = () => {
 	const path = usePathname();
-	console.log(path);
+
 	return (
 		<Sidebar
 			width='100%'

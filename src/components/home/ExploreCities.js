@@ -19,30 +19,30 @@ const ExploreCities = () => {
       image: "/images/listings/Limassol.webp",
       number: 8,
     },
-    {
-      id: 3,
-      name: "Larnaca",
-      image: "/images/listings/Larnaca.webp",
-      number: 15,
-    },
-    {
-      id: 4,
-      name: "Nicosia",
-      image: "/images/listings/Nicosia.jpg",
-      number: 10,
-    },
-    {
-      id: 5,
-      name: "Ayia Napa",
-      image: "/images/listings/Ayia Napa.webp",
-      number: 12,
-    },
-    {
-      id: 6,
-      name: "Protaras",
-      image: "/images/listings/Protaras.webp",
-      number: 8,
-    },
+    // {
+    //   id: 3,
+    //   name: "Larnaca",
+    //   image: "/images/listings/Larnaca.webp",
+    //   number: 15,
+    // },
+    // {
+    //   id: 4,
+    //   name: "Nicosia",
+    //   image: "/images/listings/Nicosia.jpg",
+    //   number: 10,
+    // },
+    // {
+    //   id: 5,
+    //   name: "Ayia Napa",
+    //   image: "/images/listings/Ayia Napa.webp",
+    //   number: 12,
+    // },
+    // {
+    //   id: 6,
+    //   name: "Protaras",
+    //   image: "/images/listings/Protaras.webp",
+    //   number: 8,
+    // },
     // Add more cities if needed
   ];
 
@@ -105,7 +105,7 @@ const ExploreCities = () => {
                   </div>
                   <div className="feature-content pt20">
                     <h6 className="title mb-1">{city.name}</h6>
-                    <p className="text fz15">{city.number} Properties</p>
+                    {/* <p className="text fz15">{city.number} Properties</p> */}
                   </div>
                 </div>
               </Link>

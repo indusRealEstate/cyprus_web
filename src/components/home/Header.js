@@ -79,14 +79,14 @@ const Header = () => {
                     <i className="far fa-user-circle fz16 me-2" />{" "}
                     <span className="d-none d-xl-block">Login / Register</span>
                   </a> */}
-                  <Link
+                  <a
                     className="ud-btn add-property menu-btn bdrs12 mx-2 mx-xl-4"
-                    href=""
+                    href="tel:+971552136536"
                   >
                     More Info
                     <i className="fal fa-arrow-right-long" />
-                  </Link>
-                  <a
+                  </a>
+                  {/* <a
                     className="sidemenu-btn filter-btn-right"
                     href="#"
                     data-bs-toggle="offcanvas"
@@ -108,7 +108,7 @@ const Header = () => {
                       src="/images/icon/nav-icon-dark.svg"
                       alt="humberger menu"
                     />
-                  </a>
+                  </a> */}
                 </div>
               </div>
               {/* End .col-auto */}
@@ -120,7 +120,7 @@ const Header = () => {
       {/* End Header */}
 
       {/* Signup Modal */}
-      <div className="signup-modal">
+      {/* <div className="signup-modal">
         <div
           className="modal fade"
           id="loginSignupModal"
@@ -132,18 +132,18 @@ const Header = () => {
             <LoginSignupModal />
           </div>
         </div>
-      </div>
+      </div> */}
       {/* End Signup Modal */}
 
       {/* DesktopSidebarMenu */}
-      <div
+      {/* <div
         className="offcanvas offcanvas-end"
         tabIndex="-1"
         id="SidebarPanel"
         aria-labelledby="SidebarPanelLabel"
       >
         <SidebarPanel />
-      </div>
+      </div> */}
       {/* Sidebar Panel End */}
     </>
   );

@@ -26,11 +26,11 @@ const Footer = () => {
           </div>
           {/* End .col */}
 
-          <div className="col-sm-7">
+          {/* <div className="col-sm-7">
             <div className="social-widget text-center text-sm-end">
               <Social />
             </div>
-          </div>
+          </div> */}
           {/* End .col */}
         </div>
         {/* End .row */}

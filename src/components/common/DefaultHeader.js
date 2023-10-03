@@ -80,33 +80,34 @@ const DefaultHeader = () => {
                     <i className="far fa-user-circle fz16 me-2" />{" "}
                     <span className="d-none d-xl-block">Login / Register</span>
                   </a> */}
-									<Link
+									<a
 										className='ud-btn btn-white add-property bdrs60 mx-2 mx-xl-4'
-										href=''>
+										href='tel:+971552136536'>
 										More Info
 										<i className='fal fa-arrow-right-long' />
-									</Link>
-									<a
-										className='sidemenu-btn filter-btn-right'
-										href='#'
-										data-bs-toggle='offcanvas'
-										data-bs-target='#SidebarPanel'
-										aria-controls='SidebarPanelLabel'>
-										<Image
-											width={25}
-											height={9}
-											className='img-1'
-											src='/images/dark-nav-icon.svg'
-											alt='humberger menu'
-										/>
-										<Image
-											width={25}
-											height={9}
-											className='img-2'
-											src='/images/dark-nav-icon.svg'
-											alt='humberger menu'
-										/>
 									</a>
+									{/* <a
+                    className="sidemenu-btn filter-btn-right"
+                    href="#"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#SidebarPanel"
+                    aria-controls="SidebarPanelLabel"
+                  >
+                    <Image
+                      width={25}
+                      height={9}
+                      className="img-1"
+                      src="/images/dark-nav-icon.svg"
+                      alt="humberger menu"
+                    />
+                    <Image
+                      width={25}
+                      height={9}
+                      className="img-2"
+                      src="/images/dark-nav-icon.svg"
+                      alt="humberger menu"
+                    />
+                  </a> */}
 								</div>
 							</div>
 							{/* End .col-auto */}

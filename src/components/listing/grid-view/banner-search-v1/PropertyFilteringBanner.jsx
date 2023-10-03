@@ -9,6 +9,7 @@ import RecentProperty from "../../sidebar-2/RecentProperty";
 import MortgageCalculator from "./MortgageCalculator";
 import Hero from "./hero";
 import PaginationTwo from "../../PaginationTwo";
+import ScheduleTour from "@/components/property/property-single-style/sidebar/ScheduleTour";
 
 export default function PropertyFilteringBanner({
   listings,
@@ -318,12 +319,16 @@ export default function PropertyFilteringBanner({
         <div className="container">
           <div className="row gx-xl-5">
             <div className="col-lg-4">
-              <div className="list-sidebar-style1">
+              {/* <div className="list-sidebar-style1">
                 <div className="widget-wrapper">
                   <h6 className="list-title">Mortgage Calculator</h6>
                   <MortgageCalculator />
                 </div>
-                {/* End widget-wrapper */}
+              </div> */}
+              <div className="default-box-shadow1 bdrs12 bdr1 p-3 mb30-md bgc-white position-relative">
+                <h4 className="form-title mb5">Schedule a tour</h4>
+                <p className="text">Choose your preferred day</p>
+                <ScheduleTour />
               </div>
               {/* End .list-sidebar-style1 */}
 

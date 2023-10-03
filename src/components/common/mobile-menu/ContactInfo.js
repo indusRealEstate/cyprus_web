@@ -6,15 +6,15 @@ const ContactInfo = () => {
 	const contactInfo = [
 		{
 			id: 1,
-			title: 'Total Free Customer Care',
-			phone: '+(0) 123 456 78945',
-			phoneHref: 'tel:+012345678945', // Updated phoneHref to use "tel" URI
+			title: 'Customer Care',
+			phone: '+(971) 55 213 6536',
+			phoneHref: 'tel:+971552136536', // Updated phoneHref to use "tel" URI
 		},
 		{
 			id: 2,
-			title: 'Need Live Support?',
-			email: 'info@premium-realtor.com',
-			emailHref: 'mailto:info@premium-realtor.com', // Updated emailHref to use "mailto" URI
+			title: 'Whatsapp',
+			email: 'Message Via Whatsapp',
+			emailHref: 'https://wa.me/971552136536', // Updated emailHref to use "mailto" URI
 		},
 	];
 
