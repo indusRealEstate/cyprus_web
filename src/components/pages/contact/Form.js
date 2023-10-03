@@ -3,6 +3,7 @@ import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import axios from 'axios';
 import React, { useEffect } from 'react';
+import { submitContactForm } from '@/api/pages/contactForm';
 
 const Form = () => {
 	const [formData, setFormData] = React.useState({
@@ -21,7 +22,7 @@ const Form = () => {
 	const [isEmail, checkEmail] = React.useState(true);
 	const [firstNameValid, checkFirstName] = React.useState(true);
 	const [lastNameValid, checkLastName] = React.useState(true);
-	const onlyEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	const onlyEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{0,9})+$/;
 	// const onlyEmail = /^([A-Za-z])+@+.+[A-Za-z]\w+/g;
 	const onlyText = /^[a-zA-Z ]*$/;
 
@@ -62,26 +63,31 @@ const Form = () => {
 					throw new Error('Use the correct email fromat');
 				}
 
-				const response = await axios.post(
-					'https://premium-realtor.com/api/formscontactFrom.php',
-					formData
-				);
-				document.getElementById('contact-form').reset();
-				if (response.data.status === 1) {
-					setDataSubmit(true);
-					setAlertMsg(response.data.msg);
-					setAlertTitle('Success');
-					setAlertSeverity('success');
-					formData.first_name = '';
-					formData.last_name = '';
-					formData.email = '';
-					formData.message = '';
-				} else {
-					setDataSubmit(true);
-					setAlertMsg(response.data.msg);
-					setAlertTitle('Error');
-					setAlertSeverity('error');
-				}
+				// const response = await axios.post(
+				// 	'https://premium-realtor.com/api/formscontactFrom.php',
+				// 	formData
+				// );
+
+				submitContactForm(formData).then((res) => {
+					console.log(res);
+				});
+
+				// document.getElementById('contact-form').reset();
+				// if (response.data.status === 1) {
+				// 	setDataSubmit(true);
+				// 	setAlertMsg(response.data.msg);
+				// 	setAlertTitle('Success');
+				// 	setAlertSeverity('success');
+				// 	formData.first_name = '';
+				// 	formData.last_name = '';
+				// 	formData.email = '';
+				// 	formData.message = '';
+				// } else {
+				// 	setDataSubmit(true);
+				// 	setAlertMsg(response.data.msg);
+				// 	setAlertTitle('Error');
+				// 	setAlertSeverity('error');
+				// }
 			}
 		} catch (error) {
 			console.log('Error occur ' + error.message);
