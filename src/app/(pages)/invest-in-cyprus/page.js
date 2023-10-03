@@ -5,14 +5,35 @@ import DefaultHeader from "@/components/common/DefaultHeader";
 import MobileMenu from "@/components/common/mobile-menu";
 import Footer from "@/components/home/footer";
 import Image from "next/image";
+import Head from "next/head";
 
 export const metadata = {
-  title: "Premium Realtor | Why Invest In Cyprus",
+  title: "Why Invest In Cyprus | Premium Realtor",
+  description:
+    "Check out the benefits of investment in Cyprus. Cyprus introduce luxury villas and apartments.",
 };
 
 const InvestInCyprus = () => {
   return (
     <>
+      <Head>
+        <meta
+          name="description"
+          content="Check out the benefits of investment in Cyprus. Cyprus introduce luxury villas and apartments."
+          key="desc"
+        />
+        <meta property="og:title" content="Cyprus Permanent Residence" />
+        <meta
+          property="og:description"
+          content="With its beautiful beaches and tropical Mediterranean climate,
+                  Cyprus is considered an ideal destination for permanent
+                  residence for non-EU nationals."
+        />
+        <meta
+          property="og:image"
+          content="/images/about/Real/compressed_neighbourhood.webp"
+        />
+      </Head>
       {/* Main Header Nav */}
       <DefaultHeader />
       {/* End Main Header Nav */}
