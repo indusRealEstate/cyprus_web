@@ -39,14 +39,14 @@ const ReviewBoxForm = () => {
             <input
               type="email"
               className="form-control"
-              placeholder="ibthemes21@gmail.com"
+              placeholder="jhondoe@yahoo.com"
               required
             />
           </div>
         </div>
         {/* End .col-12 */}
 
-        <div className="col-md-6">
+        {/* <div className="col-md-6">
           <div className="mb-4">
             <label className="fw600 ff-heading mb-2">Title</label>
             <input
@@ -56,10 +56,10 @@ const ReviewBoxForm = () => {
               required
             />
           </div>
-        </div>
+        </div> */}
         {/* End .col-6 */}
 
-        <div className="col-md-6">
+        {/* <div className="col-md-6">
           <div className="widget-wrapper sideborder-dropdown mb-4">
             <label className="fw600 ff-heading mb-2">Rating</label>
             <div className="form-style2 input-group">
@@ -75,22 +75,22 @@ const ReviewBoxForm = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
         {/* End .col-6 */}
 
         <div className="col-md-12">
           <div className="mb-4">
-            <label className="fw600 ff-heading mb-2">Review</label>
+            <label className="fw600 ff-heading mb-2">Message</label>
             <textarea
               className="pt15"
               rows={6}
-              placeholder="Write a Review"
+              placeholder="Write a Message"
               defaultValue={""}
               required
             />
           </div>
           <button type="submit" className="ud-btn btn-white2">
-            Submit Review
+            Submit
             <i className="fal fa-arrow-right-long" />
           </button>
         </div>

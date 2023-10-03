@@ -139,6 +139,13 @@ const MainMenu = () => {
           ) ) }
         </ul> */}
       </li>
+      <li className="visible_list dropitem">
+        <Link className="list-item" href="/invest-in-cyprus">
+          <span className={topMenu == "home" ? "title menuActive" : "title"}>
+            Invest In Cyprus
+          </span>
+        </Link>
+      </li>
 
       {/* <li className="visible_list dropitem">
         <Link className="list-item" href="/rent-properties">

@@ -3,13 +3,10 @@
 import MobileMenu from "@/components/common/mobile-menu";
 import About from "@/components/home/About";
 // import Agents from "@/components/home/Agents";
-import Agents from "@/components/home/Agents";
 import ExploreCities from "@/components/home/ExploreCities";
 import FeaturedListings from "@/components/home/FeatuerdListings";
 import FeatureProperties from "@/components/home/FeatureProperties";
-import Funfact2 from "@/components/home/Funfact2";
 import Header from "@/components/home/Header";
-import Testimonial from "@/components/home/Testimonial";
 import Footer from "@/components/home/footer";
 import WhyChoose from "@/components/home/home-v3/why-choose";
 import Hero from "@/components/home/home-v5/Hero";

@@ -3,22 +3,22 @@ import React from "react";
 const featuresData = [
   {
     points: [
-      "Become a UI/UX designer.",
-      "You will be able to start earning money Figma skills.",
-      "Build a UI project from beginning to end.",
-      "Work with colors & fonts.",
-      "You will create your own UI Kit.",
+      "The application procedure is highly efficient, with a high approval rate if all criteria are satisfied.",
+      "It is not necessary to reside in Cyprus, but a visit once every two years is required.",
+      "Dependents can be enrolled in high-quality private schools offering English language courses.",
+      "Residence applies to the main applicant’s spouse and children under 25 years.",
+      "The whole process can be arranged without being present in the country, except for biometric capturing.",
+      "Successful applicants are eligible to apply for Cypriot citizenship after five years of residence.",
     ],
   },
-  {
-    points: [
-      "Build & test a complete mobile app.",
-      "Learn to design mobile apps & websites.",
-      "Design 3 different logos.",
-      "Create low-fidelity wireframe.",
-      "Downloadable exercise files.",
-    ],
-  },
+  // {
+  //   points: [
+  //     "Learn to design mobile apps & websites.",
+  //     "Design 3 different logos.",
+  //     "Create low-fidelity wireframe.",
+  //     "Downloadable exercise files.",
+  //   ],
+  // },
 ];
 
 const Features = () => {

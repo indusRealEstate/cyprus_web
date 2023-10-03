@@ -11,24 +11,21 @@ const Hero = () => {
 
   const sliderItems = [
     {
-      image:
-        "https://premium-realtor.com/api/media/listings/MI-P1-030/media/Minthis_photo_Amalthia_exterior nignt view.webp",
+      image: "/images/banner/MI-P1-030.webp",
       // price: "$986,00",
       title: "Villa on Paphos, Cyprus",
       description: "3 Beds - 3 Baths - 240 sq ft",
       prop_id: "MI-P1-030",
     },
     {
-      image:
-        "https://premium-realtor.com/api/media/listings/MI-TOPOS-ALTO-01/media/Minthis_CGI_Topos-Alto_evening pool view.webp",
+      image: "/images/banner/MI-TOPOS-ALTO-02.webp",
       // price: "$986,00",
       title: "Topos Villa on Cyprus",
       description: "3 Beds - 3 Baths - 242 sq ft",
       prop_id: "MI-TOPOS-ALTO-02",
     },
     {
-      image:
-        "https://premium-realtor.com/api/media/listings/MI-TOPOS-ALTO-01/media/Minthis_CGI_Topos-Alto_front entrance.webp",
+      image: "/images/banner/MI-TOPOS-ALTO-01.webp",
       // price: "$986,00",
       title: "Luxury Villa on Cyprus",
       description: "4 Beds - 3 Baths - 360 sq ft",

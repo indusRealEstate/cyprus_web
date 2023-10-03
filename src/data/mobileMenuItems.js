@@ -25,6 +25,11 @@ module.exports = [
     label: "Buy",
     // subMenu: [{ path: '/about', label: 'About Us' }],
   },
+  {
+    path: "/invest-in-cyprus/",
+    label: "Invest In Cyprus",
+    // subMenu: [{ path: '/about', label: 'About Us' }],
+  },
   // {
   // 	label: 'Blog/News',
   // 	subMenu: [
