@@ -36,12 +36,12 @@ const InvestInCyprus = () => {
                   residence for non-EU nationals.
                 </p>
                 <p className="ff-heading">
-                  In line with the Cypriot government’s intention to increase
-                  foreign investment and to help its economic development,
-                  Regulation 6(2) of the Aliens and Immigration Regulations
-                  allows the Ministry of Interior to issue residence permits to
-                  applicants from non-European countries who intend to invest in
-                  the republic.
+                  In line with the Cypriot government&apos;s intention to
+                  increase foreign investment and to help its economic
+                  development, Regulation 6(2) of the Aliens and Immigration
+                  Regulations allows the Ministry of Interior to issue residence
+                  permits to applicants from non-European countries who intend
+                  to invest in the republic.
                 </p>
               </div>
 
@@ -49,7 +49,7 @@ const InvestInCyprus = () => {
                 <blockquote className="blockquote">
                   <p className="fst-italic fz15 fw500 ff-heading">
                     The Cyprus golden visa allows foreign nationals to benefit
-                    from the country's relatively low cost of living, no
+                    from the country&apos;s relatively low cost of living, no
                     inheritance tax, and the lowest crime levels in the EU, as
                     well as its high-quality healthcare system and leading
                     medical centers.
