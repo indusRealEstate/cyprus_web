@@ -1,30 +1,30 @@
 /** @format */
 
-'use client';
-import Link from 'next/link';
-import Image from 'next/image';
-import ContactInfo from './ContactInfo';
-import Social from './Social';
-import ProSidebarContent from './ProSidebarContent';
-import React, { useLayoutEffect, useState } from 'react';
+"use client"
+import Link from "next/link"
+import Image from "next/image"
+import ContactInfo from "./ContactInfo"
+import Social from "./Social"
+import ProSidebarContent from "./ProSidebarContent"
+import React, { useLayoutEffect, useState } from "react"
 
 const MobileMenu = () => {
-	const [scrollPosition, setPosition] = useState(0);
+	const [scrollPosition, setPosition] = useState(0)
 	useLayoutEffect(() => {
 		function updatePosition() {
-			setPosition(window.pageYOffset);
+			setPosition(window.pageYOffset)
 		}
-		window.addEventListener('scroll', updatePosition);
-		updatePosition();
-		return () => window.removeEventListener('scroll', updatePosition);
-	}, [scrollPosition]);
+		window.addEventListener("scroll", updatePosition)
+		updatePosition()
+		return () => window.removeEventListener("scroll", updatePosition)
+	}, [scrollPosition])
 
 	return (
 		<div
 			className={
 				scrollPosition <= 50
-					? ' mobilie_header_nav stylehome1 mobile-menu '
-					: 'mobile-menu-scroll-down slideInDown animated mobilie_header_nav'
+					? " mobilie_header_nav stylehome1 mobile-menu "
+					: "mobile-menu-scroll-down slideInDown animated mobilie_header_nav"
 			}>
 			<div className='mobile-menu'>
 				<div className='header innerpage-style'>
@@ -43,9 +43,7 @@ const MobileMenu = () => {
 									alt='mobile icon'
 								/>
 							</a>
-							<Link
-								className='mobile_logo'
-								href='/'>
+							<Link className='mobile_logo' href='/'>
 								<Image
 									width={138}
 									height={44}
@@ -108,7 +106,7 @@ const MobileMenu = () => {
 				</div>
 			</div>
 		</div>
-	);
-};
+	)
+}
 
-export default MobileMenu;
+export default MobileMenu
