@@ -158,15 +158,15 @@ const NearbySimilarProperty = () => {
                             : "For Rent"}
                         </span>
                         <div className="icons d-flex align-items-center">
-                          <a href="#">
+                          <a href={`/property-details?id=${listing.prop_id}`}>
                             <span className="flaticon-fullscreen" />
                           </a>
                           <a href="#">
                             <span className="flaticon-new-tab" />
                           </a>
-                          <a href="#">
+                          {/* <a href="#">
                             <span className="flaticon-like" />
-                          </a>
+                          </a> */}
                         </div>
                       </div>
                     </div>
