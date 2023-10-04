@@ -42,6 +42,13 @@ const Subscribe = () => {
 	const [formData, setFormData] = useState({
 		email: '',
 	});
+
+	const enterToSubmit = (event) => {
+		if (event.code === 'Enter') {
+			submitForm(event);
+		}
+	};
+
 	const [isEmail, checkEmail] = useState(true);
 	const submitForm = (event) => {
 		// route.push('/#main');
@@ -140,6 +147,7 @@ const Subscribe = () => {
 									border: '1px solid red',
 							  }
 					}
+					onKeyDown={(event) => enterToSubmit(event)}
 					onChange={(event) => {
 						setFormData({ ...formData, email: event.target.value });
 					}}

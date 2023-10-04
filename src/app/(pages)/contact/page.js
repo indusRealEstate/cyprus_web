@@ -25,6 +25,10 @@ const Contact = () => {
 				<Image
 					width={1200}
 					height={600}
+					style={{
+						objectFit: 'cover',
+						objectPosition: 'center',
+					}}
 					priority
 					src='/images/about/Real/compressed_pool.webp'
 					alt='blog'
