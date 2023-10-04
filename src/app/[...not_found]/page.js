@@ -1,12 +1,12 @@
 import DefaultHeader from "@/components/common/DefaultHeader";
-import Footer from "@/components/common/default-footer";
+import Footer from "@/components/home/footer";
 import MobileMenu from "@/components/common/mobile-menu";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export const metadata = {
-  title: "Not-Found  || Homez - Real Estate NextJS Template",
+  title: "Premium Realtor | Explore International Properties",
 };
 
 const NotFound = () => {
@@ -56,7 +56,7 @@ const NotFound = () => {
                   go to.
                 </p>
                 <Link href="/" className="ud-btn btn-dark">
-                  Go Back To Homepages
+                  Go Back To Homepage
                   <i className="fal fa-arrow-right-long" />
                 </Link>
               </div>
@@ -68,7 +68,7 @@ const NotFound = () => {
       {/* End Error/404 Section Area */}
 
       {/* Start Our Footer */}
-      <section className="footer-style1 pt60 pb-0">
+      <section className="footer-style1 at-home6 pt60 pb-0">
         <Footer />
       </section>
       {/* End Our Footer */}

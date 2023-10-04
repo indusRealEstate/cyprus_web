@@ -32,7 +32,7 @@ const MobileMenu = () => {
 						<div className='mobile_menu_bar d-flex justify-content-between align-items-center'>
 							<a
 								className='menubar'
-								// href='#'
+								href='/'
 								data-bs-toggle='offcanvas'
 								data-bs-target='#mobileMenu'
 								aria-controls='mobileMenu'>

@@ -15,6 +15,7 @@ const MenuWidget = () => {
       title: "Quick Links",
       links: [
         { label: "Why Cyprus", href: "/#why-cyprus" },
+        { label: "Invest In Cyprus", href: "/invest-in-cyprus" },
         { label: "Pafilia Collections", href: "/#flagship-prop" },
         { label: "Contact Us", href: "/contact" },
         { label: "All Properties", href: "/all-properties" },

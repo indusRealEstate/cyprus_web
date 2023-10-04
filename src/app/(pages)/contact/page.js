@@ -1,9 +1,9 @@
 import CallToActions from '@/components/common/CallToActions';
 import DefaultHeader from '@/components/common/DefaultHeader';
-import Footer from '@/components/home/footer';
 import MobileMenu from '@/components/common/mobile-menu';
+import Footer from '@/components/home/footer';
 import Form from '@/components/pages/contact/Form';
-import Office from '@/components/pages/contact/Office';
+import Image from 'next/image';
 
 export const metadata = {
 	title: 'Premium Realtor | Explore International Properties',
@@ -22,13 +22,22 @@ const Contact = () => {
 
 			{/* Our Contact With Map */}
 			<section className='p-0'>
-				<iframe
-					src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57823.079294247924!2d55.117731488939945!3d25.069939442109245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6d04d580eb8d%3A0x8d223d86886fa136!2sIndus%20Real%20Estate%20LLC%20(DMCC%20Branch)!5e0!3m2!1sen!2sae!4v1695707256162!5m2!1sen!2sae'
+				<Image
+					width={1200}
+					height={600}
+					priority
+					src='/images/about/Real/compressed_pool.webp'
+					alt='blog'
 					className='home8-map contact-page'
-					allowfullscreen=''
-					loading='lazy'
-					referrerpolicy='no-referrer-when-downgrade'
-					aria-label='Dubai Eye, Dubai, United Arab Emirates'></iframe>
+				/>
+				{/* <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57823.079294247924!2d55.117731488939945!3d25.069939442109245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6d04d580eb8d%3A0x8d223d86886fa136!2sIndus%20Real%20Estate%20LLC%20(DMCC%20Branch)!5e0!3m2!1sen!2sae!4v1695707256162!5m2!1sen!2sae"
+          className="home8-map contact-page"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="Dubai Eye, Dubai, United Arab Emirates"
+        ></iframe> */}
 				{/* <iframe
           className="home8-map contact-page"
           loading="lazy"
@@ -59,9 +68,9 @@ const Contact = () => {
 								from you.
 							</h2>
 							<p className='text'>
-								We are here to answer any question you may have. As a partner of
-								corporates, realton has more than 9,000 offices of all sizes and
-								all potential of session.
+								We have been successfully active in business since 2004. During
+								this time, we have successfully assisted hundreds clients and we
+								will be happy to guide you.
 							</p>
 						</div>
 						{/* End .col */}

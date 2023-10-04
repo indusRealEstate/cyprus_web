@@ -46,8 +46,6 @@ export default function Details() {
               <video
                 // className="bg-video"
                 id="vid"
-                width="1920"
-                height="760"
                 loop
                 autoPlay
                 muted
@@ -58,7 +56,7 @@ export default function Details() {
                   borderRadius: "10px",
                 }}
               >
-                <source src={"/video/sample.webm"} type="video/mp4" />
+                <source src={"/video/video-new.mp4"} type="video/mp4" />
               </video>
               {/* <Image
                 width={1200}

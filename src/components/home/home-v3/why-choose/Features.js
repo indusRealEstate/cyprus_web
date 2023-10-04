@@ -3,7 +3,7 @@ const Features = () => {
 	const features = [
 		{
 			icon: 'flaticon-security',
-			title: 'Permenent Residency',
+			title: 'Permanent Residency',
 			description:
 				'A permanent residency visa can easily be obtained.It gives you and your family the right to live freely and travel with ease throughout the EU. Permit holders also have the right to own a business in Cyprus or set up a Cyprus company for trading with excellent tax advantages.',
 		},
