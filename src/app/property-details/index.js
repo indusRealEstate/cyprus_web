@@ -36,7 +36,7 @@ const PropertyDetailsPage = () => {
 		getPropertyDetails(params).then((res) => {
 			setData(res);
 		});
-	}, [data]);
+	}, [data, params]);
 
 	useLayoutEffect(() => {
 		setScreenWidth(window.innerWidth);

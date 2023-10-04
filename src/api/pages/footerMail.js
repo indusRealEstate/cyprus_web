@@ -5,12 +5,10 @@ import { NextResponse, NextRequest } from 'next/server';
 
 export async function subscrbeMail(data) {
 	const res = await axios
-		.post('https://premium-realtor.com/api/forms/emailSubcribe.php', {
-			data: data,
-		})
+		.post('https://premium-realtor.com/api/forms/emailSubcribe.php', data)
 		.catch(function (error) {
 			console.log(error);
 		});
 
-	return res.data;
+	return res;
 }

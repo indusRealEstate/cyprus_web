@@ -153,6 +153,7 @@ const ScheduleTour = () => {
 				if (!error) {
 					console.log('no error');
 					submit(data).then((res) => {
+						console.log(res.data);
 						if (res.data === true) {
 							setRespons(true);
 							handleClickOpen();
@@ -179,7 +180,7 @@ const ScheduleTour = () => {
 					<DialogTitle
 						id='responsive-dialog-title'
 						color={'#1d4439'}>
-						{'Thank you for your subsciption :)'}
+						{'Thank you :)'}
 					</DialogTitle>
 					<DialogContent>
 						<DialogContentText>
@@ -196,7 +197,6 @@ const ScheduleTour = () => {
 							OKAY
 						</Button>
 					</DialogActions>
-					      
 				</Dialog>
 			) : (
 				''
