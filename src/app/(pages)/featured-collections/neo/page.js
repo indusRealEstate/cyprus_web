@@ -1,6 +1,6 @@
 import CallToActions from "@/components/common/CallToActions"
 import DefaultHeader from "@/components/common/DefaultHeader"
-import Footer from "@/components/common/default-footer"
+import Footer from "@/components/home/footer"
 import MobileMenu from "@/components/common/mobile-menu"
 import Agents from "@/components/pages/about/Agents"
 import Features from "@/components/pages/about/Features"
@@ -17,7 +17,27 @@ export const getFeatureData = (data) => {
 	console.log(data)
 }
 
-const About = () => {
+const Neo = () => {
+	const propertyType = "minthis"
+	const features = [
+		{
+			icon: "flaticon-home-3",
+			title: "4 Residential Towers",
+			description:
+				"Rising from the foot of the Cyprian hills, NEO's four towers embody a meeting point between four distinct landscapes: City, Mountain, Sky and Sea.",
+		},
+		{
+			icon: "flaticon-location",
+			title: "Set on the Limassol shoreline",
+			description: "On the rooftop, the pool is framed by soothing natural tones, plants and native trees, surrounded by a vista of the sea and gardens below.",
+		},
+		// {
+		// 	icon: "flaticon-investment",
+		// 	title: "Currency Services",
+		// 	description:
+		// 		"3% of the land will be built on, the rest will remain natural untouched landscape",
+		// },
+	]
 	return (
 		<>
 			{/* Main Header Nav */}
@@ -29,15 +49,25 @@ const About = () => {
 			{/* End Mobile Nav  */}
 
 			{/* Breadcrumb Sections */}
-			<section className='about-main p-0 '>
+			<section className='neo p-0 '>
 				<div className='container'>
 					<div className='row'>
 						<div className='col-lg-12'>
 							<div className='breadcumb-style1'>
-								<h2 className='title'>About Us</h2>
-								<div className='breadcumb-list'>
-									<a href='#'>Home</a>
-									<a href='#'>About</a>
+								<h2 className='title'>
+									<Image
+										width={150}
+										height={50}
+										src='/images/neo-logo.webp'
+										alt='property image'
+										style={{
+											filter: "brightness(5.5)",
+										}}
+									/>
+								</h2>
+								<div className='breadcumb-list mt-2'>
+									<a href='#'>Featured Properties Collection </a>
+									<a href='#'>Minthis</a>
 								</div>
 							</div>
 						</div>
@@ -51,27 +81,65 @@ const About = () => {
 				<div className='container'>
 					<div className='row' data-aos='fade-up' data-aos-delay='300'>
 						<div className='col-lg-6'>
-							<h2>
-								We&apos;re on a Mission to Change
-								<br className='d-none d-lg-block' /> View of Real Estate Field.
+							<h2
+								style={{
+									fontSize: "30pt",
+									fontWeight: 200,
+									fontStyle: "oblique",
+								}}>
+								NEO: Between the Sky and the Sea
 							</h2>
 						</div>
 						<div className='col-lg-6'>
-							<p className='text mb25'>
-								It doesn’t matter how organized you are — a surplus of toys will
-								always ensure your house is a mess waiting to happen.
-								Fortunately, getting kids on board with the idea of ditching
-								their stuff is a lot easier than it sounds.
+							<h5>
+								A new home. <br />A new investment. <br />A new discovery.
+							</h5>
+							<p className='text mb-1'>
+								Rising from the foot of the Cyprian hills, NEO&apos;s four
+								towers embody a meeting point between four distinct landscapes:
+								City, Mountain, Sky and Sea.
 							</p>
-							<p className='text mb55'>
-								Maecenas quis viverra metus, et efficitur ligula. Nam congue
-								augue et ex congue, sed luctus lectus congue. Integer convallis
-								condimentum sem. Duis elementum tortor eget condimentum tempor.
-								Praesent sollicitudin lectus ut pharetra pulvinar.
+							<p className='text mb-1'>
+								Designed and crafted by world-leading developers, architects and
+								engineers, NEO is a prestigious and globally-significant
+								residential landmark set on the Limassol shoreline. With
+								unparalleled views, unprecedented architecture and immersive
+								environment, NEO represents the ethos of Cypriot living at every
+								level.
 							</p>
-							<div className='row'>
-								<Mission />
-							</div>
+							<p className='text mb-1'>
+								At the heart of NEO&apos;s identity is its connection to
+								Limassol&apos;s evolution. With a tradition of warmly welcoming
+								visitors, wanderers and explorers, Limassol is both
+								quintessentially Cyprian and internationally relevant. Cyprus
+								has evolved to become an eastern gateway into Europe, making NEO
+								an investment in community, culture and connectivity.
+							</p>
+							<p className='text mb-1'>
+								All properties - Residences, Villas and Suites - harmonise with
+								the topography to capture the light, harness cool hillside
+								breezes and frame the extraordinary views. Nature is an
+								ever-present element at Minthis. The 18-hole championship golf
+								course moulds itself to the landscape, passing walnut and fig
+								trees, olive groves and the historic 12th century monastery.
+							</p>
+							<p className='text mb-1'>
+								This unique development unites environment, innovation and local
+								culture. It is defined by an exquisite balance of access to
+								indulgence, and the desire to escape. NEO provides the ultimate
+								luxury: choice. It is both an immersive, cosmopolitan
+								environment and a haven high above it all.
+							</p>
+							<p className='text mb50'>
+								NEO offers a curated, modern and forward-looking lifestyle
+								anchored by the sophisticated and historic allure of the
+								Mediterranean. NEO delivers experiences across three levels:
+								personal and adaptable living spaces — &apos;villas in the
+								sky&apos;, resort-style podium amenities, access to local
+								culture and finally, connectivity to the Limassol lifestyle —
+								known as &apos;Lima-soul&apos;.
+							</p>
+							<div className='row'>{/* <Mission /> */}</div>
 						</div>
 					</div>
 				</div>
@@ -89,7 +157,7 @@ const About = () => {
 									height={515}
 									priority
 									className='about-banner'
-									src='/images/about/Real/compressed_neighbourhood.webp'
+									src='/images/featureProperties/Minthis neighbourhood.webp'
 									alt='about banner'
 								/>
 							</div>
@@ -100,7 +168,7 @@ const About = () => {
 			{/* End About Banner */}
 
 			{/* Funfact */}
-			<section className='pt-0'>
+			{/* <section className='pt-0'>
 				<div className='container'>
 					<div
 						className='row justify-content-center'
@@ -109,11 +177,11 @@ const About = () => {
 						<FunFact />
 					</div>
 				</div>
-			</section>
+			</section> */}
 			{/* End Funfact */}
 
 			{/* Exclusive Agents */}
-			<section className='pb90'>
+			{/* <section className='pb90'>
 				<div className='container'>
 					<div className='row  justify-content-center'>
 						<div className='col-auto'>
@@ -127,9 +195,7 @@ const About = () => {
 								</p>
 							</div>
 						</div>
-						{/* End header */}
 					</div>
-					{/* End .row */}
 
 					<div className='row'>
 						<div className='col-lg-12' data-aos='fade-up' data-aos-delay='300'>
@@ -139,7 +205,7 @@ const About = () => {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 			{/* Exclusive Agents */}
 
 			{/* Abut intro */}
@@ -158,7 +224,7 @@ const About = () => {
 									</h2>
 								</div>
 								<div className='why-chose-list style2'>
-									<Features />
+									<Features features={features} />
 								</div>
 								<Link href='#' className='ud-btn btn-dark'>
 									Learn More
@@ -200,7 +266,7 @@ const About = () => {
 
 			{/* Start Our Footer */}
 			{/* footer-style1  */}
-			<section className='footer-main pt60 pb-0'>
+			<section className='footer-style1 at-home6 pt60 pb-0'>
 				<Footer />
 			</section>
 			{/* End Our Footer */}
@@ -208,4 +274,4 @@ const About = () => {
 	)
 }
 
-export default About
+export default Neo

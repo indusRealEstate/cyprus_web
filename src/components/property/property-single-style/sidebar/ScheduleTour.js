@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Alert from '@mui/material/Alert';
-import AlertTitle from '@mui/material/AlertTitle';
-import { submit } from '@/api/pages/scheduleATour';
+import React, { useState } from "react"
+import Alert from "@mui/material/Alert"
+import AlertTitle from "@mui/material/AlertTitle"
+import { submit } from "@/api/pages/scheduleATour"
 import {
 	Button,
 	Dialog,
@@ -11,163 +11,164 @@ import {
 	DialogTitle,
 	useMediaQuery,
 	useTheme,
-} from '@mui/material';
+} from "@mui/material"
 
 const ScheduleTour = () => {
 	const onlyEmail =
-		/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+		/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 	// const onlyEmail = /^([A-Za-z])+@+.+[A-Za-z]\w+/g;
-	const onlyText = /^[a-zA-Z ]*$/;
-	const onlyContactNumber = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
-	const [notValidName, setValidName] = useState(true);
-	const [notValidPhone, setValidPhone] = useState(true);
-	const [notValidNEmail, setValidEmail] = useState(true);
-	const [tabType, setTabType] = useState('inperson');
-	const [alertMsg, setAlertMsg] = useState();
-	const [alertTitle, setAlertTitle] = useState();
-	const [alertSeverity, setAlertSeverity] = useState();
-	const [formSubmit, setFormSubmit] = useState(false);
-	const [timeIsEmpty, setTimeEmpty] = useState(false);
-	const [messageEmpty, setMessageEmpty] = useState(false);
-	const [error, setError] = useState(false);
-	const [responsData, setRespons] = useState(false);
-	const theme = useTheme();
-	const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
-	const [open, setOpen] = useState(false);
+	const onlyText = /^[a-zA-Z ]*$/
+	const onlyContactNumber = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g
+	const [notValidName, setValidName] = useState(true)
+	const [notValidPhone, setValidPhone] = useState(true)
+	const [notValidNEmail, setValidEmail] = useState(true)
+	const [tabType, setTabType] = useState("inperson")
+	const [alertMsg, setAlertMsg] = useState()
+	const [alertTitle, setAlertTitle] = useState()
+	const [alertSeverity, setAlertSeverity] = useState()
+	const [formSubmit, setFormSubmit] = useState(false)
+	const [timeIsEmpty, setTimeEmpty] = useState(false)
+	const [messageEmpty, setMessageEmpty] = useState(false)
+	const [error, setError] = useState(false)
+	const [responsData, setRespons] = useState(false)
+	const theme = useTheme()
+	const fullScreen = useMediaQuery(theme.breakpoints.down("md"))
+	const [open, setOpen] = useState(false)
 	const tabs = [
 		{
-			id: 'inperson',
-			label: 'In Person',
+			id: "inperson",
+			label: "In Person",
 		},
 		{
-			id: 'videochat',
-			label: 'Video Chat',
+			id: "videochat",
+			label: "Video Chat",
 		},
-	];
+	]
 	const [data, setData] = useState({
-		status: 'inperson',
-		time: '',
-		name: '',
-		phone: '',
-		email: '',
-		message: '',
-	});
+		status: "inperson",
+		time: "",
+		name: "",
+		phone: "",
+		email: "",
+		message: "",
+	})
 
 	const changeStatus = (status) => {
-		const previousState = status === 'inperson' ? 'videochat' : 'inperson';
-		document.getElementById('form_' + previousState).reset();
-		document.getElementById('form_' + status).reset();
-		setTabType(status);
+		const previousState = status === "inperson" ? "videochat" : "inperson"
+		document.getElementById("form_" + previousState).reset()
+		document.getElementById("form_" + status).reset()
+		setTabType(status)
 		setData({
 			status: status,
-			time: '',
-			name: '',
-			phone: '',
-			email: '',
-			message: '',
-		});
-	};
+			time: "",
+			name: "",
+			phone: "",
+			email: "",
+			message: "",
+		})
+	}
 	const handleClickOpen = () => {
-		setOpen(true);
-	};
+		setOpen(true)
+	}
 	const handleClose = () => {
-		setOpen(false);
-		setRespons(false);
-	};
-	const onSubmit = (event) => {
-		event.preventDefault();
-		setFormSubmit(true);
-		if (event.type === 'click') {
+		setOpen(false)
+		setRespons(false)
+	}
+	const onSubmit = (event, tabId) => {
+		event.preventDefault()
+		setFormSubmit(true)
+		if (event.type === "click") {
 			try {
-				if (data.time == '') {
-					setTimeEmpty(true);
-					setError(true);
-					throw new Error('Fill the time');
+				if (data.time == "") {
+					setTimeEmpty(true)
+					setError(true)
+					throw new Error("Fill the time")
 				} else {
-					setError(false);
-					setTimeEmpty(false);
+					setError(false)
+					setTimeEmpty(false)
 				}
-				if (data.name == '') {
-					setError(true);
-					setValidName(false);
-					throw new Error('Fill the name');
+				if (data.name == "") {
+					setError(true)
+					setValidName(false)
+					throw new Error("Fill the name")
 				} else {
-					setError(false);
-					setValidName(true);
+					setError(false)
+					setValidName(true)
 				}
 
 				if (!data.name.match(onlyText)) {
-					setValidName(false);
-					setError(true);
-					throw new Error('Fill the correct name');
+					setValidName(false)
+					setError(true)
+					throw new Error("Fill the correct name")
 				} else {
-					setError(false);
-					setValidName(true);
+					setError(false)
+					setValidName(true)
 				}
 
-				if (data.phone == '') {
-					setError(true);
-					setValidPhone(false);
-					throw new Error('Fill the contact number');
+				if (data.phone == "") {
+					setError(true)
+					setValidPhone(false)
+					throw new Error("Fill the contact number")
 				} else {
-					setError(false);
-					setValidPhone(true);
+					setError(false)
+					setValidPhone(true)
 				}
 
 				if (!data.phone.match(onlyContactNumber)) {
-					setError(true);
-					setValidPhone(false);
-					throw new Error('Fill the correct contact number');
+					setError(true)
+					setValidPhone(false)
+					throw new Error("Fill the correct contact number")
 				} else {
-					setError(false);
-					setValidPhone(true);
+					setError(false)
+					setValidPhone(true)
 				}
 
-				if (data.email == '') {
-					setError(true);
-					setValidEmail(false);
-					throw new Error('Fill the email');
+				if (data.email == "") {
+					setError(true)
+					setValidEmail(false)
+					throw new Error("Fill the email")
 				} else {
-					setError(false);
-					setValidEmail(true);
+					setError(false)
+					setValidEmail(true)
 				}
 
 				if (!data.email.match(onlyEmail)) {
-					setError(true);
-					setValidEmail(false);
-					throw new Error('Fill the correct email');
+					setError(true)
+					setValidEmail(false)
+					throw new Error("Fill the correct email")
 				} else {
-					setError(false);
-					setValidEmail(true);
+					setError(false)
+					setValidEmail(true)
 				}
 
-				if (data.message == '') {
-					setError(true);
-					setMessageEmpty(true);
-					throw new Error('Fill the message');
+				if (data.message == "") {
+					setError(true)
+					setMessageEmpty(true)
+					throw new Error("Fill the message")
 				} else {
-					setError(false);
-					setMessageEmpty(false);
+					setError(false)
+					setMessageEmpty(false)
 				}
 
 				if (!error) {
-					console.log('no error');
+					console.log("no error")
 					submit(data).then((res) => {
-						console.log(res.data);
+						console.log(res.data)
 						if (res.data === true) {
-							setRespons(true);
-							handleClickOpen();
+							document.getElementById(`form_${tabId}`).reset()
+							setRespons(true)
+							handleClickOpen()
 						}
-					});
+					})
 				}
 			} catch (error) {
-				console.log(error.message);
-				setAlertMsg(error.message);
-				setAlertTitle('Error');
-				setAlertSeverity('error');
+				console.log(error.message)
+				setAlertMsg(error.message)
+				setAlertTitle("Error")
+				setAlertSeverity("error")
 			}
 		}
-	};
+	}
 
 	return (
 		<div className='ps-navtab'>
@@ -177,10 +178,8 @@ const ScheduleTour = () => {
 					open={open}
 					onClose={handleClose}
 					aria-labelledby='responsive-dialog-title'>
-					<DialogTitle
-						id='responsive-dialog-title'
-						color={'#1d4439'}>
-						{'Thank you :)'}
+					<DialogTitle id='responsive-dialog-title' color={"#1d4439"}>
+						{"Thank you :)"}
 					</DialogTitle>
 					<DialogContent>
 						<DialogContentText>
@@ -192,37 +191,29 @@ const ScheduleTour = () => {
 							autoFocus
 							onClick={handleClose}
 							style={{
-								color: '#1d4439',
+								color: "#1d4439",
 							}}>
 							OKAY
 						</Button>
 					</DialogActions>
 				</Dialog>
 			) : (
-				''
+				""
 			)}
 			{formSubmit && error ? (
-				<Alert
-					severity={alertSeverity}
-					className='mb-5'>
+				<Alert severity={alertSeverity} className='mb-5'>
 					<AlertTitle>{alertTitle}</AlertTitle>
 					<strong>{alertMsg}</strong>
 				</Alert>
 			) : (
-				''
+				""
 			)}
-			<ul
-				className='nav nav-pills mb-3'
-				id='pills-tab'
-				role='tablist'>
+			<ul className='nav nav-pills mb-3' id='pills-tab' role='tablist'>
 				{tabs.map((tab) => (
-					<li
-						className='nav-item'
-						key={tab.id}
-						role='presentation'>
+					<li className='nav-item' key={tab.id} role='presentation'>
 						<button
 							className={`nav-link${
-								tab.id === 'inperson' ? ' active mr15 mb5-lg' : ''
+								tab.id === "inperson" ? " active mr15 mb5-lg" : ""
 							}`}
 							id={`pills-${tab.id}-tab`}
 							data-bs-toggle='pill'
@@ -230,7 +221,7 @@ const ScheduleTour = () => {
 							type='button'
 							role='tab'
 							aria-controls={`pills-${tab.id}`}
-							aria-selected={tab.id === 'inperson' ? 'true' : 'false'}
+							aria-selected={tab.id === "inperson" ? "true" : "false"}
 							onChange={(event) => setData({ ...data, status: tab.id })}
 							onClick={(event) => changeStatus(tab.id)}>
 							{tab.label}
@@ -240,21 +231,17 @@ const ScheduleTour = () => {
 			</ul>
 			{/* End nav-pills */}
 
-			<div
-				className='tab-content'
-				id='pills-tabContent'>
+			<div className='tab-content' id='pills-tabContent'>
 				{tabs.map((tab) => (
 					<div
 						className={`tab-pane fade${
-							tab.id === 'inperson' ? ' show active' : ''
+							tab.id === "inperson" ? " show active" : ""
 						}`}
 						id={`pills-${tab.id}`}
 						role='tabpanel'
 						aria-labelledby={`pills-${tab.id}-tab`}
 						key={tab.id}>
-						<form
-							className='form-style1'
-							id={`form_${tab.id}`}>
+						<form className='form-style1' id={`form_${tab.id}`}>
 							<div className='row'>
 								<div className='col-md-12'>
 									<div className='mb20'>
@@ -265,7 +252,7 @@ const ScheduleTour = () => {
 											required
 											style={
 												tabType === tab.id && timeIsEmpty
-													? { border: '2px solid red' }
+													? { border: "2px solid red" }
 													: {}
 											}
 											onChange={(event) =>
@@ -284,7 +271,7 @@ const ScheduleTour = () => {
 											required
 											style={
 												tabType === tab.id && !notValidName
-													? { border: '2px solid red' }
+													? { border: "2px solid red" }
 													: {}
 											}
 											onChange={(event) =>
@@ -303,7 +290,7 @@ const ScheduleTour = () => {
 											required
 											style={
 												tabType === tab.id && !notValidPhone
-													? { border: '2px solid red' }
+													? { border: "2px solid red" }
 													: {}
 											}
 											onChange={(event) =>
@@ -322,7 +309,7 @@ const ScheduleTour = () => {
 											required
 											style={
 												tabType === tab.id && !notValidNEmail
-													? { border: '2px solid red' }
+													? { border: "2px solid red" }
 													: {}
 											}
 											onChange={(event) =>
@@ -338,10 +325,10 @@ const ScheduleTour = () => {
 											cols={30}
 											rows={4}
 											placeholder='Enter Your Messages'
-											defaultValue={''}
+											defaultValue={""}
 											style={
 												tabType === tab.id && messageEmpty
-													? { border: '2px solid red' }
+													? { border: "2px solid red" }
 													: {}
 											}
 											onChange={(event) =>
@@ -356,7 +343,7 @@ const ScheduleTour = () => {
 										<button
 											type='submit'
 											className='ud-btn btn-thm'
-											onClick={(event) => onSubmit(event)}>
+											onClick={(event) => onSubmit(event, tab.id)}>
 											Submit a Tour Request
 											<i className='fal fa-arrow-right-long' />
 										</button>
@@ -369,7 +356,7 @@ const ScheduleTour = () => {
 				))}
 			</div>
 		</div>
-	);
-};
+	)
+}
 
-export default ScheduleTour;
+export default ScheduleTour
