@@ -4,7 +4,7 @@ module.exports = [
   {
     label: "Home",
     subMenu: [
-      { path: "/", label: "Home" },
+      { path: "/#main", label: "Home" },
       // { path: "/#why-cyprus", label: "Why Cyprus" },
       { path: "/#flagship-prop", label: "Flagship Collection" },
       { path: "/#featured-listings", label: "Featured Listings" },

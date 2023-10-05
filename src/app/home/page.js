@@ -54,7 +54,7 @@ const Home = () => {
           </div>
         </div>
       </section> */}
-      <div className="banner-wrapper position-relative">
+      <div id="main" className="banner-wrapper position-relative">
         <section className="thumbimg-countnumber-carousel p-0">
           <Hero />
         </section>
