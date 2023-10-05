@@ -115,6 +115,7 @@ const ReviewBoxForm = () => {
 						if (res.data === true) {
 							setRespons(true)
 							handleClickOpen()
+							document.getElementById("form").reset()
 						}
 					})
 				}
@@ -165,7 +166,7 @@ const ReviewBoxForm = () => {
 			) : (
 				""
 			)}
-			<form className='comments_form mt30' onSubmit={handleSubmit}>
+			<form className='comments_form mt30' id='form'>
 				<div className='row'>
 					<div className='col-md-12'>
 						<div className='mb-4'>

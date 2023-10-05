@@ -9,6 +9,7 @@ import {
   rentItems,
   buyItems,
   cyprusItems,
+  propertyCollections,
 } from "@/data/navItems";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -24,6 +25,11 @@ const MainMenu = () => {
     homeItems.forEach((elm) => {
       if (elm.href.split("/")[1] == pathname.split("/")[1]) {
         setTopMenu("home");
+      }
+    });
+    propertyCollections.forEach((elm) => {
+      if (elm.href.split("/")[1] == pathname.split("/")[1]) {
+        setTopMenu("minthis");
       }
     });
     blogItems.forEach((elm) => {
@@ -145,6 +151,24 @@ const MainMenu = () => {
             Invest In Cyprus
           </span>
         </Link>
+      </li>
+      <li className="visible_list dropitem">
+        <a className="list-item" href="#">
+          <span className={topMenu == "home" ? "title menuActive" : "title"}>
+            Pafilia Collections
+          </span>
+          <span className="arrow"></span>
+        </a>
+        {/* Level Two*/}
+        <ul className="sub-menu">
+          {propertyCollections.map((item, index) => (
+            <li key={index}>
+              <Link className={`${handleActive(item.href)}`} href={item.href}>
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </li>
 
       {/* <li className="visible_list dropitem">

@@ -16,6 +16,12 @@ export const homeItems = [
   // { href: "/home-v10", label: "Home v10" },
 ];
 
+export const propertyCollections = [
+  { href: "/featured-collections/minthis", label: "Minthis" },
+  { href: "/featured-collections/one", label: "One" },
+  { href: "/featured-collections/neo", label: "Neo" },
+];
+
 export const listingItems = [
   {
     title: "Grid View",
