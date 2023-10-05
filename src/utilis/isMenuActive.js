@@ -10,3 +10,7 @@ export const isParentActive = (children, path) => {
 			  ),
 	)
 }
+
+export const checkPathActive = (url, path) => {
+	return url
+}
