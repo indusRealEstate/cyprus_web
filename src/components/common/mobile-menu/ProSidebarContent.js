@@ -14,10 +14,7 @@ const ProSidebarContent = () => {
 	const route = useRouter()
 
 	return (
-		<Sidebar
-			width='100%'
-			backgroundColor='#fff'
-			className='my-custom-class'>
+		<Sidebar width='100%' backgroundColor='#fff' className='my-custom-class'>
 			<Menu>
 				{mobileMenuItems.map((item, index) => (
 					<>
