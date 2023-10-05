@@ -229,7 +229,7 @@ const Neo = () => {
                 <div className="why-chose-list style2">
                   <Features features={features} />
                 </div>
-                <Link href="#" className="ud-btn btn-dark">
+                <Link href="/contact" className="ud-btn btn-dark">
                   Learn More
                   <i className="fal fa-arrow-right-long" />
                 </Link>

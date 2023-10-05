@@ -30,6 +30,14 @@ module.exports = [
     label: "Invest In Cyprus",
     // subMenu: [{ path: '/about', label: 'About Us' }],
   },
+  {
+    label: "Pafilia Collections",
+    subMenu: [
+      { path: "/featured-collections/minthis", label: "Minthis" },
+      { path: "/featured-collections/one", label: "One" },
+      { path: "/featured-collections/neo", label: "Neo" },
+    ],
+  },
   // {
   // 	label: 'Blog/News',
   // 	subMenu: [
