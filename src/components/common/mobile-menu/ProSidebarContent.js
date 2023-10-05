@@ -3,17 +3,16 @@
 import mobileMenuItems from "@/data/mobileMenuItems";
 import { isParentActive } from "@/utilis/isMenuActive";
 import Link from "next/link";
-import { useParams, usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 import { Menu, MenuItem, Sidebar, SubMenu } from "react-pro-sidebar";
 
 const ProSidebarContent = () => {
   const path = usePathname();
-  const [hash, setHash] = useState("");
-  useEffect(() => {
-    setHash(window.location.hash);
-  });
+  // const [hash, setHash] = useState("");
+  // useEffect(() => {
+  //   setHash(window.location.hash);
+  // });
 
   return (
     <Sidebar width="100%" backgroundColor="#fff" className="my-custom-class">
@@ -23,9 +22,7 @@ const ProSidebarContent = () => {
             {item.subMenu != undefined ? (
               <SubMenu
                 key={index}
-                className={
-                  isParentActive(item.subMenu, path + hash) ? "active" : ""
-                }
+                className={isParentActive(item.subMenu, path) ? "active" : ""}
                 label={item.label}
               >
                 {item.subMenu.map((subItem, subIndex) =>
@@ -34,9 +31,7 @@ const ProSidebarContent = () => {
                       key={subIndex}
                       label={subItem.label}
                       className={
-                        isParentActive(subItem.subMenu, path + hash)
-                          ? "active"
-                          : ""
+                        isParentActive(subItem.subMenu, path) ? "active" : ""
                       }
                     >
                       {subItem.subMenu.map((nestedItem, nestedIndex) => (
@@ -45,7 +40,7 @@ const ProSidebarContent = () => {
                           component={
                             <Link
                               className={
-                                nestedItem.path == path + hash ? "active" : ""
+                                nestedItem.path == path ? "active" : ""
                               }
                               href={nestedItem.path}
                             />
@@ -60,9 +55,7 @@ const ProSidebarContent = () => {
                       key={subIndex}
                       component={
                         <Link
-                          className={
-                            subItem.path == path + hash ? "active" : ""
-                          }
+                          className={subItem.path == path ? "active" : ""}
                           href={subItem.path}
                         />
                       }
@@ -77,7 +70,7 @@ const ProSidebarContent = () => {
                 <MenuItem
                   component={
                     <Link
-                      className={item.path == path + hash ? "active" : ""}
+                      className={item.path == path ? "active" : ""}
                       href={item.path}
                     />
                   }
