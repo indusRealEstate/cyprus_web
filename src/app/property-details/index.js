@@ -36,7 +36,7 @@ const PropertyDetailsPage = () => {
     getPropertyDetails(params).then((res) => {
       setData(res);
     });
-  }, [data]);
+  }, [data, params]);
 
   useLayoutEffect(() => {
     setScreenWidth(window.innerWidth);
@@ -57,7 +57,7 @@ const PropertyDetailsPage = () => {
           <CircularProgress />
         </Box>
       ) : (
-        <>
+        <div id="divcontents">
           {/* Main Header Nav */}
           <DefaultHeader />
           {/* End Main Header Nav */}
@@ -314,7 +314,7 @@ const PropertyDetailsPage = () => {
             <Footer />
           </section>
           {/* End Our Footer */}
-        </>
+        </div>
       )}
     </>
   );

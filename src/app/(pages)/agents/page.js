@@ -1,11 +1,11 @@
-import AgentsComponent from ".";
+import AgentsComponent from '.';
 
 export const metadata = {
-  title: "Premium Realtor | Explore International Properties",
+	title: 'Premium Realtor | Explore International Properties',
 };
 
 const Page = () => {
-  return <AgentsComponent />;
+	return <AgentsComponent />;
 };
 
 export default Page;

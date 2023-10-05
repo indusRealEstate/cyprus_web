@@ -1,11 +1,11 @@
-import PropertyDetailsPage from ".";
+import PropertyDetailsPage from '.';
 
 export const metadata = {
-  title: "Premium Realtor | Explore International Properties",
+	title: 'Premium Realtor | Explore International Properties',
 };
 
 const Page = () => {
-  return <PropertyDetailsPage />;
+	return <PropertyDetailsPage />;
 };
 
 export default Page;

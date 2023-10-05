@@ -90,6 +90,7 @@ const FeaturedListings = () => {
                           height={240}
                         />
                       )}
+
                       <img
                         id={listing.id}
                         width={382}
@@ -156,10 +157,13 @@ const FeaturedListings = () => {
                             : "For Rent"}
                         </span>
                         <div className="icons d-flex align-items-center">
-                          <a href="#">
+                          <a href={`/property-details?id=${listing.prop_id}`}>
                             <span className="flaticon-fullscreen" />
                           </a>
-                          <a href="#">
+                          <a
+                            href={`/property-details?id=${listing.prop_id}`}
+                            target="_blank"
+                          >
                             <span className="flaticon-new-tab" />
                           </a>
                           {/* <a href="#">

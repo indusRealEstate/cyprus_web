@@ -67,6 +67,7 @@ const AllAgents = ({ data }) => {
 						</div>
 						<div className='feature-content pt20'>
 							<h6 className='title mb-1'>
+								
 								<Link
 									href={{
 										pathname: '/agent-details',

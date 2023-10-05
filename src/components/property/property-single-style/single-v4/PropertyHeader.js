@@ -3,10 +3,25 @@ import React from "react";
 
 const PropertyHeader = ({ id, data }) => {
   // const data = listings.filter((elm) => elm.id == id)[0] || listings[0];
-  var formatter = new Intl.NumberFormat(undefined, {
-    style: "currency",
-    currency: "EUR",
-  });
+  const copy = (url) => {
+    const el = document.createElement("input");
+    el.value = url;
+    el.id = "url-input";
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand("copy");
+    el.remove();
+  };
+
+  const openPrinter = () => {
+    var content = document.getElementById("divcontents");
+    var pri = document.getElementById("ifmcontentstoprint").contentWindow;
+    pri.document.open();
+    pri.document.write(content.innerHTML);
+    pri.document.close();
+    pri.focus();
+    pri.print();
+  };
   return (
     <>
       <div className="col-lg-8">
@@ -19,10 +34,14 @@ const PropertyHeader = ({ id, data }) => {
           </div>
           <div className="property-meta d-flex align-items-center">
             <a
-              className="ff-heading text-thm fz15 bdrr1 pr10 bdrrn-sm"
+              className="ff-heading text-thm fz15 bdrr1 pr10 bdrrn-sm fw-bolder fs-6"
+              style={{
+                textTransform: "uppercase",
+                color: "#009f73",
+              }}
               href="#"
             >
-              <i className="fas fa-circle fz10 pe-2" />
+              <i className="fas fa-circle pe-2" />
               For {data.unit_purpose == "rent" ? "Rent" : "Sale"}
             </a>
             {/* <a
@@ -46,18 +65,44 @@ const PropertyHeader = ({ id, data }) => {
         <div className="single-property-content">
           <div className="property-action text-lg-end">
             <div className="d-flex mb20 mb10-md align-items-center justify-content-lg-end">
+              <iframe
+                id="ifmcontentstoprint"
+                style={{
+                  height: "0",
+                  width: "0",
+                  position: "absolute",
+                }}
+              ></iframe>
               {/* <a className="icon mr10" href="#">
                 <span className="flaticon-like" />
               </a> */}
-              <a className="icon mr10" href="#">
+              <a
+                className="icon mr10"
+                href={`/property-details?id=${id}`}
+                target="_blank"
+              >
                 <span className="flaticon-new-tab" />
               </a>
-              <a className="icon mr10" href="#">
+              <div
+                onClick={() =>
+                  copy(`https://premium-realtor/property-details?id=${id}`)
+                }
+                className="icon mr10"
+                style={{
+                  cursor: "pointer",
+                }}
+              >
                 <span className="flaticon-share-1" />
-              </a>
-              <a className="icon" href="#">
+              </div>
+              <div
+                onClick={() => openPrinter()}
+                className="icon"
+                style={{
+                  cursor: "pointer",
+                }}
+              >
                 <span className="flaticon-printer" />
-              </a>
+              </div>
             </div>
             {/* <h3 className="price mb-0">{formatter.format(data.price)}</h3> */}
             <p className="text space fz15">{data.total_area} Sqft</p>
