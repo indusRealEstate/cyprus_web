@@ -1,25 +1,38 @@
 /** @format */
 
-import axios from 'axios';
+import axios from "axios"
 
 export async function getPropertyDetails(formData) {
 	const res = await axios
-		.post('https://premium-realtor.com/api/forms/contactFrom.php', {
+		.post("https://premium-realtor.com/api/forms/contactFrom.php", {
 			data: formData,
 		})
 		.catch(function (error) {
-			console.log(error);
-		});
+			console.log(error)
+		})
 
-	return res.json();
+	return res.json()
 }
 
 export async function submitContactForm(data) {
 	const response = await axios
-		.post('https://premium-realtor.com/api/forms/contactFrom.php', data)
+		.post("https://premium-realtor.com/api/forms/contactFrom.php", data)
 		.catch(function (error) {
-			console.log(error);
-		});
+			console.log(error)
+		})
 	// return res.json();
-	return response;
+	return response
+}
+
+export async function downloadBrochureRequestForm(data) {
+	const response = await axios
+		.post(
+			"https://premium-realtor.com/api/forms/brochure_download_form.php",
+			data,
+		)
+		.catch(function (error) {
+			console.log(error)
+		})
+	// return res.json();
+	return response
 }

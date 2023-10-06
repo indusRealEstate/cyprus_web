@@ -1,21 +1,13 @@
+"use client"
 import CallToActions from "@/components/common/CallToActions"
 import DefaultHeader from "@/components/common/DefaultHeader"
-import Footer from "@/components/home/footer"
 import MobileMenu from "@/components/common/mobile-menu"
-import Agents from "@/components/pages/about/Agents"
+import BrochureDownload from "@/components/dialog/brochureDownload"
+import Footer from "@/components/home/footer"
 import Features from "@/components/pages/about/Features"
-import FunFact from "@/components/pages/about/FunFact"
-import Mission from "@/components/pages/about/Mission"
 import Image from "next/image"
 import Link from "next/link"
-
-export const metadata = {
-	title: "International Properties",
-}
-
-export const getFeatureData = (data) => {
-	console.log(data)
-}
+import { useEffect, useState } from "react"
 
 const Minthis = () => {
 	const propertyType = "minthis"
@@ -39,6 +31,24 @@ const Minthis = () => {
 				"3% of the land will be built on, the rest will remain natural untouched landscape",
 		},
 	]
+
+	const [open, setOpen] = useState(false)
+
+	const handleClickOpen = () => {
+		setOpen(true)
+	}
+
+	const handleClose = (response) => {
+		setOpen(false)
+	}
+
+	const dialogFunctions = {
+		handleClose,
+	}
+
+	useEffect(() => {}, [open])
+
+	// console.log(download)
 	return (
 		<>
 			{/* Main Header Nav */}
@@ -50,6 +60,7 @@ const Minthis = () => {
 			{/* End Mobile Nav  */}
 
 			{/* Breadcrumb Sections */}
+
 			<section className='minthis p-0 '>
 				<div className='container'>
 					<div className='row'>
@@ -100,6 +111,28 @@ const Minthis = () => {
 								Minthis is an inspiring hillside community, where every inch is
 								in complete harmony with its breathtaking surroundings.
 							</p>
+							<div className='row'>
+								<div className='col-6 me-auto'>
+									<button
+										type='button'
+										onClick={(event) => handleClickOpen()}
+										className='ud-btn btn-transparent mr30 mr0-xs'>
+										DOWNLOAD BROCHURE
+									</button>
+									{open ? (
+										<BrochureDownload
+											type={"minthis"}
+											open={open}
+											dialogFunctions={dialogFunctions}
+											route={
+												"https://premium-realtor.com/api/media/brochure/minthis/MINTHIS BOOK PROPERTY COLLECTION EN.pdf"
+											}
+										/>
+									) : (
+										<></>
+									)}
+								</div>
+							</div>
 						</div>
 						<div className='col-lg-6'>
 							<h5>An eden of discovery, wellness and adventure</h5>

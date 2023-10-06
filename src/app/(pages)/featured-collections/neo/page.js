@@ -1,21 +1,13 @@
+"use client"
 import CallToActions from "@/components/common/CallToActions"
 import DefaultHeader from "@/components/common/DefaultHeader"
-import Footer from "@/components/home/footer"
 import MobileMenu from "@/components/common/mobile-menu"
-import Agents from "@/components/pages/about/Agents"
+import BrochureDownload from "@/components/dialog/brochureDownload"
+import Footer from "@/components/home/footer"
 import Features from "@/components/pages/about/Features"
-import FunFact from "@/components/pages/about/FunFact"
-import Mission from "@/components/pages/about/Mission"
 import Image from "next/image"
 import Link from "next/link"
-
-export const metadata = {
-	title: "International Properties",
-}
-
-export const getFeatureData = (data) => {
-	console.log(data)
-}
+import { useEffect, useState } from "react"
 
 const Neo = () => {
 	const propertyType = "minthis"
@@ -39,6 +31,23 @@ const Neo = () => {
 		// 		"3% of the land will be built on, the rest will remain natural untouched landscape",
 		// },
 	]
+
+	const [open, setOpen] = useState(false)
+
+	const handleClickOpen = () => {
+		setOpen(true)
+	}
+
+	const handleClose = (response) => {
+		setOpen(false)
+	}
+
+	const dialogFunctions = {
+		handleClose,
+	}
+
+	useEffect(() => {}, [open])
+
 	return (
 		<>
 			{/* Main Header Nav */}
@@ -90,6 +99,28 @@ const Neo = () => {
 								}}>
 								NEO: Between the Sky and the Sea
 							</h2>
+							<div className='row'>
+								<div className='col-6 me-auto'>
+									<button
+										type='button'
+										onClick={(event) => handleClickOpen()}
+										className='ud-btn btn-transparent mr30 mr0-xs'>
+										DOWNLOAD BROCHURE
+									</button>
+									{open ? (
+										<BrochureDownload
+											type={"neo"}
+											open={open}
+											dialogFunctions={dialogFunctions}
+											route={
+												"https://premium-realtor.com/api/media/brochure/neo/neo-brochure.pdf"
+											}
+										/>
+									) : (
+										<></>
+									)}
+								</div>
+							</div>
 						</div>
 						<div className='col-lg-6'>
 							<h5>
