@@ -1,7 +1,10 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 const CallToActions = () => {
+	const path = usePathname()
 	return (
 		<section className='our-cta pt0'>
 			{/* bgc-f7 */}
@@ -41,7 +44,7 @@ const CallToActions = () => {
 						<div className='col-lg-5 col-xl-6 ' data-aos='fade-left'>
 							<div className='cta-btns-style1 d-block d-sm-flex align-items-center justify-content-lg-end'>
 								<a
-									href='/contact/'
+									href={path === "/contact/" ? "#main" : "/contact/"}
 									className='ud-btn btn-transparent mr30 mr0-xs'>
 									Contact Us
 									<i className='fal fa-arrow-right-long' />
