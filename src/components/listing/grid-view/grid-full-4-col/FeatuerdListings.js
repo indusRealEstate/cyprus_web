@@ -55,7 +55,7 @@ const FeaturedListings = ({ data, colstyle }) => {
                   <span className="flaticon-shower" /> {listing.bath} bath
                 </a>
                 <a href="#">
-                  <span className="flaticon-expand" /> {listing.sqft} sqft
+                  <span className="flaticon-expand" /> {listing.sqft} sq m
                 </a>
               </div>
               <hr className="mt-2 mb-2" />

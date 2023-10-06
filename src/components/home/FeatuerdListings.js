@@ -146,7 +146,7 @@ const FeaturedListings = () => {
                         </a>
                         <a href="#">
                           <span className="flaticon-expand" />{" "}
-                          {listing.total_area} sqft
+                          {listing.total_area} sq m
                         </a>
                       </div>
                       <hr className="mt-2 mb-2" />

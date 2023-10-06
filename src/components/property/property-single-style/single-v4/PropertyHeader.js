@@ -105,7 +105,7 @@ const PropertyHeader = ({ id, data }) => {
               </div>
             </div>
             {/* <h3 className="price mb-0">{formatter.format(data.price)}</h3> */}
-            <p className="text space fz15">{data.total_area} Sqft</p>
+            <p className="text space fz15">{data.total_area} Sq M</p>
             <a
               className="ud-btn btn-thm mb-3"
               href={`https://premium-realtor.com/api/media/listings/${id}/attachments/${

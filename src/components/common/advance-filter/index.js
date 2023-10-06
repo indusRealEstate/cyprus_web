@@ -174,7 +174,7 @@ const AdvanceFilterModal = () => {
 
             <div className="col-sm-6">
               <div className="widget-wrapper">
-                <h6 className="list-title">Square Feet</h6>
+                <h6 className="list-title">Square Metre</h6>
                 <div className="space-area">
                   <div className="d-flex align-items-center justify-content-between">
                     <div className="form-style1">
@@ -230,7 +230,7 @@ const AdvanceFilterModal = () => {
                     `/search-results?price=${priceRange}&category=${propertyTypes}&bed=${bedrooms}&bath=${bathroms}&location=${location.replace(
                       / /,
                       "+"
-                    )}&sqft=${squirefeet}&amenities=${categories.map((c) =>
+                    )}&sqm=${squirefeet}&amenities=${categories.map((c) =>
                       c.replace(/ /, "+")
                     )}`
                   );

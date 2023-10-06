@@ -19,7 +19,7 @@ const PropertyDetails = ({ data }) => {
       // },
       {
         label: "Property Size",
-        value: data.total_area + " Sqft",
+        value: data.total_area + " Sq M",
       },
       {
         label: "Bathrooms",

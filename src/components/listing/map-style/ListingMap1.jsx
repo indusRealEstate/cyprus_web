@@ -286,7 +286,7 @@ export default function ListingMap1() {
                       </a>
                       <a href="#">
                         <span className="flaticon-expand" /> {getLocation.sqft}{" "}
-                        sqft
+                        sq m
                       </a>
                     </div>
                     <hr className="mt-2 mb-2" />

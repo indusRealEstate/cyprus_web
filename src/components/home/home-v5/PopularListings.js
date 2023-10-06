@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 
-const PopularListings = ({data}) => {
+const PopularListings = ({ data }) => {
   return (
     <>
       <Swiper
@@ -64,7 +64,7 @@ const PopularListings = ({data}) => {
                       <span className="flaticon-shower" /> {listing.bath} bath
                     </a>
                     <a href="#">
-                      <span className="flaticon-expand" /> {listing.sqft} sqft
+                      <span className="flaticon-expand" /> {listing.sqft} sq m
                     </a>
                   </div>
                   <hr className="mt-2 mb-2" />

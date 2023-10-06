@@ -43,7 +43,7 @@ const Listing7 = () => {
                   <span className="flaticon-shower" /> {listing.bath} bath
                 </a>
                 <a href="#">
-                  <span className="flaticon-expand" /> {listing.sqft} sqft
+                  <span className="flaticon-expand" /> {listing.sqft} sq m
                 </a>
               </div>
               <p className="list-text2">
