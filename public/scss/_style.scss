@@ -699,12 +699,13 @@ li {
 	}
 }
 
-@media (max-width: 425px){
-	.one::before{
+@media (max-width: 425px) {
+	.one::before {
 		content: "";
 		position: absolute;
 		top: 0;
 		right: 0;
+
 		bottom: 0;
 		left: 0;
 		background-image: linear-gradient(45deg, #011d2ddb 20%, #074d4400 100%);
@@ -7272,7 +7273,7 @@ textarea:focus {
 }
 .btn-light-gray:hover,
 .btn-transparent:hover {
-	border: 1px solid #eb6753;
+	border: 1px solid #1d4439;
 }
 
 .btn-transparent,

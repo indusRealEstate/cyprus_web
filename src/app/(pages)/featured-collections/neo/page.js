@@ -1,18 +1,16 @@
+"use client";
 import CallToActions from "@/components/common/CallToActions";
 import DefaultHeader from "@/components/common/DefaultHeader";
 import MobileMenu from "@/components/common/mobile-menu";
+import BrochureDownload from "@/components/dialog/brochureDownload";
 import Footer from "@/components/home/footer";
 import Features from "@/components/pages/about/Features";
 import Image from "next/image";
 import Link from "next/link";
-
-export const metadata = {
-  title: "NEO Limassol Towers - Cyprus | Premium Realtor",
-  description:
-    "Rising from the foot of the Cyprian hills, NEO's four towers embody a meeting point between four distinct landscapes: City, Mountain, Sky and Sea.",
-};
+import { useEffect, useState } from "react";
 
 const Neo = () => {
+  const propertyType = "minthis";
   const features = [
     {
       icon: "flaticon-home-3",
@@ -33,6 +31,23 @@ const Neo = () => {
     // 		"3% of the land will be built on, the rest will remain natural untouched landscape",
     // },
   ];
+
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (response) => {
+    setOpen(false);
+  };
+
+  const dialogFunctions = {
+    handleClose,
+  };
+
+  useEffect(() => {}, [open]);
+
   return (
     <>
       {/* Main Header Nav */}
@@ -85,6 +100,29 @@ const Neo = () => {
               >
                 NEO: Between the Sky and the Sea
               </h2>
+              <div className="row">
+                <div className="col-6 me-auto">
+                  <button
+                    type="button"
+                    onClick={(event) => handleClickOpen()}
+                    className="ud-btn btn-transparent mr30 mr0-xs"
+                  >
+                    DOWNLOAD BROCHURE
+                  </button>
+                  {open ? (
+                    <BrochureDownload
+                      type={"neo"}
+                      open={open}
+                      dialogFunctions={dialogFunctions}
+                      route={
+                        "https://premium-realtor.com/api/media/brochure/neo/neo-brochure.pdf"
+                      }
+                    />
+                  ) : (
+                    <></>
+                  )}
+                </div>
+              </div>
             </div>
             <div className="col-lg-6">
               <h5>
