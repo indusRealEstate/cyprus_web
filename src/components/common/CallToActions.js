@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation"
 
 const CallToActions = () => {
 	const path = usePathname()
-	console.log(path)
 	return (
 		<section className='our-cta pt0'>
 			{/* bgc-f7 */}
