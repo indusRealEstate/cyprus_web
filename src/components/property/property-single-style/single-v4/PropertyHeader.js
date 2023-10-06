@@ -1,4 +1,5 @@
 import listings from "@/data/listings";
+import { Tooltip } from "@mui/material";
 import React from "react";
 
 const PropertyHeader = ({ id, data }) => {
@@ -76,33 +77,39 @@ const PropertyHeader = ({ id, data }) => {
               {/* <a className="icon mr10" href="#">
                 <span className="flaticon-like" />
               </a> */}
-              <a
-                className="icon mr10"
-                href={`/property-details?id=${id}`}
-                target="_blank"
-              >
-                <span className="flaticon-new-tab" />
-              </a>
-              <div
-                onClick={() =>
-                  copy(`https://premium-realtor/property-details?id=${id}`)
-                }
-                className="icon mr10"
-                style={{
-                  cursor: "pointer",
-                }}
-              >
-                <span className="flaticon-share-1" />
-              </div>
-              <div
-                onClick={() => openPrinter()}
-                className="icon"
-                style={{
-                  cursor: "pointer",
-                }}
-              >
-                <span className="flaticon-printer" />
-              </div>
+              <Tooltip title="Open In New Tab">
+                <a
+                  className="icon mr10"
+                  href={`/property-details?id=${id}`}
+                  target="_blank"
+                >
+                  <span className="flaticon-new-tab" />
+                </a>
+              </Tooltip>
+              <Tooltip title="Copy The Link">
+                <div
+                  onClick={() =>
+                    copy(`https://premium-realtor/property-details?id=${id}`)
+                  }
+                  className="icon mr10"
+                  style={{
+                    cursor: "pointer",
+                  }}
+                >
+                  <span className="flaticon-share-1" />
+                </div>
+              </Tooltip>
+              <Tooltip title="Print The Page">
+                <div
+                  onClick={() => openPrinter()}
+                  className="icon"
+                  style={{
+                    cursor: "pointer",
+                  }}
+                >
+                  <span className="flaticon-printer" />
+                </div>
+              </Tooltip>
             </div>
             {/* <h3 className="price mb-0">{formatter.format(data.price)}</h3> */}
             <p className="text space fz15">{data.total_area} Sq M</p>

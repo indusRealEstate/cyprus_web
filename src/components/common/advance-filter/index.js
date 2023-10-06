@@ -20,8 +20,8 @@ const AdvanceFilterModal = () => {
 
   const locationOptions = [
     { value: "All Cities", label: "All Cities" },
-    { value: "Minthis Street", label: "Minthis Street" },
     { value: "Paphos", label: "Paphos" },
+    { value: "Limassol", label: "Limassol" },
   ];
 
   const customStyles = {

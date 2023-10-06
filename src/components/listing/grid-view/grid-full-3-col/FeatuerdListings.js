@@ -2,7 +2,7 @@
 
 "use client";
 
-import { Skeleton } from "@mui/material";
+import { Skeleton, Tooltip } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -131,12 +131,20 @@ const FeaturedListings = ({ data, colstyle }) => {
                     {listing.unit_purpose == "sale" ? "For Sale" : "For Rent"}
                   </span>
                   <div className="icons d-flex align-items-center">
-                    <a href="#">
-                      <span className="flaticon-fullscreen" />
-                    </a>
-                    <a href="#">
-                      <span className="flaticon-new-tab" />
-                    </a>
+                    <Tooltip title="View">
+                      <a href={`/property-details?id=${listing.prop_id}`}>
+                        <span className="flaticon-fullscreen" />
+                      </a>
+                    </Tooltip>
+
+                    <Tooltip title="Open In New Tab">
+                      <a
+                        href={`/property-details?id=${listing.prop_id}`}
+                        target="_blank"
+                      >
+                        <span className="flaticon-new-tab" />
+                      </a>
+                    </Tooltip>
                     {/* <a href="#">
                       <span className="flaticon-like" />
                     </a> */}
