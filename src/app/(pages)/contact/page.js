@@ -1,13 +1,13 @@
-import CallToActions from '@/components/common/CallToActions';
-import DefaultHeader from '@/components/common/DefaultHeader';
-import MobileMenu from '@/components/common/mobile-menu';
-import Footer from '@/components/home/footer';
-import Form from '@/components/pages/contact/Form';
-import Image from 'next/image';
+import CallToActions from "@/components/common/CallToActions"
+import DefaultHeader from "@/components/common/DefaultHeader"
+import MobileMenu from "@/components/common/mobile-menu"
+import Footer from "@/components/home/footer"
+import Form from "@/components/pages/contact/Form"
+import Image from "next/image"
 
 export const metadata = {
-	title: 'Premium Realtor | Explore International Properties',
-};
+	title: "Premium Realtor | Explore International Properties",
+}
 
 const Contact = () => {
 	return (
@@ -26,8 +26,8 @@ const Contact = () => {
 					width={1200}
 					height={600}
 					style={{
-						objectFit: 'cover',
-						objectPosition: 'center',
+						objectFit: "cover",
+						objectPosition: "center",
 					}}
 					priority
 					src='/images/about/Real/compressed_pool.webp'
@@ -53,7 +53,7 @@ const Contact = () => {
 			{/* End Our Contact With Map */}
 
 			{/* Start Our Contact Form */}
-			<section>
+			<section id='main'>
 				<div className='container'>
 					<div className='row d-flex align-items-end'>
 						<div className='col-lg-5 position-relative'>
@@ -119,7 +119,7 @@ const Contact = () => {
 			</section>
 			{/* End Our Footer */}
 		</>
-	);
-};
+	)
+}
 
-export default Contact;
+export default Contact
