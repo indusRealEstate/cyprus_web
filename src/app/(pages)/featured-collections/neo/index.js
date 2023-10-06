@@ -77,7 +77,7 @@ const Neo = () => {
                 </h2>
                 <div className="breadcumb-list mt-2">
                   <a href="#">Featured Properties Collection </a>
-                  <a href="#">Minthis</a>
+                  <a href="#">Neo</a>
                 </div>
               </div>
             </div>
@@ -253,10 +253,7 @@ const Neo = () => {
                 data-aos-delay="300"
               >
                 <div className="mb30">
-                  <h2 className="title text-capitalize">
-                    Let’s find the right <br className="d-none d-md-block" />{" "}
-                    selling option for you
-                  </h2>
+                  <h2 className="title text-capitalize">Key Features</h2>
                 </div>
                 <div className="why-chose-list style2">
                   <Features features={features} />
