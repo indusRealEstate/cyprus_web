@@ -109,11 +109,11 @@ export const One = () => {
                 residential seafront tower in Europe.
               </p>
               <div className="row">
-                <div className="col-6 me-auto">
+                <div className="col-lg-6 col-12 my-4 fs-6 mobile-container-center">
                   <button
                     type="button"
                     onClick={(event) => handleClickOpen()}
-                    className="ud-btn btn-transparent mr30 mr0-xs"
+                    className="ud-btn btn-transparent mr30 mr0-xs mobile-btn"
                   >
                     DOWNLOAD BROCHURE
                   </button>

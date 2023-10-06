@@ -144,6 +144,17 @@ body {
 	.only-mobile {
 		display: flex;
 	}
+	.mobile-container-center {
+		display: flex;
+		justify-content: center;
+	}
+	.mobile-btn {
+		padding: 10px 15px !important;
+		display: flex;
+		align-items: center;
+		font-size: 9pt !important;
+		text-align: center;
+	}
 }
 
 .text-default-green {
