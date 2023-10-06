@@ -161,7 +161,21 @@ const BrochureDownload = ({ type, open, dialogFunctions, route }) => {
 				onClose={() => dialogFunctions.handleClose()}
 				aria-labelledby='responsive-dialog-title'>
 				<DialogTitle id='responsive-dialog-title' color={"#1d4439"}>
-					Please fill the form to download the brochure.
+					<div className='row'>
+						<div className='col-10 py-3'>
+							<h4>Please fill the form to download the brochure.</h4>
+						</div>
+						<div className='col-2 d-flex clo'>
+							<button
+								style={{
+									fontSize: "1.5rem",
+								}}
+								className='btn btn-lg ms-auto'
+								onClick={() => dialogFunctions.handleClose()}>
+								<i className='flaticon-close'></i>
+							</button>
+						</div>
+					</div>
 				</DialogTitle>
 				<DialogContent>
 					{/* <DialogContentText>
