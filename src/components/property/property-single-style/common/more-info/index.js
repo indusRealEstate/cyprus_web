@@ -1,11 +1,11 @@
-'use client';
-import Select from 'react-select';
-import SingleAgentInfo from './SingleAgentInfo';
-import { useState } from 'react';
-import Alert from '@mui/material/Alert';
-import AlertTitle from '@mui/material/AlertTitle';
-import { contactAgent } from '@/api/pages/scheduleATour';
-import axios from 'axios';
+"use client"
+import Select from "react-select"
+import SingleAgentInfo from "./SingleAgentInfo"
+import { useState } from "react"
+import Alert from "@mui/material/Alert"
+import AlertTitle from "@mui/material/AlertTitle"
+import { contactAgent } from "@/api/pages/scheduleATour"
+import axios from "axios"
 import {
 	Button,
 	Dialog,
@@ -15,151 +15,127 @@ import {
 	DialogTitle,
 	useMediaQuery,
 	useTheme,
-} from '@mui/material';
+} from "@mui/material"
 
 const InfoWithForm = ({ agentId }) => {
-	const onlyEmail =
-		/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-	// const onlyEmail = /^([A-Za-z])+@+.+[A-Za-z]\w+/g;
-	const onlyText = /^[a-zA-Z ]*$/;
-	const onlyContactNumber = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
-	const [notValidName, setValidName] = useState(true);
-	const [notValidPhone, setValidPhone] = useState(true);
-	const [notValidNEmail, setValidEmail] = useState(true);
-	const [alertMsg, setAlertMsg] = useState();
-	const [alertTitle, setAlertTitle] = useState();
-	const [alertSeverity, setAlertSeverity] = useState();
-	const [formSubmit, setFormSubmit] = useState(false);
-	const [messageEmpty, setMessageEmpty] = useState(false);
-	const [error, setError] = useState(false);
-	const [responsData, setRespons] = useState(false);
-	const theme = useTheme();
-	const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
-	const [open, setOpen] = useState(false);
+	const onlyEmail = /^((\w+\.)*\w+)@(\w+\.)+(\w)/
+	const onlyText = /^[a-zA-Z ]*$/
+	const onlyContactNumber = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g
+	const [notValidName, setValidName] = useState(true)
+	const [notValidPhone, setValidPhone] = useState(true)
+	const [notValidNEmail, setValidEmail] = useState(true)
+	const [alertMsg, setAlertMsg] = useState()
+	const [alertTitle, setAlertTitle] = useState()
+	const [alertSeverity, setAlertSeverity] = useState()
+	const [formSubmit, setFormSubmit] = useState(false)
+	const [messageEmpty, setMessageEmpty] = useState(false)
+	const [error, setError] = useState(false)
+	const [responsData, setRespons] = useState(false)
+	const theme = useTheme()
+	const fullScreen = useMediaQuery(theme.breakpoints.down("md"))
+	const [open, setOpen] = useState(false)
 
 	const handleClickOpen = () => {
-		setOpen(true);
-	};
+		setOpen(true)
+	}
 	const handleClose = () => {
-		setOpen(false);
-		setRespons(false);
-	};
+		setOpen(false)
+		setRespons(false)
+	}
 
 	const inqueryType = [
-		{ value: 'Engineer', label: 'Engineer' },
-		{ value: 'Doctor', label: 'Doctor' },
-		{ value: 'Employee', label: 'Employee' },
-		{ value: 'Businessman', label: 'Businessman' },
-		{ value: 'Other', label: 'Other' },
-	];
+		{ value: "Engineer", label: "Engineer" },
+		{ value: "Doctor", label: "Doctor" },
+		{ value: "Employee", label: "Employee" },
+		{ value: "Businessman", label: "Businessman" },
+		{ value: "Other", label: "Other" },
+	]
 
 	const customStyles = {
 		option: (styles, { isFocused, isSelected, isHovered }) => {
 			return {
 				...styles,
 				backgroundColor: isSelected
-					? '#eb6753'
+					? "#eb6753"
 					: isHovered
-					? '#eb675312'
+					? "#eb675312"
 					: isFocused
-					? '#eb675312'
+					? "#eb675312"
 					: undefined,
-			};
+			}
 		},
-	};
+	}
 
 	const [formData, setFormData] = useState({
-		name: '',
-		phone: '',
-		email: '',
-		message: '',
-	});
+		name: "",
+		phone: "",
+		email: "",
+		message: "",
+	})
 
 	const onSubmit = async (event) => {
-		event.preventDefault();
-		setFormSubmit(true);
-		if (event.type === 'click') {
+		event.preventDefault()
+		setFormSubmit(true)
+		if (event.type === "click") {
 			try {
-				if (formData.name == '') {
-					setError(true);
-					setValidName(false);
-					throw new Error('Fill the name');
+				if (formData.name == "") {
+					setError(true)
+					setValidName(false)
+					throw new Error("Fill the name")
+				} else if (!formData.name.match(onlyText)) {
+					setValidName(false)
+					setError(true)
+					throw new Error("Fill the correct name")
+				} else if (formData.phone == "") {
+					setValidName(true)
+					setError(true)
+					setValidPhone(false)
+					throw new Error("Fill the contact number")
+				} else if (!formData.phone.match(onlyContactNumber)) {
+					setError(true)
+					setValidPhone(false)
+					throw new Error("Fill the correct contact number")
+				} else if (formData.email == "") {
+					setValidPhone(true)
+					setError(true)
+					setValidEmail(false)
+					throw new Error("Fill the email")
+				} else if (!formData.email.match(onlyEmail)) {
+					setError(true)
+					setValidEmail(false)
+					throw new Error("Fill the correct email")
+				} else if (formData.message == "") {
+					setValidEmail(true)
+					setError(true)
+					setMessageEmpty(true)
+					throw new Error("Fill the message")
 				} else {
-					setError(false);
-					setValidName(true);
-				}
-
-				if (!formData.name.match(onlyText)) {
-					setValidName(false);
-					setError(true);
-					throw new Error('Fill the correct name');
-				} else {
-					setError(false);
-					setValidName(true);
-				}
-
-				if (formData.phone == '') {
-					setError(true);
-					setValidPhone(false);
-					throw new Error('Fill the contact number');
-				} else {
-					setError(false);
-					setValidPhone(true);
-				}
-
-				if (!formData.phone.match(onlyContactNumber)) {
-					setError(true);
-					setValidPhone(false);
-					throw new Error('Fill the correct contact number');
-				} else {
-					setError(false);
-					setValidPhone(true);
-				}
-
-				if (formData.email == '') {
-					setError(true);
-					setValidEmail(false);
-					throw new Error('Fill the email');
-				} else {
-					setError(false);
-					setValidEmail(true);
-				}
-
-				if (!formData.email.match(onlyEmail)) {
-					setError(true);
-					setValidEmail(false);
-					throw new Error('Fill the correct email');
-				} else {
-					setError(false);
-					setValidEmail(true);
-				}
-
-				if (formData.message == '') {
-					setError(true);
-					setMessageEmpty(true);
-					throw new Error('Fill the message');
-				} else {
-					setError(false);
-					setMessageEmpty(false);
-				}
-
-				if (!error) {
-					console.log('no error');
+					console.log("no error")
+					setMessageEmpty(false)
 					contactAgent(formData).then((res) => {
 						if (res.data === true) {
-							setRespons(true);
-							handleClickOpen();
+							document.getElementById(`form`).reset()
+							setFormSubmit(false)
+							setFormData({
+								name: "",
+								phone: "",
+								email: "",
+								message: "",
+							})
+							setError(false)
+							setRespons(true)
+							handleClickOpen()
 						}
-					});
+					})
 				}
 			} catch (error) {
-				console.log(error.message);
-				setAlertMsg(error.message);
-				setAlertTitle('Error');
-				setAlertSeverity('error');
+				console.log(error.message)
+				setAlertMsg(error.message)
+				setAlertTitle("Error")
+				setAlertSeverity("error")
 			}
 		}
-	};
+	}
 
 	return (
 		<>
@@ -170,10 +146,8 @@ const InfoWithForm = ({ agentId }) => {
 					open={open}
 					onClose={handleClose}
 					aria-labelledby='responsive-dialog-title'>
-					<DialogTitle
-						id='responsive-dialog-title'
-						color={'#1d4439'}>
-						{'Thank you :)'}
+					<DialogTitle id='responsive-dialog-title' color={"#1d4439"}>
+						{"Thank you :)"}
 					</DialogTitle>
 					<DialogContent>
 						<DialogContentText>
@@ -185,28 +159,26 @@ const InfoWithForm = ({ agentId }) => {
 							autoFocus
 							onClick={handleClose}
 							style={{
-								color: '#1d4439',
+								color: "#1d4439",
 							}}>
 							OKAY
 						</Button>
 					</DialogActions>
 				</Dialog>
 			) : (
-				''
+				""
 			)}
 			{formSubmit && error ? (
-				<Alert
-					severity={alertSeverity}
-					className='mb-5'>
+				<Alert severity={alertSeverity} className='mb-5'>
 					<AlertTitle>{alertTitle}</AlertTitle>
 					<strong>{alertMsg}</strong>
 				</Alert>
 			) : (
-				''
+				""
 			)}
 			<div className='row'>
 				<div className='col-md-12'>
-					<form className='form-style1 row'>
+					<form className='form-style1 row' id='form'>
 						<div className='col-md-6'>
 							<div className='mb20'>
 								<label className='heading-color ff-heading fw600 mb10'>
@@ -215,8 +187,8 @@ const InfoWithForm = ({ agentId }) => {
 								<input
 									type='text'
 									className='form-control'
-									placeholder='Ali Tufan'
-									style={!notValidName ? { border: '2px solid red' } : {}}
+									placeholder='Enter your name'
+									style={!notValidName ? { border: "2px solid red" } : {}}
 									onChange={(event) =>
 										setFormData({ ...formData, name: event.target.value })
 									}
@@ -234,7 +206,7 @@ const InfoWithForm = ({ agentId }) => {
 									type='text'
 									className='form-control'
 									placeholder='Enter your phone'
-									style={!notValidPhone ? { border: '2px solid red' } : {}}
+									style={!notValidPhone ? { border: "2px solid red" } : {}}
 									onChange={(event) =>
 										setFormData({ ...formData, phone: event.target.value })
 									}
@@ -251,8 +223,8 @@ const InfoWithForm = ({ agentId }) => {
 								<input
 									type='email'
 									className='form-control'
-									placeholder='creativelayers088'
-									style={!notValidNEmail ? { border: '2px solid red' } : {}}
+									placeholder='Enter your correct email'
+									style={!notValidNEmail ? { border: "2px solid red" } : {}}
 									onChange={(event) =>
 										setFormData({ ...formData, email: event.target.value })
 									}
@@ -290,9 +262,9 @@ const InfoWithForm = ({ agentId }) => {
 								<textarea
 									cols={30}
 									rows={4}
-									placeholder='Hello, I am interested in [Renovated apartment at last floor]'
-									defaultValue={''}
-									style={messageEmpty ? { border: '2px solid red' } : {}}
+									placeholder='Hello, I am interested in getting to know about more properties'
+									defaultValue={""}
+									style={messageEmpty ? { border: "2px solid red" } : {}}
 									onChange={(event) =>
 										setFormData({ ...formData, message: event.target.value })
 									}
@@ -321,7 +293,7 @@ const InfoWithForm = ({ agentId }) => {
 				</div>
 			</div>
 		</>
-	);
-};
+	)
+}
 
-export default InfoWithForm;
+export default InfoWithForm

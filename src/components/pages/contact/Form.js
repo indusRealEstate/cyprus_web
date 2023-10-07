@@ -15,9 +15,7 @@ import AlertTitle from "@mui/material/AlertTitle"
 import { useState } from "react"
 
 const Form = () => {
-	const onlyEmail =
-		/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+.(?:\.[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+)*$/
-	// const onlyEmail = /^([A-Za-z])+@+.+[A-Za-z]\w+/g;
+	const onlyEmail = /^((\w+\.)*\w+)@(\w+\.)+(\w)/
 	const onlyText = /^[a-zA-Z ]*$/
 	const onlyContactNumber = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g
 	const [ValidFirstName, setValidFirstName] = useState(true)
@@ -50,83 +48,62 @@ const Form = () => {
 
 	const onSubmitForm = async (event) => {
 		event.preventDefault()
-		setFormSubmit(true)
+		window.scrollTo(0, 0)
+
 		if (event.type === "click") {
+			setFormSubmit(true)
 			try {
-				// FIRST NAME
 				if (formData.first_name == "") {
+					// check the first name empty
 					setError(true)
 					setValidFirstName(false)
 					throw new Error("Fill the first name")
-				} else {
-					setError(false)
-					setValidFirstName(true)
-				}
-
-				if (!formData.first_name.match(onlyText)) {
+				} else if (!formData.first_name.match(onlyText)) {
+					// check the first
 					setValidFirstName(false)
 					setError(true)
 					throw new Error("Fill the correct first name")
-				} else {
-					setError(false)
+				} else if (formData.last_name == "") {
+					// check last name empty
 					setValidFirstName(true)
-				}
-
-				// LAST NAME
-				if (formData.last_name == "") {
 					setError(true)
 					setValidLastName(false)
 					throw new Error("Fill the last name")
-				} else {
-					setError(false)
-					setValidLastName(true)
-				}
-
-				if (!formData.last_name.match(onlyText)) {
+				} else if (!formData.last_name.match(onlyText)) {
 					setValidLastName(false)
 					setError(true)
 					throw new Error("Fill the correct last name")
-				} else {
-					setError(false)
+				} else if (formData.email == "") {
 					setValidLastName(true)
-				}
-
-				// EMAILL
-				if (formData.email == "") {
 					setError(true)
 					setValidEmail(false)
 					throw new Error("Fill the email")
-				} else {
-					setError(false)
-					setValidEmail(true)
-				}
-
-				if (!formData.email.match(onlyEmail)) {
+				} else if (!formData.email.match(onlyEmail)) {
 					setError(true)
 					setValidEmail(false)
 					throw new Error("Fill the correct email")
-				} else {
-					setError(false)
+				} else if (formData.message == "") {
 					setValidEmail(true)
-				}
-
-				if (formData.message == "") {
 					setError(true)
 					setMessageEmpty(true)
 					throw new Error("Fill the message")
 				} else {
-					setError(false)
 					setMessageEmpty(false)
-				}
-
-				if (!error) {
+					setError(false)
 					console.log("no error")
 					submitContactForm(formData).then((res) => {
 						console.log(res.data)
 						if (res.data === true) {
 							setRespons(true)
-							handleClickOpen()
+							setFormData({
+								first_name: "",
+								last_name: "",
+								email: "",
+								message: "",
+							})
+							setFormSubmit(false)
 							document.getElementById("form").reset()
+							handleClickOpen()
 						}
 					})
 				}
