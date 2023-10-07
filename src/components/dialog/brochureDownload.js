@@ -22,6 +22,7 @@ const BrochureDownload = ({ type, open, dialogFunctions, route }) => {
 	const [ValidFirstName, setValidFirstName] = useState(true)
 	const [ValidLastName, setValidLastName] = useState(true)
 	const [ValidNEmail, setValidEmail] = useState(true)
+	const [ValidContact, setValidContact] = useState(true)
 	const [alertMsg, setAlertMsg] = useState([])
 	const [alertTitle, setAlertTitle] = useState([])
 	const [alertSeverity, setAlertSeverity] = useState([])
@@ -108,20 +109,20 @@ const BrochureDownload = ({ type, open, dialogFunctions, route }) => {
 				// CONTACT NUMBER
 				if (formData.contact == "") {
 					setError(true)
-					setValidEmail(false)
+					setValidContact(false)
 					throw new Error("Fill the contact number")
 				} else {
 					setError(false)
-					setValidEmail(true)
+					setValidContact(true)
 				}
 
 				if (!formData.contact.match(onlyContactNumber)) {
 					setError(true)
-					setValidEmail(false)
+					setValidContact(false)
 					throw new Error("Fill the correct contact number")
 				} else {
 					setError(false)
-					setValidEmail(true)
+					setValidContact(true)
 				}
 
 				if (!error) {
@@ -132,7 +133,8 @@ const BrochureDownload = ({ type, open, dialogFunctions, route }) => {
 						if (res.data === true) {
 							dialogFunctions.handleClose()
 							document.getElementById("form").reset()
-							router.push(route)
+							// router.push(route)
+							window.open(route, "_blank")
 						}
 					})
 				}
@@ -147,14 +149,6 @@ const BrochureDownload = ({ type, open, dialogFunctions, route }) => {
 
 	return (
 		<>
-			{formSubmit && error ? (
-				<Alert severity={alertSeverity} className='mb-5'>
-					<AlertTitle>{alertTitle}</AlertTitle>
-					<strong>{alertMsg}</strong>
-				</Alert>
-			) : (
-				""
-			)}
 			<Dialog
 				fullScreen={fullScreen}
 				open={open}
@@ -174,6 +168,18 @@ const BrochureDownload = ({ type, open, dialogFunctions, route }) => {
 								onClick={() => dialogFunctions.handleClose()}>
 								<i className='flaticon-close'></i>
 							</button>
+						</div>
+					</div>
+					<div className='row'>
+						<div className='col-12'>
+							{formSubmit && error ? (
+								<Alert severity={alertSeverity} className='mb-2'>
+									<AlertTitle>{alertTitle}</AlertTitle>
+									<strong>{alertMsg}</strong>
+								</Alert>
+							) : (
+								""
+							)}
 						</div>
 					</div>
 				</DialogTitle>
@@ -260,7 +266,7 @@ const BrochureDownload = ({ type, open, dialogFunctions, route }) => {
 									<input
 										type='tel'
 										className={
-											ValidNEmail
+											ValidContact
 												? "form-control"
 												: "form-control border border-danger"
 										}
