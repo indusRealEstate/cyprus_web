@@ -116,6 +116,10 @@ const ScheduleTour = () => {
 					throw new Error("Fill the message")
 				} else {
 					setMessageEmpty(false)
+					setValidEmail(true)
+					setValidPhone(true)
+					setValidName(true)
+					setTimeEmpty(false)
 					console.log("no error")
 					submit(data).then((res) => {
 						console.log(res.data)
