@@ -25,6 +25,14 @@ const MenuWidget = () => {
     {
       title: "Discover",
       links: [
+        { label: "Minthis", href: "/featured-collections/minthis" },
+        { label: "One", href: "/featured-collections/one" },
+        { label: "Neo", href: "/featured-collections/neo" },
+      ],
+    },
+    {
+      title: "Explore",
+      links: [
         { label: "Paphos", href: "/search-results" },
         { label: "Limassol", href: "/search-results" },
       ],

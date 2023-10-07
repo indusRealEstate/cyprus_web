@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const FeaturedListings = ({data,colstyle}) => {
+const FeaturedListings = ({ data, colstyle }) => {
   return (
     <>
       {data.map((listing) => (
@@ -13,7 +13,7 @@ const FeaturedListings = ({data,colstyle}) => {
               <Image
                 width={382}
                 height={248}
-                style={{height:'472px'}}
+                style={{ height: "472px" }}
                 className="w-100 h-100 cover"
                 src={listing.image}
                 alt="listings"
@@ -53,7 +53,7 @@ const FeaturedListings = ({data,colstyle}) => {
                   <span className="flaticon-shower" /> {listing.bath} bath
                 </a>
                 <a href="#">
-                  <span className="flaticon-expand" /> {listing.sqft} sqft
+                  <span className="flaticon-expand" /> {listing.sqft} sq m
                 </a>
               </div>
               <hr className="mt-2 mb-2" />

@@ -46,7 +46,7 @@ const PropertyHeader = ({ id }) => {
             </a>
             <a className="text ml20 fz15" href="#">
               <i className="flaticon-expand pe-2 align-text-top" />
-              {data.sqft} sqft
+              {data.sqft} sq m
             </a>
           </div>
         </div>
@@ -76,7 +76,7 @@ const PropertyHeader = ({ id }) => {
               {(
                 Number(data.price.split("$")[1].split(",").join("")) / data.sqft
               ).toFixed(2)}
-              /sq ft
+              /sq m
             </p>
           </div>
         </div>

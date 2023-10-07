@@ -1,8 +1,7 @@
-
 import Image from "next/image";
 import Link from "next/link";
 
-const FeaturedListings = ({cities}) => {
+const FeaturedListings = ({ cities }) => {
   return (
     <>
       {cities.slice(0, 8).map((listing) => (
@@ -52,7 +51,7 @@ const FeaturedListings = ({cities}) => {
                   <span className="flaticon-shower" /> {listing.bath} bath
                 </a>
                 <a href="#">
-                  <span className="flaticon-expand" /> {listing.sqft} sqft
+                  <span className="flaticon-expand" /> {listing.sqft} sq m
                 </a>
               </div>
             </div>

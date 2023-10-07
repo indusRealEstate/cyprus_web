@@ -13,11 +13,11 @@ const WhyChoose = () => {
           }}
         >
           <Image
-            width={591}
-            height={685}
+            width={570}
+            height={687}
             priority
             className="w-100 h-100 cover"
-            src="/images/cyprus-demo.webp"
+            src="/images/why-cyrpus-img.webp"
             alt="why chosse"
           />
           <Link href="/all-properties">

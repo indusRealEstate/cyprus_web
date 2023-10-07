@@ -97,7 +97,7 @@ const ContactWithAgent = ({ agentId }) => {
           </div>
 
           <div className="d-grid">
-            <a href="tel:+971552136536" className="ud-btn btn-white2">
+            <a href="/contact" className="ud-btn btn-white2">
               Contact
               <i className="fal fa-arrow-right-long" />
             </a>

@@ -6,8 +6,8 @@ import Link from "next/link";
 const About = () => {
   const featureList = [
     "Find excellent deals",
-    "Friendly host & Fast support",
-    "List your own property",
+    "Browse through our collection",
+    "Fast and Secure",
   ];
   return (
     <>
@@ -18,7 +18,7 @@ const About = () => {
             data-aos="fade-left"
           >
             <h2 className="title mb30 text-align-center-in-mobile">
-              Let’s find the right selling option for you
+              Let’s find the right home for you
             </h2>
             <p className="text mb25 fz15 text-align-center-in-mobile">
               As the complexity of buildings to increase, the field of

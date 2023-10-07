@@ -72,7 +72,7 @@ const ListingSidebar = ({ filterFunctions }) => {
       {/* End .widget-wrapper */}
 
       <div className="widget-wrapper">
-        <h6 className="list-title">Square Feet</h6>
+        <h6 className="list-title">Square Metre</h6>
         <SquareFeet filterFunctions={filterFunctions} />
       </div>
       {/* End .widget-wrapper */}
