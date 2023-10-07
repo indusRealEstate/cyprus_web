@@ -14,9 +14,7 @@ import { useRouter } from "next/navigation"
 import { useState } from "react"
 
 const BrochureDownload = ({ type, open, dialogFunctions, route }) => {
-	const onlyEmail =
-		/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+.(?:\.[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+)*$/
-	// const onlyEmail = /^([A-Za-z])+@+.+[A-Za-z]\w+/g;
+	const onlyEmail = /^((\w+\.)*\w+)@(\w+\.)+(\w)/
 	const onlyText = /^[a-zA-Z ]*$/
 	const onlyContactNumber = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g
 	const [ValidFirstName, setValidFirstName] = useState(true)
@@ -28,8 +26,6 @@ const BrochureDownload = ({ type, open, dialogFunctions, route }) => {
 	const [alertSeverity, setAlertSeverity] = useState([])
 	const [error, setError] = useState(false)
 	const [formSubmit, setFormSubmit] = useState(false)
-	const [messageEmpty, setMessageEmpty] = useState(false)
-	const [responsData, setRespons] = useState(false)
 	const theme = useTheme()
 	const fullScreen = useMediaQuery(theme.breakpoints.down("md"))
 
@@ -47,6 +43,7 @@ const BrochureDownload = ({ type, open, dialogFunctions, route }) => {
 		setFormData({ ...formData, brochureType: type })
 		event.preventDefault()
 		setFormSubmit(true)
+		window.scrollTo(0, 0)
 		if (event.type === "click") {
 			try {
 				// FIRST NAME
@@ -54,83 +51,52 @@ const BrochureDownload = ({ type, open, dialogFunctions, route }) => {
 					setError(true)
 					setValidFirstName(false)
 					throw new Error("Fill the first name")
-				} else {
-					setError(false)
-					setValidFirstName(true)
-				}
-
-				if (!formData.first_name.match(onlyText)) {
+				} else if (!formData.first_name.match(onlyText)) {
 					setValidFirstName(false)
 					setError(true)
 					throw new Error("Fill the correct first name")
-				} else {
-					setError(false)
+				} else if (formData.last_name == "") {
 					setValidFirstName(true)
-				}
-
-				// LAST NAME
-				if (formData.last_name == "") {
 					setError(true)
 					setValidLastName(false)
 					throw new Error("Fill the last name")
-				} else {
-					setError(false)
-					setValidLastName(true)
-				}
-
-				if (!formData.last_name.match(onlyText)) {
+				} else if (!formData.last_name.match(onlyText)) {
 					setValidLastName(false)
 					setError(true)
 					throw new Error("Fill the correct last name")
-				} else {
-					setError(false)
+				} else if (formData.email == "") {
 					setValidLastName(true)
-				}
-
-				// EMAILL
-				if (formData.email == "") {
 					setError(true)
 					setValidEmail(false)
 					throw new Error("Fill the email")
-				} else {
-					setError(false)
-					setValidEmail(true)
-				}
-
-				if (!formData.email.match(onlyEmail)) {
+				} else if (!formData.email.match(onlyEmail)) {
 					setError(true)
 					setValidEmail(false)
 					throw new Error("Fill the correct email")
-				} else {
-					setError(false)
+				} else if (formData.contact == "") {
 					setValidEmail(true)
-				}
-
-				// CONTACT NUMBER
-				if (formData.contact == "") {
 					setError(true)
 					setValidContact(false)
 					throw new Error("Fill the contact number")
-				} else {
-					setError(false)
+				} else if (!formData.contact.match(onlyContactNumber)) {
 					setValidContact(true)
-				}
-
-				if (!formData.contact.match(onlyContactNumber)) {
 					setError(true)
 					setValidContact(false)
 					throw new Error("Fill the correct contact number")
 				} else {
-					setError(false)
 					setValidContact(true)
-				}
-
-				if (!error) {
 					console.log("no error")
-
 					downloadBrochureRequestForm(formData).then((res) => {
 						console.log(res.data)
 						if (res.data === true) {
+							setFormData({
+								first_name: "",
+								last_name: "",
+								email: "",
+								contact: "",
+								brochureType: "",
+							})
+							setError(false)
 							dialogFunctions.handleClose()
 							document.getElementById("form").reset()
 							// router.push(route)
@@ -178,7 +144,7 @@ const BrochureDownload = ({ type, open, dialogFunctions, route }) => {
 									<strong>{alertMsg}</strong>
 								</Alert>
 							) : (
-								""
+								<></>
 							)}
 						</div>
 					</div>

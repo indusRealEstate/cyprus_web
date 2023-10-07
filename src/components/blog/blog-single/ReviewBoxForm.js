@@ -46,9 +46,7 @@ const ReviewBoxForm = () => {
 		// Additional logic or API calls can be added here
 	}
 
-	const onlyEmail =
-		/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+.(?:\.[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+)*$/
-	// const onlyEmail = /^([A-Za-z])+@+.+[A-Za-z]\w+/g;
+	const onlyEmail = /^((\w+\.)*\w+)@(\w+\.)+(\w)/
 	const onlyText = /^[a-zA-Z ]*$/
 	const onlyContactNumber = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g
 	const [ValidNEmail, setValidEmail] = useState(true)
@@ -85,37 +83,29 @@ const ReviewBoxForm = () => {
 					setError(true)
 					setValidEmail(false)
 					throw new Error("Fill the email")
-				} else {
-					setError(false)
-					setValidEmail(true)
-				}
-
-				if (!formData.email.match(onlyEmail)) {
+				} else if (!formData.email.match(onlyEmail)) {
 					setError(true)
 					setValidEmail(false)
 					throw new Error("Fill the correct email")
-				} else {
-					setError(false)
+				} else if (formData.message == "") {
 					setValidEmail(true)
-				}
-
-				if (formData.message == "") {
 					setError(true)
 					setMessageEmpty(true)
 					throw new Error("Fill the message")
 				} else {
-					setError(false)
 					setMessageEmpty(false)
-				}
-
-				if (!error) {
 					console.log("no error")
 					submitInvestCyprus(formData).then((res) => {
 						console.log(res.data)
 						if (res.data === true) {
+							setFormData({
+								email: "",
+								message: "",
+							})
+							setError(false)
 							setRespons(true)
-							handleClickOpen()
 							document.getElementById("form").reset()
+							handleClickOpen()
 						}
 					})
 				}

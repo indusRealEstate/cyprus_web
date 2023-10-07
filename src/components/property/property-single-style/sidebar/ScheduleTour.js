@@ -14,9 +14,7 @@ import {
 } from "@mui/material"
 
 const ScheduleTour = () => {
-	const onlyEmail =
-		/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-	// const onlyEmail = /^([A-Za-z])+@+.+[A-Za-z]\w+/g;
+	const onlyEmail = /^((\w+\.)*\w+)@(\w+\.)+(\w)/
 	const onlyText = /^[a-zA-Z ]*$/
 	const onlyContactNumber = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g
 	const [notValidName, setValidName] = useState(true)
@@ -77,84 +75,61 @@ const ScheduleTour = () => {
 	const onSubmit = (event, tabId) => {
 		event.preventDefault()
 		setFormSubmit(true)
+		window.scrollTo(0, 500)
 		if (event.type === "click") {
 			try {
 				if (data.time == "") {
 					setTimeEmpty(true)
 					setError(true)
 					throw new Error("Fill the time")
-				} else {
-					setError(false)
+				} else if (data.name == "") {
 					setTimeEmpty(false)
-				}
-				if (data.name == "") {
 					setError(true)
 					setValidName(false)
 					throw new Error("Fill the name")
-				} else {
-					setError(false)
-					setValidName(true)
-				}
-
-				if (!data.name.match(onlyText)) {
+				} else if (!data.name.match(onlyText)) {
 					setValidName(false)
 					setError(true)
 					throw new Error("Fill the correct name")
-				} else {
-					setError(false)
+				} else if (data.phone == "") {
 					setValidName(true)
-				}
-
-				if (data.phone == "") {
 					setError(true)
 					setValidPhone(false)
 					throw new Error("Fill the contact number")
-				} else {
-					setError(false)
-					setValidPhone(true)
-				}
-
-				if (!data.phone.match(onlyContactNumber)) {
+				} else if (!data.phone.match(onlyContactNumber)) {
 					setError(true)
 					setValidPhone(false)
 					throw new Error("Fill the correct contact number")
-				} else {
-					setError(false)
+				} else if (data.email == "") {
 					setValidPhone(true)
-				}
-
-				if (data.email == "") {
 					setError(true)
 					setValidEmail(false)
 					throw new Error("Fill the email")
-				} else {
-					setError(false)
-					setValidEmail(true)
-				}
-
-				if (!data.email.match(onlyEmail)) {
+				} else if (!data.email.match(onlyEmail)) {
 					setError(true)
 					setValidEmail(false)
 					throw new Error("Fill the correct email")
-				} else {
-					setError(false)
+				} else if (data.message == "") {
 					setValidEmail(true)
-				}
-
-				if (data.message == "") {
 					setError(true)
 					setMessageEmpty(true)
 					throw new Error("Fill the message")
 				} else {
-					setError(false)
 					setMessageEmpty(false)
-				}
-
-				if (!error) {
 					console.log("no error")
 					submit(data).then((res) => {
 						console.log(res.data)
 						if (res.data === true) {
+							setData({
+								status: "inperson",
+								time: "",
+								name: "",
+								phone: "",
+								email: "",
+								message: "",
+							})
+							setError(false)
+							setFormSubmit(false)
 							document.getElementById(`form_${tabId}`).reset()
 							setRespons(true)
 							handleClickOpen()
