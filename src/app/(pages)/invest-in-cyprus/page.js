@@ -94,7 +94,7 @@ const InvestInCyprus = () => {
                   width={804}
                   height={470}
                   priority
-                  src="/images/about/Real/compressed_neighbourhood.webp"
+                  src="/images/about/Real/minthis_neighbourhood.webp"
                   alt="blog"
                   className="bdrs12 post-img-2 w-100 h-100 cover"
                 />

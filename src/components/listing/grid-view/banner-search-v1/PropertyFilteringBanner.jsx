@@ -267,7 +267,7 @@ export default function PropertyFilteringBanner({
       <section
         className="property-banner-style1 p-0"
         style={{
-          backgroundImage: "url(/images/banner-img.webp)",
+          backgroundImage: "url(/images/search-banner.webp)",
         }}
       >
         <div className="inner-style1">
