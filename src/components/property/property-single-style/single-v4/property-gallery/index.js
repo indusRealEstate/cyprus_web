@@ -1,7 +1,6 @@
 /** @format */
 
 import GalleryBox from "./GalleryBox";
-import Map from "./Map";
 import RealMapView from "./RealMapView";
 
 const PropertyGallery = ({ id, images }) => {
@@ -88,14 +87,14 @@ const PropertyGallery = ({ id, images }) => {
             </div>
           </div>
 
-          <div
+          {/* <div
             className="tab-pane fade"
             id="pills-profile"
             role="tabpanel"
             aria-labelledby="pills-profile-tab"
           >
             <Map />
-          </div>
+          </div> */}
 
           <div
             className="tab-pane fade"

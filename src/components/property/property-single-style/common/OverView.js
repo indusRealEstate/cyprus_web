@@ -1,6 +1,4 @@
 /** @format */
-
-import listings from "@/data/listings";
 import React, { useState, useLayoutEffect, useEffect } from "react";
 
 const OverView = ({ id, data }) => {
