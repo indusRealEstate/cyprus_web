@@ -14,6 +14,7 @@ import { useRouter } from "next/navigation"
 import { useState } from "react"
 
 const BrochureDownload = ({ type, open, dialogFunctions, route }) => {
+	// console.log(type)
 	const onlyEmail = /^((\w+\.)*\w+)@(\w+\.)+(\w)/
 	const onlyText = /^[a-zA-Z ]*$/
 	const onlyContactNumber = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g
@@ -36,11 +37,10 @@ const BrochureDownload = ({ type, open, dialogFunctions, route }) => {
 		last_name: "",
 		email: "",
 		contact: "",
-		brochureType: "",
+		brochureType: type,
 	})
 
 	const onSubmitForm = async (event) => {
-		setFormData({ ...formData, brochureType: type })
 		event.preventDefault()
 		setFormSubmit(true)
 		window.scrollTo(0, 0)
@@ -83,11 +83,11 @@ const BrochureDownload = ({ type, open, dialogFunctions, route }) => {
 					setValidContact(false)
 					throw new Error("Fill the correct contact number")
 				} else {
+					// console.log(formData)
 					setValidFirstName(true)
 					setValidLastName(true)
 					setValidEmail(true)
 					setValidContact(true)
-					console.log("no error")
 					downloadBrochureRequestForm(formData).then((res) => {
 						console.log(res.data)
 						if (res.data === true) {
