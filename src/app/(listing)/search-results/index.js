@@ -1,14 +1,14 @@
 "use client";
-import { getAllListings, getAllListingsByFilter } from "@/api";
+import { getAllListings } from "@/api";
 import DefaultHeader from "@/components/common/DefaultHeader";
-import Footer from "@/components/home/footer";
 import MobileMenu from "@/components/common/mobile-menu";
+import Footer from "@/components/home/footer";
 
-import PropertyFilteringBanner from "@/components/listing/grid-view/banner-search-v1/PropertyFilteringBanner";
+import PropertyFilteringBanner from "@/components/listings/search-result/PropertyFilteringBanner";
 import { Box, CircularProgress } from "@mui/material";
 import { useSearchParams } from "next/navigation";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const SearchResultPage = () => {
   const searchParams = useSearchParams();

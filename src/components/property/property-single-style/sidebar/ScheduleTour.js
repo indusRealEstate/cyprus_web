@@ -75,7 +75,7 @@ const ScheduleTour = () => {
 	const onSubmit = (event, tabId) => {
 		event.preventDefault()
 		setFormSubmit(true)
-		// window.scrollTo(0, 500)
+		// window.scrollTo(0, 500);
 		if (event.type === "click") {
 			try {
 				if (data.time == "") {

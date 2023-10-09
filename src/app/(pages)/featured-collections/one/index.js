@@ -4,7 +4,7 @@ import DefaultHeader from "@/components/common/DefaultHeader";
 import MobileMenu from "@/components/common/mobile-menu";
 import BrochureDownload from "@/components/dialog/brochureDownload";
 import Footer from "@/components/home/footer";
-import Features from "@/components/pages/about/Features";
+import Features from "@/components/featured-collections/Features";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -197,7 +197,7 @@ export const One = () => {
                   height={515}
                   priority
                   className="about-banner"
-                  src="/images/featureProperties/ONE_CGI_aerial view.webp"
+                  src="/images/featureProperties/one-limassol.webp"
                   alt="about banner"
                 />
               </div>

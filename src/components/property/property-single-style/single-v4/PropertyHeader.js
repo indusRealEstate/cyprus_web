@@ -1,4 +1,3 @@
-import listings from "@/data/listings";
 import { Tooltip } from "@mui/material";
 import React from "react";
 
