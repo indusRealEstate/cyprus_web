@@ -197,7 +197,7 @@ export const One = () => {
                   height={515}
                   priority
                   className="about-banner"
-                  src="/images/featureProperties/ONE_CGI_aerial view.webp"
+                  src="/images/featureProperties/one-limassol.webp"
                   alt="about banner"
                 />
               </div>
