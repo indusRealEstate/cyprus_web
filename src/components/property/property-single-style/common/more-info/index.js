@@ -112,6 +112,9 @@ const InfoWithForm = ({ agentId }) => {
 				} else {
 					console.log("no error")
 					setMessageEmpty(false)
+					setValidName(true)
+					setValidPhone(true)
+					setValidEmail(true)
 					contactAgent(formData).then((res) => {
 						if (res.data === true) {
 							document.getElementById(`form`).reset()

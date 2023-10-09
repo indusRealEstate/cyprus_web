@@ -79,11 +79,13 @@ const BrochureDownload = ({ type, open, dialogFunctions, route }) => {
 					setValidContact(false)
 					throw new Error("Fill the contact number")
 				} else if (!formData.contact.match(onlyContactNumber)) {
-					setValidContact(true)
 					setError(true)
 					setValidContact(false)
 					throw new Error("Fill the correct contact number")
 				} else {
+					setValidFirstName(true)
+					setValidLastName(true)
+					setValidEmail(true)
 					setValidContact(true)
 					console.log("no error")
 					downloadBrochureRequestForm(formData).then((res) => {
