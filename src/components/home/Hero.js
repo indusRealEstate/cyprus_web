@@ -74,12 +74,7 @@ const Hero = () => {
                         </p>
                         <div className="slider-btn-block">
                           <Link
-                            href={{
-                              pathname: "/property-details",
-                              query: {
-                                id: item.prop_id,
-                              },
-                            }}
+                            href={`/property/${item.prop_id}`}
                             className="ud-btn btn-white slider-btn"
                           >
                             View Details

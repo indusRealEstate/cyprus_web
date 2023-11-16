@@ -104,12 +104,7 @@ const FeaturedListings = ({ data, colstyle }) => {
               <div className="list-content">
                 <h6 className="list-title">
                   <Link
-                    href={{
-                      pathname: "/property-details",
-                      query: {
-                        id: listing.prop_id,
-                      },
-                    }}
+                    href={`/property/${listing.prop_id}`}
                   >{`${listing.property}`}</Link>
                 </h6>
                 <p className="list-text">{listing.location}</p>
@@ -132,16 +127,13 @@ const FeaturedListings = ({ data, colstyle }) => {
                   </span>
                   <div className="icons d-flex align-items-center">
                     <Tooltip title="View">
-                      <a href={`/property-details?id=${listing.prop_id}`}>
+                      <a href={`/property/${listing.prop_id}`}>
                         <span className="flaticon-fullscreen" />
                       </a>
                     </Tooltip>
 
                     <Tooltip title="Open In New Tab">
-                      <a
-                        href={`/property-details?id=${listing.prop_id}`}
-                        target="_blank"
-                      >
+                      <a href={`/property/${listing.prop_id}`} target="_blank">
                         <span className="flaticon-new-tab" />
                       </a>
                     </Tooltip>

@@ -1,7 +1,8 @@
+"use client";
 /** @format */
-import React, { useState, useLayoutEffect, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const OverView = ({ id, data }) => {
+const OverView = ({ data }) => {
   // const data = listings.filter((elm) => elm.id == id)[0] || listings[0];
   const [screenWidth, setScreenWidth] = useState();
 

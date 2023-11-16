@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";

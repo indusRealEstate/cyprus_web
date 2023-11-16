@@ -68,12 +68,7 @@ const ListingItems = ({ data }) => {
             <div className="list-content">
               <h6 className="list-title">
                 <Link
-                  href={{
-                    pathname: "/property-details",
-                    query: {
-                      id: listing.prop_id,
-                    },
-                  }}
+                  href={`/property/${listing.prop_id}`}
                 >{`${listing.property}`}</Link>
               </h6>
               <p className="list-text">{listing.location}</p>

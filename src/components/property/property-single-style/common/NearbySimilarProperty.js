@@ -128,12 +128,7 @@ const NearbySimilarProperty = () => {
                     <div className="list-content">
                       <h6 className="list-title">
                         <Link
-                          href={{
-                            pathname: "/property-details",
-                            query: {
-                              id: listing.prop_id,
-                            },
-                          }}
+                          href={`/property/${listing.prop_id}`}
                         >{`${listing.unit_no}, ${listing.property}`}</Link>
                       </h6>
                       <p className="list-text">{listing.location}</p>
@@ -158,7 +153,7 @@ const NearbySimilarProperty = () => {
                             : "For Rent"}
                         </span>
                         <div className="icons d-flex align-items-center">
-                          <a href={`/property-details?id=${listing.prop_id}`}>
+                          <a href={`/property/${listing.prop_id}`}>
                             <span className="flaticon-fullscreen" />
                           </a>
                           <a href="#">

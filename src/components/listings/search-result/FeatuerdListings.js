@@ -109,14 +109,7 @@ const FeaturedListings = ({ data, colstyle }) => {
               </div>
               <div className="list-content">
                 <h6 className="list-title">
-                  <Link
-                    href={{
-                      pathname: "/property-details",
-                      query: {
-                        id: listing.prop_id,
-                      },
-                    }}
-                  >
+                  <Link href={`/property/${listing.prop_id}`}>
                     {listing.property}
                   </Link>
                 </h6>
