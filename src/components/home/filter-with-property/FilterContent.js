@@ -5,6 +5,7 @@ import InputRange from "react-input-range";
 import "react-input-range/lib/css/index.css";
 import LookingFor from "./LookingFor";
 import Location from "./Location";
+import { useAppSelector } from "@/redux/store";
 
 const FilterContent = () => {
   const router = useRouter();
@@ -14,9 +15,37 @@ const FilterContent = () => {
     setActiveTab(tab);
   };
 
+  const lang = useAppSelector((state) => state.langReducer);
+
+  const getLang = (lang, type) => {
+    if (type == "buy") {
+      switch (lang) {
+        case "en":
+          return "Buy";
+        case "ru":
+          return "Купить";
+        case "ch":
+          return "买";
+        default:
+          return "Buy";
+      }
+    } else {
+      switch (lang) {
+        case "en":
+          return "Rent";
+        case "ru":
+          return "Арендовать";
+        case "ch":
+          return "租";
+        default:
+          return "Rent";
+      }
+    }
+  };
+
   const tabs = [
-    { id: "buy", label: "Buy" },
-    { id: "rent", label: "Rent" },
+    { id: "buy", label: getLang(lang, "buy") },
+    { id: "rent", label: getLang(lang, "rent") },
     // { id: "sold", label: "Sold" },
   ];
 
@@ -28,8 +57,10 @@ const FilterContent = () => {
   };
 
   return (
-    <div className="advance-style4 at-home5 mt-100 mt50-lg mb10 mx-auto animate-up-2">
-      <ul className="nav nav-tabs p-0 m-0">
+    <div
+      className={`advance-style4 at-home5 mt-100 mt50-lg mb10 mx-auto animate-up-2`}
+    >
+      <ul className={`nav nav-tabs p-0 m-0 ${lang == "ru" ? "maxw240" : ""}`}>
         {tabs.map((tab) => (
           <li className="nav-item" key={tab.id}>
             <button
@@ -51,7 +82,9 @@ const FilterContent = () => {
             <div className="advance-content-style3 at-home5">
               <div className="row align-items-center">
                 <div className="col-md-4 col-xl-3 bdrr1 bdrrn-sm">
-                  <label>Search</label>
+                  <label>
+                    {lang == "en" ? "Search" : lang == "ru" ? "Поиск" : "搜索"}
+                  </label>
                   <div className="advance-search-field position-relative">
                     <form className="form-search position-relative">
                       <div className="box-search">
@@ -59,7 +92,13 @@ const FilterContent = () => {
                           className="form-control bgc-f7 bdrs12 ps-0"
                           type="text"
                           name="search"
-                          placeholder={`Enter Keyword for ${tab.label}`}
+                          placeholder={`${
+                            lang == "en"
+                              ? "Search Properties"
+                              : lang == "ru"
+                              ? "Поиск недвижимости"
+                              : "搜索属性"
+                          }`}
                         />
                       </div>
                     </form>
@@ -70,8 +109,14 @@ const FilterContent = () => {
                 <div className="col-md-4 col-xl-2 bdrr1 bdrrn-sm px20 pl15-sm">
                   <div className="mt-3 mt-md-0 px-0">
                     <div className="bootselect-multiselect">
-                      <label className="fz14">Loking For</label>
-                      <LookingFor />
+                      <label className="fz14">
+                        {lang == "en"
+                          ? "Looking For"
+                          : lang == "ru"
+                          ? "Находясь в поиске"
+                          : "寻找"}
+                      </label>
+                      <LookingFor lang={lang} />
                     </div>
                   </div>
                 </div>
@@ -80,8 +125,14 @@ const FilterContent = () => {
                 <div className="col-md-4 col-xl-2 bdrr1 bdrrn-sm px20 pl15-sm">
                   <div className="mt-3 mt-md-0">
                     <div className="bootselect-multiselect">
-                      <label className="fz14">Location</label>
-                      <Location />
+                      <label className="fz14">
+                        {lang == "en"
+                          ? "Location"
+                          : lang == "ru"
+                          ? "Расположение"
+                          : "地点"}
+                      </label>
+                      <Location lang={lang} />
                     </div>
                   </div>
                 </div>
@@ -90,7 +141,13 @@ const FilterContent = () => {
                 <div className="col-md-4 col-xl-2 bdrr1 bdrrn-sm px20 pl15-sm">
                   <div className="mt-3 mt-md-0">
                     <div className="dropdown-lists">
-                      <label className="fz14 mb-1">Price</label>
+                      <label className="fz14 mb-1">
+                        {lang == "en"
+                          ? "Price"
+                          : lang == "ru"
+                          ? "Цена"
+                          : "价格"}
+                      </label>
                       <div
                         className="btn open-btn text-start dropdown-toggle"
                         data-bs-toggle="dropdown"
@@ -136,7 +193,12 @@ const FilterContent = () => {
                       data-bs-toggle="modal"
                       data-bs-target="#advanceSeachModal"
                     >
-                      <span className="flaticon-settings" /> Advanced
+                      <span className="flaticon-settings" />{" "}
+                      {lang == "en"
+                        ? "Advanced"
+                        : lang == "ru"
+                        ? "Передовой"
+                        : "先进的"}
                     </button>
                     <button
                       className="advance-search-icon ud-btn btn-thm ms-4"

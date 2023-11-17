@@ -1,14 +1,25 @@
 /** @format */
-
+"use client";
+import { ch_tr, en_tr, ru_tr } from "@/lang";
+import { useAppSelector } from "@/redux/store";
 import Image from "next/image";
 import Link from "next/link";
 
 const About = () => {
-  const featureList = [
-    "Find excellent deals",
-    "Browse through our collection",
-    "Fast and Secure",
-  ];
+  const lang = useAppSelector((state) => state.langReducer);
+
+  const getLang = (lang) => {
+    switch (lang) {
+      case "en":
+        return en_tr.bottom_section_home;
+      case "ru":
+        return ru_tr.bottom_section_home;
+      case "ch":
+        return ch_tr.bottom_section_home;
+      default:
+        return en_tr.bottom_section_home;
+    }
+  };
   return (
     <>
       <div className="row">
@@ -18,15 +29,14 @@ const About = () => {
             data-aos="fade-left"
           >
             <h2 className="title mb30 text-align-center-in-mobile">
-              Let’s find the right home for you
+              {getLang(lang).heading}
             </h2>
             <p className="text mb25 fz15 text-align-center-in-mobile">
-              As the complexity of buildings to increase, the field of
-              architecture
+              {getLang(lang).sub_heading}
             </p>
             <div className="list-style1 mb50 text-align-center-in-mobile">
               <ul>
-                {featureList.map((list, index) => (
+                {getLang(lang).features.map((list, index) => (
                   <li key={index}>
                     <i className="far fa-check text-white bgc-dark fz15"></i>
                     {list}
@@ -40,7 +50,13 @@ const About = () => {
                   href={`/contact`}
                   className="ud-btn btn-white2 mobile-mx-auto"
                 >
-                  Learn More<i className="fal fa-arrow-right-long"></i>
+                  {" "}
+                  {lang == "en"
+                    ? "Learn More"
+                    : lang == "ru"
+                    ? "Узнать больше"
+                    : "了解更多"}
+                  <i className="fal fa-arrow-right-long"></i>
                 </Link>
               </div>
             </div>

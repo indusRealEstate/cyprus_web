@@ -1,8 +1,27 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import Features from "./Features";
+import { useAppSelector } from "@/redux/store";
+
+import { ch_tr, en_tr, ru_tr } from "@/lang/index";
 
 const WhyChoose = () => {
+  const lang = useAppSelector((state) => state.langReducer);
+
+  const getLang = (lang) => {
+    switch (lang) {
+      case "en":
+        return en_tr.why_cyprus;
+      case "ru":
+        return ru_tr.why_cyprus;
+      case "ch":
+        return ch_tr.why_cyprus;
+      default:
+        return en_tr.why_cyprus;
+    }
+  };
+
   return (
     <>
       <div className="col-md-6 col-lg-6">
@@ -24,8 +43,8 @@ const WhyChoose = () => {
             <div className="iconbox-style5 d-flex align-items-center">
               <span className="icon flaticon-home flex-shrink-0" />
               <div className="iconbox-content flex-shrink-1 ms-2">
-                <p className="text mb-0">Explore</p>
-                <h4 className="title mb-0">Properties</h4>
+                <p className="text mb-0">{getLang(lang).btn_text_1}</p>
+                <h4 className="title mb-0">{getLang(lang).btn_text_2}</h4>
               </div>
             </div>
           </Link>
@@ -39,18 +58,13 @@ const WhyChoose = () => {
         data-aos-delay="300"
       >
         <div className="main-title2">
-          <h2 className="title">Why Cyprus</h2>
-          <p className="paragraph fz15">
-            A unique and unrivalled proposition for investing and living, the
-            full EU-member of Cyprus is poised on the cusp of three continents –
-            namely, Europe, Africa, and Asia – and enjoys the bounty of this
-            exclusive position that no other country can boast.
-          </p>
+          <h2 className="title">{getLang(lang).heading}</h2>
+          <p className="paragraph fz15">{getLang(lang).sub_heading}</p>
         </div>
         {/* End main-title2 */}
 
         <div className="why-chose-list">
-          <Features />
+          <Features lang={getLang(lang)} />
         </div>
         {/* End .why-chose-list */}
       </div>

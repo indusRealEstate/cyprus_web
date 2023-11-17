@@ -5,39 +5,26 @@ import { Thumbs } from "swiper";
 import "swiper/swiper-bundle.css";
 import Image from "next/image";
 import Link from "next/link";
+import { ch_tr, en_tr, ru_tr } from "@/lang";
+import { useAppSelector } from "@/redux/store";
 
 const Hero = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  const sliderItems = [
-    {
-      image: "/images/banner/MI-P1-030.webp",
-      // price: "$986,00",
-      title: "Villa on Paphos, Cyprus",
-      description: "3 Beds - 3 Baths - 240 sq m",
-      prop_id: "MI-P1-030",
-    },
-    {
-      image: "/images/banner/MI-TOPOS-ALTO-02.webp",
-      // price: "$986,00",
-      title: "Topos Villa on Cyprus",
-      description: "3 Beds - 3 Baths - 242 sq m",
-      prop_id: "MI-TOPOS-ALTO-02",
-    },
-    {
-      image: "/images/banner/MI-TOPOS-ALTO-01.webp",
-      // price: "$986,00",
-      title: "Luxury Villa on Cyprus",
-      description: "4 Beds - 3 Baths - 360 sq m",
-      prop_id: "MI-TOPOS-ALTO-01",
-    },
-    // {
-    //   image: "/images/home/home-5-4.jpg",
-    //   price: "$986,00",
-    //   title: "Studio on Grand Avenue",
-    //   description: "32 Beds - 91 Baths - 1500 sq ft",
-    // },
-  ];
+  const lang = useAppSelector((state) => state.langReducer);
+
+  const getLang = (lang) => {
+    switch (lang) {
+      case "en":
+        return en_tr.main_slider;
+      case "ru":
+        return ru_tr.main_slider;
+      case "ch":
+        return ch_tr.main_slider;
+      default:
+        return en_tr.main_slider;
+    }
+  };
 
   return (
     <>
@@ -52,7 +39,7 @@ const Hero = () => {
           thumbs={{ swiper: thumbsSwiper }}
           style={{ height: "850px" }}
         >
-          {sliderItems.map((item, index) => (
+          {getLang(lang).map((item, index) => (
             <SwiperSlide key={index}>
               <div className="item">
                 <div
@@ -77,7 +64,12 @@ const Hero = () => {
                             href={`/property/${item.prop_id}`}
                             className="ud-btn btn-white slider-btn"
                           >
-                            View Details
+                            {" "}
+                            {lang == "en"
+                              ? "View Details"
+                              : lang == "ru"
+                              ? "Посмотреть детали"
+                              : "查看详情"}
                             <i className="fal fa-arrow-right-long" />
                           </Link>
                         </div>
@@ -97,11 +89,11 @@ const Hero = () => {
           modules={[Thumbs]}
           watchSlidesProgress
           onSwiper={setThumbsSwiper}
-          slidesPerView={sliderItems.length} // Display all thumbs at once
+          slidesPerView={getLang(lang).length} // Display all thumbs at once
           spaceBetween={0} // Adjust the space between thumbs
           style={{ height: "268px" }} // Set a fixed height for the thumbs gallery
         >
-          {sliderItems.map((item, index) => (
+          {getLang(lang).map((item, index) => (
             <SwiperSlide key={index}>
               <Image
                 width={50}

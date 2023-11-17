@@ -1,21 +1,18 @@
 /** @format */
 
 import {
-  homeItems,
   blogItems,
-  listingItems,
-  propertyItems,
-  pageItems,
-  rentItems,
-  buyItems,
   cyprusItems,
+  homeItems,
   propertyCollections,
 } from "@/data/navItems";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const MainMenu = () => {
+import { ch_tr, en_tr, ru_tr } from "@/lang/index";
+
+const MainMenu = ({ lang }) => {
   const pathname = usePathname();
   const [topMenu, setTopMenu] = useState("");
   const [submenu, setSubmenu] = useState("");
@@ -80,18 +77,58 @@ const MainMenu = () => {
       return "menuActive";
     }
   };
+
+  const getLang = (lang, index) => {
+    if (index == 0 || index == 5) {
+      switch (lang) {
+        case "en":
+          return Object.keys(en_tr.navbar[index])[0];
+        case "ru":
+          return Object.keys(ru_tr.navbar[index])[0];
+        case "ch":
+          return Object.keys(ch_tr.navbar[index])[0];
+        default:
+          return Object.keys(en_tr.navbar[index])[0];
+      }
+    } else {
+      switch (lang) {
+        case "en":
+          return en_tr.navbar[index];
+        case "ru":
+          return ru_tr.navbar[index];
+        case "ch":
+          return ch_tr.navbar[index];
+        default:
+          return en_tr.navbar[index];
+      }
+    }
+  };
+
+  const getSubLang = (lang, index) => {
+    switch (lang) {
+      case "en":
+        return Object.values(en_tr.navbar[index])[0];
+      case "ru":
+        return Object.values(ru_tr.navbar[index])[0];
+      case "ch":
+        return Object.values(ch_tr.navbar[index])[0];
+      default:
+        return Object.values(en_tr.navbar[index])[0];
+    }
+  };
+
   return (
     <ul className="ace-responsive-menu">
       <li className="visible_list dropitem">
         <a className="list-item" href="#">
           <span className={topMenu == "home" ? "title menuActive" : "title"}>
-            Home
+            {getLang(lang, 0)}
           </span>
           <span className="arrow"></span>
         </a>
         {/* Level Two*/}
         <ul className="sub-menu">
-          {homeItems.map((item, index) => (
+          {getSubLang(lang, 0).map((item, index) => (
             <li key={index}>
               <Link className={`${handleActive(item.href)}`} href={item.href}>
                 {item.label}
@@ -104,7 +141,7 @@ const MainMenu = () => {
       <li className="visible_list dropitem">
         <Link className="list-item" href="/#why-cyprus">
           <span className={topMenu == "pages" ? "title menuActive" : "title"}>
-            Why Cyprus
+            {getLang(lang, 1)}
           </span>
           {/* <span className="arrow"></span> */}
         </Link>
@@ -113,7 +150,7 @@ const MainMenu = () => {
       <li className="visible_list dropitem">
         <Link className="list-item" href="/all-properties">
           <span className={topMenu == "pages" ? "title menuActive" : "title"}>
-            All Listings
+            {getLang(lang, 2)}
           </span>
         </Link>
         {/* <ul className="sub-menu">
@@ -130,7 +167,7 @@ const MainMenu = () => {
       <li className="visible_list dropitem">
         <Link className="list-item" href="/sale-properties">
           <span className={topMenu == "home" ? "title menuActive" : "title"}>
-            Buy
+            {getLang(lang, 3)}
           </span>
           {/* <span className="arrow"></span> */}
         </Link>
@@ -148,20 +185,20 @@ const MainMenu = () => {
       <li className="visible_list dropitem">
         <Link className="list-item" href="/invest-in-cyprus">
           <span className={topMenu == "home" ? "title menuActive" : "title"}>
-            Invest In Cyprus
+            {getLang(lang, 4)}
           </span>
         </Link>
       </li>
       <li className="visible_list dropitem">
         <a className="list-item" href="#">
           <span className={topMenu == "home" ? "title menuActive" : "title"}>
-            Pafilia Collections
+            {getLang(lang, 5)}
           </span>
           <span className="arrow"></span>
         </a>
         {/* Level Two*/}
         <ul className="sub-menu">
-          {propertyCollections.map((item, index) => (
+          {getSubLang(lang, 5).map((item, index) => (
             <li key={index}>
               <Link className={`${handleActive(item.href)}`} href={item.href}>
                 {item.label}
@@ -303,7 +340,7 @@ const MainMenu = () => {
       <li className="visible_list dropitem">
         <Link className="list-item" href="/contact">
           <span className={topMenu == "pages" ? "title menuActive" : "title"}>
-            Contact Us
+            {getLang(lang, 6)}
           </span>
           {/* <span className="arrow"></span> */}
         </Link>

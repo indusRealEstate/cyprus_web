@@ -1,14 +1,25 @@
 "use client";
 import Select from "react-select";
 
-const LookingFor = () => {
+const LookingFor = ({ lang }) => {
   const inqueryType = [
-    { value: "Apartments", label: "Apartments" },
-    { value: "Bungalow", label: "Bungalow" },
-    { value: "Houses", label: "Houses" },
-    { value: "Office", label: "Office" },
-    { value: "TownHome", label: "TownHome" },
-    { value: "Villa", label: "Villa" },
+    {
+      value: "Apartments",
+      label: lang == "en" ? "Apartments" : lang == "ru" ? "Квартиры" : "公寓",
+    },
+    {
+      value: "Houses",
+      label: lang == "en" ? "Houses" : lang == "ru" ? "Дома" : "房屋",
+    },
+    {
+      value: "Villa",
+      label: lang == "en" ? "Villa" : lang == "ru" ? "Вилла" : "别墅",
+    },
+    {
+      value: "TownHome",
+      label:
+        lang == "en" ? "TownHome" : lang == "ru" ? "ГородДомой" : "联排别墅",
+    },
   ];
 
   const customStyles = {

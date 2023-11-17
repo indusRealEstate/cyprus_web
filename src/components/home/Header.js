@@ -3,14 +3,17 @@
 "use client";
 
 import MainMenu from "@/components/common/MainMenu";
-import SidebarPanel from "@/components/common/sidebar-panel";
-import LoginSignupModal from "@/components/common/login-signup-modal";
+import { ch_tr, en_tr, ru_tr } from "@/lang/index";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import SelectLanguage from "../select-lang";
+import { useAppSelector } from "@/redux/store";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
+
+  const lang = useAppSelector((state) => state.langReducer);
 
   const changeBackground = () => {
     if (window.scrollY >= 10) {
@@ -29,6 +32,19 @@ const Header = () => {
     // #f79727
   }, []);
 
+  const getLang = (lang) => {
+    switch (lang) {
+      case "en":
+        return en_tr.conatct;
+      case "ru":
+        return ru_tr.conatct;
+      case "ch":
+        return ch_tr.conatct;
+      default:
+        return en_tr.conatct;
+    }
+  };
+
   return (
     <>
       <header
@@ -37,14 +53,14 @@ const Header = () => {
         }`}
       >
         <nav className="posr">
-          <div className="container posr menu_bdrt1">
+          <div className="container posr menu_bdrt1 maxw1500">
             <div className="row align-items-center justify-content-between">
               <div className="col-auto">
                 <div className="d-flex align-items-center justify-content-between">
-                  <div className="logos mr40">
+                  <div className="logos mr10">
                     <Link className="header-logo logo1" href="/">
                       <Image
-                        width={138}
+                        width={100}
                         height={55}
                         src="/images/logo/logo-light.svg"
                         alt="Header Logo"
@@ -52,7 +68,7 @@ const Header = () => {
                     </Link>
                     <Link className="header-logo logo2" href="/">
                       <Image
-                        width={138}
+                        width={100}
                         height={55}
                         src="/images/logo/logo-dark.svg"
                         alt="Header Logo"
@@ -61,7 +77,7 @@ const Header = () => {
                   </div>
                   {/* End Logo */}
 
-                  <MainMenu />
+                  <MainMenu lang={lang} />
                   {/* End Main Menu */}
                 </div>
               </div>
@@ -69,46 +85,14 @@ const Header = () => {
 
               <div className="col-auto">
                 <div className="d-flex align-items-center">
-                  {/* <a
-                    href="#"
-                    className="login-info d-flex align-items-center"
-                    data-bs-toggle="modal"
-                    data-bs-target="#loginSignupModal"
-                    role="button"
-                  >
-                    <i className="far fa-user-circle fz16 me-2" />{" "}
-                    <span className="d-none d-xl-block">Login / Register</span>
-                  </a> */}
+                  <SelectLanguage scrolled={navbar} />
                   <a
-                    className="ud-btn add-property menu-btn bdrs12 mx-2 mx-xl-4"
+                    className="ud-btn add-property menu-btn bdrs12 mx-2"
                     href="tel:+971552136536"
                   >
-                    More Info
-                    <i className="fal fa-arrow-right-long" />
+                    {getLang(lang)}
+                    <i className="fal fa-arrow-right-long fz13" />
                   </a>
-                  {/* <a
-                    className="sidemenu-btn filter-btn-right"
-                    href="#"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#SidebarPanel"
-                    aria-controls="SidebarPanelLabel"
-                  >
-                    <Image
-                      width={25}
-                      height={9}
-                      className="img-1"
-                      src="/images/icon/nav-icon-white.svg"
-                      alt="humberger menu"
-                    />
-
-                    <Image
-                      width={25}
-                      height={9}
-                      className="img-2"
-                      src="/images/icon/nav-icon-dark.svg"
-                      alt="humberger menu"
-                    />
-                  </a> */}
                 </div>
               </div>
               {/* End .col-auto */}
@@ -117,34 +101,6 @@ const Header = () => {
           </div>
         </nav>
       </header>
-      {/* End Header */}
-
-      {/* Signup Modal */}
-      {/* <div className="signup-modal">
-        <div
-          className="modal fade"
-          id="loginSignupModal"
-          tabIndex={-1}
-          aria-labelledby="loginSignupModalLabel"
-          aria-hidden="true"
-        >
-          <div className="modal-dialog  modal-dialog-scrollable modal-dialog-centered">
-            <LoginSignupModal />
-          </div>
-        </div>
-      </div> */}
-      {/* End Signup Modal */}
-
-      {/* DesktopSidebarMenu */}
-      {/* <div
-        className="offcanvas offcanvas-end"
-        tabIndex="-1"
-        id="SidebarPanel"
-        aria-labelledby="SidebarPanelLabel"
-      >
-        <SidebarPanel />
-      </div> */}
-      {/* Sidebar Panel End */}
     </>
   );
 };

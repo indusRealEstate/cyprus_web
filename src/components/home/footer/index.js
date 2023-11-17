@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import ContactMeta from "./ContactMeta";
@@ -5,8 +6,11 @@ import Social from "./Social";
 import Subscribe from "./Subscribe";
 import MenuWidget from "./MenuWidget";
 import Copyright from "./Copyright";
+import { useAppSelector } from "@/redux/store";
 
 const Footer = () => {
+  const lang = useAppSelector((state) => state.langReducer);
+
   return (
     <>
       <div className="container">
@@ -38,7 +42,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-md-6">
             <div className="row justify-content-between">
-              <MenuWidget />
+              <MenuWidget lang={lang} />
             </div>
           </div>
           {/* End .col */}
@@ -49,7 +53,11 @@ const Footer = () => {
               <div className="footer-widget mb-4 mb-lg-5">
                 <div className="mailchimp-widget mb-4 mb-lg-5">
                   <h6 className="title text-white mb20">
-                    Keep Yourself Up to Date
+                    {lang == "en"
+                      ? "Keep Yourself Up to Date"
+                      : lang == "ru"
+                      ? "Держите себя в курсе"
+                      : "让自己保持最新状态"}
                   </h6>
                   <Subscribe />
                 </div>

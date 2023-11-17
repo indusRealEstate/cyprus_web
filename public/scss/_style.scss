@@ -97,6 +97,15 @@ body {
 .text-default-green {
   color: #1d4439 !important;
 }
+
+.maxw1500 {
+  max-width: 1500px !important;
+}
+
+.maxw240 {
+  max-width: 240px !important;
+}
+
 // main mobile css
 @media (max-width: 768px) {
   .hide-in-mobile {
@@ -7309,9 +7318,9 @@ textarea:focus {
 }
 
 .add-property {
-  font-size: 14px;
-  height: 47px;
-  padding: 9px 22px;
+  font-size: 13px;
+  // height: 47px;
+  padding: 6px 13px;
 }
 .add-property:hover {
   color: #ffffff;
@@ -7837,7 +7846,7 @@ header.nav-homepage-style .ace-responsive-menu .megamenu_style a.list-item,
 header.nav-homepage-style .ace-responsive-menu .visible_list a.list-item {
   border-radius: 60px;
   text-align: center;
-  padding: 7px 22px;
+  padding: 7px 15px;
 }
 header.nav-homepage-style
   .ace-responsive-menu

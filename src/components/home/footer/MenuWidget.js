@@ -1,47 +1,23 @@
 import React from "react";
+import { ch_tr, en_tr, ru_tr } from "@/lang";
 
-const MenuWidget = () => {
-  const menuSections = [
-    {
-      title: "Popular Search",
-      links: [
-        { label: "Townhouses", href: "/search-results" },
-        { label: "Appartments", href: "/search-results" },
-        { label: "Homes", href: "/search-results" },
-        { label: "Villa", href: "/search-results" },
-      ],
-    },
-    {
-      title: "Quick Links",
-      links: [
-        { label: "Why Cyprus", href: "/#why-cyprus" },
-        { label: "Invest In Cyprus", href: "/invest-in-cyprus" },
-        { label: "Pafilia Collections", href: "/#flagship-prop" },
-        { label: "Contact Us", href: "/contact" },
-        { label: "All Properties", href: "/all-properties" },
-        // { label: "FAQs", href: "/faq" },
-      ],
-    },
-    {
-      title: "Discover",
-      links: [
-        { label: "Minthis", href: "/featured-collections/minthis" },
-        { label: "One", href: "/featured-collections/one" },
-        { label: "Neo", href: "/featured-collections/neo" },
-      ],
-    },
-    {
-      title: "Explore",
-      links: [
-        { label: "Paphos", href: "/search-results" },
-        { label: "Limassol", href: "/search-results" },
-      ],
-    },
-  ];
+const MenuWidget = ({ lang }) => {
+  const getLang = (lang) => {
+    switch (lang) {
+      case "en":
+        return en_tr.footer;
+      case "ru":
+        return ru_tr.footer;
+      case "ch":
+        return ch_tr.footer;
+      default:
+        return en_tr.footer;
+    }
+  };
 
   return (
     <>
-      {menuSections.map((section, index) => (
+      {getLang(lang).menu.map((section, index) => (
         <div className="col-auto" key={index}>
           <div className="link-style1 mb-3">
             <h6 className="text-white mb25">{section.title}</h6>
