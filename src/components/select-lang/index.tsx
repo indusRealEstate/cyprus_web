@@ -3,11 +3,11 @@ import { FormControl, MenuItem, Select } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { useEffect, useState } from "react";
 
-import { changeLang } from "../../redux/features/lang-slice";
 import { useDispatch } from "react-redux";
+import { changeLang } from "../../redux/features/lang-slice";
 import { AppDispatch } from "../../redux/store";
 
-const useStyles = makeStyles({
+const useStyles: any = makeStyles({
   root: {
     "& .MuiSelect-select ": {
       padding: "7px 10px",
@@ -37,7 +37,7 @@ const useStyles = makeStyles({
   },
 });
 
-const SelectLanguage = ({ scrolled }) => {
+const SelectLanguage = ({ scrolled }: any) => {
   const [lang, setLang] = useState("en");
   const classes = useStyles();
   const dispatch = useDispatch<AppDispatch>();

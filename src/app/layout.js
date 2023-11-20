@@ -25,11 +25,7 @@ const poppins = Poppins({
   variable: "--title-font-family",
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }) {
   useEffect(() => {
     Aos.init({
       duration: 1200,

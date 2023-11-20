@@ -8,13 +8,13 @@ import Link from "next/link";
 import { useState } from "react";
 import Box from "@mui/material/Box";
 
-const FeaturedListings = ({ data, colstyle }) => {
+const FeaturedListings = ({ data, colstyle, lang }) => {
   var formatter = new Intl.NumberFormat(undefined, {
     style: "currency",
     currency: "EUR",
   });
 
-  const [loaded, setLoaded] = useState([]);
+  const [loaded, setLoaded] = useState(false);
 
   return (
     <>
@@ -60,7 +60,7 @@ const FeaturedListings = ({ data, colstyle }) => {
               }
             >
               <div className="list-thumb">
-                {!loaded.includes(listing.id) && (
+                {!loaded && (
                   <Skeleton
                     // sx={{ bgcolor: "grey.100" }}
                     variant="rectangular"
@@ -68,11 +68,11 @@ const FeaturedListings = ({ data, colstyle }) => {
                     height={240}
                   />
                 )}
-                <img
+                <Image
                   width={382}
                   height={248}
                   className={`${
-                    !loaded.includes(listing.id)
+                    !loaded
                       ? "opacity-0 position-absolute w-100 cover"
                       : "opacity-100 w-100 cover"
                   }}`}
@@ -81,12 +81,7 @@ const FeaturedListings = ({ data, colstyle }) => {
                     listing.prop_id
                   }/media/${JSON.parse(listing.images)[0]}`}
                   alt="listings"
-                  onLoad={() => {
-                    if (!loaded.includes(listing.id)) {
-                      loaded.push(listing.id);
-                      setLoaded(loaded);
-                    }
-                  }}
+                  onLoadingComplete={() => setLoaded(true)}
                 />
                 <div className="sale-sticker-wrap">
                   {!listing.forRent && (
@@ -110,20 +105,32 @@ const FeaturedListings = ({ data, colstyle }) => {
                 <p className="list-text">{listing.location}</p>
                 <div className="list-meta d-flex align-items-center">
                   <a href="#">
-                    <span className="flaticon-bed" /> {listing.bed} bed
+                    <span className="flaticon-bed" /> {listing.bed}{" "}
+                    {lang == "en" ? "bed" : lang == "ru" ? "кровать" : "床"}
                   </a>
                   <a href="#">
-                    <span className="flaticon-shower" /> {listing.bath} bath
+                    <span className="flaticon-shower" /> {listing.bath}{" "}
+                    {lang == "en" ? "bath" : lang == "ru" ? "ванна" : "洗澡"}
                   </a>
                   <a href="#">
-                    <span className="flaticon-expand" /> {listing.total_area} sq
-                    m
+                    <span className="flaticon-expand" /> {listing.total_area}{" "}
+                    {lang == "en" ? "sq m" : lang == "ru" ? "кв.м." : "平方米"}
                   </a>
                 </div>
                 <hr className="mt-2 mb-2" />
                 <div className="list-meta2 d-flex justify-content-between align-items-center">
                   <span className="for-what">
-                    {listing.unit_purpose == "sale" ? "For Sale" : "For Rent"}
+                    {listing.unit_purpose == "sale"
+                      ? lang == "en"
+                        ? "For Sale"
+                        : lang == "ru"
+                        ? "Продается"
+                        : "出售"
+                      : lang == "en"
+                      ? "For Rent"
+                      : lang == "ru"
+                      ? "В аренду"
+                      : "出租"}
                   </span>
                   <div className="icons d-flex align-items-center">
                     <Tooltip title="View">

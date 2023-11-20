@@ -2,19 +2,32 @@
 
 import React from "react";
 
-const PropertyType = ({ filterFunctions }) => {
+const PropertyType = ({ filterFunctions, lang }) => {
   const options = [
-    { label: "Houses", val: "house" },
+    {
+      label: lang == "en" ? "Houses" : lang == "ru" ? "Дома" : "房屋",
+      val: "house",
+    },
 
-    { label: "Apartments", defaultChecked: true, val: "appartment" },
-    { label: "Office", val: "office" },
-    { label: "Villa", val: "villa" },
+    {
+      label: lang == "en" ? "Apartments" : lang == "ru" ? "Квартиры" : "公寓",
+      defaultChecked: true,
+      val: "appartment",
+    },
+    {
+      label: lang == "en" ? "Office" : lang == "ru" ? "Офис" : "办公室",
+      val: "office",
+    },
+    {
+      label: lang == "en" ? "Villa" : lang == "ru" ? "Вилла" : "别墅",
+      val: "villa",
+    },
   ];
 
   return (
     <>
       <label className="custom_checkbox">
-        All
+        {lang == "en" ? "All" : lang == "ru" ? "Все" : "全部"}
         <input
           type="checkbox"
           checked={!filterFunctions?.propertyTypes.length}

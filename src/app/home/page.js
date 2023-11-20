@@ -7,14 +7,10 @@ import ExploreCities from "@/components/home/ExploreCities";
 import FeaturedListings from "@/components/home/FeatuerdListings";
 import FeatureProperties from "@/components/home/FeatureProperties";
 import Header from "@/components/home/Header";
-import Footer from "@/components/home/footer";
-import WhyChoose from "@/components/home/why-choose";
 import Hero from "@/components/home/Hero";
 import FilterWithProperties from "@/components/home/filter-with-property";
-
-export const metadata = {
-  title: "Premium Realtor | Explore International Properties",
-};
+import Footer from "@/components/home/footer";
+import WhyChoose from "@/components/home/why-choose";
 
 const Home = () => {
   return (

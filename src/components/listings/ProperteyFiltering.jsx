@@ -7,8 +7,22 @@ import PaginationTwo from "./PaginationTwo";
 import ListingSidebar from "./sidebar";
 import FeaturedListings from "./FeatuerdListings";
 import TopFilterBar from "./TopFilterBar";
+import { getAllListings } from "@/api";
+import { Box, CircularProgress } from "@mui/material";
+import { useAppSelector } from "@/redux/store";
 
-export default function ProperteyFiltering({ listings, prop_for }) {
+export default function ProperteyFiltering({ prop_for }) {
+  const lang = useAppSelector((state) => state.langReducer);
+
+  const [listings, setAllListings] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getAllListings()
+      .then((res) => setAllListings(res))
+      .finally(() => setLoading(false));
+  }, []);
+
   // console.log(prop_for);
   const [filteredData, setFilteredData] = useState([]);
 
@@ -290,12 +304,31 @@ export default function ProperteyFiltering({ listings, prop_for }) {
             filterFunctions={filterFunctions}
             setCurrentSortingOption={setCurrentSortingOption}
             listingStatus={listingStatus}
+            lang={lang}
           />
         </div>
         {/* End TopFilterBar */}
 
         <div className="row">
-          <FeaturedListings colstyle={colstyle} data={pageItems} />
+          {loading ? (
+            <Box
+              sx={{
+                display: "flex",
+                height: "30rem",
+                width: "100%",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <CircularProgress />
+            </Box>
+          ) : (
+            <FeaturedListings
+              colstyle={colstyle}
+              data={pageItems}
+              lang={lang}
+            />
+          )}
         </div>
         {/* End .row */}
 
