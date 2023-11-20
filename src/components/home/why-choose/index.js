@@ -40,7 +40,7 @@ const WhyChoose = () => {
             alt="why chosse"
           />
           <Link href="/all-properties">
-            <div className="iconbox-style5 d-flex align-items-center">
+            <div className={`iconbox-style5 d-flex align-items-center`}>
               <span className="icon flaticon-home flex-shrink-0" />
               <div className="iconbox-content flex-shrink-1 ms-2">
                 <p className="text mb-0">{getLang(lang).btn_text_1}</p>

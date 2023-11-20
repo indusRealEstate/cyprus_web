@@ -49,7 +49,7 @@ const Footer = () => {
 
           <div className="col-md-6 col-lg-4 offset-lg-2">
             <div className="footer-widget mb-4 mb-lg-5">
-              <ContactMeta />
+              <ContactMeta lang={lang} />
               <div className="footer-widget mb-4 mb-lg-5">
                 <div className="mailchimp-widget mb-4 mb-lg-5">
                   <h6 className="title text-white mb20">
@@ -59,7 +59,7 @@ const Footer = () => {
                       ? "Держите себя в курсе"
                       : "让自己保持最新状态"}
                   </h6>
-                  <Subscribe />
+                  <Subscribe lang={lang} />
                 </div>
               </div>
             </div>
