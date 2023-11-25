@@ -16,20 +16,20 @@ import ScheduleTour from "@/components/property/property-single-style/sidebar/Sc
 import PropertyHeader from "@/components/property/property-single-style/single-v4/PropertyHeader";
 import PropertyGallery from "@/components/property/property-single-style/single-v4/property-gallery";
 
-export async function generateStaticParams() {
-  // Call an external API endpoint to get posts
-  const res = await fetch(
-    `https://premium-realtor.com/api/listings/get_all_listings.php`,
-    {
-      method: "GET",
-    }
-  );
-  const props = await res.json();
+// export async function generateStaticParams() {
+//   // Call an external API endpoint to get posts
+//   const res = await fetch(
+//     `https://premium-realtor.com/api/listings/get_all_listings.php`,
+//     {
+//       method: "GET",
+//     }
+//   );
+//   const props = await res.json();
 
-  return props.map((p) => ({
-    id: p.prop_id,
-  }));
-}
+//   return props.map((p) => ({
+//     id: p.prop_id,
+//   }));
+// }
 
 export async function generateMetadata({ params }) {
   const staticData = await fetch(

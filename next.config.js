@@ -4,10 +4,11 @@ const nextConfig = {
   //   appDir: true,
   // },
   images: {
-    unoptimized: true,
+    // unoptimized: true,
   },
-  trailingSlash: true,
-  output: "export",
+  distDir: "build",
+  // trailingSlash: true,
+  // output: "export",
 };
 
 module.exports = nextConfig;
