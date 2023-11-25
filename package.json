@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && tar -zcvf archive.tar.gz out/*",
-    "start": "next start",
+    "build": "next build",
+    "build-ssg": "next build && tar -zcvf archive.tar.gz out/*",
+    "start": "node app.js",
     "lint": "next lint"
   },
   "dependencies": {

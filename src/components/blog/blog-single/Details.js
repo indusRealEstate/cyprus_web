@@ -1,12 +1,21 @@
+"use client";
+import { useAppSelector } from "@/redux/store";
 import React from "react";
 
 export default function Details() {
+  const lang = useAppSelector((state) => state.langReducer);
   return (
     <>
       <div className="container">
         <div className="row" data-aos="fade-up" data-aos-delay="100">
           <div className="col-lg-12">
-            <h2 className="blog-title">Why Invest In Cyprus</h2>
+            <h2 className="blog-title">
+              {lang == "en"
+                ? "Why Invest In Cyprus"
+                : lang == "ru"
+                ? "Зачем инвестировать в Кипр"
+                : "为什么投资塞浦路斯"}
+            </h2>
             <div className="blog-single-meta">
               {/* <div className="post-author d-sm-flex align-items-center">
                 <Image

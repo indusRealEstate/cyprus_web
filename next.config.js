@@ -4,6 +4,7 @@ const nextConfig = {
   //   appDir: true,
   // },
   images: {
+    domains: ["premium-realtor.com"],
     // unoptimized: true,
   },
   distDir: "build",

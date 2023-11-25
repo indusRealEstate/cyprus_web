@@ -17,7 +17,7 @@ import {
 import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
 
-const ReviewBoxForm = () => {
+const ReviewBoxForm = ({ lang }) => {
   const inqueryType = [
     { value: "Five Star", label: "Five Star" },
     { value: "Four Star", label: "Four Star" },
@@ -135,7 +135,11 @@ const ReviewBoxForm = () => {
           </DialogTitle>
           <DialogContent>
             <DialogContentText>
-              We will soon connect with you for finding your home.
+              {lang == "en"
+                ? "We will soon connect with you for finding your home."
+                : lang == "ru"
+                ? "Мы скоро свяжемся с вами для поиска вашего дома."
+                : "我们将很快与您联系以寻找您的家。"}
             </DialogContentText>
           </DialogContent>
           <DialogActions>
@@ -146,7 +150,7 @@ const ReviewBoxForm = () => {
                 color: "#1d4439",
               }}
             >
-              OKAY
+              {lang == "en" ? "Okay" : lang == "ru" ? "Хорошо" : "好的"}
             </Button>
           </DialogActions>
         </Dialog>
@@ -165,7 +169,13 @@ const ReviewBoxForm = () => {
         <div className="row">
           <div className="col-md-12">
             <div className="mb-4">
-              <label className="fw600 ff-heading mb-2">Email</label>
+              <label className="fw600 ff-heading mb-2">
+                {lang == "en"
+                  ? "Email"
+                  : lang == "ru"
+                  ? "Электронная почта"
+                  : "电子邮件"}
+              </label>
               <input
                 type="email"
                 className="form-control"
@@ -213,11 +223,19 @@ const ReviewBoxForm = () => {
 
           <div className="col-md-12">
             <div className="mb-4">
-              <label className="fw600 ff-heading mb-2">Message</label>
+              <label className="fw600 ff-heading mb-2">
+                {lang == "en" ? "Message" : lang == "ru" ? "Сообщение" : "信息"}
+              </label>
               <textarea
                 className="pt15"
                 rows={6}
-                placeholder="Write a Message"
+                placeholder={
+                  lang == "en"
+                    ? "Write a Message"
+                    : lang == "ru"
+                    ? "Напиши сообщение"
+                    : "写一个信息"
+                }
                 defaultValue={""}
                 required
                 onChange={(event) =>
@@ -230,7 +248,11 @@ const ReviewBoxForm = () => {
               className="ud-btn btn-white2"
               onClick={(event) => onSubmitForm(event)}
             >
-              Submit
+              {lang == "en"
+                ? "Submit"
+                : lang == "ru"
+                ? "Представлять на рассмотрение"
+                : "提交"}
               <i className="fal fa-arrow-right-long" />
             </button>
           </div>

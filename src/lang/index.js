@@ -190,6 +190,41 @@ export const en_tr = {
       },
     ],
   },
+
+  invest_in_cyprus: {
+    point_1: {
+      title: "Cyprus Permanent Residence",
+      sub_title_1:
+        "With its beautiful beaches and tropical Mediterranean climate, Cyprus is considered an ideal destination for permanent residence for non-EU nationals.",
+      sub_title_2:
+        "In line with the Cypriot government's intention to increase foreign investment and to help its economic development, Regulation 6(2) of the Aliens and Immigration Regulations allows the Ministry of Interior to issue residence permits to applicants from non-European countries who intend to invest in the republic.",
+      quote:
+        "The Cyprus golden visa allows foreign nationals to benefit from the country's relatively low cost of living, no inheritance tax, and the lowest crime levels in the EU, as well as its high-quality healthcare system and leading medical centers.",
+    },
+    point_2: {
+      title: "Benefits of a Cypriot golden visa",
+      features: [
+        {
+          points: [
+            "The application procedure is highly efficient, with a high approval rate if all criteria are satisfied.",
+            "It is not necessary to reside in Cyprus, but a visit once every two years is required.",
+            "Dependents can be enrolled in high-quality private schools offering English language courses.",
+            "Residence applies to the main applicant’s spouse and children under 25 years.",
+            "The whole process can be arranged without being present in the country, except for biometric capturing.",
+            "Successful applicants are eligible to apply for Cypriot citizenship after five years of residence.",
+          ],
+        },
+      ],
+    },
+    point_3: {
+      title: "Cyprus golden visa requirements",
+      li_1: "Purchase up to two new immovable residential properties of a total market value of at least EUR 300,000 plus VAT, with the option to purchase from two different developers.",
+      li_2: "Purchase up to two new or used immovable non-residential properties (offices, shops, hotels, or other developments) of a total market value of at least EUR 300,000 plus VAT",
+      li_3: "Invest EUR 300,000 in the share capital of a physical company registered and operating in Cyprus, which employs at least five people.",
+    },
+  },
+
+  minthis_page: {},
 };
 
 ///////////////////------------------------------ RUSSIAN TRANSLATION--------------------------------------------------------///////////////////////////////
@@ -383,6 +418,39 @@ export const ru_tr = {
       },
     ],
   },
+
+  invest_in_cyprus: {
+    point_1: {
+      title: "Постоянное место жительства на Кипре",
+      sub_title_1:
+        "Кипр с его прекрасными пляжами и тропическим средиземноморским климатом считается идеальным местом для постоянного проживания для граждан стран, не входящих в ЕС.",
+      sub_title_2:
+        "В соответствии с намерением правительства Кипра увеличить иностранные инвестиции и помочь его экономическому развитию, Положение 6(2) Положений об иностранцах и иммиграции позволяет Министерству внутренних дел выдавать вид на жительство заявителям из неевропейских стран, которые намереваются инвестировать в Республика.",
+      quote:
+        "Золотая виза Кипра позволяет иностранным гражданам воспользоваться относительно низкой стоимостью жизни в стране, отсутствием налога на наследство и самым низким уровнем преступности в ЕС, а также высококачественной системой здравоохранения и ведущими медицинскими центрами.",
+    },
+    point_2: {
+      title: "Преимущества золотой визы Кипра",
+      features: [
+        {
+          points: [
+            "Процедура подачи заявки очень эффективна и имеет высокий процент одобрения при соблюдении всех критериев.",
+            "Проживать на Кипре не обязательно, но посещение раз в два года обязательно.",
+            "Иждивенцы могут быть зачислены в высококачественные частные школы, предлагающие курсы английского языка.",
+            "Вид на жительство распространяется на супругу основного заявителя и детей до 25 лет.",
+            "Весь процесс можно организовать без присутствия в стране, за исключением снятия биометрических данных.",
+            "Успешные заявители имеют право подать заявление на получение кипрского гражданства после пяти лет проживания.",
+          ],
+        },
+      ],
+    },
+    point_3: {
+      title: "Требования к золотой визе Кипра",
+      li_1: "Приобретите до двух новых недвижимых жилых объектов общей рыночной стоимостью не менее 300 000 евро плюс НДС с возможностью покупки у двух разных застройщиков.",
+      li_2: "Приобретите до двух новых или бывших в употреблении недвижимых нежилых объектов (офисов, магазинов, отелей или других объектов) общей рыночной стоимостью не менее 300 000 евро плюс НДС.",
+      li_3: "Инвестируйте 300 000 евро в уставный капитал физической компании, зарегистрированной и действующей на Кипре, в которой работают не менее пяти человек.",
+    },
+  },
 };
 
 ///////////////////------------------------------ CHINESE TRANSLATION--------------------------------------------------------///////////////////////////////
@@ -570,5 +638,38 @@ export const ch_tr = {
         ],
       },
     ],
+  },
+
+  invest_in_cyprus: {
+    point_1: {
+      title: "塞浦路斯永久居留权",
+      sub_title_1:
+        "凭借其美丽的海滩和热带地中海气候，塞浦路斯被认为是非欧盟国民永久居留的理想目的地。",
+      sub_title_2:
+        "为了配合塞浦路斯政府增加外国投资、帮助其经济发展的意图，《外国人和移民条例》第6(2)条允许内政部向有意投资塞浦路斯的非欧洲国家的申请人颁发居留许可。共和国。",
+      quote:
+        "塞浦路斯黄金签证允许外国人受益于该国相对较低的生活成本、无遗产税、欧盟最低的犯罪率以及高质量的医疗保健系统和领先的医疗中心。",
+    },
+    point_2: {
+      title: "塞浦路斯黄金签证的好处",
+      features: [
+        {
+          points: [
+            "申请程序效率很高，如果满足所有标准，批准率很高。",
+            "不一定要居住在塞浦路斯，但需要每两年访问一次。",
+            "家属可以入读提供英语课程的优质私立学校。",
+            "居留适用于主申请人的配偶和25岁以下的子女。",
+            "除生物识别捕获外，整个过程无需在国内即可安排。",
+            "成功的申请人在居住五年后有资格申请塞浦路斯公民身份。",
+          ],
+        },
+      ],
+    },
+    point_3: {
+      title: "塞浦路斯黄金签证要求",
+      li_1: "购买最多两处新的不动产住宅物业，总市值至少为 300,000 欧元（另加增值税），可以选择从两个不同的开发商处购买。",
+      li_2: "购买最多两处新的或二手的不动产非住宅物业（办公室、商店、酒店或其他开发项目），总市场价值至少为 300,000 欧元（另加增值税）",
+      li_3: "向在塞浦路斯注册和运营的实体公司的股本投资 300,000 欧元，该公司至少雇用 5 名员工。",
+    },
   },
 };

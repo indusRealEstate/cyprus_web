@@ -89,7 +89,7 @@ const Neo = () => {
       {/* Our About Area */}
       <section className="our-about pb90">
         <div className="container">
-          <div className="row" data-aos="fade-up" data-aos-delay="300">
+          <div className="row" data-aos="fade-up" data-aos-delay="0">
             <div className="col-lg-6">
               <h2
                 style={{
@@ -183,7 +183,7 @@ const Neo = () => {
       {/* About Banner */}
       <section className="our-about pt-0">
         <div className="container">
-          <div className="row" data-aos="fade-up" data-aos-delay="300">
+          <div className="row" data-aos="fade-up" data-aos-delay="0">
             <div className="col-lg-12">
               <div className="about-page-img">
                 <Image
