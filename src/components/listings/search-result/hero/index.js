@@ -8,15 +8,27 @@ const Hero = ({
   currentActiveTab,
   currentPropertyType,
   currentSearchQuery,
+  lang,
 }) => {
   return (
     <>
       <div className="inner-banner-style1 text-center">
-        <h2 className="hero-title animate-up-3">Find Your Dream Home</h2>
+        <h2 className="hero-title animate-up-3">
+          {lang == "en"
+            ? "Find Your Dream Home"
+            : lang == "ru"
+            ? "Найдите дом своей мечты"
+            : "找到您的梦想家园"}
+        </h2>
         <p className="hero-text animate-up-3">
-          We’ve more than 745,000 apartments, place &amp; plot.
+          {lang == "en"
+            ? "Browse through our collections"
+            : lang == "ru"
+            ? "Просмотрите наши коллекции"
+            : "浏览我们的收藏"}
         </p>
         <HeroContent
+          lang={lang}
           filterFunctions={filterFunctions}
           currentActiveTab={currentActiveTab}
           currentSearchQuery={currentSearchQuery}

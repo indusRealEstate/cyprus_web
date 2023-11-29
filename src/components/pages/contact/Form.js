@@ -14,7 +14,7 @@ import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
 import { useState } from "react";
 
-const Form = () => {
+const Form = ({ lang }) => {
   const onlyEmail = /^((\w+\.)*\w+)@(\w+\.)+(\w)/;
   const onlyText = /^[a-zA-Z ]*$/;
   const onlyContactNumber = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
@@ -167,7 +167,7 @@ const Form = () => {
           <div className="col-lg-12">
             <div className="mb20">
               <label className="heading-color ff-heading fw600 mb10">
-                First Name
+                {lang == "en" ? "First Name" : lang == "ru" ? "Имя" : "名"}
               </label>
               <input
                 type="text"
@@ -176,7 +176,13 @@ const Form = () => {
                     ? "form-control"
                     : "form-control border border-danger"
                 }
-                placeholder="Your Name"
+                placeholder={
+                  lang == "en"
+                    ? "Your name"
+                    : lang == "ru"
+                    ? "Ваше имя"
+                    : "你的名字"
+                }
                 required
                 onChange={(event) =>
                   setFormData({ ...formData, first_name: event.target.value })
@@ -188,7 +194,7 @@ const Form = () => {
           <div className="col-lg-12">
             <div className="mb20">
               <label className="heading-color ff-heading fw600 mb10">
-                Last Name
+                {lang == "en" ? "Last Name" : lang == "ru" ? "Фамилия" : "姓"}
               </label>
               <input
                 type="text"
@@ -197,7 +203,13 @@ const Form = () => {
                     ? "form-control"
                     : "form-control border border-danger"
                 }
-                placeholder="Your Name"
+                placeholder={
+                  lang == "en"
+                    ? "Your last name"
+                    : lang == "ru"
+                    ? "Ваша фамилия"
+                    : "你的姓氏"
+                }
                 required
                 onChange={(event) =>
                   setFormData({ ...formData, last_name: event.target.value })
@@ -209,7 +221,11 @@ const Form = () => {
           <div className="col-md-12">
             <div className="mb20">
               <label className="heading-color ff-heading fw600 mb10">
-                Email
+                {lang == "en"
+                  ? "Email"
+                  : lang == "ru"
+                  ? "Электронная почта"
+                  : "电子邮件"}
               </label>
               <input
                 type="email"
@@ -218,7 +234,13 @@ const Form = () => {
                     ? "form-control"
                     : "form-control border border-danger"
                 }
-                placeholder="Your Name"
+                placeholder={
+                  lang == "en"
+                    ? "Your email"
+                    : lang == "ru"
+                    ? "Ваш адрес электронной почты"
+                    : "你的邮件"
+                }
                 required
                 onChange={(event) =>
                   setFormData({ ...formData, email: event.target.value })
@@ -230,12 +252,22 @@ const Form = () => {
           <div className="col-md-12">
             <div className="mb10">
               <label className="heading-color ff-heading fw600 mb10">
-                Textarea Message
+                {lang == "en"
+                  ? "Textarea Message"
+                  : lang == "ru"
+                  ? "Текстовое сообщение"
+                  : "文本区留言"}
               </label>
               <textarea
                 cols={30}
                 rows={4}
-                placeholder="There are many variations of passages."
+                placeholder={
+                  lang == "en"
+                    ? "There are many variations of passages."
+                    : lang == "ru"
+                    ? "Существует множество вариаций отрывков."
+                    : "段落有很多变体。"
+                }
                 defaultValue={""}
                 required
                 style={messageEmpty ? { border: "2px solid red" } : {}}

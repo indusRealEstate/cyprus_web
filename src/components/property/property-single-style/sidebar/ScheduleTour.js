@@ -14,7 +14,7 @@ import {
   useTheme,
 } from "@mui/material";
 
-const ScheduleTour = () => {
+const ScheduleTour = ({ lang }) => {
   const onlyEmail = /^((\w+\.)*\w+)@(\w+\.)+(\w)/;
   const onlyText = /^[a-zA-Z ]*$/;
   const onlyContactNumber = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
@@ -36,11 +36,12 @@ const ScheduleTour = () => {
   const tabs = [
     {
       id: "inperson",
-      label: "In Person",
+      label: lang == "en" ? "In Person" : lang == "ru" ? "Лично" : "亲自",
     },
     {
       id: "videochat",
-      label: "Video Chat",
+      label:
+        lang == "en" ? "Video Chat" : lang == "ru" ? "Видеочат" : "视频聊天",
     },
   ];
   const [data, setData] = useState({
@@ -163,11 +164,15 @@ const ScheduleTour = () => {
           aria-labelledby="responsive-dialog-title"
         >
           <DialogTitle id="responsive-dialog-title" color={"#1d4439"}>
-            {"Thank you :)"}
+            {lang == "en" ? "Thank you" : lang == "ru" ? "Спасибо" : "谢谢"}
           </DialogTitle>
           <DialogContent>
             <DialogContentText>
-              We will soon connect with you for finding your home.
+              {lang == "en"
+                ? "We will soon connect with you for finding your home."
+                : lang == "ru"
+                ? "Мы скоро свяжемся с вами для поиска вашего дома."
+                : "我们将很快与您联系以寻找您的家。"}
             </DialogContentText>
           </DialogContent>
           <DialogActions>
@@ -178,7 +183,7 @@ const ScheduleTour = () => {
                 color: "#1d4439",
               }}
             >
-              OKAY
+              {lang == "en" ? "Okay" : lang == "ru" ? "Хорошо" : "好的"}
             </Button>
           </DialogActions>
         </Dialog>
@@ -235,7 +240,9 @@ const ScheduleTour = () => {
                     <input
                       type="`text`"
                       className="form-control"
-                      placeholder="Time"
+                      placeholder={
+                        lang == "en" ? "Time" : lang == "ru" ? "Время" : "时间"
+                      }
                       required
                       style={
                         tabType === tab.id && timeIsEmpty
@@ -254,7 +261,9 @@ const ScheduleTour = () => {
                     <input
                       type="text"
                       className="form-control"
-                      placeholder="Name"
+                      placeholder={
+                        lang == "en" ? "Name" : lang == "ru" ? "Имя" : "姓名"
+                      }
                       required
                       style={
                         tabType === tab.id && !notValidName
@@ -273,7 +282,13 @@ const ScheduleTour = () => {
                     <input
                       type="text"
                       className="form-control"
-                      placeholder="Phone"
+                      placeholder={
+                        lang == "en"
+                          ? "Phone"
+                          : lang == "ru"
+                          ? "Телефон"
+                          : "电话"
+                      }
                       required
                       style={
                         tabType === tab.id && !notValidPhone
@@ -292,7 +307,13 @@ const ScheduleTour = () => {
                     <input
                       type="email"
                       className="form-control"
-                      placeholder="Email"
+                      placeholder={
+                        lang == "en"
+                          ? "Email"
+                          : lang == "ru"
+                          ? "Электронная почта"
+                          : "电子邮件"
+                      }
                       required
                       style={
                         tabType === tab.id && !notValidNEmail
@@ -311,7 +332,13 @@ const ScheduleTour = () => {
                     <textarea
                       cols={30}
                       rows={4}
-                      placeholder="Enter Your Messages"
+                      placeholder={
+                        lang == "en"
+                          ? "Enter your message"
+                          : lang == "ru"
+                          ? "Введите ваше сообщение"
+                          : "输入您的留言"
+                      }
                       defaultValue={""}
                       style={
                         tabType === tab.id && messageEmpty
@@ -332,7 +359,11 @@ const ScheduleTour = () => {
                       className="ud-btn btn-thm"
                       onClick={(event) => onSubmit(event, tab.id)}
                     >
-                      Submit a Tour Request
+                      {lang == "en"
+                        ? "Submit a Tour Request"
+                        : lang == "ru"
+                        ? "Отправить заявку на тур"
+                        : "提交旅游请求"}
                       <i className="fal fa-arrow-right-long" />
                     </button>
                   </div>

@@ -2,8 +2,9 @@ import CallToActions from "@/components/common/CallToActions";
 import DefaultHeader from "@/components/common/DefaultHeader";
 import MobileMenu from "@/components/common/mobile-menu";
 import Footer from "@/components/home/footer";
-import Form from "@/components/pages/contact/Form";
+
 import Image from "next/image";
+import ContactPageContent from "./content";
 
 export const metadata = {
   title: "Premium Realtor | Explore International Properties",
@@ -53,34 +54,7 @@ const Contact = () => {
       {/* End Our Contact With Map */}
 
       {/* Start Our Contact Form */}
-      <section id="main">
-        <div className="container">
-          <div className="row d-flex align-items-end">
-            <div className="col-lg-5 position-relative">
-              <div className="home8-contact-form default-box-shadow1 bdrs12 bdr1 p30 mb30-md bgc-white">
-                <h4 className="form-title mb25">
-                  Have questions? Get in touch!
-                </h4>
-                <Form />
-              </div>
-            </div>
-            {/* End .col */}
-
-            <div className="col-lg-5 offset-lg-2">
-              <h2 className="mb30 text-capitalize">
-                We’d love to hear <br className="d-none d-lg-block" />
-                from you.
-              </h2>
-              <p className="text">
-                We have been successfully active in business since 2004. During
-                this time, we have successfully assisted hundreds clients and we
-                will be happy to guide you.
-              </p>
-            </div>
-            {/* End .col */}
-          </div>
-        </div>
-      </section>
+      <ContactPageContent />
       {/* End Our Contact Form */}
 
       {/* Visit our Office */}

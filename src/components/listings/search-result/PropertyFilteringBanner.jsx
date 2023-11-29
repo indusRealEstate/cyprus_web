@@ -13,6 +13,7 @@ export default function PropertyFilteringBanner({
   prop_for,
   prop_type,
   search_text,
+  lang,
 }) {
   const [filteredData, setFilteredData] = useState([]);
 
@@ -272,6 +273,7 @@ export default function PropertyFilteringBanner({
             <div className="row">
               <div className="col-xl-11 mx-auto">
                 <Hero
+                  lang={lang}
                   filterFunctions={filterFunctions}
                   currentActiveTab={prop_for == "Buy" ? "buy" : "rent"}
                   currentPropertyType={prop_type}
@@ -291,10 +293,20 @@ export default function PropertyFilteringBanner({
           <div className="row">
             <div className="col-lg-12">
               <div className="breadcumb-style1">
-                <h2 className="title text-dark">Searched Properties</h2>
-                <div className="breadcumb-list">
+                <h2 className="title text-dark">
+                  {lang == "en"
+                    ? "Searched Properties"
+                    : lang == "ru"
+                    ? "Поиск недвижимости"
+                    : "搜索属性"}
+                </h2>
+                {/* <div className="breadcumb-list">
                   <a href="#" className="text-dark">
-                    Home
+                    {lang == "en"
+                      ? "Home"
+                      : lang == "ru"
+                      ? "Поиск недвижимости"
+                      : "搜索属性"}
                   </a>
                   <a href="#" className="text-dark">
                     {listingStatus != "All"
@@ -303,7 +315,7 @@ export default function PropertyFilteringBanner({
                         : "For Rent"
                       : "For All"}
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -323,9 +335,21 @@ export default function PropertyFilteringBanner({
                 </div>
               </div> */}
               <div className="default-box-shadow1 bdrs12 bdr1 p-3 mb30-md bgc-white position-relative">
-                <h4 className="form-title mb5">Schedule a tour</h4>
-                <p className="text">Choose your preferred day</p>
-                <ScheduleTour />
+                <h4 className="form-title mb5">
+                  {lang == "en"
+                    ? "Schedule a tour"
+                    : lang == "ru"
+                    ? "Запланировать тур"
+                    : "安排游览"}
+                </h4>
+                <p className="text">
+                  {lang == "en"
+                    ? "Choose your preferred day"
+                    : lang == "ru"
+                    ? "Выберите предпочитаемый день"
+                    : "选择您喜欢的日子"}
+                </p>
+                <ScheduleTour lang={lang} />
               </div>
               {/* End .list-sidebar-style1 */}
 
@@ -342,6 +366,7 @@ export default function PropertyFilteringBanner({
             <div className="col-lg-8">
               <div className="row align-items-center mb20">
                 <TopFilterBar
+                  lang={lang}
                   pageContentTrac={pageContentTrac}
                   colstyle={colstyle}
                   setColstyle={setColstyle}

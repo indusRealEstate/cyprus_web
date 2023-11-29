@@ -8,29 +8,24 @@ import Features from "@/components/featured-collections/Features";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useAppSelector } from "@/redux/store";
+import { ch_tr, en_tr, ru_tr } from "@/lang";
 
 const Neo = () => {
-  const propertyType = "minthis";
-  const features = [
-    {
-      icon: "flaticon-home-3",
-      title: "4 Residential Towers",
-      description:
-        "Rising from the foot of the Cyprian hills, NEO's four towers embody a meeting point between four distinct landscapes: City, Mountain, Sky and Sea.",
-    },
-    {
-      icon: "flaticon-location",
-      title: "Set on the Limassol shoreline",
-      description:
-        "On the rooftop, the pool is framed by soothing natural tones, plants and native trees, surrounded by a vista of the sea and gardens below.",
-    },
-    // {
-    // 	icon: "flaticon-investment",
-    // 	title: "Currency Services",
-    // 	description:
-    // 		"3% of the land will be built on, the rest will remain natural untouched landscape",
-    // },
-  ];
+  const lang = useAppSelector((state) => state.langReducer);
+
+  const getLang = (lang) => {
+    switch (lang) {
+      case "en":
+        return en_tr.latest_projects_neo;
+      case "ru":
+        return ru_tr.latest_projects_neo;
+      case "ch":
+        return ch_tr.latest_projects_neo;
+      default:
+        return en_tr.latest_projects_neo;
+    }
+  };
 
   const [open, setOpen] = useState(false);
 
@@ -76,8 +71,8 @@ const Neo = () => {
                   />
                 </h2>
                 <div className="breadcumb-list mt-2">
-                  <a href="#">Featured Properties Collection </a>
-                  <a href="#">Neo</a>
+                  <a href="#">{getLang(lang).bread_crumb_1}</a>
+                  <a href="#">{getLang(lang).bread_crumb_2}</a>
                 </div>
               </div>
             </div>
@@ -98,7 +93,7 @@ const Neo = () => {
                   fontStyle: "oblique",
                 }}
               >
-                NEO: Between the Sky and the Sea
+                {getLang(lang).title}
               </h2>
               <div className="row">
                 <div className="col-lg-6 col-12 my-4 fs-6 mobile-container-center">
@@ -107,7 +102,11 @@ const Neo = () => {
                     onClick={(event) => handleClickOpen()}
                     className="ud-btn btn-transparent mr30 mr0-xs mobile-btn"
                   >
-                    DOWNLOAD BROCHURE
+                    {lang == "en"
+                      ? "DOWNLOAD BROCHURE"
+                      : lang == "ru"
+                      ? "СКАЧАТЬ БРОШЮРУ"
+                      : "下载手册"}
                   </button>
                   {open ? (
                     <BrochureDownload
@@ -125,54 +124,15 @@ const Neo = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <h5>
-                A new home. <br />A new investment. <br />A new discovery.
-              </h5>
-              <p className="text mb-1">
-                Rising from the foot of the Cyprian hills, NEO&apos;s four
-                towers embody a meeting point between four distinct landscapes:
-                City, Mountain, Sky and Sea.
-              </p>
-              <p className="text mb-1">
-                Designed and crafted by world-leading developers, architects and
-                engineers, NEO is a prestigious and globally-significant
-                residential landmark set on the Limassol shoreline. With
-                unparalleled views, unprecedented architecture and immersive
-                environment, NEO represents the ethos of Cypriot living at every
-                level.
-              </p>
-              <p className="text mb-1">
-                At the heart of NEO&apos;s identity is its connection to
-                Limassol&apos;s evolution. With a tradition of warmly welcoming
-                visitors, wanderers and explorers, Limassol is both
-                quintessentially Cyprian and internationally relevant. Cyprus
-                has evolved to become an eastern gateway into Europe, making NEO
-                an investment in community, culture and connectivity.
-              </p>
-              <p className="text mb-1">
-                All properties - Residences, Villas and Suites - harmonise with
-                the topography to capture the light, harness cool hillside
-                breezes and frame the extraordinary views. Nature is an
-                ever-present element at Minthis. The 18-hole championship golf
-                course moulds itself to the landscape, passing walnut and fig
-                trees, olive groves and the historic 12th century monastery.
-              </p>
-              <p className="text mb-1">
-                This unique development unites environment, innovation and local
-                culture. It is defined by an exquisite balance of access to
-                indulgence, and the desire to escape. NEO provides the ultimate
-                luxury: choice. It is both an immersive, cosmopolitan
-                environment and a haven high above it all.
-              </p>
-              <p className="text mb50">
-                NEO offers a curated, modern and forward-looking lifestyle
-                anchored by the sophisticated and historic allure of the
-                Mediterranean. NEO delivers experiences across three levels:
-                personal and adaptable living spaces — &apos;villas in the
-                sky&apos;, resort-style podium amenities, access to local
-                culture and finally, connectivity to the Limassol lifestyle —
-                known as &apos;Lima-soul&apos;.
-              </p>
+              <h5 className="mb0">{getLang(lang).subtitle_1}</h5>
+              <h5 className="mb0">{getLang(lang).subtitle_2}</h5>
+              <h5 className="mb20">{getLang(lang).subtitle_3}</h5>
+              <p className="text mb-1">{getLang(lang).para_1}</p>
+              <p className="text mb-1">{getLang(lang).para_2}</p>
+              <p className="text mb-1">{getLang(lang).para_3}</p>
+              <p className="text mb-1">{getLang(lang).para_4}</p>
+              <p className="text mb-1">{getLang(lang).para_5}</p>
+              <p className="text mb50">{getLang(lang).para_6}</p>
               <div className="row">{/* <Mission /> */}</div>
             </div>
           </div>
@@ -250,16 +210,26 @@ const Neo = () => {
               <div
                 className="col-md-6 col-lg-5 pl30-md pl15-xs"
                 data-aos="fade-left"
-                data-aos-delay="300"
+                data-aos-delay="10"
               >
                 <div className="mb30">
-                  <h2 className="title text-capitalize">Key Features</h2>
+                  <h2 className="title text-capitalize">
+                    {lang == "en"
+                      ? "Key Features"
+                      : lang == "ru"
+                      ? "Ключевая особенность"
+                      : "主要特征"}
+                  </h2>
                 </div>
                 <div className="why-chose-list style2">
-                  <Features features={features} />
+                  <Features features={getLang(lang).features} />
                 </div>
                 <Link href="/contact" className="ud-btn btn-dark">
-                  Learn More
+                  {lang == "en"
+                    ? "Learn More"
+                    : lang == "ru"
+                    ? "Узнать больше"
+                    : "了解更多"}
                   <i className="fal fa-arrow-right-long" />
                 </Link>
               </div>

@@ -5,6 +5,7 @@ const HeroContent = ({
   filterFunctions,
   currentActiveTab,
   currentSearchQuery,
+  lang,
 }) => {
   const [activeTab, setActiveTab] = useState(currentActiveTab);
 
@@ -14,15 +15,41 @@ const HeroContent = ({
     filterFunctions.setListingStatus(tab == "rent" ? "Rent" : "Buy");
   };
 
+  const getLang = (lang, type) => {
+    if (type == "buy") {
+      switch (lang) {
+        case "en":
+          return "Buy";
+        case "ru":
+          return "Купить";
+        case "ch":
+          return "买";
+        default:
+          return "Buy";
+      }
+    } else {
+      switch (lang) {
+        case "en":
+          return "Rent";
+        case "ru":
+          return "Арендовать";
+        case "ch":
+          return "租";
+        default:
+          return "Rent";
+      }
+    }
+  };
+
   const tabs = [
-    { id: "buy", label: "Buy" },
-    { id: "rent", label: "Rent" },
+    { id: "buy", label: getLang(lang, "buy") },
+    { id: "rent", label: getLang(lang, "rent") },
     // { id: "sold", label: "Sold" },
   ];
 
   return (
     <div className="advance-search-tab mt30 mx-auto animate-up-3">
-      <ul className="nav nav-tabs p-0 m-0">
+      <ul className={`nav nav-tabs p-0 m-0 ${lang == "ru" ? "maxw240" : ""}`}>
         {tabs.map((tab) => (
           <li className="nav-item" key={tab.id}>
             <button
@@ -57,7 +84,13 @@ const HeroContent = ({
                             filterFunctions &&
                             filterFunctions.setSearchQuery(e.target.value)
                           }
-                          placeholder={`Enter an address, neighborhood, city, or ZIP code for ${tab.label}`}
+                          placeholder={
+                            lang == "en"
+                              ? "Search Properties"
+                              : lang == "ru"
+                              ? "Поиск недвижимости"
+                              : "搜索属性"
+                          }
                         />
                       </div>
                     </form>
@@ -73,7 +106,12 @@ const HeroContent = ({
                       data-bs-toggle="modal"
                       data-bs-target="#advanceSeachModal"
                     >
-                      <span className="flaticon-settings" /> Advanced
+                      <span className="flaticon-settings" />
+                      {lang == "en"
+                        ? "Advanced"
+                        : lang == "ru"
+                        ? "Передовой"
+                        : "先进的"}
                     </button>
                     <button
                       className="advance-search-icon ud-btn btn-thm ms-4"

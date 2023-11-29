@@ -5,12 +5,15 @@ import MobileMenu from "@/components/common/mobile-menu";
 import Footer from "@/components/home/footer";
 
 import PropertyFilteringBanner from "@/components/listings/search-result/PropertyFilteringBanner";
+import { useAppSelector } from "@/redux/store";
 import { Box, CircularProgress } from "@mui/material";
 import { useSearchParams } from "next/navigation";
 
 import { useEffect, useState } from "react";
 
 const SearchResultPage = () => {
+  const lang = useAppSelector((state) => state.langReducer);
+
   const searchParams = useSearchParams();
   const [allData, setAllData] = useState([]);
   const [prop_for, setPropFor] = useState("");
@@ -73,6 +76,7 @@ const SearchResultPage = () => {
       {/* Home Banner Style V1 */}
       {allData.length != 0 ? (
         <PropertyFilteringBanner
+          lang={lang}
           listings={allData}
           prop_for={
             prop_for == null ? "Buy" : prop_for == "buy" ? "Buy" : "Rent"

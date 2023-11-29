@@ -102,9 +102,6 @@ const FeaturedListings = ({ data, colstyle }) => {
                   <a href="#" className="mr5">
                     <span className="flaticon-new-tab" />
                   </a>
-                  <a href="#">
-                    <span className="flaticon-like" />
-                  </a>
                 </div>
               </div>
               <div className="list-content">

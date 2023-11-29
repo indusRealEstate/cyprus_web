@@ -8,29 +8,24 @@ import Features from "@/components/featured-collections/Features";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useAppSelector } from "@/redux/store";
+import { ch_tr, en_tr, ru_tr } from "@/lang";
 
 export const One = () => {
-  const propertyType = "minthis";
-  const features = [
-    {
-      icon: "flaticon-secure-payment",
-      title: "Low risk investment profile",
-      description:
-        "Low Risk investments are in general terms, investments that are safer than their alternatives.",
-    },
-    {
-      icon: "flaticon-hotel-1",
-      title: "Under construction - delivery  commenced 2021",
-      description:
-        "When purchasing a property, homebuyers are usually divided between a ready and under-construction property",
-    },
-    {
-      icon: "flaticon-security",
-      title: "Complete privacy and exclusivity",
-      description:
-        "3 apartments per floor giving complete privacy and exclusivity",
-    },
-  ];
+  const lang = useAppSelector((state) => state.langReducer);
+
+  const getLang = (lang) => {
+    switch (lang) {
+      case "en":
+        return en_tr.latest_projects_one;
+      case "ru":
+        return ru_tr.latest_projects_one;
+      case "ch":
+        return ch_tr.latest_projects_one;
+      default:
+        return en_tr.latest_projects_one;
+    }
+  };
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -74,8 +69,8 @@ export const One = () => {
                   />
                 </h2>
                 <div className="breadcumb-list ps-3 mt-2">
-                  <a href="#">Featured Properties Collection </a>
-                  <a href="#">One</a>
+                  <a href="#">{getLang(lang).bread_crumb_1}</a>
+                  <a href="#">{getLang(lang).bread_crumb_2}</a>
                 </div>
               </div>
             </div>
@@ -96,7 +91,7 @@ export const One = () => {
                   fontStyle: "oblique",
                 }}
               >
-                ONE Limassol Tower
+                {getLang(lang).title}
               </h2>
               <p
                 style={{
@@ -105,8 +100,7 @@ export const One = () => {
                   fontStyle: "oblique",
                 }}
               >
-                One-of-a-kind, bold, striking, commanding, and the tallest
-                residential seafront tower in Europe.
+                {getLang(lang).subtitle}
               </p>
               <div className="row">
                 <div className="col-lg-6 col-12 my-4 fs-6 mobile-container-center">
@@ -115,7 +109,11 @@ export const One = () => {
                     onClick={(event) => handleClickOpen()}
                     className="ud-btn btn-transparent mr30 mr0-xs mobile-btn"
                   >
-                    DOWNLOAD BROCHURE
+                    {lang == "en"
+                      ? "DOWNLOAD BROCHURE"
+                      : lang == "ru"
+                      ? "СКАЧАТЬ БРОШЮРУ"
+                      : "下载手册"}
                   </button>
                   {open ? (
                     <BrochureDownload
@@ -133,52 +131,14 @@ export const One = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <h5>A One-Of-A-Kind Opportunity</h5>
-              <p className="text mb-1">
-                Cyprus&apos; southern coastal city of Limassol has blossomed
-                over the last few decades from an industrial-fuelled landscape
-                into a multifaceted, modern European vista of vibrant
-                opportunities in business, culture, and recreation.
-              </p>
-              <p className="text mb-1">
-                Reigning supreme as the epitome of luxurious island living,
-                Limassol&apos;s coastal charm, inherent history and culture,
-                vast entertainment options, boutique shopping, and epicurean
-                proposals make it a playground for global, glamorous travellers
-                and residents alike.
-              </p>
-              <p className="text mb-1">
-                Armed with rich knowledge of Limassol&apos;s development history
-                and belief in the potential of its future, Pafilia saw an
-                opportunity: to create a collection of refined residences at an
-                iconic address that would serve as a progenitor of a new
-                lifestyle and evolved expression of luxury.
-              </p>
-              <p className="text mb-1">
-                A masterpiece of architectural and design brilliance, ONE
-                Limassol stands proudly, powerfully, in the very heart of the
-                community, propositioning self-assured buyers seeking a
-                reimagined expression of luxury living.
-              </p>
-              <h5 className="my-3">Orchestrating a Masterpiece</h5>
-              <p className="text mb-1">
-                Intent on demonstrating just how far inspired thinking can
-                transform the character of a city&apos;s landscape, and the
-                essence of a community&apos;s experience, Pafilia sought out the
-                most esteemed consortium of partners – including Atkins, of Burj
-                Al Arab fame, WKK, HBA, and BuroHappold – with which to
-                collaborate in orchestrating the exact execution of its vision
-                for ONE.
-              </p>
-              <p className="text mb50">
-                The sprawling, palm tree-lined 28th October Avenue seafront
-                promenade close to both the business district and quaint old
-                town is Limassol&apos;s most iconic address. In possession of a
-                prime position along it, Pafilia set about uniting
-                Limassol&apos;s blessed trinity of city, mountain, and sea,
-                creating an immediately recognisable 37-storey landmark to
-                command the locale&apos;s horizon.
-              </p>
+              <h5>{getLang(lang).subtitle_2}</h5>
+              <p className="text mb-1">{getLang(lang).para_1}</p>
+              <p className="text mb-1">{getLang(lang).para_2}</p>
+              <p className="text mb-1">{getLang(lang).para_3}</p>
+              <p className="text mb-1">{getLang(lang).para_4}</p>
+              <h5 className="my-3">{getLang(lang).subtitle_3}</h5>
+              <p className="text mb-1">{getLang(lang).para_5}</p>
+              <p className="text mb50">{getLang(lang).para_6}</p>
               <div className="row">{/* <Mission /> */}</div>
             </div>
           </div>
@@ -256,16 +216,26 @@ export const One = () => {
               <div
                 className="col-md-6 col-lg-5 pl30-md pl15-xs"
                 data-aos="fade-left"
-                data-aos-delay="300"
+                data-aos-delay="10"
               >
                 <div className="mb30">
-                  <h2 className="title text-capitalize">Key Features</h2>
+                  <h2 className="title text-capitalize">
+                    {lang == "en"
+                      ? "Key Features"
+                      : lang == "ru"
+                      ? "Ключевая особенность"
+                      : "主要特征"}
+                  </h2>
                 </div>
                 <div className="why-chose-list style2">
-                  <Features features={features} />
+                  <Features features={getLang(lang).features} />
                 </div>
                 <Link href="/contact" className="ud-btn btn-dark">
-                  Learn More
+                  {lang == "en"
+                    ? "Learn More"
+                    : lang == "ru"
+                    ? "Узнать больше"
+                    : "了解更多"}
                   <i className="fal fa-arrow-right-long" />
                 </Link>
               </div>
