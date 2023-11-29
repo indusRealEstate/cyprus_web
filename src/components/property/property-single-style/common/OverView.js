@@ -2,7 +2,7 @@
 /** @format */
 import { useEffect, useState } from "react";
 
-const OverView = ({ data }) => {
+const OverView = ({ data, lang }) => {
   // const data = listings.filter((elm) => elm.id == id)[0] || listings[0];
   const [screenWidth, setScreenWidth] = useState();
 
@@ -13,34 +13,45 @@ const OverView = ({ data }) => {
   const overviewData = [
     {
       icon: "flaticon-bed",
-      label: "Bedroom",
+      label: lang == "en" ? "Bedroom" : lang == "ru" ? "Спальня" : "卧室",
       value: data.bed,
     },
     {
       icon: "flaticon-shower",
-      label: "Bath",
+      label:
+        lang == "en" ? "Bathroom" : lang == "ru" ? "Ванная комната" : "浴室",
       value: data.bath,
     },
     {
       icon: "flaticon-event",
-      label: "Year Built",
+      label:
+        lang == "en"
+          ? "Year Built"
+          : lang == "ru"
+          ? "Год постройки"
+          : "建成年份",
       value: data.year_built,
     },
     {
       icon: "flaticon-garage",
-      label: "Garage",
+      label: lang == "en" ? "Garage" : lang == "ru" ? "Гараж" : "车库",
       value: data.parking,
       xs: true,
     },
     {
       icon: "flaticon-expand",
-      label: "Sq M",
+      label: lang == "en" ? "Sq M" : lang == "ru" ? "кв.м." : "平方米",
       value: data.total_area,
       xs: true,
     },
     {
       icon: "flaticon-home-1",
-      label: "Property Type",
+      label:
+        lang == "en"
+          ? "Property Type"
+          : lang == "ru"
+          ? "Тип недвижимости"
+          : "财产种类",
       value: data.unit_type,
     },
   ];

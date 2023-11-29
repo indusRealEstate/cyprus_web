@@ -1,9 +1,7 @@
 /** @format */
 
 "use client";
-import { Skeleton } from "@mui/material";
 import Image from "next/image";
-import { useState, useEffect } from "react";
 
 // const floorPlanData = [
 //   {
@@ -37,10 +35,6 @@ import { useState, useEffect } from "react";
 
 const FloorPlans = ({ floorDataRaw, id }) => {
   const floorData = JSON.parse(floorDataRaw);
-
-  const [loaded, setLoaded] = useState([]);
-
-  useEffect(() => {}, [loaded]);
 
   return (
     <div className="accordion" id="accordionExample">
@@ -90,30 +84,12 @@ const FloorPlans = ({ floorDataRaw, id }) => {
             data-parent="#accordionExample"
           >
             <div className="accordion-body text-center">
-              {!loaded.includes(index) && (
-                <Skeleton
-                  // sx={{ bgcolor: "grey.100" }}
-                  variant="rectangular"
-                  width={736}
-                  height={544}
-                />
-              )}
-              <img
+              <Image
                 width={736}
                 height={544}
-                className={`${
-                  !loaded.includes(index)
-                    ? "opacity-0 position-absolute w-100 h-100 cover"
-                    : "opacity-100 w-100 h-100 cover"
-                }}`}
+                className={`opacity-100 w-100 h-100 cover`}
                 src={`https://alsimatower.ae/int_web_api/media/listings/${id}/floorplan/${floorPlan.img}`}
                 alt="listing figureout"
-                onLoad={() => {
-                  if (!loaded.includes(index)) {
-                    loaded.push(index);
-                    setLoaded(loaded);
-                  }
-                }}
               />
             </div>
           </div>

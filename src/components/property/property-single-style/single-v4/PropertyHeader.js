@@ -3,7 +3,7 @@ import BrochureDownload from "@/components/dialog/brochureDownload";
 import { Tooltip } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
-const PropertyHeader = ({ id, data }) => {
+const PropertyHeader = ({ id, data, lang }) => {
   // const data = listings.filter((elm) => elm.id == id)[0] || listings[0];
   const copy = (url) => {
     const el = document.createElement("input");
@@ -41,6 +41,36 @@ const PropertyHeader = ({ id, data }) => {
 
   useEffect(() => {}, [open]);
 
+  const getPropFor = (purpose, lang) => {
+    switch (purpose) {
+      case purpose == "rent":
+        if (lang == "en") {
+          return "For Rent";
+        } else if (lang == "ru") {
+          return "В аренду";
+        } else {
+          return "出租";
+        }
+
+      case purpose == "sale":
+        if (lang == "en") {
+          return "For Sale";
+        } else if (lang == "ru") {
+          return "Продается";
+        } else {
+          return "出售";
+        }
+      default:
+        if (lang == "en") {
+          return "For Sale";
+        } else if (lang == "ru") {
+          return "Продается";
+        } else {
+          return "出售";
+        }
+    }
+  };
+
   return (
     <>
       <div className="col-lg-8">
@@ -61,7 +91,8 @@ const PropertyHeader = ({ id, data }) => {
               href="#"
             >
               <i className="fas fa-circle pe-2" />
-              For {data.unit_purpose == "rent" ? "Rent" : "Sale"}
+              {getPropFor(data.unit_purpose, lang)}
+              {/* For {data.unit_purpose == "rent" ? "Rent" : "Sale"} */}
             </a>
             {/* <a
               className="ff-heading bdrr1 fz15 pr10 ml10 ml0-sm bdrrn-sm"
@@ -128,13 +159,20 @@ const PropertyHeader = ({ id, data }) => {
               </Tooltip>
             </div>
             {/* <h3 className="price mb-0">{formatter.format(data.price)}</h3> */}
-            <p className="text space fz15">{data.total_area} Sq M</p>
+            <p className="text space fz15">
+              {data.total_area}{" "}
+              {lang == "en" ? "Sq M" : lang == "ru" ? "кв.м." : "平方米"}
+            </p>
             <button
               type="button"
               onClick={(event) => handleClickOpen()}
               className="ud-btn btn-transparent mr30 mr0-xs mobile-btn my-5"
             >
-              DOWNLOAD BROCHURE
+              {lang == "en"
+                ? "DOWNLOAD BROCHURE"
+                : lang == "ru"
+                ? "СКАЧАТЬ БРОШЮРУ"
+                : "下载手册"}
             </button>
             {open ? (
               <BrochureDownload
