@@ -18,7 +18,7 @@ export const en_tr = {
     "Buy",
     "Invest In Cyprus",
     {
-      "Pafilia Collections": [
+      "Latest Projects": [
         { href: "/featured-collections/minthis", label: "Minthis" },
         { href: "/featured-collections/one", label: "One" },
         { href: "/featured-collections/neo", label: "Neo" },
@@ -248,7 +248,7 @@ export const ru_tr = {
     "Купить",
     "Инвестируйте в Кипр",
     {
-      "Коллекции Пафилии": [
+      "Последние проекты": [
         { href: "/featured-collections/minthis", label: "Минтис" },
         { href: "/featured-collections/one", label: "Один" },
         { href: "/featured-collections/neo", label: "Нео" },
@@ -474,7 +474,7 @@ export const ch_tr = {
     "买",
     "投资塞浦路斯",
     {
-      帕菲利亚系列: [
+      最新项目: [
         { href: "/featured-collections/minthis", label: "敏睿斯" },
         { href: "/featured-collections/one", label: "一" },
         { href: "/featured-collections/neo", label: "尼奥" },
