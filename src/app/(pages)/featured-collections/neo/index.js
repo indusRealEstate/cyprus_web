@@ -114,7 +114,7 @@ const Neo = () => {
                       open={open}
                       dialogFunctions={dialogFunctions}
                       route={
-                        "https://premium-realtor.com/api/media/brochure/neo/neo-brochure.pdf"
+                        "https://alsimatower.ae/int_web_api/media/brochure/neo/neo-brochure.pdf"
                       }
                     />
                   ) : (

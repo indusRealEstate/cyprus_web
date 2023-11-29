@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 
 export async function getAllListings() {
   const res = await fetch(
-    "https://premium-realtor.com/api/listings/get_all_listings.php",
+    "https://alsimatower.ae/int_web_api/listings/get_all_listings.php",
     {
       method: "GET",
       headers: {
@@ -19,7 +19,7 @@ export async function getAllListings() {
 
 export async function getAllListingsByFilter(type) {
   const res = await fetch(
-    "https://premium-realtor.com/api/listings/get_all_listings_filter.php",
+    "https://alsimatower.ae/int_web_api/listings/get_all_listings_filter.php",
     {
       method: "POST",
       headers: {
@@ -36,9 +36,12 @@ export async function getAllListingsByFilter(type) {
 
 export async function getPropertyDetails(prop_id) {
   const res = await axios
-    .post("https://premium-realtor.com/api/listings/get_property_details.php", {
-      prop_id: prop_id,
-    })
+    .post(
+      "https://alsimatower.ae/int_web_api/listings/get_property_details.php",
+      {
+        prop_id: prop_id,
+      }
+    )
     .catch(function (error) {
       console.log(error);
     });

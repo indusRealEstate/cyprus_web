@@ -141,7 +141,7 @@ const PropertyHeader = ({ id, data }) => {
                 type={`${data.property}`}
                 open={open}
                 dialogFunctions={dialogFunctions}
-                route={`https://premium-realtor.com/api/media/listings/${id}/attachments/${
+                route={`https://alsimatower.ae/int_web_api/media/listings/${id}/attachments/${
                   JSON.parse(data.attachments)[0]
                 }`}
               />
@@ -150,7 +150,7 @@ const PropertyHeader = ({ id, data }) => {
             )}
             {/* <a
               className="ud-btn btn-thm mb-3"
-              href={`https://premium-realtor.com/api/media/listings/${id}/attachments/${
+              href={`https://alsimatower.ae/int_web_api/media/listings/${id}/attachments/${
                 JSON.parse(data.attachments)[0]
               }`}
             >

@@ -126,7 +126,7 @@ const Minthis = () => {
                       open={open}
                       dialogFunctions={dialogFunctions}
                       route={
-                        "https://premium-realtor.com/api/media/brochure/minthis/MINTHIS BOOK PROPERTY COLLECTION EN.pdf"
+                        "https://alsimatower.ae/int_web_api/media/brochure/minthis/MINTHIS BOOK PROPERTY COLLECTION EN.pdf"
                       }
                     />
                   ) : (

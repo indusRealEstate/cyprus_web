@@ -19,7 +19,7 @@ import PropertyGallery from "@/components/property/property-single-style/single-
 // export async function generateStaticParams() {
 //   // Call an external API endpoint to get posts
 //   const res = await fetch(
-//     `https://premium-realtor.com/api/listings/get_all_listings.php`,
+//     `https://alsimatower.ae/int_web_api/listings/get_all_listings.php`,
 //     {
 //       method: "GET",
 //     }
@@ -33,7 +33,7 @@ import PropertyGallery from "@/components/property/property-single-style/single-
 
 export async function generateMetadata({ params }) {
   const staticData = await fetch(
-    `https://premium-realtor.com/api/listings/get_property_details.php`,
+    `https://alsimatower.ae/int_web_api/listings/get_property_details.php`,
     {
       cache: "force-cache",
       method: "POST",
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }) {
 
 async function PropertyPage({ params }) {
   const staticData = await fetch(
-    `https://premium-realtor.com/api/listings/get_property_details.php`,
+    `https://alsimatower.ae/int_web_api/listings/get_property_details.php`,
     {
       cache: "force-cache",
       method: "POST",

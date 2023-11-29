@@ -41,7 +41,7 @@ const ListingItems = ({ data }) => {
                     ? "opacity-0 position-absolute w-100 h-100 cover"
                     : "opacity-100 w-100 h-100 cover"
                 }}`}
-                src={`https://premium-realtor.com/api/media/listings/${
+                src={`https://alsimatower.ae/int_web_api/media/listings/${
                   listing.prop_id
                 }/media/${JSON.parse(listing.images)[0]}`}
                 alt="listings"

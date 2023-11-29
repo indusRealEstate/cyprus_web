@@ -121,7 +121,7 @@ export const One = () => {
                       open={open}
                       dialogFunctions={dialogFunctions}
                       route={
-                        "https://premium-realtor.com/api/media/brochure/one/ONE_BROCHURE_EN.pdf"
+                        "https://alsimatower.ae/int_web_api/media/brochure/one/ONE_BROCHURE_EN.pdf"
                       }
                     />
                   ) : (

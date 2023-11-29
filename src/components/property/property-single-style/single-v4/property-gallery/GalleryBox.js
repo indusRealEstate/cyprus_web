@@ -54,7 +54,7 @@ const GalleryBox = ({ id, images }) => {
                     />
                   )}
                   <Image
-                    src={`https://premium-realtor.com/api/media/listings/${id}/media/${imageUrl}`}
+                    src={`https://alsimatower.ae/int_web_api/media/listings/${id}/media/${imageUrl}`}
                     className={`${
                       !loading
                         ? "bdrs12 w-100 cover height-50 position-relative opacity-100"

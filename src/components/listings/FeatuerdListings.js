@@ -77,7 +77,7 @@ const FeaturedListings = ({ data, colstyle, lang }) => {
                       : "opacity-100 w-100 cover"
                   }}`}
                   style={{ height: "230px" }}
-                  src={`https://premium-realtor.com/api/media/listings/${
+                  src={`https://alsimatower.ae/int_web_api/media/listings/${
                     listing.prop_id
                   }/media/${JSON.parse(listing.images)[0]}`}
                   alt="listings"

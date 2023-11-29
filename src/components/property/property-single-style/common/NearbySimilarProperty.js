@@ -102,7 +102,7 @@ const NearbySimilarProperty = () => {
                             : "opacity-100 w-100 h-100 cover"
                         }}`}
                         // className="w-100 h-100 cover"
-                        src={`https://premium-realtor.com/api/media/listings/${
+                        src={`https://alsimatower.ae/int_web_api/media/listings/${
                           listing.prop_id
                         }/media/${JSON.parse(listing.images)[0]}`}
                         alt="listings"
