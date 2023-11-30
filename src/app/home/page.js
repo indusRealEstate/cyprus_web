@@ -5,12 +5,13 @@ import About from "@/components/home/About";
 // import Agents from "@/components/home/Agents";
 import ExploreCities from "@/components/home/ExploreCities";
 import FeaturedListings from "@/components/home/FeatuerdListings";
-import FeatureProperties from "@/components/home/FeatureProperties";
+
 import Header from "@/components/home/Header";
 import Hero from "@/components/home/Hero";
 import FilterWithProperties from "@/components/home/filter-with-property";
 import Footer from "@/components/home/footer";
 import WhyChoose from "@/components/home/why-choose";
+import PopupDialog from "./popup";
 
 const Home = () => {
   return (
@@ -27,7 +28,7 @@ const Home = () => {
           <Hero />
         </section>
       </div>
-      <section className="pt-0 pb110 bgc-f7 pb50-md">
+      <section className="pt-0 pb50 bgc-f7 pb50-md">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -38,13 +39,17 @@ const Home = () => {
         </div>
         {/* End .container */}
       </section>
+
+      <section id="explore-cities" className="pt60 pb0 pb50-md">
+        <ExploreCities />
+      </section>
       {/* End Home Banner Style V6 */}
-      <section id="why-cyprus">
+      <section id="why-cyprus" className="pb30 pt100">
         <div className="container">
           <div
             className="row align-items-md-center"
             data-aos="fade-left"
-            data-aos-delay="100"
+            data-aos-delay="10"
           >
             <WhyChoose />
           </div>
@@ -52,22 +57,17 @@ const Home = () => {
       </section>
 
       {/* Featured Properties */}
-      <section id="flagship-prop" className="our-testimonial pt-5 mt-5">
-        <FeatureProperties />
-        {/* End .container */}
-      </section>
+
       {/* End Featured Properties */}
 
       {/* Featured Listings */}
-      <section id="featured-listings" className="pt-0 pb80 pb30-md">
+      <section id="featured-listings" className="pt100 pb80 pb30-md">
         <FeaturedListings />
       </section>
       {/* End Featured Listings */}
 
       {/* Property Cities */}
-      <section id="explore-cities" className="pt0 pb90 pb50-md">
-        <ExploreCities />
-      </section>
+
       {/* End property cities */}
 
       {/* <!-- About Us --> */}
@@ -77,6 +77,8 @@ const Home = () => {
         </div>
       </section>
       {/*  <!-- End About Us --> */}
+
+      {/* <PopupDialog /> */}
 
       {/* Start Our Footer */}
       <section className="footer-style1 at-home6 pt60 pb-0">

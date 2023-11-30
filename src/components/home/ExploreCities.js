@@ -10,6 +10,24 @@ import "swiper/swiper-bundle.min.css";
 const ExploreCities = () => {
   const lang = useAppSelector((state) => state.langReducer);
 
+  const cities = [
+    {
+      id: 1,
+      name: "Paphos",
+      image: "/images/listings/Paphos.webp",
+    },
+    {
+      id: 2,
+      name: "Limassol",
+      image: "/images/listings/Limassol.webp",
+    },
+    {
+      id: 2,
+      name: "Muscut",
+      image: "/images/listings/muscut.webp",
+    },
+  ];
+
   const getLang = (lang) => {
     switch (lang) {
       case "en":
@@ -90,7 +108,7 @@ const ExploreCities = () => {
                   },
                 }}
               >
-                {getLang(lang).cities.map((city) => (
+                {cities.map((city) => (
                   <SwiperSlide key={city.id}>
                     <div className="item">
                       <Link

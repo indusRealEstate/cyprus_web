@@ -3,14 +3,12 @@
 "use client";
 
 import MainMenu from "@/components/common/MainMenu";
-import SidebarPanel from "@/components/common/sidebar-panel";
-import LoginSignupModal from "@/components/common/login-signup-modal";
+import { ch_tr, en_tr, ru_tr } from "@/lang/index";
+import { useAppSelector } from "@/redux/store";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import SelectLanguage from "../select-lang";
-import { useAppSelector } from "@/redux/store";
-import { ch_tr, en_tr, ru_tr } from "@/lang/index";
 
 const DefaultHeader = () => {
   const [navbar, setNavbar] = useState(false);
@@ -53,7 +51,7 @@ const DefaultHeader = () => {
         }`}
       >
         <nav className="posr">
-          <div className="container posr menu_bdrt1 maxw1500">
+          <div className="container posr menu_bdrt1 ">
             <div className="row align-items-center justify-content-between">
               <div className="col-auto">
                 <div className="d-flex align-items-center justify-content-between">
@@ -93,6 +91,13 @@ const DefaultHeader = () => {
                     {getLang(lang)}
                     <i className="fal fa-arrow-right-long fz13" />
                   </a>
+                  <a href="https://wa.me/971552136536" target="_blank">
+                    <img
+                      src="/images/whatsapp.svg"
+                      alt="whatsapp"
+                      className="whtsapp-icon"
+                    />
+                  </a>
                 </div>
               </div>
               {/* End .col-auto */}
@@ -104,30 +109,11 @@ const DefaultHeader = () => {
       {/* End Header */}
 
       {/* Signup Modal */}
-      <div className="signup-modal">
-        <div
-          className="modal fade"
-          id="loginSignupModal"
-          tabIndex={-1}
-          aria-labelledby="loginSignupModalLabel"
-          aria-hidden="true"
-        >
-          <div className="modal-dialog  modal-dialog-scrollable modal-dialog-centered">
-            <LoginSignupModal />
-          </div>
-        </div>
-      </div>
+
       {/* End Signup Modal */}
 
       {/* DesktopSidebarMenu */}
-      <div
-        className="offcanvas offcanvas-end"
-        tabIndex="-1"
-        id="SidebarPanel"
-        aria-labelledby="SidebarPanelLabel"
-      >
-        <SidebarPanel />
-      </div>
+
       {/* Sidebar Panel End */}
     </>
   );

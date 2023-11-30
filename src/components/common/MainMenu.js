@@ -79,41 +79,15 @@ const MainMenu = ({ lang }) => {
   };
 
   const getLang = (lang, index) => {
-    if (index == 0 || index == 5) {
-      switch (lang) {
-        case "en":
-          return Object.keys(en_tr.navbar[index])[0];
-        case "ru":
-          return Object.keys(ru_tr.navbar[index])[0];
-        case "ch":
-          return Object.keys(ch_tr.navbar[index])[0];
-        default:
-          return Object.keys(en_tr.navbar[index])[0];
-      }
-    } else {
-      switch (lang) {
-        case "en":
-          return en_tr.navbar[index];
-        case "ru":
-          return ru_tr.navbar[index];
-        case "ch":
-          return ch_tr.navbar[index];
-        default:
-          return en_tr.navbar[index];
-      }
-    }
-  };
-
-  const getSubLang = (lang, index) => {
     switch (lang) {
       case "en":
-        return Object.values(en_tr.navbar[index])[0];
+        return en_tr.navbar[index];
       case "ru":
-        return Object.values(ru_tr.navbar[index])[0];
+        return ru_tr.navbar[index];
       case "ch":
-        return Object.values(ch_tr.navbar[index])[0];
+        return ch_tr.navbar[index];
       default:
-        return Object.values(en_tr.navbar[index])[0];
+        return en_tr.navbar[index];
     }
   };
 
@@ -122,13 +96,13 @@ const MainMenu = ({ lang }) => {
       <li className="visible_list dropitem">
         <a className="list-item" href="#">
           <span className={topMenu == "home" ? "title menuActive" : "title"}>
-            {getLang(lang, 0)}
+            {getLang(lang, 0).title}
           </span>
           <span className="arrow"></span>
         </a>
         {/* Level Two*/}
         <ul className="sub-menu">
-          {getSubLang(lang, 0).map((item, index) => (
+          {getLang(lang, 0).subMenu.map((item, index) => (
             <li key={index}>
               <Link className={`${handleActive(item.href)}`} href={item.href}>
                 {item.label}
@@ -137,68 +111,63 @@ const MainMenu = ({ lang }) => {
           ))}
         </ul>
       </li>
+
       {/* End homeItems */}
       <li className="visible_list dropitem">
-        <Link className="list-item" href="/#why-cyprus">
+        <Link className="list-item" href="/all-properties">
           <span className={topMenu == "pages" ? "title menuActive" : "title"}>
             {getLang(lang, 1)}
           </span>
           {/* <span className="arrow"></span> */}
         </Link>
       </li>
-
-      <li className="visible_list dropitem">
-        <Link className="list-item" href="/all-properties">
-          <span className={topMenu == "pages" ? "title menuActive" : "title"}>
-            {getLang(lang, 2)}
-          </span>
-        </Link>
-        {/* <ul className="sub-menu">
-          {pageItems.map((item, index) => (
-            <li key={index}>
-              <Link className={`${handleActive(item.href)}`} href={item.href}>
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul> */}
-      </li>
-
-      <li className="visible_list dropitem">
-        <Link className="list-item" href="/sale-properties">
-          <span className={topMenu == "home" ? "title menuActive" : "title"}>
-            {getLang(lang, 3)}
-          </span>
-          {/* <span className="arrow"></span> */}
-        </Link>
-        {/* Level Two*/}
-        {/* <ul className="sub-menu">
-          { buyItems.map( ( item, index ) => (
-            <li key={ index }>
-              <Link className={ `${handleActive( item.href )}` } href={ item.href }>
-                { item.label }
-              </Link>
-            </li>
-          ) ) }
-        </ul> */}
-      </li>
-      <li className="visible_list dropitem">
-        <Link className="list-item" href="/invest-in-cyprus">
-          <span className={topMenu == "home" ? "title menuActive" : "title"}>
-            {getLang(lang, 4)}
-          </span>
-        </Link>
-      </li>
       <li className="visible_list dropitem">
         <a className="list-item" href="#">
-          <span className={topMenu == "home" ? "title menuActive" : "title"}>
-            {getLang(lang, 5)}
+          <span
+            className={topMenu == "property" ? "title menuActive" : "title"}
+          >
+            {getLang(lang, 2).title}
           </span>
           <span className="arrow"></span>
         </a>
-        {/* Level Two*/}
         <ul className="sub-menu">
-          {getSubLang(lang, 5).map((item, index) => (
+          {getLang(lang, 2).subMenu.map((item, index) => (
+            <li key={index} className="dropitem">
+              <a href="#">
+                <span
+                  className={
+                    submenu == item.label ? "title menuActive" : "title"
+                  }
+                >
+                  {item.label}
+                </span>
+                <span className="arrow"></span>
+              </a>
+              <ul className="sub-menu">
+                {item.subMenuItems.map((subMenuItem, subIndex) => (
+                  <li key={subIndex}>
+                    <Link
+                      className={`${handleActive(subMenuItem.href)}`}
+                      href={subMenuItem.href}
+                    >
+                      {subMenuItem.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </li>
+      {/* <li className="visible_list dropitem">
+        <a className="list-item" href="#">
+          <span className={topMenu == "home" ? "title menuActive" : "title"}>
+            {getLang(lang, 2)}
+          </span>
+          <span className="arrow"></span>
+        </a>
+        <ul className="sub-menu">
+          {getSubLang(lang, 2).map((item, index) => (
             <li key={index}>
               <Link className={`${handleActive(item.href)}`} href={item.href}>
                 {item.label}
@@ -206,6 +175,32 @@ const MainMenu = ({ lang }) => {
             </li>
           ))}
         </ul>
+      </li> */}
+      <li className="visible_list dropitem">
+        <a className="list-item" href="#">
+          <span className={topMenu == "home" ? "title menuActive" : "title"}>
+            {getLang(lang, 3).title}
+          </span>
+          <span className="arrow"></span>
+        </a>
+        {/* Level Two*/}
+        <ul className="sub-menu">
+          {getLang(lang, 3).subMenu.map((item, index) => (
+            <li key={index}>
+              <Link className={`${handleActive(item.href)}`} href={item.href}>
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </li>
+
+      <li className="visible_list dropitem">
+        <Link className="list-item" href="/contact">
+          <span className={topMenu == "pages" ? "title menuActive" : "title"}>
+            {getLang(lang, 4)}
+          </span>
+        </Link>
       </li>
 
       {/* <li className="visible_list dropitem">
@@ -262,44 +257,6 @@ const MainMenu = ({ lang }) => {
       </li> */}
       {/* End listings */}
 
-      {/* <li className="visible_list dropitem">
-        <a className="list-item" href="#">
-          <span
-            className={topMenu == "property" ? "title menuActive" : "title"}
-          >
-            Property
-          </span>
-          <span className="arrow"></span>
-        </a>
-        <ul className="sub-menu">
-          {propertyItems.map((item, index) => (
-            <li key={index} className="dropitem">
-              <a href="#">
-                <span
-                  className={
-                    submenu == item.label ? "title menuActive" : "title"
-                  }
-                >
-                  {item.label}
-                </span>
-                <span className="arrow"></span>
-              </a>
-              <ul className="sub-menu">
-                {item.subMenuItems.map((subMenuItem, subIndex) => (
-                  <li key={subIndex}>
-                    <Link
-                      className={`${handleActive(subMenuItem.href)}`}
-                      href={subMenuItem.href}
-                    >
-                      {subMenuItem.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-      </li> */}
       {/* End property Items */}
 
       {/* <li className="visible_list dropitem">
@@ -321,39 +278,6 @@ const MainMenu = ({ lang }) => {
       </li> */}
       {/* End blog Items */}
 
-      <li className="visible_list dropitem">
-        {/* <Link className="list-item" href="/faq">
-          <span className={topMenu == "pages" ? "title menuActive" : "title"}>
-            FAQ
-          </span>
-        </Link> */}
-        {/* <ul className="sub-menu">
-          {pageItems.map((item, index) => (
-            <li key={index}>
-              <Link className={`${handleActive(item.href)}`} href={item.href}>
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul> */}
-      </li>
-      <li className="visible_list dropitem">
-        <Link className="list-item" href="/contact">
-          <span className={topMenu == "pages" ? "title menuActive" : "title"}>
-            {getLang(lang, 6)}
-          </span>
-          {/* <span className="arrow"></span> */}
-        </Link>
-        {/* <ul className="sub-menu">
-          {pageItems.map((item, index) => (
-            <li key={index}>
-              <Link className={`${handleActive(item.href)}`} href={item.href}>
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul> */}
-      </li>
       {/* End pages Items */}
       {/* Agents */}
       {/* <li className='visible_list dropitem'>

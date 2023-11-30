@@ -53,7 +53,7 @@ const Header = () => {
         }`}
       >
         <nav className="posr">
-          <div className="container posr menu_bdrt1 maxw1500">
+          <div className="container posr menu_bdrt1 ">
             <div className="row align-items-center justify-content-between">
               <div className="col-auto">
                 <div className="d-flex align-items-center justify-content-between">
@@ -92,6 +92,13 @@ const Header = () => {
                   >
                     {getLang(lang)}
                     <i className="fal fa-arrow-right-long fz13" />
+                  </a>
+                  <a href="https://wa.me/971552136536" target="_blank">
+                    <img
+                      src="/images/whatsapp.svg"
+                      alt="whatsapp"
+                      className="whtsapp-icon"
+                    />
                   </a>
                 </div>
               </div>

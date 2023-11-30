@@ -253,20 +253,20 @@ const Form = ({ lang }) => {
             <div className="mb10">
               <label className="heading-color ff-heading fw600 mb10">
                 {lang == "en"
-                  ? "Textarea Message"
+                  ? "Your Message"
                   : lang == "ru"
-                  ? "Текстовое сообщение"
-                  : "文本区留言"}
+                  ? "Ваше сообщение"
+                  : "您的留言"}
               </label>
               <textarea
                 cols={30}
                 rows={4}
                 placeholder={
                   lang == "en"
-                    ? "There are many variations of passages."
+                    ? "Tell us your property requirements."
                     : lang == "ru"
-                    ? "Существует множество вариаций отрывков."
-                    : "段落有很多变体。"
+                    ? "Сообщите нам ваши требования к недвижимости."
+                    : "告诉我们您的财产要求。"
                 }
                 defaultValue={""}
                 required

@@ -5,23 +5,48 @@
 export const en_tr = {
   navbar: [
     {
-      Home: [
+      title: "Home",
+      subMenu: [
         { href: "/#main", label: "Home" },
-        { href: "/#why-cyprus", label: "Why Cyprus" },
-        { href: "/#flagship-prop", label: "Flagship Collection" },
         { href: "/#featured-listings", label: "Featured Listings" },
         { href: "/#explore-cities", label: "Explore Cities" },
       ],
     },
-    "Why Cyprus",
     "All Listings",
-    "Buy",
-    "Invest In Cyprus",
     {
-      "Latest Projects": [
-        { href: "/featured-collections/minthis", label: "Minthis" },
-        { href: "/featured-collections/one", label: "One" },
-        { href: "/featured-collections/neo", label: "Neo" },
+      title: "Global Projects",
+      subMenu: [
+        {
+          label: "Cyprus",
+          subMenuItems: [
+            { href: "/cyprus/minthis", label: "Minthis" },
+            { href: "/cyprus/one", label: "One" },
+            { href: "/cyprus/neo", label: "Neo" },
+          ],
+        },
+        {
+          label: "Greece",
+          subMenuItems: [
+            { href: "/cyprus/minthis", label: "Minthis" },
+            { href: "/cyprus/one", label: "One" },
+            { href: "/cyprus/neo", label: "Neo" },
+          ],
+        },
+        {
+          label: "Oman",
+          subMenuItems: [
+            { href: "/cyprus/minthis", label: "Minthis" },
+            { href: "/cyprus/one", label: "One" },
+            { href: "/cyprus/neo", label: "Neo" },
+          ],
+        },
+      ],
+    },
+    {
+      title: "More",
+      subMenu: [
+        { href: "/invest-in-cyprus", label: "Invest In Cyprus" },
+        { href: "/why-cyprus", label: "Why Cyprus" },
       ],
     },
     "Contact Us",
@@ -72,7 +97,7 @@ export const en_tr = {
   },
 
   property_collections_home: {
-    heading: "Pafilia Flagship Property Collection",
+    heading: "Latest Projects in Cyprus",
     sub_heading:
       "Pafilia is the largest privately owned residential Cyprus developer, dedicated to developing world class properties for personal living and investment.",
     collection: [
@@ -87,7 +112,7 @@ export const en_tr = {
         bath: "3 - 5 baths",
         sqft: "200 - 300 sq m",
         imageSrc: "/images/minthis/Minthis_photo_Callisto_exterior.jpg",
-        path: "/featured-collections/minthis",
+        path: "/cyprus/minthis",
       },
       {
         id: 2,
@@ -100,7 +125,7 @@ export const en_tr = {
         bath: "1 - 3 baths",
         sqft: "66.8 - 291.51 sq m",
         imageSrc: "/images/one/ONE_photo_exterior 3.jpg",
-        path: "/featured-collections/one",
+        path: "/cyprus/one",
       },
       {
         id: 3,
@@ -113,7 +138,7 @@ export const en_tr = {
         bath: "1 - 3 baths",
         sqft: "144 - 407 sq m",
         imageSrc: "/images/neo/231118_limassol_exteriors_aerial_riviera_wb.jpg",
-        path: "/featured-collections/neo",
+        path: "/cyprus/neo",
       },
     ],
   },
@@ -176,9 +201,9 @@ export const en_tr = {
       {
         title: "Discover",
         links: [
-          { label: "Minthis", href: "/featured-collections/minthis" },
-          { label: "One", href: "/featured-collections/one" },
-          { label: "Neo", href: "/featured-collections/neo" },
+          { label: "Minthis", href: "/cyprus/minthis" },
+          { label: "One", href: "/cyprus/one" },
+          { label: "Neo", href: "/cyprus/neo" },
         ],
       },
       {
@@ -359,27 +384,53 @@ export const en_tr = {
 export const ru_tr = {
   navbar: [
     {
-      Дом: [
+      title: "Дом",
+      subMenu: [
         { href: "/#main", label: "Дом" },
-        { href: "/#why-cyprus", label: "Почему Кипр" },
-        { href: "/#flagship-prop", label: "Флагманские коллекции" },
         { href: "/#featured-listings", label: "Избранные объявления" },
         { href: "/#explore-cities", label: "Исследуйте города" },
       ],
     },
-    "Почему Кипр",
     "Все объявления",
-    "Купить",
-    "Инвестируйте в Кипр",
     {
-      "Последние проекты": [
-        { href: "/featured-collections/minthis", label: "Минтис" },
-        { href: "/featured-collections/one", label: "Один" },
-        { href: "/featured-collections/neo", label: "Нео" },
+      title: "Глобальные проекты",
+      subMenu: [
+        {
+          label: "Cyprus",
+          subMenuItems: [
+            { href: "/cyprus/minthis", label: "Minthis" },
+            { href: "/cyprus/one", label: "One" },
+            { href: "/cyprus/neo", label: "Neo" },
+          ],
+        },
+        {
+          label: "Greece",
+          subMenuItems: [
+            { href: "/cyprus/minthis", label: "Minthis" },
+            { href: "/cyprus/one", label: "One" },
+            { href: "/cyprus/neo", label: "Neo" },
+          ],
+        },
+        {
+          label: "Oman",
+          subMenuItems: [
+            { href: "/cyprus/minthis", label: "Minthis" },
+            { href: "/cyprus/one", label: "One" },
+            { href: "/cyprus/neo", label: "Neo" },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Более",
+      subMenu: [
+        { href: "/invest-in-cyprus", label: "Инвестируйте в Кипр" },
+        { href: "/invest-in-cyprus", label: "Почему Кипр" },
       ],
     },
     "Связаться с нами",
   ],
+
   conatct: "Контакт",
   main_slider: [
     {
@@ -425,7 +476,7 @@ export const ru_tr = {
     btn_text_2: "Характеристики",
   },
   property_collections_home: {
-    heading: "Коллекция флагманской недвижимости Pafilia",
+    heading: "Последние проекты на Кипре",
     sub_heading:
       "Pafilia — крупнейший частный застройщик жилой недвижимости на Кипре, занимающийся строительством недвижимости мирового класса для личного проживания и инвестиций.",
     collection: [
@@ -440,7 +491,7 @@ export const ru_tr = {
         bath: "3 - 5 ванн",
         sqft: "200 - 300 кв.м.",
         imageSrc: "/images/minthis/Minthis_photo_Callisto_exterior.jpg",
-        path: "/featured-collections/minthis",
+        path: "/cyprus/minthis",
       },
       {
         id: 2,
@@ -453,7 +504,7 @@ export const ru_tr = {
         bath: "1 - 3 ванн",
         sqft: "66.8 - 291.51 кв.м.",
         imageSrc: "/images/one/ONE_photo_exterior 3.jpg",
-        path: "/featured-collections/one",
+        path: "/cyprus/one",
       },
       {
         id: 3,
@@ -466,7 +517,7 @@ export const ru_tr = {
         bath: "1 - 3 ванн",
         sqft: "144 - 407 кв.м.",
         imageSrc: "/images/neo/231118_limassol_exteriors_aerial_riviera_wb.jpg",
-        path: "/featured-collections/neo",
+        path: "/cyprus/neo",
       },
     ],
   },
@@ -528,9 +579,9 @@ export const ru_tr = {
       {
         title: "Обнаружить",
         links: [
-          { label: "Minthis", href: "/featured-collections/minthis" },
-          { label: "One", href: "/featured-collections/one" },
-          { label: "Neo", href: "/featured-collections/neo" },
+          { label: "Minthis", href: "/cyprus/minthis" },
+          { label: "One", href: "/cyprus/one" },
+          { label: "Neo", href: "/cyprus/neo" },
         ],
       },
       {
@@ -711,23 +762,48 @@ export const ru_tr = {
 export const ch_tr = {
   navbar: [
     {
-      家: [
+      title: "家",
+      subMenu: [
         { href: "/#main", label: "家" },
-        { href: "/#why-cyprus", label: "为什么选择塞浦路斯" },
-        { href: "/#flagship-prop", label: "旗舰系列" },
         { href: "/#featured-listings", label: "精选房源" },
         { href: "/#explore-cities", label: "探索城市" },
       ],
     },
-    "为什么选择塞浦路斯",
     "所有目录",
-    "买",
-    "投资塞浦路斯",
     {
-      最新项目: [
-        { href: "/featured-collections/minthis", label: "敏睿斯" },
-        { href: "/featured-collections/one", label: "一" },
-        { href: "/featured-collections/neo", label: "尼奥" },
+      title: "全球项目",
+      subMenu: [
+        {
+          label: "Cyprus",
+          subMenuItems: [
+            { href: "/cyprus/minthis", label: "Minthis" },
+            { href: "/cyprus/one", label: "One" },
+            { href: "/cyprus/neo", label: "Neo" },
+          ],
+        },
+        {
+          label: "Greece",
+          subMenuItems: [
+            { href: "/cyprus/minthis", label: "Minthis" },
+            { href: "/cyprus/one", label: "One" },
+            { href: "/cyprus/neo", label: "Neo" },
+          ],
+        },
+        {
+          label: "Oman",
+          subMenuItems: [
+            { href: "/cyprus/minthis", label: "Minthis" },
+            { href: "/cyprus/one", label: "One" },
+            { href: "/cyprus/neo", label: "Neo" },
+          ],
+        },
+      ],
+    },
+    {
+      title: "更多的",
+      subMenu: [
+        { href: "/invest-in-cyprus", label: "投资塞浦路斯" },
+        { href: "/invest-in-cyprus", label: "为什么选择塞浦路斯" },
       ],
     },
     "联系我们",
@@ -777,7 +853,7 @@ export const ch_tr = {
     btn_text_2: "特性",
   },
   property_collections_home: {
-    heading: "帕菲利亚旗舰物业系列",
+    heading: "塞浦路斯最新项目",
     sub_heading:
       "Pafilia 是塞浦路斯最大的私营住宅开发商，致力于开发世界一流的个人居住和投资房产。",
     collection: [
@@ -792,7 +868,7 @@ export const ch_tr = {
         bath: "3 - 5 浴场",
         sqft: "200 - 300 平方米",
         imageSrc: "/images/minthis/Minthis_photo_Callisto_exterior.jpg",
-        path: "/featured-collections/minthis",
+        path: "/cyprus/minthis",
       },
       {
         id: 2,
@@ -805,7 +881,7 @@ export const ch_tr = {
         bath: "1 - 3 浴场",
         sqft: "66.8 - 291.51 平方米",
         imageSrc: "/images/one/ONE_photo_exterior 3.jpg",
-        path: "/featured-collections/one",
+        path: "/cyprus/one",
       },
       {
         id: 2,
@@ -818,7 +894,7 @@ export const ch_tr = {
         bath: "1 - 3 浴场",
         sqft: "144 - 407 平方米",
         imageSrc: "/images/neo/231118_limassol_exteriors_aerial_riviera_wb.jpg",
-        path: "/featured-collections/neo",
+        path: "/cyprus/neo",
       },
     ],
   },
@@ -875,9 +951,9 @@ export const ch_tr = {
       {
         title: "发现",
         links: [
-          { label: "Minthis", href: "/featured-collections/minthis" },
-          { label: "One", href: "/featured-collections/one" },
-          { label: "Neo", href: "/featured-collections/neo" },
+          { label: "Minthis", href: "/cyprus/minthis" },
+          { label: "One", href: "/cyprus/one" },
+          { label: "Neo", href: "/cyprus/neo" },
         ],
       },
       {

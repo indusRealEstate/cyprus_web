@@ -7,6 +7,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ch_tr, en_tr, ru_tr } from "@/lang";
 import { useAppSelector } from "@/redux/store";
+import SwiperCore, { Autoplay } from "swiper";
+SwiperCore.use([Autoplay]);
 
 const Hero = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -34,7 +36,7 @@ const Hero = () => {
           spaceBetween={0}
           slidesPerView={1}
           speed={1400} // Set the slide transition speed in milliseconds
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          autoplay={{ delay: 4000 }}
           modules={[Thumbs]}
           thumbs={{ swiper: thumbsSwiper }}
           style={{ height: "850px" }}

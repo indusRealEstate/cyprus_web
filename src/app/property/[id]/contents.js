@@ -215,7 +215,7 @@ const PropertyDetailsContent = ({ data, params }) => {
                       ? "Выберите предпочитаемый день"
                       : "选择您喜欢的日子"}
                   </p>
-                  <ScheduleTour />
+                  <ScheduleTour lang={lang} />
                 </div>
               </div>
             </div>
