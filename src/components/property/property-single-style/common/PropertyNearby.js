@@ -1,71 +1,148 @@
 import React from "react";
 
-const PropertyNearby = () => {
+const PropertyNearby = ({ lang }) => {
   const tabsData = [
     {
-      title: "Facilities",
+      title: lang == "en" ? "Facilities" : lang == "ru" ? "Удобства" : "设施",
       details: [
         {
           rating: "4",
-          schoolName: "Clubhouse",
+          schoolName:
+            lang == "en"
+              ? "Clubhouse"
+              : lang == "ru"
+              ? "Клубный дом"
+              : "俱乐部",
           grades: "PK-6",
           distance: "3.7 mi",
         },
         {
           rating: "5",
-          schoolName: "Wellness Spa",
+          schoolName:
+            lang == "en"
+              ? "Wellness Spa"
+              : lang == "ru"
+              ? "Оздоровительный Спа"
+              : "健康水疗中心",
           grades: "PK-6",
           distance: "3.7 mi",
         },
         {
           rating: "5",
-          schoolName: "Monastry",
+          schoolName:
+            lang == "en" ? "Monastry" : lang == "ru" ? "Монастырь" : "修道院",
           grades: "PK-6",
           distance: "3.7 mi",
         },
         {
           rating: "5",
-          schoolName: "The Plateia",
+          schoolName:
+            lang == "en"
+              ? "The Plateia"
+              : lang == "ru"
+              ? "Платея"
+              : "普拉蒂亚酒店",
           grades: "PK-6",
           distance: "3.7 mi",
         },
       ],
     },
     {
-      title: "Sports",
-      details: [
-        { rating: "4", facilityName: "Golf Course", distance: "3.7 mi" },
-        {
-          rating: "5",
-          facilityName: "Outdoor Sports Park",
-          distance: "3.7 mi",
-        },
-        { rating: "5", facilityName: "Sports Ground", distance: "3.7 mi" },
-        { rating: "5", facilityName: "Equestrian Centre", distance: "3.7 mi" },
-        { rating: "5", facilityName: "Kids Club", distance: "3.7 mi" },
-      ],
-    },
-    {
-      title: "Others",
+      title: lang == "en" ? "Sports" : lang == "ru" ? "Виды спорта" : "运动的",
       details: [
         {
           rating: "4",
-          transportationName: "Vineyards",
+          facilityName:
+            lang == "en"
+              ? "Golf Course"
+              : lang == "ru"
+              ? "Поле для гольфа"
+              : "高尔夫球场",
           distance: "3.7 mi",
         },
         {
           rating: "5",
-          transportationName: "Stargazing",
+          facilityName:
+            lang == "en"
+              ? "Outdoor Sports Park"
+              : lang == "ru"
+              ? "Открытый спортивный парк"
+              : "户外运动公园",
           distance: "3.7 mi",
         },
         {
           rating: "5",
-          transportationName: "Driving Range",
+          facilityName:
+            lang == "en"
+              ? "Sports Ground"
+              : lang == "ru"
+              ? "Спортивная площадка"
+              : "运动场",
           distance: "3.7 mi",
         },
         {
           rating: "5",
-          transportationName: "Ezousa Suites",
+          facilityName:
+            lang == "en"
+              ? "Equestrian Centre"
+              : lang == "ru"
+              ? "Конный центр"
+              : "马术中心",
+          distance: "3.7 mi",
+        },
+        {
+          rating: "5",
+          facilityName:
+            lang == "en"
+              ? "Kids Club"
+              : lang == "ru"
+              ? "Детский клуб"
+              : "儿童俱乐部",
+          distance: "3.7 mi",
+        },
+      ],
+    },
+    {
+      title: lang == "en" ? "Others" : lang == "ru" ? "Другие" : "其他的",
+      details: [
+        {
+          rating: "4",
+          transportationName:
+            lang == "en"
+              ? "Vineyards"
+              : lang == "ru"
+              ? "Виноградники"
+              : "葡萄园",
+          distance: "3.7 mi",
+        },
+        {
+          rating: "5",
+          transportationName:
+            lang == "en"
+              ? "Stargazing"
+              : lang == "ru"
+              ? "Наблюдение за звездами"
+              : "观星",
+          distance: "3.7 mi",
+        },
+        {
+          rating: "5",
+          transportationName:
+            lang == "en"
+              ? "Driving Range"
+              : lang == "ru"
+              ? "Вождение диапазон"
+              : "练习场",
+          distance: "3.7 mi",
+        },
+        {
+          rating: "5",
+          transportationName:
+            lang == "en"
+              ? "Ezousa Suites"
+              : lang == "ru"
+              ? "Эзуза Сьютс"
+              : "埃祖萨套房酒店",
           distance: "3.7 mi",
         },
       ],
@@ -118,7 +195,7 @@ const PropertyNearby = () => {
                   </div> */}
                   <div className="details">
                     <p className="dark-color fw600 mb-0">
-                      {tab.title === "Facilities"
+                      {index === 0
                         ? detail.schoolName
                         : detail.facilityName || detail.transportationName}
                     </p>

@@ -3,36 +3,6 @@
 "use client";
 import Image from "next/image";
 
-// const floorPlanData = [
-//   {
-//     id: "first-floor",
-//     title: "First Floor",
-//     size: "1267 Sqft",
-//     bedrooms: "2",
-//     bathrooms: "2",
-//     price: "$920,99",
-//     imageSrc: "/images/listings/listing-single-1.png",
-//   },
-//   {
-//     id: "second-floor",
-//     title: "Second Floor",
-//     size: "1267 Sqft",
-//     bedrooms: "2",
-//     bathrooms: "2",
-//     price: "$920,99",
-//     imageSrc: "/images/listings/listing-single-1.png",
-//   },
-//   {
-//     id: "third-floor",
-//     title: "Third Floor",
-//     size: "1267 Sqft",
-//     bedrooms: "2",
-//     bathrooms: "2",
-//     price: "$920,99",
-//     imageSrc: "/images/listings/listing-single-1.png",
-//   },
-// ];
-
 const FloorPlans = ({ floorDataRaw, id }) => {
   const floorData = JSON.parse(floorDataRaw);
 

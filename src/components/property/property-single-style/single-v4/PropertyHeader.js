@@ -1,9 +1,16 @@
 "use client";
 import BrochureDownload from "@/components/dialog/brochureDownload";
-import { Tooltip } from "@mui/material";
+import { Skeleton, Tooltip } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
-const PropertyHeader = ({ id, data, lang }) => {
+const PropertyHeader = ({
+  id,
+  data,
+  lang,
+  translatePage,
+  location,
+  loadingLocation,
+}) => {
   // const data = listings.filter((elm) => elm.id == id)[0] || listings[0];
   const copy = (url) => {
     const el = document.createElement("input");
@@ -71,11 +78,34 @@ const PropertyHeader = ({ id, data, lang }) => {
     }
   };
 
+  const [title, setTitle] = useState("");
+  const [loadingTitle, setLoadingTitle] = useState(true);
+
+  useEffect(() => {
+    setLoadingTitle(true);
+
+    if (lang != "en") {
+      translatePage(data.property, lang == "ch" ? "zh" : lang)
+        .then((res) => {
+          setTitle(res.translatedText);
+        })
+        .finally(() => setLoadingTitle(false));
+    } else {
+      setTitle(data.property);
+      setLoadingTitle(false);
+    }
+  }, [lang]);
+
   return (
     <>
       <div className="col-lg-8">
         <div className="single-property-content mb30-md">
-          <h2 className="sp-lg-title">{`${data.property}`}</h2>
+          {loadingTitle ? (
+            <Skeleton height={60} width={500} />
+          ) : (
+            <h2 className="sp-lg-title">{title}</h2>
+          )}
+
           <div className="pd-meta mb15 d-md-flex align-items-center">
             <p className="text fz15 mb-0 bdrr1 pr10 bdrrn-sm">
               {data.location}

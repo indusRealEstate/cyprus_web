@@ -2,54 +2,89 @@
 
 import React from "react";
 
-const PropertyDetails = ({ data }) => {
-  var formatter = new Intl.NumberFormat(undefined, {
-    style: "currency",
-    currency: "EUR",
-  });
+const PropertyDetails = ({ data, lang }) => {
+  const getPropFor = (purpose, lang) => {
+    switch (purpose) {
+      case purpose == "rent":
+        if (lang == "en") {
+          return "For Rent";
+        } else if (lang == "ru") {
+          return "В аренду";
+        } else {
+          return "出租";
+        }
+
+      case purpose == "sale":
+        if (lang == "en") {
+          return "For Sale";
+        } else if (lang == "ru") {
+          return "Продается";
+        } else {
+          return "出售";
+        }
+      default:
+        if (lang == "en") {
+          return "For Sale";
+        } else if (lang == "ru") {
+          return "Продается";
+        } else {
+          return "出售";
+        }
+    }
+  };
+
   const columns = [
     [
       {
-        label: "Property ID",
+        label:
+          lang == "en"
+            ? "Property ID"
+            : lang == "ru"
+            ? "Идентификатор объекта"
+            : "物业编号",
         value: data.prop_id,
       },
-      // {
-      // 	label: 'Price',
-      // 	value: formatter.format(data.price),
-      // },
       {
-        label: "Property Size",
+        label:
+          lang == "en"
+            ? "Property Size"
+            : lang == "ru"
+            ? "Размер недвижимости"
+            : "物业规模",
         value: data.total_area + " Sq M",
       },
       {
-        label: "Bathrooms",
+        label:
+          lang == "en" ? "Bathrooms" : lang == "ru" ? "Ванные комнаты" : "浴室",
         value: data.bath,
       },
       {
-        label: "Bedrooms",
+        label: lang == "en" ? "Bedrooms" : lang == "ru" ? "Спальни" : "卧室",
         value: data.bed,
       },
     ],
     [
       {
-        label: "Garage",
+        label: lang == "en" ? "Garage" : lang == "ru" ? "Гараж" : "车库",
         value: data.parking,
       },
-      //   {
-      //     label: "Garage Size",
-      //     value: data.parking_area + " Sqft",
-      //   },
-      //   {
-      //     label: "Year Built",
-      //     value: data.year_built,
-      //   },
       {
-        label: "Property Type",
+        label:
+          lang == "en"
+            ? "Property Type"
+            : lang == "ru"
+            ? "Тип недвижимости"
+            : "财产种类",
         value: data.unit_type,
       },
       {
-        label: "Property Status",
-        value: data.unit_purpose == "sale" ? "For Sale" : "For Rent",
+        label:
+          lang == "en"
+            ? "Property Status"
+            : lang == "ru"
+            ? "Статус недвижимости"
+            : "物业状况",
+        value: getPropFor(data.unit_purpose, lang),
       },
     ],
   ];

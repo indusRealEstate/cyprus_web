@@ -1,6 +1,6 @@
 import React from "react";
 
-const PropertyAddress = ({ data }) => {
+const PropertyAddress = ({ data, lang }) => {
   const addresses = [
     {
       address: data.location,
@@ -28,10 +28,26 @@ const PropertyAddress = ({ data }) => {
         >
           <div className="d-flex justify-content-between">
             <div className="pd-list">
-              <p className="fw600 mb10 ff-heading dark-color">Address</p>
-              <p className="fw600 mb10 ff-heading dark-color">Zip Code</p>
-              <p className="fw600 mb10 ff-heading dark-color">City</p>
-              <p className="fw600 mb-0 ff-heading dark-color">State/county</p>
+              <p className="fw600 mb10 ff-heading dark-color">
+                {lang == "en" ? "Address" : lang == "ru" ? "Адрес" : "地址"}
+              </p>
+              <p className="fw600 mb10 ff-heading dark-color">
+                {lang == "en"
+                  ? "Zip Code"
+                  : lang == "ru"
+                  ? "Почтовый индекс"
+                  : "邮政编码"}
+              </p>
+              <p className="fw600 mb10 ff-heading dark-color">
+                {lang == "en" ? "City" : lang == "ru" ? "Город" : "城市"}
+              </p>
+              <p className="fw600 mb-0 ff-heading dark-color">
+                {lang == "en"
+                  ? "State/county"
+                  : lang == "ru"
+                  ? "Штат / Страна"
+                  : "州/县"}
+              </p>
             </div>
             <div className="pd-list">
               <p className="text mb10">{address.address}</p>

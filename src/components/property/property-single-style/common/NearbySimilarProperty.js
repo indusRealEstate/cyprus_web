@@ -5,6 +5,7 @@ import { getAllListings } from "@/api";
 import { Skeleton } from "@mui/material";
 import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Navigation, Pagination } from "swiper";
@@ -12,19 +13,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 
 const NearbySimilarProperty = () => {
-  var formatter = new Intl.NumberFormat(undefined, {
-    style: "currency",
-    currency: "EUR",
-  });
   const [data, setData] = useState([]);
-  const [loaded, setLoaded] = useState([]);
 
-  useEffect(() => {}, [loaded]);
   useEffect(() => {
     getAllListings().then((res) => {
       setData(res);
     });
-  }, [data]);
+  }, []);
 
   if (data.length == 0) {
     return (
@@ -84,46 +79,17 @@ const NearbySimilarProperty = () => {
                         height: "15rem",
                       }}
                     >
-                      {!loaded.includes(listing.id) && (
-                        <Skeleton
-                          // sx={{ bgcolor: "grey.100" }}
-                          variant="rectangular"
-                          width={420}
-                          height={240}
-                        />
-                      )}
-                      <img
+                      <Image
                         id={listing.id}
                         width={382}
                         height={248}
-                        className={`${
-                          !loaded.includes(listing.id)
-                            ? "opacity-0 position-absolute w-100 h-100 cover"
-                            : "opacity-100 w-100 h-100 cover"
-                        }}`}
+                        className={`opacity-100 w-100 h-100 cover`}
                         // className="w-100 h-100 cover"
                         src={`https://alsimatower.ae/int_web_api/media/listings/${
                           listing.prop_id
                         }/media/${JSON.parse(listing.images)[0]}`}
                         alt="listings"
-                        onLoad={() => {
-                          if (!loaded.includes(listing.id)) {
-                            loaded.push(listing.id);
-                            setLoaded(loaded);
-                          }
-                        }}
                       />
-                      {/* <div className="sale-sticker-wrap">
-                      {listing.highlight && (
-                        <div className="list-tag rounded-0 fz12">
-                          <span className="flaticon-electricity" />
-                          FEATURED
-                        </div>
-                      )}
-                    </div> */}
-                      {/* <div className="list-price">
-                        {formatter.format(listing.price)}
-                      </div> */}
                     </div>
                     <div className="list-content">
                       <h6 className="list-title">
