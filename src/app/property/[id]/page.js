@@ -6,20 +6,20 @@ import PropertyGallery from "@/components/property/property-single-style/single-
 
 import PropertyDetailsContent from "./contents";
 
-// export async function generateStaticParams() {
-//   // Call an external API endpoint to get posts
-//   const res = await fetch(
-//     `https://alsimatower.ae/int_web_api/listings/get_all_listings.php`,
-//     {
-//       method: "GET",
-//     }
-//   );
-//   const props = await res.json();
+export async function generateStaticParams() {
+  // Call an external API endpoint to get posts
+  const res = await fetch(
+    `https://alsimatower.ae/int_web_api/listings/get_all_listings.php`,
+    {
+      method: "GET",
+    }
+  );
+  const props = await res.json();
 
-//   return props.map((p) => ({
-//     id: p.prop_id,
-//   }));
-// }
+  return props.map((p) => ({
+    id: p.prop_id,
+  }));
+}
 
 export async function generateMetadata({ params }) {
   const staticData = await fetch(
