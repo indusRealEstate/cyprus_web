@@ -24,20 +24,19 @@ export const en_tr = {
             { href: "/cyprus/neo", label: "Neo" },
           ],
         },
-        {
-          label: "Greece",
-          subMenuItems: [
-            { href: "/cyprus/minthis", label: "Minthis" },
-            { href: "/cyprus/one", label: "One" },
-            { href: "/cyprus/neo", label: "Neo" },
-          ],
-        },
+        // {
+        //   label: "Greece",
+        //   subMenuItems: [
+        //     { href: "/cyprus/minthis", label: "Minthis" },
+        //     { href: "/cyprus/one", label: "One" },
+        //     { href: "/cyprus/neo", label: "Neo" },
+        //   ],
+        // },
         {
           label: "Oman",
           subMenuItems: [
-            { href: "/cyprus/minthis", label: "Minthis" },
-            { href: "/cyprus/one", label: "One" },
-            { href: "/cyprus/neo", label: "Neo" },
+            { href: "/oman/blue-city", label: "Blue City" },
+            { href: "/oman/waves", label: "Waves" },
           ],
         },
       ],
@@ -75,26 +74,74 @@ export const en_tr = {
       prop_id: "MI-TOPOS-ALTO-01",
     },
   ],
-  why_cyprus: {
-    heading: "Why Cyprus",
-    sub_heading:
-      "A unique and unrivalled proposition for investing and living, the full EU-member of Cyprus is poised on the cusp of three continents – namely, Europe, Africa, and Asia – and enjoys the bounty of this exclusive position that no other country can boast.",
-    point_1: {
-      heading: "Permanent Residency",
-      desc: "A permanent residency visa can easily be obtained.It gives you and your family the right to live freely and travel with ease throughout the EU. Permit holders also have the right to own a business in Cyprus or set up a Cyprus company for trading with excellent tax advantages.",
-    },
-    point_2: {
-      heading: "Low Cost Of Living",
-      desc: "The cost of living in Nicosia and Paphos is 10—15% lower. In general, you would need €3,000 without rent a month in Limassol, €2,700 in Nicosia and €2,600 in Paphos. Cyprus's cities are more affordable than British and USA cities. Living in Cyprus can be beneficial for many reasons.",
-    },
-    point_3: {
-      heading: "High Educational Standards",
-      desc: "Cyprus places a great deal of value on Higher Education. The country has one of the highest tertiary educational attainment rate in the EU with 58.3 % of 30-34 year olds having a Higher Education degree in 2021 (EU average: 41.2 %).",
-    },
 
-    btn_text_1: "Explore",
-    btn_text_2: "Properties",
-  },
+  why_choose: [
+    {
+      heading: "Why Cyprus",
+      sub_heading:
+        "A unique and unrivalled proposition for investing and living, the full EU-member of Cyprus is poised on the cusp of three continents – namely, Europe, Africa, and Asia – and enjoys the bounty of this exclusive position that no other country can boast.",
+      point_1: {
+        heading: "Permanent Residency",
+        desc: "A permanent residency visa can easily be obtained.It gives you and your family the right to live freely and travel with ease throughout the EU. Permit holders also have the right to own a business in Cyprus or set up a Cyprus company for trading with excellent tax advantages.",
+      },
+      point_2: {
+        heading: "Low Cost Of Living",
+        desc: "The cost of living in Nicosia and Paphos is 10—15% lower. In general, you would need €3,000 without rent a month in Limassol, €2,700 in Nicosia and €2,600 in Paphos. Cyprus's cities are more affordable than British and USA cities. Living in Cyprus can be beneficial for many reasons.",
+      },
+      point_3: {
+        heading: "High Educational Standards",
+        desc: "Cyprus places a great deal of value on Higher Education. The country has one of the highest tertiary educational attainment rate in the EU with 58.3 % of 30-34 year olds having a Higher Education degree in 2021 (EU average: 41.2 %).",
+      },
+
+      btn_text_1: "Explore",
+      btn_text_2: "Properties",
+      img: "/images/why-cyrpus-img.webp",
+    },
+    {
+      heading: "Why Greece",
+      sub_heading:
+        "Athens, Greece's vibrant capital, boasts rich history, unique neighborhoods like Exarhia, Plaka's historical charm, Gazi's nightlife, and Kolonaki's trendy shopping.",
+      point_1: {
+        heading: "Efficient Processing",
+        desc: "Real estate acquisition in Greece offers a streamlined process with a notably quick turnaround time of approximately two months. This expedites the investment procedure for those seeking residency or citizenship.",
+      },
+      point_2: {
+        heading: "Inclusive Family Benefits",
+        desc: "Greek real estate residency permits extend to all family members, encompassing children up to the age of 21 and the parents of both spouses. This inclusivity simplifies the application process and allows for broader family involvement.",
+      },
+      point_3: {
+        heading: "EU Mobility and Citizenship Opportunity",
+        desc: "Acquiring property in Greece not only grants residency benefits but also opens doors to visa-free travel across Schengen countries. Moreover, it provides the pathway for individuals to apply for EU citizenship, offering expanded opportunities within the European Union.",
+      },
+
+      btn_text_1: "Explore",
+      btn_text_2: "Properties",
+      img: "/images/why-greece.webp",
+    },
+    {
+      heading: "Why Oman",
+      sub_heading:
+        "Oman’s real estate market has seen steady growth over the past two years, driven by a notable increase in the expatriate population and continuing strategic investment in the economy. These are among the key findings from the newly-released Oman Property Report 2023, compiled by Savills.",
+      point_1: {
+        heading: "Foreign Investment Facilitation through Freehold Ownership",
+        desc: "The government's move to allow freehold ownership for foreigners in Oman is a significant step to encourage foreign investment in properties. This policy change enables non-residents to own properties, thereby boosting investment opportunities and potentially expanding the real estate market.",
+      },
+      point_2: {
+        heading:
+          "Stability and Growth Driven by Expatriate Population and Infrastructure Investments",
+        desc: "Oman's increasing expatriate community and substantial government investments in infrastructure projects have contributed to the steady growth of both commercial and residential property values. The influx of expatriates has positively impacted the real estate sector, providing stability and growth prospects.",
+      },
+      point_3: {
+        heading:
+          "Infrastructure Development Impacting Transportation and Real Estate",
+        desc: "With the ongoing development of railways and metro systems, Oman's real estate market is expected to witness significant changes. The expansion of transportation networks often correlates with increased property demand and value appreciation, presenting potential opportunities for investors and developers to capitalize on emerging areas.",
+      },
+
+      btn_text_1: "Explore",
+      btn_text_2: "Properties",
+      img: "/images/why-oman.webp",
+    },
+  ],
 
   property_collections_home: {
     heading: "Latest Projects in Cyprus",
@@ -250,7 +297,7 @@ export const en_tr = {
   },
 
   latest_projects_minthis: {
-    bread_crumb_1: "Featured Properties Collection",
+    bread_crumb_1: "Featured Projects",
     bread_crumb_2: "Minthis",
     title: "Minthis: Effortless Luxury Living",
     subtitle:
@@ -291,7 +338,7 @@ export const en_tr = {
   },
 
   latest_projects_one: {
-    bread_crumb_1: "Featured Properties Collection",
+    bread_crumb_1: "Featured Projects",
     bread_crumb_2: "ONE",
     title: "ONE Limassol Tower",
     subtitle:
@@ -333,7 +380,7 @@ export const en_tr = {
   },
 
   latest_projects_neo: {
-    bread_crumb_1: "Featured Properties Collection",
+    bread_crumb_1: "Featured Projects",
     bread_crumb_2: "NEO",
     title: "NEO: Between the Sky and the Sea",
     subtitle_1: "A new home.",
@@ -363,6 +410,80 @@ export const en_tr = {
         title: "Set on the Limassol shoreline",
         description:
           "On the rooftop, the pool is framed by soothing natural tones, plants and native trees, surrounded by a vista of the sea and gardens below.",
+      },
+    ],
+  },
+
+  oman_projects_blue_city: {
+    bread_crumb_1: "Featured Projects",
+    bread_crumb_2: "Blue City",
+    title: "Great Blue City Development",
+    subtitle:
+      "As one of the largest scale developments in the Middle East; this iconic project comprises residential, commercial, light industrial, institutional, and municipal developments.",
+    subtitle_2:
+      "Al-Madina Al-Zarqa is a 32-square-kilometer waterfront city built along 16 kilometers of coastline. The city is located in the vicinity of the Gulf of Oman; 45 minutes from Muscat Seeb Airport.",
+    para_1:
+      "Undertaken by AKTOR & ENKA Joint Venture the Blue City project was primarily a residential and tourism development with leisure and retail elements in Muscat Al-Sawadi Region in Oman. The project was aimed to create a city of world renown as a landmark for the Sultanate for the 21st century onwards.",
+    para_2:
+      "The project’s scope of work included: design, engineering, procurement and construction work for three 5-star and one 4-star hotels, 4,991 apartments and 202 villas, two Professional Golfers’ Association (PGA) world class golf courses, one with 18 and the other with 9 holes including their club house, tourist and heritage villages, one amphitheater podium with gallery & retail units, shopping complex, entertainment and public amenity units such as a primary school, nursery, kindergarten, health centre, police station, fire house, post office and a mosque and all their related modern city infrastructure and landscaping over an area totaling 5.4 km² with 1.7 million m² approximate total gross floor area, which was 15.8% of the overall projected final site land.",
+    para_3:
+      "An intelligent, elegant layout was devised for the development, which was served by a network of broad boulevards, access roads and parking spaces complete with promenades, wide squares, public parks and green areas, giving residents a feeling of openness and space.",
+    para_4:
+      "Furthermore, in compliance with its location, the design character of the hotels and the residences reflected and integrated a combination of traditional Omani and modern styles. The Blue City was composed of eight sections, all reflected different types of design, and all afforded sweeping Gulf views of follow the beautiful green expanse of the golf courses.",
+    features: [
+      {
+        icon: "flaticon-garden",
+        title: "Luxury Villas",
+        description:
+          "Luxury Villas comprising 100 luxurious villas with an approximate BUA of 7,500 m2",
+      },
+      {
+        icon: "flaticon-location",
+        title: "Lagoon Villas",
+        description:
+          "Lagoon Villas comprising 202 villas with a total BUA of 77,300 m2",
+      },
+      {
+        icon: "flaticon-investment",
+        title: "5-Star Hotel",
+        description:
+          "5-Star Hotel occupying a plot area of 26,000 m2 and accommodating up to 135 rooms accompanied by luxurious hotel suites, with a total BUA of 15,000 m2",
+      },
+    ],
+  },
+
+  oman_projects_waves: {
+    bread_crumb_1: "Featured Projects",
+    bread_crumb_2: "Al Mouj Muscat, Muscat Hills",
+    title: "Beyond Imagination",
+    subtitle:
+      "The exceptionally exclusive Golf Beach Residences is a select collection of spectacular oceanfront mansions and fabulous beachside villas situated in Al Mouj Muscat’s idyllic Shatti and Golf Districts.",
+    para_1:
+      "With an oceanfront environment, Al Hajar Mountains as its backdrop and a location adjacent to both Al Mouj Golf and St. Regis Al Mouj Muscat Resort, Golf Beach Residences offers much more than beautiful homes - it opens up a world of premium lifestyle opporutnities.",
+    para_2:
+      "Elegantly situated alongside a picturesque private avenue, these exceptional properties impress from the very first moment - surpassing all expectations with their contemporary luxury and elegant style",
+    para_3:
+      "Inspired by their verdant setting and meticulously designed with an uncompromising focus on luxury and exclusivity, these exceptional villas are stunning symphonies of elegant style and sophistication. Perfectly armonising light and space, indoor and outdoor living, family life and formal occasions, Golf Park Villas create a perfect environment for every element of modern life.",
+    para_4:
+      "Lying on Muscats’ Sea of Oman coast in the Shatti district of Al Mouj, this group of spectacular oceanfront mansions and villas has access to 6km of verdant water frontage featuring cycling trails, play areas, cafes and an 18 hole golf course.",
+    features: [
+      {
+        icon: "flaticon-garden",
+        title: "Prime Coastal Development",
+        description:
+          "Al Mouj Muscat and Muscat Hills stand out as premier coastal projects, spanning across 1.1 million square meters of pristine shoreline. This expansive stretch provides an idyllic setting for luxurious living and tourism ventures.",
+      },
+      {
+        icon: "flaticon-location",
+        title: "Strategic Collaborations",
+        description:
+          "Backed by partnerships with third-party entities like Majid Al Futtaim, Oman Waterfront Company, and the National Investment Funds Company, Al Mouj Muscat, Muscat Hills, and other Integrated Tourism Complexes (ITCs) ensure a transparent investment process. These collaborations prioritize customer interests while streamlining property ownership for foreigners.",
+      },
+      {
+        icon: "flaticon-investment",
+        title: "Exclusive Residences and Amenities",
+        description:
+          "With a vast array of offerings, including 4,000 townhouses and the provision of 24 citizenships, these developments are not just about residences but also about lifestyle. The presence of four hotels, a golf club, and a marina within the vicinity accentuates the allure of these projects, promising a sophisticated and complete living experience.",
       },
     ],
   },
@@ -403,20 +524,19 @@ export const ru_tr = {
             { href: "/cyprus/neo", label: "Neo" },
           ],
         },
-        {
-          label: "Greece",
-          subMenuItems: [
-            { href: "/cyprus/minthis", label: "Minthis" },
-            { href: "/cyprus/one", label: "One" },
-            { href: "/cyprus/neo", label: "Neo" },
-          ],
-        },
+        // {
+        //   label: "Greece",
+        //   subMenuItems: [
+        //     { href: "/cyprus/minthis", label: "Minthis" },
+        //     { href: "/cyprus/one", label: "One" },
+        //     { href: "/cyprus/neo", label: "Neo" },
+        //   ],
+        // },
         {
           label: "Oman",
           subMenuItems: [
-            { href: "/cyprus/minthis", label: "Minthis" },
-            { href: "/cyprus/one", label: "One" },
-            { href: "/cyprus/neo", label: "Neo" },
+            { href: "/oman/blue-city", label: "Blue City" },
+            { href: "/oman/waves", label: "Waves" },
           ],
         },
       ],
@@ -455,26 +575,76 @@ export const ru_tr = {
       prop_id: "MI-TOPOS-ALTO-01",
     },
   ],
-  why_cyprus: {
-    heading: "Почему Кипр",
-    sub_heading:
-      "Кипр, являющийся уникальным и непревзойденным предложением для инвестиций и проживания, полноправный член ЕС, расположен на стыке трех континентов – а именно, Европы, Африки и Азии – и наслаждается этим исключительным положением, которым не может похвастаться ни одна другая страна.",
-    point_1: {
-      heading: "Постоянное место жительства",
-      desc: "Визу постоянного проживания можно легко получить. Она дает вам и вашей семье право свободно жить и с легкостью путешествовать по всему ЕС. Обладатели разрешений также имеют право владеть бизнесом на Кипре или создать кипрскую компанию для торговли с отличными налоговыми преимуществами.",
-    },
-    point_2: {
-      heading: "Низкая стоимость жизни",
-      desc: "Стоимость жизни в Никосии и Пафосе ниже на 10—15%. В целом вам понадобится 3000 евро без аренды в месяц в Лимассоле, 2700 евро в Никосии и 2600 евро в Пафосе. Города Кипра более доступны по цене, чем города Великобритании и США. Жить на Кипре может быть выгодно по многим причинам.",
-    },
-    point_3: {
-      heading: "Высокие образовательные стандарты",
-      desc: "Кипр придает большое значение высшему образованию. В стране один из самых высоких показателей получения высшего образования в ЕС: в 2021 году 58,3% людей в возрасте 30–34 лет имели высшее образование (средний показатель по ЕС: 41,2%).",
-    },
 
-    btn_text_1: "Исследовать",
-    btn_text_2: "Характеристики",
-  },
+  why_choose: [
+    {
+      heading: "Почему Кипр",
+      sub_heading:
+        "Кипр, являющийся уникальным и непревзойденным предложением для инвестиций и проживания, полноправный член ЕС, расположен на стыке трех континентов – а именно, Европы, Африки и Азии – и наслаждается этим исключительным положением, которым не может похвастаться ни одна другая страна.",
+      point_1: {
+        heading: "Постоянное место жительства",
+        desc: "Визу постоянного проживания можно легко получить. Она дает вам и вашей семье право свободно жить и с легкостью путешествовать по всему ЕС. Обладатели разрешений также имеют право владеть бизнесом на Кипре или создать кипрскую компанию для торговли с отличными налоговыми преимуществами.",
+      },
+      point_2: {
+        heading: "Низкая стоимость жизни",
+        desc: "Стоимость жизни в Никосии и Пафосе ниже на 10—15%. В целом вам понадобится 3000 евро без аренды в месяц в Лимассоле, 2700 евро в Никосии и 2600 евро в Пафосе. Города Кипра более доступны по цене, чем города Великобритании и США. Жить на Кипре может быть выгодно по многим причинам.",
+      },
+      point_3: {
+        heading: "Высокие образовательные стандарты",
+        desc: "Кипр придает большое значение высшему образованию. В стране один из самых высоких показателей получения высшего образования в ЕС: в 2021 году 58,3% людей в возрасте 30–34 лет имели высшее образование (средний показатель по ЕС: 41,2%).",
+      },
+
+      btn_text_1: "Исследовать",
+      btn_text_2: "Характеристики",
+      img: "/images/why-cyrpus-img.webp",
+    },
+    {
+      heading: "Почему Греция",
+      sub_heading:
+        "Афины, оживленная столица Греции, могут похвастаться богатой историей, уникальными районами, такими как Экзархия, историческим очарованием Плаки, ночной жизнью Гази и модными магазинами Колонаки.",
+      point_1: {
+        heading: "Эффективная обработка",
+        desc: "Приобретение недвижимости в Греции представляет собой упрощенный процесс с очень быстрым сроком выполнения — примерно два месяца. Это ускоряет процедуру инвестирования для тех, кто ищет вид на жительство или гражданство.",
+      },
+      point_2: {
+        heading: "Инклюзивные семейные преимущества",
+        desc: "Вид на жительство в Греции распространяется на всех членов семьи, включая детей до 21 года и родителей обоих супругов. Такая инклюзивность упрощает процесс подачи заявления и обеспечивает более широкое участие семьи.",
+      },
+      point_3: {
+        heading: "Возможности мобильности и гражданства ЕС",
+        desc: "Приобретение недвижимости в Греции не только дает право на получение вида на жительство, но и открывает двери для безвизового путешествия по странам Шенгенской зоны. Более того, он предоставляет людям возможность подать заявление на получение гражданства ЕС, предлагая расширенные возможности внутри Европейского Союза.",
+      },
+
+      btn_text_1: "Исследовать",
+      btn_text_2: "Характеристики",
+      img: "/images/why-greece.webp",
+    },
+    {
+      heading: "Почему Оман",
+      sub_heading:
+        "На рынке недвижимости Омана в течение последних двух лет наблюдался устойчивый рост, обусловленный заметным увеличением числа иностранцев и продолжающимися стратегическими инвестициями в экономику. Это одни из ключевых выводов недавно опубликованного Отчета о недвижимости Омана за 2023 год, составленного Savills.",
+      point_1: {
+        heading:
+          "Содействие иностранным инвестициям посредством безусловного владения",
+        desc: "Решение правительства разрешить иностранцам в Омане право собственности на недвижимость является важным шагом для поощрения иностранных инвестиций в недвижимость. Это изменение политики позволяет нерезидентам владеть недвижимостью, тем самым увеличивая инвестиционные возможности и потенциально расширяя рынок недвижимости.",
+      },
+      point_2: {
+        heading:
+          "Стабильность и рост, обусловленные иностранным населением и инвестициями в инфраструктуру",
+        desc: "Растущее число иностранцев в Омане и значительные государственные инвестиции в инфраструктурные проекты способствовали устойчивому росту стоимости как коммерческой, так и жилой недвижимости. Приток экспатриантов положительно повлиял на сектор недвижимости, обеспечив стабильность и перспективы роста.",
+      },
+      point_3: {
+        heading:
+          "Развитие инфраструктуры, влияющее на транспорт и недвижимость",
+        desc: "Ожидается, что в связи с продолжающимся развитием железных дорог и систем метро на рынке недвижимости Омана произойдут значительные изменения. Расширение транспортных сетей часто коррелирует с ростом спроса на недвижимость и повышением ее стоимости, предоставляя инвесторам и застройщикам потенциальные возможности для извлечения выгоды из развивающихся областей.",
+      },
+
+      btn_text_1: "Исследовать",
+      btn_text_2: "Характеристики",
+      img: "/images/why-oman.webp",
+    },
+  ],
+
   property_collections_home: {
     heading: "Последние проекты на Кипре",
     sub_heading:
@@ -628,7 +798,7 @@ export const ru_tr = {
   },
 
   latest_projects_minthis: {
-    bread_crumb_1: "Коллекция избранных объектов недвижимости",
+    bread_crumb_1: "Рекомендуемые проекты",
     bread_crumb_2: "Минтис",
     title: "Минтис: роскошная жизнь без усилий",
     subtitle:
@@ -745,6 +915,80 @@ export const ru_tr = {
     ],
   },
 
+  oman_projects_blue_city: {
+    bread_crumb_1: "Рекомендуемые проекты",
+    bread_crumb_2: "Blue City",
+    title: "Развитие Великого Голубого города",
+    subtitle:
+      "Как одно из крупнейших событий на Ближнем Востоке; Этот культовый проект включает в себя жилые, коммерческие, легкие промышленные, институциональные и муниципальные объекты.",
+    subtitle_2:
+      "Аль-Мадина Аль-Зарка — прибрежный город площадью 32 квадратных километра, построенный вдоль 16 километров береговой линии. Город расположен недалеко от Оманского залива; 45 минут от аэропорта Маскат Сиб.",
+    para_1:
+      "Проект «Голубой город», реализованный совместным предприятием «АКТОР» и «ЭНКА», представлял собой в первую очередь жилой и туристический комплекс с элементами досуга и розничной торговли в регионе Маскат Аль-Савади в Омане. Целью проекта было создание города с мировым именем как ориентира Султаната в XXI веке.",
+    para_2:
+      "В объем работ проекта входили: проектирование, проектирование, закупки и строительные работы для трех 5-звездочных и одного 4-звездочного отеля, 4991 апартаментов и 202 вилл, двух полей для гольфа мирового класса Ассоциации профессиональных игроков в гольф (PGA), одного с 18 и другой с 9 лунками, включая клуб, туристические и исторические деревни, один подиум-амфитеатр с галереей и торговыми помещениями, торговый комплекс, развлекательные и общественные объекты, такие как начальная школа, детский сад, детский сад, медицинский центр, полицейский участок, пожарная часть. , почтовое отделение и мечеть, а также всю связанную с ними современную городскую инфраструктуру и ландшафтный дизайн на общей площади 5,4 км² с приблизительной общей общей площадью 1,7 миллиона м², что составляет 15,8% от общей проектируемой площади конечного участка.",
+    para_3:
+      "Для застройки была разработана продуманная и элегантная планировка, которая обслуживалась сетью широких бульваров, подъездных дорог и парковочных мест, а также променадами, широкими площадями, общественными парками и зелеными зонами, что давало жителям ощущение открытости и пространства.",
+    para_4:
+      "Кроме того, в соответствии с расположением, дизайн отелей и резиденций отражает и объединяет сочетание традиционного оманского и современного стилей. «Голубой город» состоял из восьми секций, каждая из которых отражала разные типы дизайна, и из каждой открывался потрясающий вид на залив и красивые зеленые просторы полей для гольфа.",
+    features: [
+      {
+        icon: "flaticon-garden",
+        title: "Роскошные виллы",
+        description:
+          "Роскошные виллы, состоящие из 100 роскошных вилл общей площадью 7500 м2.",
+      },
+      {
+        icon: "flaticon-location",
+        title: "Виллы в лагуне",
+        description:
+          "Lagoon Villas состоит из 202 вилл общей площадью 77 300 м2.",
+      },
+      {
+        icon: "flaticon-investment",
+        title: "5-звездочный отель",
+        description:
+          "5-звездочный отель, занимающий участок площадью 26 000 м2 и вмещающий до 135 номеров, а также роскошные гостиничные люксы, общей площадью 15 000 м2.",
+      },
+    ],
+  },
+
+  oman_projects_waves: {
+    bread_crumb_1: "Рекомендуемые проекты",
+    bread_crumb_2: "Al Mouj Muscat, Muscat Hills",
+    title: "За гранью воображения",
+    subtitle:
+      "Исключительно эксклюзивные Golf Beach Residences представляют собой избранную коллекцию впечатляющих особняков на берегу океана и великолепных пляжных вилл, расположенных в идиллических районах Шатти и Гольф Аль-Мудж Маскат.",
+    para_1:
+      "Golf Beach Residences, расположенный на берегу океана, на фоне гор Аль-Хаджар и рядом с гольф-полем Al Mouj и курортом St. Regis Al Mouj Muscat, предлагает гораздо больше, чем просто красивые дома — он открывает мир возможностей для образа жизни премиум-класса.",
+    para_2:
+      "Эти исключительные объекты недвижимости, элегантно расположенные рядом с живописным частным проспектом, впечатляют с самого первого момента, превосходя все ожидания своей современной роскошью и элегантным стилем.",
+    para_3:
+      "Эти исключительные виллы, вдохновленные своей зеленой обстановкой и тщательно спроектированные с бескомпромиссным акцентом на роскошь и эксклюзивность, представляют собой потрясающую симфонию элегантного стиля и изысканности. Идеально гармонизируя свет и пространство, проживание в помещении и на открытом воздухе, семейную жизнь и официальные мероприятия, виллы Golf Park создают идеальную среду для каждого элемента современной жизни.",
+    para_4:
+      "Эта группа впечатляющих особняков и вилл на берегу океана, расположенная на побережье Оманского моря Маскат в районе Шатти в Аль-Мудже, имеет доступ к 6-километровой зеленой набережной с велосипедными дорожками, игровыми площадками, кафе и 18-луночным полем для гольфа.",
+    features: [
+      {
+        icon: "flaticon-garden",
+        title: "Премьер прибрежное развитие",
+        description:
+          "Аль-Мудж Маскат и Маскат-Хиллз выделяются как ведущие прибрежные проекты, охватывающие 1,1 миллиона квадратных метров нетронутой береговой линии. Этот обширный участок представляет собой идиллическую обстановку для роскошной жизни и туризма.",
+      },
+      {
+        icon: "flaticon-location",
+        title: "Стратегическое сотрудничество",
+        description:
+          "Опираясь на партнерские отношения со сторонними организациями, такими как Маджид Аль-Футтайм, Oman Waterfront Company и Национальная инвестиционная компания, Al Mouj Muscat, Muscat Hills и другие интегрированные туристические комплексы (ITC) обеспечивают прозрачный инвестиционный процесс. Это сотрудничество ставит во главу угла интересы клиентов и упрощает владение недвижимостью для иностранцев.",
+      },
+      {
+        icon: "flaticon-investment",
+        title: "Эксклюзивные резиденции и удобства",
+        description:
+          "Благодаря широкому спектру предложений, включая 4000 таунхаусов и предоставлению 24 гражданств, эти разработки касаются не только жилья, но и образа жизни. Наличие четырех отелей, гольф-клуба и пристани для яхт в непосредственной близости подчеркивает привлекательность этих проектов, обещая изысканный и полный жизненный опыт.",
+      },
+    ],
+  },
+
   contact_page: {
     form_title: "Есть вопросы? Связаться!",
     title_part_1: "Нам бы хотелось услышать",
@@ -781,20 +1025,19 @@ export const ch_tr = {
             { href: "/cyprus/neo", label: "Neo" },
           ],
         },
-        {
-          label: "Greece",
-          subMenuItems: [
-            { href: "/cyprus/minthis", label: "Minthis" },
-            { href: "/cyprus/one", label: "One" },
-            { href: "/cyprus/neo", label: "Neo" },
-          ],
-        },
+        // {
+        //   label: "Greece",
+        //   subMenuItems: [
+        //     { href: "/cyprus/minthis", label: "Minthis" },
+        //     { href: "/cyprus/one", label: "One" },
+        //     { href: "/cyprus/neo", label: "Neo" },
+        //   ],
+        // },
         {
           label: "Oman",
           subMenuItems: [
-            { href: "/cyprus/minthis", label: "Minthis" },
-            { href: "/cyprus/one", label: "One" },
-            { href: "/cyprus/neo", label: "Neo" },
+            { href: "/oman/blue-city", label: "Blue City" },
+            { href: "/oman/waves", label: "Waves" },
           ],
         },
       ],
@@ -832,26 +1075,71 @@ export const ch_tr = {
       prop_id: "MI-TOPOS-ALTO-01",
     },
   ],
-  why_cyprus: {
-    heading: "为什么选择塞浦路斯",
-    sub_heading:
-      "塞浦路斯作为欧盟正式成员国，处于欧洲、非洲和亚洲三大洲的交汇点，是投资和生活的独特而无与伦比的主张，并享有其他国家无法夸耀的独特地位。",
-    point_1: {
-      heading: "永久居留",
-      desc: "永久居留签证很容易获得。它使您和您的家人有权在整个欧盟自由生活和轻松旅行。许可证持有者还有权在塞浦路斯拥有企业或设立塞浦路斯公司进行贸易，并享有良好的税收优惠。",
-    },
-    point_2: {
-      heading: "生活成本低",
-      desc: "尼科西亚和帕福斯的生活成本低 10-15%。一般来说，利马索尔每月需要 3,000 欧元（不含租金），尼科西亚为 2,700 欧元，帕福斯为 2,600 欧元。塞浦路斯的城市比英国和美国的城市更便宜。居住在塞浦路斯有很多好处。",
-    },
-    point_3: {
-      heading: "高教育标准",
-      desc: "塞浦路斯非常重视高等教育。该国是欧盟高等教育普及率最高的国家之一，2021 年 30-34 岁人群中 58.3% 的人拥有高等教育学位（欧盟平均水平：41.2%）。",
-    },
+  why_choose: [
+    {
+      heading: "为什么选择塞浦路斯",
+      sub_heading:
+        "塞浦路斯作为欧盟正式成员国，处于欧洲、非洲和亚洲三大洲的交汇点，是投资和生活的独特而无与伦比的主张，并享有其他国家无法夸耀的独特地位。",
+      point_1: {
+        heading: "永久居留",
+        desc: "永久居留签证很容易获得。它使您和您的家人有权在整个欧盟自由生活和轻松旅行。许可证持有者还有权在塞浦路斯拥有企业或设立塞浦路斯公司进行贸易，并享有良好的税收优惠。",
+      },
+      point_2: {
+        heading: "生活成本低",
+        desc: "尼科西亚和帕福斯的生活成本低 10-15%。一般来说，利马索尔每月需要 3,000 欧元（不含租金），尼科西亚为 2,700 欧元，帕福斯为 2,600 欧元。塞浦路斯的城市比英国和美国的城市更便宜。居住在塞浦路斯有很多好处。",
+      },
+      point_3: {
+        heading: "高教育标准",
+        desc: "塞浦路斯非常重视高等教育。该国是欧盟高等教育普及率最高的国家之一，2021 年 30-34 岁人群中 58.3% 的人拥有高等教育学位（欧盟平均水平：41.2%）。",
+      },
 
-    btn_text_1: "探索",
-    btn_text_2: "特性",
-  },
+      btn_text_1: "探索",
+      btn_text_2: "特性",
+      img: "/images/why-cyrpus-img.webp",
+    },
+    {
+      heading: "为什么选择希腊",
+      sub_heading:
+        "雅典是希腊充满活力的首都，拥有丰富的历史、Exarhia 等独特的街区、普拉卡的历史魅力、加齐的夜生活以及柯洛纳基的时尚购物场所。",
+      point_1: {
+        heading: "高效处理",
+        desc: "希腊的房地产收购提供了简化的流程，周转时间非常快，约为两个月。这加快了那些寻求居留权或公民身份的人的投资程序。",
+      },
+      point_2: {
+        heading: "包容性家庭福利",
+        desc: "希腊房地产居留许可适用于所有家庭成员，包括 21 岁以下的子女以及配偶双方的父母。这种包容性简化了申请流程，并允许更广泛的家庭参与。",
+      },
+      point_3: {
+        heading: "欧盟流动性和公民机会",
+        desc: "在希腊购买房产不仅可以获得居住福利，还为申根国家免签证旅行打开了大门。此外，它还为个人申请欧盟公民身份提供了途径，从而在欧盟范围内提供了更多的机会。",
+      },
+
+      btn_text_1: "探索",
+      btn_text_2: "特性",
+      img: "/images/why-greece.webp",
+    },
+    {
+      heading: "为什么选择阿曼",
+      sub_heading:
+        "在外籍人口显着增加和经济持续战略投资的推动下，阿曼房地产市场在过去两年稳步增长。这些是第一太平戴维斯 (Savills) 编制的新发布的《2023 年阿曼房地产报告》的主要发现之一。",
+      point_1: {
+        heading: "通过永久业权促进外国投资",
+        desc: "政府允许外国人在阿曼拥有永久业权的举措是鼓励外国投资房地产的重要一步。这一政策变化使非居民能够拥有房产，从而增加投资机会并有可能扩大房地产市场。",
+      },
+      point_2: {
+        heading: "外籍人口和基础设施投资推动稳定和增长",
+        desc: "阿曼不断增加的外籍人士社区和政府对基础设施项目的大量投资促进了商业和住宅房地产价值的稳定增长。外籍人士的涌入对房地产行业产生了积极影响，提供了稳定性和增长前景。",
+      },
+      point_3: {
+        heading: "基础设施发展影响交通和房地产",
+        desc: "随着铁路和地铁系统的不断发展，阿曼的房地产市场预计将发生重大变化。交通网络的扩张通常与房地产需求的增加和价值升值相关，为投资者和开发商利用新兴领域提供了潜在的机会。",
+      },
+
+      btn_text_1: "探索",
+      btn_text_2: "特性",
+      img: "/images/why-oman.webp",
+    },
+  ],
   property_collections_home: {
     heading: "塞浦路斯最新项目",
     sub_heading:
@@ -1000,7 +1288,7 @@ export const ch_tr = {
   },
 
   latest_projects_minthis: {
-    bread_crumb_1: "特色房产系列",
+    bread_crumb_1: "特色项目",
     bread_crumb_2: "敏睿斯",
     title: "敏睿斯：轻松奢华生活",
     subtitle:
@@ -1106,6 +1394,78 @@ export const ch_tr = {
         title: "位于利马索尔海岸线",
         description:
           "屋顶上的游泳池周围环绕着舒缓的自然色调、植物和本土树木，周围环绕着下面的大海和花园的景色。",
+      },
+    ],
+  },
+
+  oman_projects_blue_city: {
+    bread_crumb_1: "特色项目",
+    bread_crumb_2: "Blue City",
+    title: "大蓝城发展",
+    subtitle:
+      "作为中东地区规模最大的开发项目之一；这个标志性项目包括住宅、商业、轻工业、机构和市政开发。",
+    subtitle_2:
+      "麦地那扎尔卡是一座占地 32 平方公里的海滨城市，沿着 16 公里的海岸线建造。该市位于阿曼湾附近；距马斯喀特锡卜机场 45 分钟路程。",
+    para_1:
+      "Blue City 项目由 AKTOR 和 ENKA 合资企业承建，主要是阿曼马斯喀特萨瓦迪地区的住宅和旅游开发项目，包含休闲和零售元素。该项目旨在打造一座世界闻名的城市，成为 21 世纪以来苏丹国的地标。",
+    para_2:
+      "该项目的工作范围包括：三座五星级酒店和一座四星级酒店、4,991套公寓和202栋别墅、两座职业高尔夫球手协会（PGA）世界级高尔夫球场、一座拥有18个和25个高尔夫球场的高尔夫球场的设计、工程、采购和施工工作。另一个有 9 洞，包括俱乐部会所、旅游和遗产村、一个带画廊和零售单位的圆形剧场裙楼、购物中心、娱乐和公共设施单位，如小学、托儿所、幼儿园、保健中心、警察局、消防站、邮局和清真寺及其所有相关的现代城市基础设施和景观美化，总面积达 5.4 平方公里，总建筑面积约 170 万平方米，占最终项目总用地面积的 15.8%。",
+    para_3:
+      "该开发项目设计了智能、优雅的布局，由宽阔的林荫大道、通路和停车位组成，并配有长廊、宽阔的广场、公园和绿地，给居民一种开放和空间的感觉。",
+    para_4:
+      "此外，根据其地理位置，酒店和住宅的设计特色体现并融合了阿曼传统风格和现代风格。蓝色之城由八个部分组成，每个部分都体现了不同类型的设计，并且都可以欣赏到一览无余的海湾景色，以及美丽的绿色高尔夫球场。",
+    features: [
+      {
+        icon: "flaticon-garden",
+        title: "豪华别墅",
+        description: "豪华别墅由 100 栋豪华别墅组成，BUA 约 7,500 平方米",
+      },
+      {
+        icon: "flaticon-location",
+        title: "泻湖别墅",
+        description: "泻湖别墅由 202 栋别墅组成，总面积 77,300 平方米",
+      },
+      {
+        icon: "flaticon-investment",
+        title: "五星级酒店",
+        description:
+          "五星级酒店，占地26,000平方米，拥有135间客房及豪华酒店套房，总建筑面积15,000平方米",
+      },
+    ],
+  },
+
+  oman_projects_waves: {
+    bread_crumb_1: "特色项目",
+    bread_crumb_2: "Al Mouj Muscat, Muscat Hills",
+    title: "超乎想象",
+    subtitle:
+      "极其独特的高尔夫海滩住宅是一系列精选的壮观海滨豪宅和精美海滨别墅，位于马斯喀特 Al Mouj 田园诗般的沙蒂和高尔夫区。",
+    para_1:
+      "Golf Beach Residences 拥有海滨环境，以 Al Hajar 山脉为背景，毗邻 Al Mouj 高尔夫球场和马斯喀特 Al Mouj 瑞吉度假酒店，提供的不仅仅是美丽的住宅 - 它还开辟了一个优质生活方式的世界。",
+    para_2:
+      "这些独特的房产优雅地坐落在风景如画的私人大道旁，从一开始就给人留下深刻的印象 - 以其现代奢华和优雅的风格超越了所有期望",
+    para_3:
+      "这些非凡的别墅受到青翠环境的启发，经过精心设计，毫不妥协地注重奢华和独特，是优雅风格和精致的令人惊叹的交响乐。高尔夫公园别墅完美地协调了光线和空间、室内和室外生活、家庭生活和正式场合，为现代生活的每一个元素创造了一个完美的环境。",
+    para_4:
+      "这组壮观的海滨豪宅和别墅位于马斯喀特的阿曼海海岸 Al Mouj 的 Shatti 区，可通往 6 公里的翠绿海滨，设有自行车道、游乐区、咖啡馆和 18 洞高尔夫球场。",
+    features: [
+      {
+        icon: "flaticon-garden",
+        title: "黄金海岸开发",
+        description:
+          "Al Mouj Muscat 和 Muscat Hills 是首屈一指的沿海项目，横跨 110 万平方米的原始海岸线。这片广阔的土地为奢华的生活和旅游事业提供了田园诗般的环境。",
+      },
+      {
+        icon: "flaticon-location",
+        title: "战略合作",
+        description:
+          "在与 Majid Al Futtaim、阿曼海滨公司和国家投资基金公司等第三方实体合作的支持下，Al Mouj Muscat、马斯喀特山和其他综合旅游综合体 (ITC) 确保了透明的投资流程。这些合作优先考虑客户利益，同时简化外国人的财产所有权。",
+      },
+      {
+        icon: "flaticon-investment",
+        title: "独特的住宅和便利设施",
+        description:
+          "这些开发项目提供大量产品，包括 4,000 套联排别墅和 24 种公民身份，它们不仅关乎住宅，还关乎生活方式。附近有四家酒店、一个高尔夫俱乐部和一个码头，凸显了这些项目的吸引力，承诺提供精致而完整的生活体验。",
       },
     ],
   },

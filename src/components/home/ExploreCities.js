@@ -26,6 +26,11 @@ const ExploreCities = () => {
       name: "Muscut",
       image: "/images/listings/muscut.webp",
     },
+    {
+      id: 2,
+      name: "Athens ",
+      image: "/images/listings/athens.webp",
+    },
   ];
 
   const getLang = (lang) => {

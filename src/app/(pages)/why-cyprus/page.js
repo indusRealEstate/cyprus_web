@@ -3,7 +3,7 @@ import FeatureProperties from "@/components/home/FeatureProperties";
 import DefaultHeader from "@/components/common/DefaultHeader";
 import MobileMenu from "@/components/common/mobile-menu";
 import Footer from "@/components/home/footer";
-import WhyChoose from "@/components/home/why-choose";
+import WhyChooseCyprus from "@/components/home/why-choose-cyprus";
 export const metadata = {
   title: "Why Cyprus | Premium Realtor",
   description:
@@ -27,7 +27,7 @@ const WhyCyprus = () => {
             data-aos="fade-left"
             data-aos-delay="10"
           >
-            <WhyChoose />
+            <WhyChooseCyprus />
           </div>
         </div>
       </section>
