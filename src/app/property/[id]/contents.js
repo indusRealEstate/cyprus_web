@@ -184,7 +184,7 @@ const PropertyDetailsContent = ({ data, params }) => {
                 </div>
               </div>
 
-              <div className="ps-widget bgc-white bdrs12 default-box-shadow2 p-3 mb30 overflow-hidden position-relative">
+              {/* <div className="ps-widget bgc-white bdrs12 default-box-shadow2 p-3 mb30 overflow-hidden position-relative">
                 <h4 className="title fz17 mb30">
                   {lang == "en"
                     ? "What's Nearby?"
@@ -195,7 +195,7 @@ const PropertyDetailsContent = ({ data, params }) => {
                 <div className="row">
                   <PropertyNearby lang={lang} />
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="col-lg-4">

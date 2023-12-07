@@ -11,19 +11,19 @@ import { useEffect, useState } from "react";
 import { useAppSelector } from "@/redux/store";
 import { ch_tr, en_tr, ru_tr } from "@/lang";
 
-const BlueCity = () => {
+const Aida = () => {
   const lang = useAppSelector((state) => state.langReducer);
 
   const getLang = (lang) => {
     switch (lang) {
       case "en":
-        return en_tr.oman_projects_blue_city;
+        return en_tr.oman_projects_aida;
       case "ru":
-        return ru_tr.oman_projects_blue_city;
+        return ru_tr.oman_projects_aida;
       case "ch":
-        return ch_tr.oman_projects_blue_city;
+        return ch_tr.oman_projects_aida;
       default:
-        return en_tr.oman_projects_blue_city;
+        return en_tr.oman_projects_aida;
     }
   };
 
@@ -56,13 +56,13 @@ const BlueCity = () => {
 
       {/* Breadcrumb Sections */}
 
-      <section className="blue-city p-0 ">
+      <section className="aida p-0 ">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="breadcumb-style1">
                 <h2 className="pl15 title fz40">
-                  Blue City
+                  AIDA
                   {/* <Image
                     width={400}
                     height={50}
@@ -160,7 +160,7 @@ const BlueCity = () => {
                   height={515}
                   priority
                   className="about-banner"
-                  src="/images/blue-city/blue-city-03.webp"
+                  src="/images/aida/AIDA_02_Restaurant.webp"
                   alt="about banner"
                 />
               </div>
@@ -285,4 +285,4 @@ const BlueCity = () => {
   );
 };
 
-export default BlueCity;
+export default Aida;

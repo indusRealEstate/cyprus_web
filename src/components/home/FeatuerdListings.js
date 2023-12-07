@@ -24,7 +24,7 @@ const FeaturedListings = () => {
 
   useEffect(() => {
     getAllListings().then((res) => setData(res));
-  }, [data]);
+  }, []);
 
   const lang = useAppSelector((state) => state.langReducer);
 
@@ -191,35 +191,16 @@ const FeaturedListings = () => {
                                 height: "15rem",
                               }}
                             >
-                              {!loaded.includes(listing.id) && (
-                                <Skeleton
-                                  // sx={{ bgcolor: "grey.100" }}
-                                  variant="rectangular"
-                                  width={420}
-                                  height={240}
-                                />
-                              )}
-
                               <img
                                 id={listing.id}
                                 width={382}
                                 height={248}
-                                className={`${
-                                  !loaded.includes(listing.id)
-                                    ? "opacity-0 position-absolute w-100 h-100 cover"
-                                    : "opacity-100 w-100 h-100 cover"
-                                }}`}
+                                className={`w-100 h-100 cover`}
                                 // className="w-100 h-100 cover"
                                 src={`https://alsimatower.ae/int_web_api/media/listings/${
                                   listing.prop_id
                                 }/media/${JSON.parse(listing.images)[0]}`}
                                 alt="listings"
-                                onLoad={() => {
-                                  if (!loaded.includes(listing.id)) {
-                                    loaded.push(listing.id);
-                                    setLoaded(loaded);
-                                  }
-                                }}
                               />
                               {/* <div className="sale-sticker-wrap">
                       {listing.highlight && (

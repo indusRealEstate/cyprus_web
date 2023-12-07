@@ -3,6 +3,8 @@
 import { useAppSelector } from "@/redux/store";
 import Form from "@/components/pages/contact/Form";
 import { ch_tr, en_tr, ru_tr } from "@/lang";
+import { useEffect } from "react";
+import axios from "axios";
 
 const ContactPageContent = () => {
   const lang = useAppSelector((state) => state.langReducer);
@@ -19,6 +21,37 @@ const ContactPageContent = () => {
         return en_tr.contact_page;
     }
   };
+
+  const submitForm = () => {
+    const thisForm = document.getElementById("myForm");
+
+    const formData = new FormData(thisForm).entries();
+    // const formData = new FormData();
+    // formData.append("campaign", "616555fe3e944");
+    // formData.append("lead_type", "sale");
+    // formData.append("property_type", "apartment");
+    // formData.append("source", "lp");
+    // formData.append("name", "test-ajeer-2");
+    // formData.append("phone", "034234234");
+    // formData.append("email", "test@test.ae");
+    // const response = await fetch("https://www.indus-inhouse.com/lead-api-v2", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(Object.fromEntries(formData)),
+    // });
+
+    fetch("https://www.indus-inhouse.com/lead-api-v2", {
+      // headers: {
+      //   "content-type": "application/json",
+      // },
+      body: JSON.stringify(Object.fromEntries(formData)),
+      method: "POST",
+      mode: "no-cors",
+    }).then(async (res) => {
+      console.log(res);
+    });
+  };
+
   return (
     <>
       <section id="main">
@@ -30,8 +63,66 @@ const ContactPageContent = () => {
                 <Form lang={lang} />
               </div>
             </div>
-            {/* End .col */}
+            {/* <div className="btn">Submitt</div> */}
+            {/* <form
+              id="myForm"
+              method="POST"
+              action="https://www.indus-inhouse.com/lead-api-v2"
+            >
+              <div class="modal-content">
+                <div class="modal-body">
+                  <input value="616555fe3e944" name="campaign" type="hidden" />
+                  <input value="sale" name="lead_type" type="hidden" />
+                  <input value="apartment" name="property_type" type="hidden" />
+                  <input value="lp" name="source" type="hidden" />
 
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="recipient-name"
+                      placeholder="Name"
+                      name="name"
+                      value="test-ajeer-2"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="phone"
+                      name="phone"
+                      placeholder="Phone"
+                      value="test2"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control"
+                      id="recipient-email"
+                      placeholder="Email"
+                      value="test2"
+                    />
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="submit" class="btn btn-primary" name="submit">
+                    Send message
+                  </button>
+                </div>
+              </div>
+            </form> */}
+
+            {/* End .col */}
             <div className="col-lg-5 offset-lg-2">
               <h2 className="mb0 text-capitalize">
                 {getLang(lang).title_part_1}

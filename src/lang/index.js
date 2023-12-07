@@ -34,10 +34,7 @@ export const en_tr = {
         // },
         {
           label: "Oman",
-          subMenuItems: [
-            { href: "/oman/blue-city", label: "Blue City" },
-            { href: "/oman/waves", label: "Waves" },
-          ],
+          subMenuItems: [{ href: "/oman/aida", label: "AIDA" }],
         },
       ],
     },
@@ -53,25 +50,18 @@ export const en_tr = {
   conatct: "Contact",
   main_slider: [
     {
-      image: "/images/banner/MI-P1-030.webp",
-      // price: "$986,00",
-      title: "Villa on Paphos, Cyprus",
-      description: "3 Beds - 3 Baths - 240 sq m",
-      prop_id: "MI-P1-030",
-    },
-    {
-      image: "/images/banner/MI-TOPOS-ALTO-02.webp",
-      // price: "$986,00",
-      title: "Topos Villa on Cyprus",
-      description: "3 Beds - 3 Baths - 242 sq m",
-      prop_id: "MI-TOPOS-ALTO-02",
-    },
-    {
       image: "/images/banner/MI-TOPOS-ALTO-01.webp",
       // price: "$986,00",
-      title: "Luxury Villa on Cyprus",
+      title: "Luxury villa in Cyprus",
       description: "4 Beds - 3 Baths - 360 sq m",
       prop_id: "MI-TOPOS-ALTO-01",
+    },
+    {
+      image: "/images/banner/AIDA_07_Suite_Bedroom.webp",
+      // price: "$986,00",
+      title: "Beautiful cliff villa in Oman, AIDA Muscat",
+      description: "3 - 7 Beds - 200 - 480 sq m",
+      prop_id: "AIDA-01-120",
     },
   ],
 
@@ -242,7 +232,7 @@ export const en_tr = {
           { label: "Pafilia Collections", href: "/#flagship-prop" },
           { label: "Contact Us", href: "/contact" },
           { label: "All Properties", href: "/all-properties" },
-          // { label: "FAQs", href: "/faq" },
+          { label: "Privacy policy", href: "/privacy-policy" },
         ],
       },
       {
@@ -414,76 +404,58 @@ export const en_tr = {
     ],
   },
 
-  oman_projects_blue_city: {
+  oman_projects_aida: {
     bread_crumb_1: "Featured Projects",
-    bread_crumb_2: "Blue City",
-    title: "Great Blue City Development",
+    bread_crumb_2: "AIDA",
+    title: "Overlooking The World",
     subtitle:
-      "As one of the largest scale developments in the Middle East; this iconic project comprises residential, commercial, light industrial, institutional, and municipal developments.",
-    subtitle_2:
-      "Al-Madina Al-Zarqa is a 32-square-kilometer waterfront city built along 16 kilometers of coastline. The city is located in the vicinity of the Gulf of Oman; 45 minutes from Muscat Seeb Airport.",
-    para_1:
-      "Undertaken by AKTOR & ENKA Joint Venture the Blue City project was primarily a residential and tourism development with leisure and retail elements in Muscat Al-Sawadi Region in Oman. The project was aimed to create a city of world renown as a landmark for the Sultanate for the 21st century onwards.",
-    para_2:
-      "The project’s scope of work included: design, engineering, procurement and construction work for three 5-star and one 4-star hotels, 4,991 apartments and 202 villas, two Professional Golfers’ Association (PGA) world class golf courses, one with 18 and the other with 9 holes including their club house, tourist and heritage villages, one amphitheater podium with gallery & retail units, shopping complex, entertainment and public amenity units such as a primary school, nursery, kindergarten, health centre, police station, fire house, post office and a mosque and all their related modern city infrastructure and landscaping over an area totaling 5.4 km² with 1.7 million m² approximate total gross floor area, which was 15.8% of the overall projected final site land.",
-    para_3:
-      "An intelligent, elegant layout was devised for the development, which was served by a network of broad boulevards, access roads and parking spaces complete with promenades, wide squares, public parks and green areas, giving residents a feeling of openness and space.",
-    para_4:
-      "Furthermore, in compliance with its location, the design character of the hotels and the residences reflected and integrated a combination of traditional Omani and modern styles. The Blue City was composed of eight sections, all reflected different types of design, and all afforded sweeping Gulf views of follow the beautiful green expanse of the golf courses.",
+      "Aida is an ode to the glorious ocean, Undisturbed nature, and where high curvaceous cliffs flawlessly meet deep waters.",
+    subtitle_2: `Paradise awaits you only 20 minutes from Downtown Muscat.`,
+    para_1: `Situated on the hilltops of Muscat,
+AIDA is surrounded by nature, outdoor
+activities and landmark destinations,
+including Nikki Beach Resort.`,
+    para_2: `The breathtaking surroundings of AIDA
+include intense natural views. From vast
+open spaces to waterfronts to rocky
+canyons to landmark destinations;
+including the Shangri-La Resort and
+the magnificient beaches of Yiti and
+Yenkit. All ensuring a life of recreational
+activities in its highest form.`,
+    para_3: `With stunning views of the sea, luxurious
+amenities, and an array of activities
+to enjoy, AIDA is the perfect place to
+immerse yourself in the beauty of nature
+and savor the best of all worlds.
+LUXURY`,
+    para_4: `Surrounded by the Trump International Golf
+Club Oman, this exceptional gated community
+has everything residents and visitors desire.
+From opulent ocean front mansions and villas
+to premium condominiums within the golf
+community, and from the most extraordinary
+5-star hotel on earth, to open green spaces,
+outdoor and recreational activities and exquisite
+dining options.`,
     features: [
       {
         icon: "flaticon-garden",
-        title: "Luxury Villas",
+        title: "Breathtaking Natural Surroundings",
         description:
-          "Luxury Villas comprising 100 luxurious villas with an approximate BUA of 7,500 m2",
+          "AIDA boasts an unparalleled environment nestled in hilltops, offering intense natural views, including expansive open spaces, waterfronts, rocky canyons, and landmark destinations such as Nikki Beach Resort, Shangri-La Resort, and magnificent beaches like Yiti and Yenkit. These elements create a haven for recreational activities, blending seamlessly with the untouched beauty of the ocean and cliffs.",
       },
       {
         icon: "flaticon-location",
-        title: "Lagoon Villas",
+        title: "Luxurious Amenities and Living Spaces",
         description:
-          "Lagoon Villas comprising 202 villas with a total BUA of 77,300 m2",
+          "The residences within AIDA, particularly Oceana, provide opulent living experiences. From exclusive mansions overlooking the seashores and Trump Golf Course to grand interiors filled with light and panoramic views, these homes are meticulously designed with attention to detail. With options for 6 or 7 bedrooms, including grand master bedrooms with lavish en-suites, dressing rooms, and a perfect balance between beauty and practicality, these spaces epitomize comfort and relaxation.",
       },
       {
         icon: "flaticon-investment",
-        title: "5-Star Hotel",
+        title: "Exclusive Gated Community and Recreational Lifestyle",
         description:
-          "5-Star Hotel occupying a plot area of 26,000 m2 and accommodating up to 135 rooms accompanied by luxurious hotel suites, with a total BUA of 15,000 m2",
-      },
-    ],
-  },
-
-  oman_projects_waves: {
-    bread_crumb_1: "Featured Projects",
-    bread_crumb_2: "Al Mouj Muscat, Muscat Hills",
-    title: "Beyond Imagination",
-    subtitle:
-      "The exceptionally exclusive Golf Beach Residences is a select collection of spectacular oceanfront mansions and fabulous beachside villas situated in Al Mouj Muscat’s idyllic Shatti and Golf Districts.",
-    para_1:
-      "With an oceanfront environment, Al Hajar Mountains as its backdrop and a location adjacent to both Al Mouj Golf and St. Regis Al Mouj Muscat Resort, Golf Beach Residences offers much more than beautiful homes - it opens up a world of premium lifestyle opporutnities.",
-    para_2:
-      "Elegantly situated alongside a picturesque private avenue, these exceptional properties impress from the very first moment - surpassing all expectations with their contemporary luxury and elegant style",
-    para_3:
-      "Inspired by their verdant setting and meticulously designed with an uncompromising focus on luxury and exclusivity, these exceptional villas are stunning symphonies of elegant style and sophistication. Perfectly armonising light and space, indoor and outdoor living, family life and formal occasions, Golf Park Villas create a perfect environment for every element of modern life.",
-    para_4:
-      "Lying on Muscats’ Sea of Oman coast in the Shatti district of Al Mouj, this group of spectacular oceanfront mansions and villas has access to 6km of verdant water frontage featuring cycling trails, play areas, cafes and an 18 hole golf course.",
-    features: [
-      {
-        icon: "flaticon-garden",
-        title: "Prime Coastal Development",
-        description:
-          "Al Mouj Muscat and Muscat Hills stand out as premier coastal projects, spanning across 1.1 million square meters of pristine shoreline. This expansive stretch provides an idyllic setting for luxurious living and tourism ventures.",
-      },
-      {
-        icon: "flaticon-location",
-        title: "Strategic Collaborations",
-        description:
-          "Backed by partnerships with third-party entities like Majid Al Futtaim, Oman Waterfront Company, and the National Investment Funds Company, Al Mouj Muscat, Muscat Hills, and other Integrated Tourism Complexes (ITCs) ensure a transparent investment process. These collaborations prioritize customer interests while streamlining property ownership for foreigners.",
-      },
-      {
-        icon: "flaticon-investment",
-        title: "Exclusive Residences and Amenities",
-        description:
-          "With a vast array of offerings, including 4,000 townhouses and the provision of 24 citizenships, these developments are not just about residences but also about lifestyle. The presence of four hotels, a golf club, and a marina within the vicinity accentuates the allure of these projects, promising a sophisticated and complete living experience.",
+          "AIDA stands as an exclusive gated community and golfing destination, promising a lifestyle where real-life concerns melt away, and inspiration begins. Surrounded by nature and outdoor activities, including access to the prestigious Trump International Golf Club Oman, it offers a retreat-like atmosphere just 20 minutes from Downtown Muscat. Residents and visitors have access to premium facilities, outdoor activities, exquisite dining options, and the allure of the most extraordinary 5-star hotel, making it a hub for leisure and relaxation.",
       },
     ],
   },
@@ -534,10 +506,7 @@ export const ru_tr = {
         // },
         {
           label: "Oman",
-          subMenuItems: [
-            { href: "/oman/blue-city", label: "Blue City" },
-            { href: "/oman/waves", label: "Waves" },
-          ],
+          subMenuItems: [{ href: "/oman/aida", label: "AIDA" }],
         },
       ],
     },
@@ -554,25 +523,18 @@ export const ru_tr = {
   conatct: "Контакт",
   main_slider: [
     {
-      image: "/images/banner/MI-P1-030.webp",
-      // price: "$986,00",
-      title: "Вилла в Пафосе, Кипр",
-      description: "3 кровати – 3 ванны – 240 кв.м.",
-      prop_id: "MI-P1-030",
-    },
-    {
-      image: "/images/banner/MI-TOPOS-ALTO-02.webp",
-      // price: "$986,00",
-      title: "Вилла Топос на Кипре",
-      description: "3 кровати - 3 ванны - 242 кв.м.",
-      prop_id: "MI-TOPOS-ALTO-02",
-    },
-    {
       image: "/images/banner/MI-TOPOS-ALTO-01.webp",
       // price: "$986,00",
       title: "Роскошная вилла на Кипре",
       description: "4 кровати - 3 ванны - 360 кв.м.",
       prop_id: "MI-TOPOS-ALTO-01",
+    },
+    {
+      image: "/images/banner/AIDA_07_Suite_Bedroom.webp",
+      // price: "$986,00",
+      title: "Красивая вилла на скале в Омане, AIDA Muscat",
+      description: "3–7 спальных мест – 200–480 кв.м.",
+      prop_id: "AIDA-01-120",
     },
   ],
 
@@ -743,7 +705,7 @@ export const ru_tr = {
           { label: "Коллекции Пафилии", href: "/#flagship-prop" },
           { label: "Связаться с нами", href: "/contact" },
           { label: "Все объекты недвижимости", href: "/all-properties" },
-          // { label: "FAQs", href: "/faq" },
+          { label: "Политика конфиденциальности", href: "/privacy-policy" },
         ],
       },
       {
@@ -915,76 +877,58 @@ export const ru_tr = {
     ],
   },
 
-  oman_projects_blue_city: {
+  oman_projects_aida: {
     bread_crumb_1: "Рекомендуемые проекты",
-    bread_crumb_2: "Blue City",
-    title: "Развитие Великого Голубого города",
+    bread_crumb_2: "AIDA",
+    title: "С видом на мир",
     subtitle:
-      "Как одно из крупнейших событий на Ближнем Востоке; Этот культовый проект включает в себя жилые, коммерческие, легкие промышленные, институциональные и муниципальные объекты.",
-    subtitle_2:
-      "Аль-Мадина Аль-Зарка — прибрежный город площадью 32 квадратных километра, построенный вдоль 16 километров береговой линии. Город расположен недалеко от Оманского залива; 45 минут от аэропорта Маскат Сиб.",
-    para_1:
-      "Проект «Голубой город», реализованный совместным предприятием «АКТОР» и «ЭНКА», представлял собой в первую очередь жилой и туристический комплекс с элементами досуга и розничной торговли в регионе Маскат Аль-Савади в Омане. Целью проекта было создание города с мировым именем как ориентира Султаната в XXI веке.",
-    para_2:
-      "В объем работ проекта входили: проектирование, проектирование, закупки и строительные работы для трех 5-звездочных и одного 4-звездочного отеля, 4991 апартаментов и 202 вилл, двух полей для гольфа мирового класса Ассоциации профессиональных игроков в гольф (PGA), одного с 18 и другой с 9 лунками, включая клуб, туристические и исторические деревни, один подиум-амфитеатр с галереей и торговыми помещениями, торговый комплекс, развлекательные и общественные объекты, такие как начальная школа, детский сад, детский сад, медицинский центр, полицейский участок, пожарная часть. , почтовое отделение и мечеть, а также всю связанную с ними современную городскую инфраструктуру и ландшафтный дизайн на общей площади 5,4 км² с приблизительной общей общей площадью 1,7 миллиона м², что составляет 15,8% от общей проектируемой площади конечного участка.",
-    para_3:
-      "Для застройки была разработана продуманная и элегантная планировка, которая обслуживалась сетью широких бульваров, подъездных дорог и парковочных мест, а также променадами, широкими площадями, общественными парками и зелеными зонами, что давало жителям ощущение открытости и пространства.",
-    para_4:
-      "Кроме того, в соответствии с расположением, дизайн отелей и резиденций отражает и объединяет сочетание традиционного оманского и современного стилей. «Голубой город» состоял из восьми секций, каждая из которых отражала разные типы дизайна, и из каждой открывался потрясающий вид на залив и красивые зеленые просторы полей для гольфа.",
+      "«Аида» — это ода великолепному океану, нетронутой природе и месту, где высокие изогнутые скалы безупречно встречаются с глубокими водами.",
+    subtitle_2: `Рай ждет вас всего в 20 минутах от центра Маската.`,
+    para_1: `Расположен на вершине холма Маската.
+AIDA окружена природой, на открытом воздухе
+мероприятия и достопримечательности,
+включая курорт Nikki Beach Resort.`,
+    para_2: `Захватывающие окрестности AIDA
+включают в себя насыщенные природные виды. Из огромного
+от открытых пространств до набережных и от скалистых
+каньоны до достопримечательностей;
+включая курорт Шангри-Ла и
+великолепные пляжи Йити и
+Енкит. Все для обеспечения рекреационной жизни
+деятельность в ее высшей форме.`,
+    para_3: `С потрясающим видом на море, роскошный
+удобства и множество развлечений
+чтобы насладиться, AIDA — идеальное место для
+погрузиться в красоту природы
+и насладиться лучшим из всех миров.
+РОСКОШЬ`,
+    para_4: `В окружении поля для гольфа Trump International Golf
+Club Oman, этот исключительный закрытый поселок
+Есть все, что желают жители и гости.
+Из роскошных особняков и вилл на берегу океана
+в кондоминиумы премиум-класса в гольф-клубе
+сообщества, и из самых необыкновенных
+5-звездочный отель на земле, с открытыми зелеными насаждениями,
+развлекательные мероприятия на свежем воздухе и изысканные
+варианты питания.`,
     features: [
       {
         icon: "flaticon-garden",
-        title: "Роскошные виллы",
+        title: "Захватывающая природа",
         description:
-          "Роскошные виллы, состоящие из 100 роскошных вилл общей площадью 7500 м2.",
+          "AIDA может похвастаться непревзойденной окружающей средой, расположенной на вершинах холмов, с потрясающими природными видами, включая обширные открытые пространства, набережные, скалистые каньоны и такие достопримечательности, как Nikki Beach Resort, Shangri-La Resort, а также великолепные пляжи, такие как Йити и Йенкит. Эти элементы создают рай для развлекательных мероприятий, органично сочетаясь с нетронутой красотой океана и скал.",
       },
       {
         icon: "flaticon-location",
-        title: "Виллы в лагуне",
+        title: "Роскошные удобства и жилые помещения",
         description:
-          "Lagoon Villas состоит из 202 вилл общей площадью 77 300 м2.",
+          "Резиденции в AIDA, особенно Oceana, обеспечивают роскошный жизненный опыт. От эксклюзивных особняков с видом на побережье и поле для гольфа Trump до величественных интерьеров, наполненных светом и панорамными видами, эти дома тщательно спроектированы с вниманием к деталям. Эти помещения с возможностью размещения 6 или 7 спален, включая большие спальни с роскошными ванными комнатами и гардеробными, а также идеальный баланс между красотой и практичностью олицетворяют комфорт и отдых.",
       },
       {
         icon: "flaticon-investment",
-        title: "5-звездочный отель",
+        title: "Эксклюзивное закрытое сообщество и рекреационный образ жизни",
         description:
-          "5-звездочный отель, занимающий участок площадью 26 000 м2 и вмещающий до 135 номеров, а также роскошные гостиничные люксы, общей площадью 15 000 м2.",
-      },
-    ],
-  },
-
-  oman_projects_waves: {
-    bread_crumb_1: "Рекомендуемые проекты",
-    bread_crumb_2: "Al Mouj Muscat, Muscat Hills",
-    title: "За гранью воображения",
-    subtitle:
-      "Исключительно эксклюзивные Golf Beach Residences представляют собой избранную коллекцию впечатляющих особняков на берегу океана и великолепных пляжных вилл, расположенных в идиллических районах Шатти и Гольф Аль-Мудж Маскат.",
-    para_1:
-      "Golf Beach Residences, расположенный на берегу океана, на фоне гор Аль-Хаджар и рядом с гольф-полем Al Mouj и курортом St. Regis Al Mouj Muscat, предлагает гораздо больше, чем просто красивые дома — он открывает мир возможностей для образа жизни премиум-класса.",
-    para_2:
-      "Эти исключительные объекты недвижимости, элегантно расположенные рядом с живописным частным проспектом, впечатляют с самого первого момента, превосходя все ожидания своей современной роскошью и элегантным стилем.",
-    para_3:
-      "Эти исключительные виллы, вдохновленные своей зеленой обстановкой и тщательно спроектированные с бескомпромиссным акцентом на роскошь и эксклюзивность, представляют собой потрясающую симфонию элегантного стиля и изысканности. Идеально гармонизируя свет и пространство, проживание в помещении и на открытом воздухе, семейную жизнь и официальные мероприятия, виллы Golf Park создают идеальную среду для каждого элемента современной жизни.",
-    para_4:
-      "Эта группа впечатляющих особняков и вилл на берегу океана, расположенная на побережье Оманского моря Маскат в районе Шатти в Аль-Мудже, имеет доступ к 6-километровой зеленой набережной с велосипедными дорожками, игровыми площадками, кафе и 18-луночным полем для гольфа.",
-    features: [
-      {
-        icon: "flaticon-garden",
-        title: "Премьер прибрежное развитие",
-        description:
-          "Аль-Мудж Маскат и Маскат-Хиллз выделяются как ведущие прибрежные проекты, охватывающие 1,1 миллиона квадратных метров нетронутой береговой линии. Этот обширный участок представляет собой идиллическую обстановку для роскошной жизни и туризма.",
-      },
-      {
-        icon: "flaticon-location",
-        title: "Стратегическое сотрудничество",
-        description:
-          "Опираясь на партнерские отношения со сторонними организациями, такими как Маджид Аль-Футтайм, Oman Waterfront Company и Национальная инвестиционная компания, Al Mouj Muscat, Muscat Hills и другие интегрированные туристические комплексы (ITC) обеспечивают прозрачный инвестиционный процесс. Это сотрудничество ставит во главу угла интересы клиентов и упрощает владение недвижимостью для иностранцев.",
-      },
-      {
-        icon: "flaticon-investment",
-        title: "Эксклюзивные резиденции и удобства",
-        description:
-          "Благодаря широкому спектру предложений, включая 4000 таунхаусов и предоставлению 24 гражданств, эти разработки касаются не только жилья, но и образа жизни. Наличие четырех отелей, гольф-клуба и пристани для яхт в непосредственной близости подчеркивает привлекательность этих проектов, обещая изысканный и полный жизненный опыт.",
+          "AIDA представляет собой эксклюзивное закрытое сообщество и место для игры в гольф, обещающее образ жизни, в котором исчезают реальные жизненные проблемы и начинается вдохновение. Окруженный природой и возможностями для активного отдыха, включая доступ к престижному Международному гольф-клубу Trump Oman, он предлагает атмосферу уединения всего в 20 минутах от центра Маската. Жители и гости имеют доступ к удобствам премиум-класса, мероприятиям на свежем воздухе, изысканным ресторанам и очарованию самого необычного 5-звездочного отеля, что делает его центром отдыха и релаксации.",
       },
     ],
   },
@@ -1035,10 +979,7 @@ export const ch_tr = {
         // },
         {
           label: "Oman",
-          subMenuItems: [
-            { href: "/oman/blue-city", label: "Blue City" },
-            { href: "/oman/waves", label: "Waves" },
-          ],
+          subMenuItems: [{ href: "/oman/aida", label: "AIDA" }],
         },
       ],
     },
@@ -1054,25 +995,18 @@ export const ch_tr = {
   conatct: "接触",
   main_slider: [
     {
-      image: "/images/banner/MI-P1-030.webp",
-      // price: "$986,00",
-      title: "塞浦路斯帕福斯别墅",
-      description: "3 床 - 3 浴室 - 240 平方米",
-      prop_id: "MI-P1-030",
-    },
-    {
-      image: "/images/banner/MI-TOPOS-ALTO-02.webp",
-      // price: "$986,00",
-      title: "塞浦路斯拓扑斯别墅",
-      description: "3 床 - 3 浴室 - 242 平方米",
-      prop_id: "MI-TOPOS-ALTO-02",
-    },
-    {
       image: "/images/banner/MI-TOPOS-ALTO-01.webp",
       // price: "$986,00",
       title: "塞浦路斯的豪华别墅",
       description: "4 床 - 3 浴室 - 360 平方米",
       prop_id: "MI-TOPOS-ALTO-01",
+    },
+    {
+      image: "/images/banner/AIDA_07_Suite_Bedroom.webp",
+      // price: "$986,00",
+      title: "阿曼美丽的悬崖别墅，阿伊达马斯喀特",
+      description: "3 - 7 张床 - 200 - 480 平方米",
+      prop_id: "AIDA-01-120",
     },
   ],
   why_choose: [
@@ -1233,7 +1167,7 @@ export const ch_tr = {
           { label: "帕菲利亚系列", href: "/#flagship-prop" },
           { label: "联系我们", href: "/contact" },
           { label: "所有属性", href: "/all-properties" },
-          // { label: "FAQs", href: "/faq" },
+          { label: "隐私政策", href: "/privacy-policy" },
         ],
       },
       {
@@ -1398,74 +1332,58 @@ export const ch_tr = {
     ],
   },
 
-  oman_projects_blue_city: {
+  oman_projects_aida: {
     bread_crumb_1: "特色项目",
-    bread_crumb_2: "Blue City",
-    title: "大蓝城发展",
+    bread_crumb_2: "AIDA",
+    title: "俯瞰世界",
     subtitle:
-      "作为中东地区规模最大的开发项目之一；这个标志性项目包括住宅、商业、轻工业、机构和市政开发。",
-    subtitle_2:
-      "麦地那扎尔卡是一座占地 32 平方公里的海滨城市，沿着 16 公里的海岸线建造。该市位于阿曼湾附近；距马斯喀特锡卜机场 45 分钟路程。",
-    para_1:
-      "Blue City 项目由 AKTOR 和 ENKA 合资企业承建，主要是阿曼马斯喀特萨瓦迪地区的住宅和旅游开发项目，包含休闲和零售元素。该项目旨在打造一座世界闻名的城市，成为 21 世纪以来苏丹国的地标。",
-    para_2:
-      "该项目的工作范围包括：三座五星级酒店和一座四星级酒店、4,991套公寓和202栋别墅、两座职业高尔夫球手协会（PGA）世界级高尔夫球场、一座拥有18个和25个高尔夫球场的高尔夫球场的设计、工程、采购和施工工作。另一个有 9 洞，包括俱乐部会所、旅游和遗产村、一个带画廊和零售单位的圆形剧场裙楼、购物中心、娱乐和公共设施单位，如小学、托儿所、幼儿园、保健中心、警察局、消防站、邮局和清真寺及其所有相关的现代城市基础设施和景观美化，总面积达 5.4 平方公里，总建筑面积约 170 万平方米，占最终项目总用地面积的 15.8%。",
-    para_3:
-      "该开发项目设计了智能、优雅的布局，由宽阔的林荫大道、通路和停车位组成，并配有长廊、宽阔的广场、公园和绿地，给居民一种开放和空间的感觉。",
-    para_4:
-      "此外，根据其地理位置，酒店和住宅的设计特色体现并融合了阿曼传统风格和现代风格。蓝色之城由八个部分组成，每个部分都体现了不同类型的设计，并且都可以欣赏到一览无余的海湾景色，以及美丽的绿色高尔夫球场。",
+      "《阿伊达》是对壮丽的海洋、不受干扰的自然以及高耸的曲线悬崖与深水完美交汇的颂歌。",
+    subtitle_2: `距离马斯喀特市中心仅 20 分钟路程的天堂等待着您。`,
+    para_1: `坐落在马斯喀特的山顶上，
+AIDA被大自然包围，户外
+活动和地标目的地，
+包括尼基海滩度假村。`,
+    para_2: `AIDA 令人惊叹的环境
+包括强烈的自然景观。来自广阔
+开放空间到海滨到岩石
+峡谷到地标性目的地；
+包括香格里拉度假酒店和
+伊蒂（Yiti）壮丽的海滩和
+延吉特。一切都保证了休闲生活
+活动的最高形式。`,
+    para_3: `坐拥无敌海景，尽享奢华
+便利设施和一系列活动
+享受，AIDA 是完美的地方
+沉浸在大自然的美丽之中
+并品尝世界上最好的东西。
+奢华`,
+    para_4: `周围环绕着特朗普国际高尔夫球场
+Club Oman，这个特殊的封闭社区
+拥有居民和游客想要的一切。
+从豪华的海滨豪宅和别墅
+前往高尔夫球场内的高级公寓
+社区，以及来自最非凡的
+地球上的5星级酒店，开辟绿色空间，
+户外休闲活动精致
+餐饮选择。`,
     features: [
       {
         icon: "flaticon-garden",
-        title: "豪华别墅",
-        description: "豪华别墅由 100 栋豪华别墅组成，BUA 约 7,500 平方米",
+        title: "令人惊叹的自然环境",
+        description:
+          "AIDA 拥有无与伦比的环境，坐落在山顶，可欣赏到强烈的自然景观，包括广阔的开放空间、海滨、岩石峡谷以及尼基海滩度假村、香格里拉度假村等地标性目的地，以及 Yiti 和 Yenkit 等壮丽的海滩。这些元素创造了休闲活动的天堂，与海洋和悬崖的原始美景无缝融合。",
       },
       {
         icon: "flaticon-location",
-        title: "泻湖别墅",
-        description: "泻湖别墅由 202 栋别墅组成，总面积 77,300 平方米",
+        title: "豪华设施和生活空间",
+        description:
+          "AIDA 内的住宅，尤其是 Oceana，提供了丰富的生活体验。从俯瞰海滨和特朗普高尔夫球场的独特豪宅到充满光线和全景的宏伟内饰，这些住宅均经过精心设计，注重细节。这些空间有 6 间或 7 间卧室可供选择，包括带豪华套间的豪华主卧室、更衣室，以及美观与实用之间的完美平衡，体现了舒适和放松。",
       },
       {
         icon: "flaticon-investment",
-        title: "五星级酒店",
+        title: "独特的封闭社区和休闲生活方式",
         description:
-          "五星级酒店，占地26,000平方米，拥有135间客房及豪华酒店套房，总建筑面积15,000平方米",
-      },
-    ],
-  },
-
-  oman_projects_waves: {
-    bread_crumb_1: "特色项目",
-    bread_crumb_2: "Al Mouj Muscat, Muscat Hills",
-    title: "超乎想象",
-    subtitle:
-      "极其独特的高尔夫海滩住宅是一系列精选的壮观海滨豪宅和精美海滨别墅，位于马斯喀特 Al Mouj 田园诗般的沙蒂和高尔夫区。",
-    para_1:
-      "Golf Beach Residences 拥有海滨环境，以 Al Hajar 山脉为背景，毗邻 Al Mouj 高尔夫球场和马斯喀特 Al Mouj 瑞吉度假酒店，提供的不仅仅是美丽的住宅 - 它还开辟了一个优质生活方式的世界。",
-    para_2:
-      "这些独特的房产优雅地坐落在风景如画的私人大道旁，从一开始就给人留下深刻的印象 - 以其现代奢华和优雅的风格超越了所有期望",
-    para_3:
-      "这些非凡的别墅受到青翠环境的启发，经过精心设计，毫不妥协地注重奢华和独特，是优雅风格和精致的令人惊叹的交响乐。高尔夫公园别墅完美地协调了光线和空间、室内和室外生活、家庭生活和正式场合，为现代生活的每一个元素创造了一个完美的环境。",
-    para_4:
-      "这组壮观的海滨豪宅和别墅位于马斯喀特的阿曼海海岸 Al Mouj 的 Shatti 区，可通往 6 公里的翠绿海滨，设有自行车道、游乐区、咖啡馆和 18 洞高尔夫球场。",
-    features: [
-      {
-        icon: "flaticon-garden",
-        title: "黄金海岸开发",
-        description:
-          "Al Mouj Muscat 和 Muscat Hills 是首屈一指的沿海项目，横跨 110 万平方米的原始海岸线。这片广阔的土地为奢华的生活和旅游事业提供了田园诗般的环境。",
-      },
-      {
-        icon: "flaticon-location",
-        title: "战略合作",
-        description:
-          "在与 Majid Al Futtaim、阿曼海滨公司和国家投资基金公司等第三方实体合作的支持下，Al Mouj Muscat、马斯喀特山和其他综合旅游综合体 (ITC) 确保了透明的投资流程。这些合作优先考虑客户利益，同时简化外国人的财产所有权。",
-      },
-      {
-        icon: "flaticon-investment",
-        title: "独特的住宅和便利设施",
-        description:
-          "这些开发项目提供大量产品，包括 4,000 套联排别墅和 24 种公民身份，它们不仅关乎住宅，还关乎生活方式。附近有四家酒店、一个高尔夫俱乐部和一个码头，凸显了这些项目的吸引力，承诺提供精致而完整的生活体验。",
+          "AIDA 是一个独特的封闭社区和高尔夫目的地，承诺提供一种生活方式，让现实生活中的担忧消失，灵感开始出现。酒店周围环绕着大自然和户外活动，包括前往著名的阿曼特朗普国际高尔夫俱乐部，提供静修般的氛围，距离马斯喀特市中心仅 20 分钟路程。居民和游客可以使用优质设施、户外活动、精致的餐饮选择以及最非凡的五星级酒店的魅力，使其成为休闲和放松的中心。",
       },
     ],
   },

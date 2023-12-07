@@ -16,28 +16,28 @@ const OverView = ({ data, lang }) => {
       label: lang == "en" ? "Bedroom" : lang == "ru" ? "Спальня" : "卧室",
       value: data.bed,
     },
-    {
-      icon: "flaticon-shower",
-      label:
-        lang == "en" ? "Bathroom" : lang == "ru" ? "Ванная комната" : "浴室",
-      value: data.bath,
-    },
-    {
-      icon: "flaticon-event",
-      label:
-        lang == "en"
-          ? "Year Built"
-          : lang == "ru"
-          ? "Год постройки"
-          : "建成年份",
-      value: data.year_built,
-    },
-    {
-      icon: "flaticon-garage",
-      label: lang == "en" ? "Garage" : lang == "ru" ? "Гараж" : "车库",
-      value: data.parking,
-      xs: true,
-    },
+    // {
+    //   icon: "flaticon-shower",
+    //   label:
+    //     lang == "en" ? "Bathroom" : lang == "ru" ? "Ванная комната" : "浴室",
+    //   value: data.bath,
+    // },
+    // {
+    //   icon: "flaticon-event",
+    //   label:
+    //     lang == "en"
+    //       ? "Year Built"
+    //       : lang == "ru"
+    //       ? "Год постройки"
+    //       : "建成年份",
+    //   value: data.year_built,
+    // },
+    // {
+    //   icon: "flaticon-garage",
+    //   label: lang == "en" ? "Garage" : lang == "ru" ? "Гараж" : "车库",
+    //   value: data.parking,
+    //   xs: true,
+    // },
     {
       icon: "flaticon-expand",
       label: lang == "en" ? "Sq M" : lang == "ru" ? "кв.м." : "平方米",

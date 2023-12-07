@@ -113,7 +113,7 @@ const AdvanceFilterModal = () => {
             </div>
             {/* End .col-6 */}
 
-            <div className="col-sm-6">
+            {/* <div className="col-sm-6">
               <div className="widget-wrapper">
                 <h6 className="list-title">Property ID</h6>
                 <div className="form-style2">
@@ -124,7 +124,7 @@ const AdvanceFilterModal = () => {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* End .col-6 */}
           </div>
           {/* End .row */}

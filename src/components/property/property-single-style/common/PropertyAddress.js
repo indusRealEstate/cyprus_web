@@ -5,7 +5,7 @@ const PropertyAddress = ({ data, lang }) => {
     {
       address: data.location,
       city: data.city,
-      zipCode: data.zip_code,
+      // zipCode: data.zip_code,
       // area: "Brookside",
       country: data.country,
     },
@@ -31,13 +31,13 @@ const PropertyAddress = ({ data, lang }) => {
               <p className="fw600 mb10 ff-heading dark-color">
                 {lang == "en" ? "Address" : lang == "ru" ? "Адрес" : "地址"}
               </p>
-              <p className="fw600 mb10 ff-heading dark-color">
+              {/* <p className="fw600 mb10 ff-heading dark-color">
                 {lang == "en"
                   ? "Zip Code"
                   : lang == "ru"
                   ? "Почтовый индекс"
                   : "邮政编码"}
-              </p>
+              </p> */}
               <p className="fw600 mb10 ff-heading dark-color">
                 {lang == "en" ? "City" : lang == "ru" ? "Город" : "城市"}
               </p>
@@ -51,7 +51,7 @@ const PropertyAddress = ({ data, lang }) => {
             </div>
             <div className="pd-list">
               <p className="text mb10">{address.address}</p>
-              <p className="text mb10">{address.zipCode}</p>
+              {/* <p className="text mb10">{address.zipCode}</p> */}
               <p className="text mb10">{address.city}</p>
               <p className="text mb-0">{address.country}</p>
             </div>
