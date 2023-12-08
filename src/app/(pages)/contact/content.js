@@ -54,7 +54,7 @@ const ContactPageContent = () => {
 
   return (
     <>
-      <section id="main">
+      <section id="main" className="pt250 pb30">
         <div className="container">
           <div className="row d-flex align-items-end">
             <div className="col-lg-5 position-relative">

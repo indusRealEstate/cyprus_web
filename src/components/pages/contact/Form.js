@@ -163,60 +163,80 @@ const Form = ({ lang }) => {
         ""
       )}
 
-      {/* <form method="POST" action="https://www.indus-inhouse.com/lead-api-v2">
-        <div class="modal-content">
-          <div class="modal-body">
-            <img src="assets/img/indus-logo-2.png" />
+      <form
+        className="form-style1"
+        method="POST"
+        action="https://www.indus-inhouse.com/lead-api-v2"
+      >
+        <input value="616555fe3e944" name="campaign" type="hidden" />
+        <input value="sale" name="lead_type" type="hidden" />
+        <input value="apartment" name="property_type" type="hidden" />
+        <input value="lp" name="source" type="hidden" />
 
-            <input value="616555fe3e944" name="campaign" type="hidden" />
-            <input value="sale" name="lead_type" type="hidden" />
-            <input value="apartment" name="property_type" type="hidden" />
-            <input value="lp" name="source" type="hidden" />
+        <div className="row">
+          <div className="col-lg-12">
+            <div class="form-group">
+              <div className="mb20">
+                <label className="heading-color ff-heading fw600 mb10">
+                  {lang == "en" ? "Name" : lang == "ru" ? "Имя" : "名"}
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="recipient-name"
+                  placeholder="Name"
+                  name="name"
+                />
+              </div>
+            </div>
+          </div>
 
+          <div className="col-lg-12">
             <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                id="recipient-name"
-                placeholder="Name"
-                name="name"
-              />
+              <div className="mb20">
+                <label className="heading-color ff-heading fw600 mb10">
+                  {lang == "en" ? "Phone" : lang == "ru" ? "Телефон" : "电话"}
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="phone"
+                  name="phone"
+                  placeholder="Phone"
+                />
+              </div>
             </div>
+          </div>
+
+          <div className="col-lg-12">
             <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                id="phone"
-                name="phone"
-                placeholder="Phone"
-              />
-            </div>
-            <div class="form-group">
-              <input
-                type="email"
-                name="email"
-                class="form-control"
-                id="recipient-email"
-                placeholder="Email"
-              />
+              <div className="mb20">
+                <label className="heading-color ff-heading fw600 mb10">
+                  {lang == "en"
+                    ? "Email"
+                    : lang == "ru"
+                    ? "Электронная почта"
+                    : "电子邮件"}
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  id="recipient-email"
+                  placeholder="Email"
+                />
+              </div>
             </div>
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="submit" class="btn btn-primary" name="submit">
+            <button type="submit" className="ud-btn btn-thm" name="submit">
               Send message
             </button>
           </div>
         </div>
-      </form> */}
+      </form>
 
-      <form
+      {/* <form
         className="form-style1"
         id="form"
         method="POST"
@@ -247,7 +267,6 @@ const Form = ({ lang }) => {
               />
             </div>
           </div>
-          {/* End .col-lg-12 */}
           <div className="col-md-12">
             <div className="mb20">
               <label className="heading-color ff-heading fw600 mb10">
@@ -255,7 +274,7 @@ const Form = ({ lang }) => {
               </label>
               <input
                 name="phone"
-                type="number"
+                type="text"
                 className={
                   ValidNEmail
                     ? "form-control"
@@ -300,7 +319,6 @@ const Form = ({ lang }) => {
               />
             </div>
           </div>
-          {/* End .col-lg-12 */}
           <div className="col-md-12">
             <div className="mb10">
               <label className="heading-color ff-heading fw600 mb10">
@@ -311,6 +329,7 @@ const Form = ({ lang }) => {
                   : "您的留言"}
               </label>
               <textarea
+                name="message"
                 cols={30}
                 rows={4}
                 placeholder={
@@ -324,7 +343,6 @@ const Form = ({ lang }) => {
               />
             </div>
           </div>
-          {/* End .col-lg-12 */}
 
           <div className="col-md-12">
             <div className="d-grid">
@@ -335,7 +353,7 @@ const Form = ({ lang }) => {
             </div>
           </div>
         </div>
-      </form>
+      </form> */}
     </>
   );
 };
