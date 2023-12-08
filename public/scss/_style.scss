@@ -635,6 +635,153 @@ li {
   }
 }
 
+.etoile {
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: url(../images/etoile/DAAR.Etoile_Attached_Front.webp);
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 450px;
+  .container {
+    position: relative;
+    z-index: 20;
+    .row {
+      .col-lg-12 {
+        .breadcumb-style1 {
+          .title .breadcumb-list {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #011d2ddb 20%, #074d4400 100%);
+    opacity: 0.8;
+  }
+}
+
+.old_park_lane {
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: url(../images/old-park-lane/149OPL_Street.webp);
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 450px;
+  .container {
+    position: relative;
+    z-index: 20;
+    .row {
+      .col-lg-12 {
+        .breadcumb-style1 {
+          .title .breadcumb-list {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #011d2ddb 20%, #074d4400 100%);
+    opacity: 0.8;
+  }
+}
+
+.the_cove {
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: url(../images/the-cove/bg.webp);
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 450px;
+  .container {
+    position: relative;
+    z-index: 20;
+    .row {
+      .col-lg-12 {
+        .breadcumb-style1 {
+          .title .breadcumb-list {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #011d2ddb 20%, #074d4400 100%);
+    opacity: 0.8;
+  }
+}
+
+.marea {
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: url(../images/marea/DG.MAREA_Pool.webp);
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 450px;
+  .container {
+    position: relative;
+    z-index: 20;
+    .row {
+      .col-lg-12 {
+        .breadcumb-style1 {
+          .title .breadcumb-list {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #011d2ddb 20%, #074d4400 100%);
+    opacity: 0.8;
+  }
+}
 .aida {
   position: relative;
   -webkit-box-align: center;
@@ -669,29 +816,6 @@ li {
     left: 0;
     background-image: linear-gradient(to right, #011d2ddb 20%, #074d4400 100%);
     opacity: 0.8;
-  }
-}
-
-@media (max-width: 768px) {
-  .aida::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(
-      45deg,
-      rgb(1 29 45 / 59%) 15%,
-      rgba(7, 77, 68, 0) 100%
-    );
-    opacity: 0.8;
-  }
-  .minthis-log {
-    width: 250px !important;
-  }
-  .path-description {
-    padding: 0px !important;
   }
 }
 
@@ -747,6 +871,7 @@ li {
     );
     opacity: 0.8;
   }
+
   .minthis-log {
     width: 250px !important;
   }
@@ -804,6 +929,76 @@ li {
     background-image: linear-gradient(45deg, #011d2ddb 20%, #074d4400 100%);
     opacity: 0.8;
   }
+
+  .aida::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(
+      45deg,
+      rgb(1 29 45 / 59%) 15%,
+      rgba(7, 77, 68, 0) 100%
+    );
+    opacity: 0.8;
+  }
+
+  .neo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(45deg, #011d2ddb 20%, #074d4400 100%);
+    opacity: 0.8;
+  }
+
+  .marea::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(45deg, #011d2ddb 20%, #074d4400 100%);
+    opacity: 0.8;
+  }
+
+  .the_cove::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(45deg, #011d2ddb 20%, #074d4400 100%);
+    opacity: 0.8;
+  }
+
+  .old_park_lane::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(45deg, #011d2ddb 20%, #074d4400 100%);
+    opacity: 0.8;
+  }
+
+  .etoile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(45deg, #011d2ddb 20%, #074d4400 100%);
+    opacity: 0.8;
+  }
 }
 
 .neo {
@@ -839,19 +1034,6 @@ li {
     bottom: 0;
     left: 0;
     background-image: linear-gradient(to right, #011d2ddb 20%, #074d4400 100%);
-    opacity: 0.8;
-  }
-}
-
-@media (max-width: 425px) {
-  .neo::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(45deg, #011d2ddb 20%, #074d4400 100%);
     opacity: 0.8;
   }
 }
@@ -4143,7 +4325,7 @@ li {
   position: relative;
 }
 .slider-slide-item:before {
-  background-color: rgba(24, 26, 32, 0.6);
+  background-color: rgb(24 26 32 / 32%);
   bottom: 0;
   content: "";
   height: 100%;

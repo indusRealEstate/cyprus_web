@@ -88,12 +88,12 @@ const Header = () => {
                   <SelectLanguage scrolled={navbar} />
                   <a
                     className="ud-btn add-property menu-btn bdrs12 mx-2"
-                    href="tel:+971552136536"
+                    href="tel:+971543840292"
                   >
                     {getLang(lang)}
                     <i className="fal fa-arrow-right-long fz13" />
                   </a>
-                  <a href="https://wa.me/971552136536" target="_blank">
+                  <a href="https://wa.me/971543840292" target="_blank">
                     <img
                       src="/images/whatsapp.svg"
                       alt="whatsapp"

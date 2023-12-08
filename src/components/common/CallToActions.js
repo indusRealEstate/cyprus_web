@@ -66,9 +66,9 @@ const CallToActions = () => {
                     : "联系我们"}
                   <i className="fal fa-arrow-right-long" />
                 </a>
-                <a href="tel:+971552136536" className="ud-btn btn-dark">
+                <a href="tel:+971543840292" className="ud-btn btn-dark">
                   <span className="flaticon-call vam pe-2" />
-                  +(971) 55 213 6536
+                  +(971) 54 384 0292
                 </a>
               </div>
             </div>

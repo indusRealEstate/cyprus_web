@@ -9,8 +9,8 @@ const ContactMeta = ({ lang }) => {
           : lang == "ru"
           ? "Обслуживание клиентов"
           : "客户服务",
-      phone: "+(971) 55 213 6536",
-      phoneLink: "tel:+971552136536", // Use "tel" URI scheme for phone
+      phone: "+(971) 54 384 0292",
+      phoneLink: "tel:+971543840292", // Use "tel" URI scheme for phone
     },
     {
       title: "Whatsapp",
@@ -20,7 +20,7 @@ const ContactMeta = ({ lang }) => {
           : lang == "ru"
           ? "Связаться через WhatsApp"
           : "通过 Whatsapp 联系",
-      mailLink: "https://wa.me/971552136536",
+      mailLink: "https://wa.me/971543840292",
     },
   ];
 

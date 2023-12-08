@@ -63,64 +63,6 @@ const ContactPageContent = () => {
                 <Form lang={lang} />
               </div>
             </div>
-            {/* <div className="btn">Submitt</div> */}
-            {/* <form
-              id="myForm"
-              method="POST"
-              action="https://www.indus-inhouse.com/lead-api-v2"
-            >
-              <div class="modal-content">
-                <div class="modal-body">
-                  <input value="616555fe3e944" name="campaign" type="hidden" />
-                  <input value="sale" name="lead_type" type="hidden" />
-                  <input value="apartment" name="property_type" type="hidden" />
-                  <input value="lp" name="source" type="hidden" />
-
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="recipient-name"
-                      placeholder="Name"
-                      name="name"
-                      value="test-ajeer-2"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="phone"
-                      name="phone"
-                      placeholder="Phone"
-                      value="test2"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="email"
-                      name="email"
-                      class="form-control"
-                      id="recipient-email"
-                      placeholder="Email"
-                      value="test2"
-                    />
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                  <button type="submit" class="btn btn-primary" name="submit">
-                    Send message
-                  </button>
-                </div>
-              </div>
-            </form> */}
 
             {/* End .col */}
             <div className="col-lg-5 offset-lg-2">

@@ -53,21 +53,13 @@ const PropertyDetails = ({ data, lang }) => {
             : "物业规模",
         value: data.total_area + " Sq M",
       },
-      {
-        label:
-          lang == "en" ? "Bathrooms" : lang == "ru" ? "Ванные комнаты" : "浴室",
-        value: data.bath,
-      },
+
       {
         label: lang == "en" ? "Bedrooms" : lang == "ru" ? "Спальни" : "卧室",
         value: data.bed,
       },
     ],
     [
-      {
-        label: lang == "en" ? "Garage" : lang == "ru" ? "Гараж" : "车库",
-        value: data.parking,
-      },
       {
         label:
           lang == "en"

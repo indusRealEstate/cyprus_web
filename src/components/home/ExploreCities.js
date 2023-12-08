@@ -13,22 +13,37 @@ const ExploreCities = () => {
   const cities = [
     {
       id: 1,
-      name: "Paphos",
+      name: "Oman",
+      image: "/images/listings/muscut.webp",
+    },
+    {
+      id: 4,
+      name: "Cyprus",
       image: "/images/listings/Paphos.webp",
     },
     {
       id: 2,
-      name: "Limassol",
-      image: "/images/listings/Limassol.webp",
+      name: "Spain",
+      image: "/images/listings/spain.webp",
     },
     {
-      id: 2,
-      name: "Muscut",
-      image: "/images/listings/muscut.webp",
+      id: 3,
+      name: "USA",
+      image: "/images/listings/usa.webp",
     },
     {
-      id: 2,
-      name: "Athens ",
+      id: 3,
+      name: "UK",
+      image: "/images/listings/uk.webp",
+    },
+    {
+      id: 3,
+      name: "Saudi Arabia",
+      image: "/images/listings/ksa.webp",
+    },
+    {
+      id: 6,
+      name: "Greece",
       image: "/images/listings/athens.webp",
     },
   ];

@@ -24,17 +24,25 @@ export const en_tr = {
             { href: "/cyprus/neo", label: "Neo" },
           ],
         },
-        // {
-        //   label: "Greece",
-        //   subMenuItems: [
-        //     { href: "/cyprus/minthis", label: "Minthis" },
-        //     { href: "/cyprus/one", label: "One" },
-        //     { href: "/cyprus/neo", label: "Neo" },
-        //   ],
-        // },
         {
           label: "Oman",
           subMenuItems: [{ href: "/oman/aida", label: "AIDA" }],
+        },
+        {
+          label: "Spain",
+          subMenuItems: [{ href: "/spain/marea", label: "MAREA" }],
+        },
+        {
+          label: "USA",
+          subMenuItems: [{ href: "/us/the-cove", label: "The Cove" }],
+        },
+        {
+          label: "UK",
+          subMenuItems: [{ href: "/uk/old-park-lane", label: "Old Park Lane" }],
+        },
+        {
+          label: "Saudi Arabia",
+          subMenuItems: [{ href: "/ksa/etoile", label: "Etoile" }],
         },
       ],
     },
@@ -62,6 +70,13 @@ export const en_tr = {
       title: "Beautiful cliff villa in Oman, AIDA Muscat",
       description: "3 - 7 Beds - 200 - 480 sq m",
       prop_id: "AIDA-01-120",
+    },
+    {
+      image: "/images/banner/DG.MAREA_Balcony+Podium.webp",
+      // price: "$986,00",
+      title: "Exclusive Residences, MAREA, Spain",
+      description: "2 - 3 Beds - 200 - 340 sq m",
+      prop_id: "MAREA-TYPE-A-2BD",
     },
   ],
 
@@ -131,6 +146,90 @@ export const en_tr = {
       btn_text_2: "Properties",
       img: "/images/why-oman.webp",
     },
+    {
+      heading: "Why Spain",
+      sub_heading:
+        "Secure Your Future: Invest confidently in Spain's thriving Costa Del Sol. Enjoy stable 7.5% annual property growth, up to 15% premium on off-plan sales, and guaranteed investment protection with DarGlobal. Turn market fluctuations into rising opportunities and secure steady returns in Spain's lucrative real estate landscape.",
+      point_1: {
+        heading: "Stable and Lucrative Real Estate Market",
+        desc: "Over the past several years, Spain, particularly the Costa Del Sol region, has showcased consistent growth in property values. For instance, the Costa Del Sol villa prices have displayed a steady 7.5% increase year-on-year for the last 6 years. Additionally, buying off-plan properties reveals a significant premium of 10% - 15% upon completion, indicating a promising market for investors seeking appreciating assets.",
+      },
+      point_2: {
+        heading: "Strategic Euro Investment Opportunity",
+        desc: "Amidst fluctuating Euro values, Spain presents an opportunity to turn a falling Euro into rising prospects. By investing in Spain, individuals can leverage the potential growth of their investments, taking advantage of market dynamics and potentially maximizing returns despite currency fluctuations.",
+      },
+      point_3: {
+        heading: "Guaranteed Investment Security",
+        desc: "DarGlobal ensures the protection of invested capital, offering a sense of security and confidence to potential investors. Highlighting Spain as a reliable market choice, the assurance of safeguarding every invested dollar underscores the commitment to secure and protect the investment, fostering trust and confidence in the investment process.",
+      },
+
+      btn_text_1: "Explore",
+      btn_text_2: "Properties",
+      img: "/images/why-spain.webp",
+    },
+    {
+      heading: "Why USA",
+      sub_heading:
+        "Prime Orlando real estate within Margaritaville Resort: next to top attractions, perpetual demand, and a sun-soaked paradise. Invest in luxury, location, and steady returns.",
+      point_1: {
+        heading: "Proximity to Renowned Attractions and Theme Parks",
+        desc: "Nestled within the highly sought-after Margaritaville Resort, this investment offers unparalleled proximity to globally recognized attractions like Walt Disney World Resort, Universal Orlando Resort, and SeaWorld Orlando. This strategic location ensures a steady flow of tourists and renters year-round, translating to consistent investment returns. The appeal lies in the perpetual demand driven by the constant influx of visitors to these iconic attractions, making it an ideal investment opportunity for consistent returns.",
+      },
+      point_2: {
+        heading: "Year-Round Desirable Climate and Lifestyle",
+        desc: "Orlando's subtropical climate, characterized by sun-drenched days and a pleasant ambiance throughout the year, provides an attractive setting for residents and vacationers alike. This aspect not only enhances the quality of life but also contributes to the allure of the real estate market. The promise of a warm escape, vibrant outdoor activities, and a paradise-like setting can significantly enhance the marketability and value of the properties.",
+      },
+      point_3: {
+        heading: "Luxurious Amenities and Thoughtful Design",
+        desc: "The development boasts meticulous curation of villas and apartments designed for comfort, privacy, and luxury living. Ranging from 3- to 4-bedroom villas, 2- to 3-bedroom apartments, and studios, this variety caters to diverse preferences. Additionally, the emphasis on exceptional amenities and a vibrant community spirit—such as retail, wellness, family-friendly entertainment options, and high-end residences—further solidifies its appeal. The promise of a luxurious lifestyle and an array of conveniences within reach elevates the investment potential.",
+      },
+
+      btn_text_1: "Explore",
+      btn_text_2: "Properties",
+      img: "/images/why-usa.webp",
+    },
+    {
+      heading: "Why UK",
+      sub_heading:
+        "Experience the epitome of London luxury at Old Park Lane. A meticulously redeveloped Grade II property steeped in history and sophistication, offering prime location, unparalleled amenities, and exquisite design. Elevate your lifestyle amidst iconic views and prestigious surroundings.",
+      point_1: {
+        heading: "Prime Location & Proximity",
+        desc: "The property's placement in the heart of London's iconic areas, such as Knightsbridge, Belgravia, and Mayfair, offers immediate access to renowned cultural landmarks, shopping districts, entertainment hubs, and esteemed hotels. With close proximity to Buckingham Palace and excellent transport links, the location maximizes convenience and potential rental demand.",
+      },
+      point_2: {
+        heading: "Luxurious Features & Amenities",
+        desc: "The meticulously redeveloped property boasts grandeur and sophistication, evident in its traditional architecture, high ceilings, and spacious corridors. Its reception hall, offering both formal and informal settings with stunning park views, creates an inviting ambiance. Additionally, amenities like an elevator, 24-hour porterage, and concierge services enhance the luxurious lifestyle for residents or potential tenants.",
+      },
+      point_3: {
+        heading: "Historical Charm & Exquisite Design",
+        desc: "The property exudes historic ambiance with intricate cornicing, bespoke joinery, and beautifully detailed finishing throughout, including a formal dining room and generously proportioned guest bedrooms with en-suite bathrooms. Notably, the views of Old Park Lane, Green Park, and Hyde Park Corner add an exclusive allure, attracting those seeking a blend of heritage charm and modern luxury.",
+      },
+
+      btn_text_1: "Explore",
+      btn_text_2: "Properties",
+      img: "/images/why-uk.webp",
+    },
+    {
+      heading: "Why Saudi Arabia",
+      sub_heading:
+        "Discover opulent living in Saudi Arabia's Sedra community, where Elie Saab's iconic design meets cultural heritage. Luxurious residences intertwine tradition and modernity, offering a prestigious lifestyle within a vibrant, integrated community.",
+      point_1: {
+        heading: "Cultural Fusion in Modern Living",
+        desc: "The investment in Saudi Arabia offers a unique blend of modern living within a culturally rich environment. Elie Saab's branded residences in the Sedra community merge contemporary architecture with Saudi Arabian heritage, celebrating the country's history and culture. The infusion of Salmani architecture, a modern interpretation of traditional styles, creates an aspirational living experience that honors the past while embracing technological advancements.",
+      },
+      point_2: {
+        heading: "Prestigious Lifestyle and Luxurious Living",
+        desc: "The collaboration between Elie Saab and the SEDRA community in Riyadh promises a first-of-its-kind living experience. It brings the iconic elegance of Elie Saab to the Kingdom, providing residents with opulent living spaces and luxurious amenities. This investment aims to enhance the quality of life by offering prestigious residences that blend aspirational living with cultural significance, elevating the standard of living for its inhabitants.",
+      },
+      point_3: {
+        heading: "Integrated Community Infrastructure",
+        desc: "The investment encompasses a comprehensive range of amenities beyond luxurious residences. The Sedra community boasts extensive facilities including sports centers, education and medical institutions, restaurants, retail stores, entertainment centers, and more. With vast green spaces and public parks, the community caters to diverse needs, fostering a holistic lifestyle that combines leisure, education, healthcare, and community engagement, making it an attractive destination for investors and residents alike.",
+      },
+
+      btn_text_1: "Explore",
+      btn_text_2: "Properties",
+      img: "/images/why-ksa.webp",
+    },
   ],
 
   property_collections_home: {
@@ -186,8 +285,8 @@ export const en_tr = {
   },
 
   explore_cities_home: {
-    heading: "Explore Cities",
-    sub_heading: "Search properties in these cities.",
+    heading: "Explore Countries",
+    sub_heading: "Search properties in these countries.",
     cities: [
       {
         id: 1,
@@ -460,6 +559,224 @@ dining options.`,
     ],
   },
 
+  spain_project_marea: {
+    bread_crumb_1: "Featured Projects",
+    bread_crumb_2: "MAREA",
+    title: "A Space to Pause, Breath and Reset",
+    subtitle: `Situated in the immediate
+vicinity of Finca Cortesin Resort,
+Marea, interiors by Missoni, is
+designed around the Costa Del
+Sol’s breathtaking landscape, the
+mesmerizing Mediterranean Sea,
+and a world-class golf course.`,
+    subtitle_2: `An upscale residential community at
+Finca Cortesin, offering a harmonious
+blend of refined living within the pristine
+landscapes of Costa del Sol.`,
+
+    para_1: `This exclusive gated community offers
+2-, 3- and 4-bedroom residences,
+features a private entrance and 24/7
+premium security services, to guarantee
+the highest standard in terms of security
+and privacy.`,
+
+    para_2: `Minimalist approach, simplicity and purity of lines, this
+is the idea behind the Contemporary Mediterranean
+Style. Modern elements and natural materials create
+a warm, inviting atmosphere complemented by soft,
+warm and natural lighting.`,
+
+    para_3: `Marea, interiors by Missoni, offers breathtaking
+views of the entire Costa del Sol coastline,
+stretching from Marbella all the way to Gibraltar.Luxury comes with a healthier lifestyle. At
+Marea, interiors by Missoni, the well-being
+center was specifically designed and equipped
+to satisfy every fitness enthusiast, while
+soothing into incomparable coastal views.`,
+
+    para_4: `At the core of the community is where connections sparkle
+and new ideas are born. Here are a majestic pool deck
+to unwind, indoor and outdoor kids areas, and a modern
+fitness center for residents' well-being.`,
+
+    features: [
+      {
+        icon: "flaticon-garden",
+        title: "Luxurious Amenities",
+        description:
+          "Finca Cortesín offers an array of lavish amenities, including a grand beach club, a lavish spa, four pools, and tennis facilities. This feature highlights the opulence and variety of leisure options available to guests, creating an atmosphere of relaxation and indulgence.",
+      },
+      {
+        icon: "flaticon-location",
+        title: "Golfing Excellence",
+        description:
+          "The 18-hole championship golf course at Finca Cortesín stands out as Spain's finest, providing one of Europe's most remarkable golfing experiences. Complemented by the Nicklaus Academy, it offers top-tier instruction, emphasizing the resort's commitment to delivering a premium golfing environment.",
+      },
+      {
+        icon: "flaticon-investment",
+        title: "Cultural and Natural Exploration",
+        description:
+          "Guests can immerse themselves in the beauty of the Costa Del Sol region, exploring Casares' white villages, the Mediterranean coast, and Estepona's dunes atop majestic horses. This feature emphasizes the resort's offering of unique and immersive experiences that showcase the natural beauty and cultural richness of the area.",
+      },
+    ],
+  },
+
+  us_project_the_cove: {
+    bread_crumb_1: "Featured Projects",
+    bread_crumb_2: "The Cove",
+    title: `THE COVE AT
+MARGARITAVILLE
+RESORT`,
+    subtitle: `Nestled within the highly sought-after Margaritaville
+Resort and situated just minutes away from
+renowned attractions and holiday destinations such
+as Walt Disney World Resort, Universal Orlando
+Resort, and SeaWorld Orlando, this is a rare
+investment opportunity that offers a safe haven for
+portfolio diversification.`,
+    subtitle_2: `A THRIVING CITY IN EVERY WAY`,
+
+    para_1: `Located in the heart of Florida’s subtropical terrain
+— dotted by lakes and bathed in year-round
+sunshine — and right next to iconic theme parks
+and venues, Orlando benefits from a constant stream
+of vacationers and renters year-round — translating to
+investment returns for real estate investors.`,
+
+    para_2: `Orlando’s weather is a constant delight, treating
+residents and visitors to sun-drenched days, wild
+nature, and gentle breezes. With its consistently
+pleasant climate, the city offers a warm escape
+— the perfect backdrop for outdoor activities and
+vibrant lifestyles, making every day feel like paradise.From waterparks to a beach club, diverse eateries to
+upscale retail, Margaritaville offers a wide array of
+hospitality, dining, and entertainment experiences —
+everything you need within reach`,
+
+    para_3: `Surrounded by verdant
+nature and exceptional
+amenities, destined to
+be one of Orlando’s
+most coveted addresses.This prestigious development offers
+a meticulous curation of villas and
+apartments, exquisitely designed for
+comfort and privacy. Choose from
+3- to 4-bedroom villas, 2- to 3-bedroom
+apartments, and studios.`,
+
+    para_4: `This real estate opportunity sits right next to
+Walt Disney World Resort and some of the most visited
+theme parks and attractions on the globe — solidifying
+Orlando’s position as a premier tourist hub with
+growing rental and vacation home demand yearly.Embracing a vibrant community spirit, Margaritaville Resort
+Orlando is home to a world of retail, wellness, and family-
+friendly entertainment options, as well as Margaritaville
+Hotel. The Cove is Margaritaville’s latest development,
+offering a range of high-end residences (villas and
+apartments) and a lively ever-expanding community`,
+
+    features: [
+      {
+        icon: "flaticon-garden",
+        title: "Proximity to Premier Attractions",
+        description:
+          "The property is strategically located within close proximity to renowned attractions like Walt Disney World Resort, Universal Orlando Resort, and SeaWorld Orlando. This proximity ensures a consistent stream of vacationers and renters, making it an ideal investment opportunity for real estate investors seeking high returns from rental demand and tourist footfall.",
+      },
+      {
+        icon: "flaticon-location",
+        title: "Exquisite Living Spaces and Amenities",
+        description:
+          "The development offers meticulously curated villas and apartments designed for comfort, privacy, and luxury living. Ranging from 2- to 4-bedroom residences, these units are part of a prestigious community with exceptional amenities, catering to vibrant lifestyles. The offerings include diverse entertainment experiences, upscale retail options, and a range of hospitality and dining choices, providing a comprehensive living experience within the Margaritaville Resort.",
+      },
+      {
+        icon: "flaticon-investment",
+        title: "All-Year Round Paradise-Like Environment",
+        description:
+          "Orlando's subtropical climate, characterized by year-round sunshine, gentle breezes, and natural beauty, provides residents and visitors with a constant delight. This weather creates a warm escape, fostering an ideal backdrop for outdoor activities and vibrant lifestyles. The development embraces this environment by offering a wide array of recreational facilities, from waterparks to a beach club, providing a paradise-like setting for everyday living within the community.",
+      },
+    ],
+  },
+
+  uk_project_old_park_lane: {
+    bread_crumb_1: "Featured Projects",
+    bread_crumb_2: "Old Park Lane",
+    title: `Timeless Elegance: No.149 Old Park Lane, London`,
+    subtitle: `No.149 Old Park Lane stands as a prestigious Grade II property, originally built in 1908 and meticulously redeveloped to exude historic charm merged with modern luxury. This residence epitomizes classical elegance, boasting traditional architecture, high ceilings, and spacious corridors that retain their original Art Nouveau and classical features.`,
+    subtitle_2: `A THRIVING CITY IN EVERY WAY`,
+
+    para_1: `A formal dining room with grand proportions and intricate detailing complements the four generously proportioned guest bedrooms, each equipped with en-suite bathrooms.
+    The residence maintains its historic ambiance with intricate cornicing, bespoke table, and joinery pieces, preserving the essence of its classical roots.
+    Enjoy panoramic vistas of Old Park Lane, Green Park, and Hyde Park Corner, offering a serene backdrop to the property's luxurious interiors.`,
+
+    para_2: `Conveniently located near Sloane Street, Buckingham Palace, and underground/overground transport links, providing easy access to Knightsbridge, Belgravia, and Mayfair's renowned attractions, hotels, dining, and shopping options.
+    The property boasts modern conveniences including an elevator, 24-hour porterage, and concierge services, ensuring a seamless blend of classical elegance and contemporary comfort.`,
+
+    para_3: `The crown jewel of this residence is its reception hall, a grand space offering breathtaking views of London's Green Park. Designed with dual settings, the hall accommodates both formal and informal gatherings. Its opulence is accentuated by a stunning crystal chandelier, complementing the exquisite cream, beige, and dark walnut furnishings that adorn the space.
+    No.149 Old Park Lane seamlessly marries classical grandeur with modern luxury, offering a distinguished living experience amidst London's prestigious locales and cultural landmarks.`,
+
+    para_4: `No.149 Old Park Lane stands as an emblem of historical splendor, meticulously renovated and redesigned to harmonize the essence of its 1908 origins with contemporary luxury. The property radiates a timeless elegance, showcasing traditional architectural elements, such as its high ceilings, spacious corridors, and meticulously preserved Art Nouveau and classical features.`,
+
+    features: [
+      {
+        icon: "flaticon-garden",
+        title: "Historic Grandeur, Modern Comfort",
+        description:
+          "Seamlessly blending historic charm with contemporary luxury, No.149 Old Park Lane stands as a meticulously renovated property, preserving its classical features while offering modern amenities for unparalleled comfort.",
+      },
+      {
+        icon: "flaticon-location",
+        title: "Breathtaking Views",
+        description:
+          "Panoramic vistas encompassing Old Park Lane, Green Park, and Hyde Park Corner create an ever-changing backdrop that enhances the allure of this prestigious residence, providing a visual feast day and night.",
+      },
+      {
+        icon: "flaticon-investment",
+        title: "Elegant Reception Hall",
+        description:
+          "The epitome of grandeur, the reception hall offers dual settings for formal and informal gatherings, boasting stunning views of London's Green Park, adorned with a magnificent crystal chandelier and opulent furnishings.",
+      },
+    ],
+  },
+
+  saudi_project_etoile: {
+    bread_crumb_1: "Featured Projects",
+    bread_crumb_2: "Etoile by Elie Saab",
+    title: `Embracing Elegance: Elie Saab's Iconic Residences in Saudi Arabia`,
+    subtitle: `Discover opulent living in Saudi Arabia's Sedra community, where Elie Saab's iconic design meets cultural heritage. Luxurious residences intertwine tradition and modernity, offering a prestigious lifestyle within a vibrant, integrated community.`,
+    subtitle_2: `A LEGACY OF UNTOUCHED CRAFTSMANSHIP`,
+
+    para_1: `Enter a realm where luxury meets heritage as Elie Saab, the renowned fashion luminary, extends his artistic vision into the heart of Saudi Arabia's Sedra community. These branded residences represent a testament to a sophisticated fusion—melding contemporary living with the profound historical and cultural tapestry of Saudi Arabia.`,
+
+    para_2: `Immerse yourself in the splendor of Salmani architecture, a contemporary interpretation of traditional Saudi Arabian design, meticulously crafted to reflect both the timeless essence of the region and the dynamism of modernity. These residences are more than just abodes; they are harmonious symphonies resonating with the elegant aesthetic that Elie Saab embodies.`,
+
+    para_3: `This collaboration between Elie Saab and SEDRA speaks volumes about luxury redefined—a unique partnership striving to elevate the quality of life for residents by offering not just living spaces, but an experiential journey that marries opulence with heritage. Each residence is a testament to refined living, where architectural magnificence meets the comfort of home.Nestled within this exceptional community are echoes of Saudi Arabia's architectural heritage—courtyards, intricate geometric patterns, and the subtle grace of traditional elements seamlessly woven into the fabric of modernity. This architectural symphony serves not only as a nod to the past but also as a testament to the forward-thinking essence of the nation.`,
+
+    para_4: `This collaboration between Elie Saab and SEDRA speaks volumes about luxury redefined—a unique partnership striving to elevate the quality of life for residents by offering not just living spaces, but an experiential journey that marries opulence with heritage. Each residence is a testament to refined living, where architectural magnificence meets the comfort of home.This is an investment that transcends the tangible—it's an immersion into an ethos, a celebration of heritage, and an embrace of contemporary elegance. Step into Elie Saab's world, where luxury intertwines with culture and tradition, and experience a lifestyle that harmonizes prestige, opulence, and the enduring legacy of Saudi Arabia.`,
+
+    features: [
+      {
+        icon: "flaticon-garden",
+        title: "Iconic Fusion of Tradition and Modernity",
+        description:
+          "Elie Saab's visionary touch transforms the Sedra community in Saudi Arabia, offering residences that seamlessly blend contemporary luxury with the rich heritage of Salmani architecture. This fusion creates a living experience that celebrates the nation's history while embracing cutting-edge design and technology.",
+      },
+      {
+        icon: "flaticon-location",
+        title: "Elevated Lifestyle and Prestigious Living",
+        description:
+          "These branded residences redefine opulence, providing an elevated lifestyle that reflects both Elie Saab's signature elegance and Saudi Arabia's cultural significance. Residents indulge in luxurious living spaces that harmoniously merge sophistication with a deep-rooted sense of tradition, elevating the standard of living to unparalleled heights.",
+      },
+      {
+        icon: "flaticon-investment",
+        title: "Integrated Community Excellence",
+        description:
+          "Beyond lavish accommodations, the Sedra community represents a holistic living experience. With world-class amenities, green spaces, educational and healthcare facilities, entertainment hubs, and cultural touchpoints, this investment offers a complete lifestyle package. It creates a vibrant, interconnected community that caters to diverse needs and fosters a fulfilling way of life for its residents.",
+      },
+    ],
+  },
+
   contact_page: {
     form_title: "Have questions? Get in touch!",
     title_part_1: "We’d love to hear",
@@ -496,17 +813,25 @@ export const ru_tr = {
             { href: "/cyprus/neo", label: "Neo" },
           ],
         },
-        // {
-        //   label: "Greece",
-        //   subMenuItems: [
-        //     { href: "/cyprus/minthis", label: "Minthis" },
-        //     { href: "/cyprus/one", label: "One" },
-        //     { href: "/cyprus/neo", label: "Neo" },
-        //   ],
-        // },
         {
           label: "Oman",
           subMenuItems: [{ href: "/oman/aida", label: "AIDA" }],
+        },
+        {
+          label: "Spain",
+          subMenuItems: [{ href: "/spain/marea", label: "MAREA" }],
+        },
+        {
+          label: "USA",
+          subMenuItems: [{ href: "/us/the-cove", label: "The Cove" }],
+        },
+        {
+          label: "UK",
+          subMenuItems: [{ href: "/uk/old-park-lane", label: "Old Park Lane" }],
+        },
+        {
+          label: "Saudi Arabia",
+          subMenuItems: [{ href: "/ksa/etoile", label: "Etoile" }],
         },
       ],
     },
@@ -604,6 +929,90 @@ export const ru_tr = {
       btn_text_1: "Исследовать",
       btn_text_2: "Характеристики",
       img: "/images/why-oman.webp",
+    },
+    {
+      heading: "Why Spain",
+      sub_heading:
+        "Secure Your Future: Invest confidently in Spain's thriving Costa Del Sol. Enjoy stable 7.5% annual property growth, up to 15% premium on off-plan sales, and guaranteed investment protection with DarGlobal. Turn market fluctuations into rising opportunities and secure steady returns in Spain's lucrative real estate landscape.",
+      point_1: {
+        heading: "Stable and Lucrative Real Estate Market",
+        desc: "Over the past several years, Spain, particularly the Costa Del Sol region, has showcased consistent growth in property values. For instance, the Costa Del Sol villa prices have displayed a steady 7.5% increase year-on-year for the last 6 years. Additionally, buying off-plan properties reveals a significant premium of 10% - 15% upon completion, indicating a promising market for investors seeking appreciating assets.",
+      },
+      point_2: {
+        heading: "Strategic Euro Investment Opportunity",
+        desc: "Amidst fluctuating Euro values, Spain presents an opportunity to turn a falling Euro into rising prospects. By investing in Spain, individuals can leverage the potential growth of their investments, taking advantage of market dynamics and potentially maximizing returns despite currency fluctuations.",
+      },
+      point_3: {
+        heading: "Guaranteed Investment Security",
+        desc: "DarGlobal ensures the protection of invested capital, offering a sense of security and confidence to potential investors. Highlighting Spain as a reliable market choice, the assurance of safeguarding every invested dollar underscores the commitment to secure and protect the investment, fostering trust and confidence in the investment process.",
+      },
+
+      btn_text_1: "Explore",
+      btn_text_2: "Properties",
+      img: "/images/why-spain.webp",
+    },
+    {
+      heading: "Why USA",
+      sub_heading:
+        "Prime Orlando real estate within Margaritaville Resort: next to top attractions, perpetual demand, and a sun-soaked paradise. Invest in luxury, location, and steady returns.",
+      point_1: {
+        heading: "Proximity to Renowned Attractions and Theme Parks",
+        desc: "Nestled within the highly sought-after Margaritaville Resort, this investment offers unparalleled proximity to globally recognized attractions like Walt Disney World Resort, Universal Orlando Resort, and SeaWorld Orlando. This strategic location ensures a steady flow of tourists and renters year-round, translating to consistent investment returns. The appeal lies in the perpetual demand driven by the constant influx of visitors to these iconic attractions, making it an ideal investment opportunity for consistent returns.",
+      },
+      point_2: {
+        heading: "Year-Round Desirable Climate and Lifestyle",
+        desc: "Orlando's subtropical climate, characterized by sun-drenched days and a pleasant ambiance throughout the year, provides an attractive setting for residents and vacationers alike. This aspect not only enhances the quality of life but also contributes to the allure of the real estate market. The promise of a warm escape, vibrant outdoor activities, and a paradise-like setting can significantly enhance the marketability and value of the properties.",
+      },
+      point_3: {
+        heading: "Luxurious Amenities and Thoughtful Design",
+        desc: "The development boasts meticulous curation of villas and apartments designed for comfort, privacy, and luxury living. Ranging from 3- to 4-bedroom villas, 2- to 3-bedroom apartments, and studios, this variety caters to diverse preferences. Additionally, the emphasis on exceptional amenities and a vibrant community spirit—such as retail, wellness, family-friendly entertainment options, and high-end residences—further solidifies its appeal. The promise of a luxurious lifestyle and an array of conveniences within reach elevates the investment potential.",
+      },
+
+      btn_text_1: "Explore",
+      btn_text_2: "Properties",
+      img: "/images/why-usa.webp",
+    },
+    {
+      heading: "Why UK",
+      sub_heading:
+        "Experience the epitome of London luxury at Old Park Lane. A meticulously redeveloped Grade II property steeped in history and sophistication, offering prime location, unparalleled amenities, and exquisite design. Elevate your lifestyle amidst iconic views and prestigious surroundings.",
+      point_1: {
+        heading: "Prime Location & Proximity",
+        desc: "The property's placement in the heart of London's iconic areas, such as Knightsbridge, Belgravia, and Mayfair, offers immediate access to renowned cultural landmarks, shopping districts, entertainment hubs, and esteemed hotels. With close proximity to Buckingham Palace and excellent transport links, the location maximizes convenience and potential rental demand.",
+      },
+      point_2: {
+        heading: "Luxurious Features & Amenities",
+        desc: "The meticulously redeveloped property boasts grandeur and sophistication, evident in its traditional architecture, high ceilings, and spacious corridors. Its reception hall, offering both formal and informal settings with stunning park views, creates an inviting ambiance. Additionally, amenities like an elevator, 24-hour porterage, and concierge services enhance the luxurious lifestyle for residents or potential tenants.",
+      },
+      point_3: {
+        heading: "Historical Charm & Exquisite Design",
+        desc: "The property exudes historic ambiance with intricate cornicing, bespoke joinery, and beautifully detailed finishing throughout, including a formal dining room and generously proportioned guest bedrooms with en-suite bathrooms. Notably, the views of Old Park Lane, Green Park, and Hyde Park Corner add an exclusive allure, attracting those seeking a blend of heritage charm and modern luxury.",
+      },
+
+      btn_text_1: "Explore",
+      btn_text_2: "Properties",
+      img: "/images/why-uk.webp",
+    },
+    {
+      heading: "Why Saudi Arabia",
+      sub_heading:
+        "Discover opulent living in Saudi Arabia's Sedra community, where Elie Saab's iconic design meets cultural heritage. Luxurious residences intertwine tradition and modernity, offering a prestigious lifestyle within a vibrant, integrated community.",
+      point_1: {
+        heading: "Cultural Fusion in Modern Living",
+        desc: "The investment in Saudi Arabia offers a unique blend of modern living within a culturally rich environment. Elie Saab's branded residences in the Sedra community merge contemporary architecture with Saudi Arabian heritage, celebrating the country's history and culture. The infusion of Salmani architecture, a modern interpretation of traditional styles, creates an aspirational living experience that honors the past while embracing technological advancements.",
+      },
+      point_2: {
+        heading: "Prestigious Lifestyle and Luxurious Living",
+        desc: "The collaboration between Elie Saab and the SEDRA community in Riyadh promises a first-of-its-kind living experience. It brings the iconic elegance of Elie Saab to the Kingdom, providing residents with opulent living spaces and luxurious amenities. This investment aims to enhance the quality of life by offering prestigious residences that blend aspirational living with cultural significance, elevating the standard of living for its inhabitants.",
+      },
+      point_3: {
+        heading: "Integrated Community Infrastructure",
+        desc: "The investment encompasses a comprehensive range of amenities beyond luxurious residences. The Sedra community boasts extensive facilities including sports centers, education and medical institutions, restaurants, retail stores, entertainment centers, and more. With vast green spaces and public parks, the community caters to diverse needs, fostering a holistic lifestyle that combines leisure, education, healthcare, and community engagement, making it an attractive destination for investors and residents alike.",
+      },
+
+      btn_text_1: "Explore",
+      btn_text_2: "Properties",
+      img: "/images/why-ksa.webp",
     },
   ],
 
@@ -933,6 +1342,222 @@ Club Oman, этот исключительный закрытый поселок
     ],
   },
 
+  spain_project_marea: {
+    bread_crumb_1: "Featured Projects",
+    bread_crumb_2: "MAREA",
+    title: "A Space to Pause, Breath and Reset",
+    subtitle: `Situated in the immediate
+vicinity of Finca Cortesin Resort,
+Marea, interiors by Missoni, is
+designed around the Costa Del
+Sol’s breathtaking landscape, the
+mesmerizing Mediterranean Sea,
+and a world-class golf course.`,
+    subtitle_2: `An upscale residential community at
+Finca Cortesin, offering a harmonious
+blend of refined living within the pristine
+landscapes of Costa del Sol.`,
+
+    para_1: `This exclusive gated community offers
+2-, 3- and 4-bedroom residences,
+features a private entrance and 24/7
+premium security services, to guarantee
+the highest standard in terms of security
+and privacy.`,
+
+    para_2: `Minimalist approach, simplicity and purity of lines, this
+is the idea behind the Contemporary Mediterranean
+Style. Modern elements and natural materials create
+a warm, inviting atmosphere complemented by soft,
+warm and natural lighting.`,
+
+    para_3: `Marea, interiors by Missoni, offers breathtaking
+views of the entire Costa del Sol coastline,
+stretching from Marbella all the way to Gibraltar.Luxury comes with a healthier lifestyle. At
+Marea, interiors by Missoni, the well-being
+center was specifically designed and equipped
+to satisfy every fitness enthusiast, while
+soothing into incomparable coastal views.`,
+
+    para_4: `At the core of the community is where connections sparkle
+and new ideas are born. Here are a majestic pool deck
+to unwind, indoor and outdoor kids areas, and a modern
+fitness center for residents' well-being.`,
+
+    features: [
+      {
+        icon: "flaticon-garden",
+        title: "Luxurious Amenities",
+        description:
+          "Finca Cortesín offers an array of lavish amenities, including a grand beach club, a lavish spa, four pools, and tennis facilities. This feature highlights the opulence and variety of leisure options available to guests, creating an atmosphere of relaxation and indulgence.",
+      },
+      {
+        icon: "flaticon-location",
+        title: "Golfing Excellence",
+        description:
+          "The 18-hole championship golf course at Finca Cortesín stands out as Spain's finest, providing one of Europe's most remarkable golfing experiences. Complemented by the Nicklaus Academy, it offers top-tier instruction, emphasizing the resort's commitment to delivering a premium golfing environment.",
+      },
+      {
+        icon: "flaticon-investment",
+        title: "Cultural and Natural Exploration",
+        description:
+          "Guests can immerse themselves in the beauty of the Costa Del Sol region, exploring Casares' white villages, the Mediterranean coast, and Estepona's dunes atop majestic horses. This feature emphasizes the resort's offering of unique and immersive experiences that showcase the natural beauty and cultural richness of the area.",
+      },
+    ],
+  },
+
+  us_project_the_cove: {
+    bread_crumb_1: "Featured Projects",
+    bread_crumb_2: "The Cove",
+    title: `THE COVE AT
+MARGARITAVILLE
+RESORT`,
+    subtitle: `Nestled within the highly sought-after Margaritaville
+Resort and situated just minutes away from
+renowned attractions and holiday destinations such
+as Walt Disney World Resort, Universal Orlando
+Resort, and SeaWorld Orlando, this is a rare
+investment opportunity that offers a safe haven for
+portfolio diversification.`,
+    subtitle_2: `A THRIVING CITY IN EVERY WAY`,
+
+    para_1: `Located in the heart of Florida’s subtropical terrain
+— dotted by lakes and bathed in year-round
+sunshine — and right next to iconic theme parks
+and venues, Orlando benefits from a constant stream
+of vacationers and renters year-round — translating to
+investment returns for real estate investors.`,
+
+    para_2: `Orlando’s weather is a constant delight, treating
+residents and visitors to sun-drenched days, wild
+nature, and gentle breezes. With its consistently
+pleasant climate, the city offers a warm escape
+— the perfect backdrop for outdoor activities and
+vibrant lifestyles, making every day feel like paradise.From waterparks to a beach club, diverse eateries to
+upscale retail, Margaritaville offers a wide array of
+hospitality, dining, and entertainment experiences —
+everything you need within reach`,
+
+    para_3: `Surrounded by verdant
+nature and exceptional
+amenities, destined to
+be one of Orlando’s
+most coveted addresses.This prestigious development offers
+a meticulous curation of villas and
+apartments, exquisitely designed for
+comfort and privacy. Choose from
+3- to 4-bedroom villas, 2- to 3-bedroom
+apartments, and studios.`,
+
+    para_4: `This real estate opportunity sits right next to
+Walt Disney World Resort and some of the most visited
+theme parks and attractions on the globe — solidifying
+Orlando’s position as a premier tourist hub with
+growing rental and vacation home demand yearly.Embracing a vibrant community spirit, Margaritaville Resort
+Orlando is home to a world of retail, wellness, and family-
+friendly entertainment options, as well as Margaritaville
+Hotel. The Cove is Margaritaville’s latest development,
+offering a range of high-end residences (villas and
+apartments) and a lively ever-expanding community`,
+
+    features: [
+      {
+        icon: "flaticon-garden",
+        title: "Proximity to Premier Attractions",
+        description:
+          "The property is strategically located within close proximity to renowned attractions like Walt Disney World Resort, Universal Orlando Resort, and SeaWorld Orlando. This proximity ensures a consistent stream of vacationers and renters, making it an ideal investment opportunity for real estate investors seeking high returns from rental demand and tourist footfall.",
+      },
+      {
+        icon: "flaticon-location",
+        title: "Exquisite Living Spaces and Amenities",
+        description:
+          "The development offers meticulously curated villas and apartments designed for comfort, privacy, and luxury living. Ranging from 2- to 4-bedroom residences, these units are part of a prestigious community with exceptional amenities, catering to vibrant lifestyles. The offerings include diverse entertainment experiences, upscale retail options, and a range of hospitality and dining choices, providing a comprehensive living experience within the Margaritaville Resort.",
+      },
+      {
+        icon: "flaticon-investment",
+        title: "All-Year Round Paradise-Like Environment",
+        description:
+          "Orlando's subtropical climate, characterized by year-round sunshine, gentle breezes, and natural beauty, provides residents and visitors with a constant delight. This weather creates a warm escape, fostering an ideal backdrop for outdoor activities and vibrant lifestyles. The development embraces this environment by offering a wide array of recreational facilities, from waterparks to a beach club, providing a paradise-like setting for everyday living within the community.",
+      },
+    ],
+  },
+  uk_project_old_park_lane: {
+    bread_crumb_1: "Featured Projects",
+    bread_crumb_2: "Old Park Lane",
+    title: `Timeless Elegance: No.149 Old Park Lane, London`,
+    subtitle: `No.149 Old Park Lane stands as a prestigious Grade II property, originally built in 1908 and meticulously redeveloped to exude historic charm merged with modern luxury. This residence epitomizes classical elegance, boasting traditional architecture, high ceilings, and spacious corridors that retain their original Art Nouveau and classical features.`,
+    subtitle_2: `A THRIVING CITY IN EVERY WAY`,
+
+    para_1: `A formal dining room with grand proportions and intricate detailing complements the four generously proportioned guest bedrooms, each equipped with en-suite bathrooms.
+    The residence maintains its historic ambiance with intricate cornicing, bespoke table, and joinery pieces, preserving the essence of its classical roots.
+    Enjoy panoramic vistas of Old Park Lane, Green Park, and Hyde Park Corner, offering a serene backdrop to the property's luxurious interiors.`,
+
+    para_2: `Conveniently located near Sloane Street, Buckingham Palace, and underground/overground transport links, providing easy access to Knightsbridge, Belgravia, and Mayfair's renowned attractions, hotels, dining, and shopping options.
+    The property boasts modern conveniences including an elevator, 24-hour porterage, and concierge services, ensuring a seamless blend of classical elegance and contemporary comfort.`,
+
+    para_3: `The crown jewel of this residence is its reception hall, a grand space offering breathtaking views of London's Green Park. Designed with dual settings, the hall accommodates both formal and informal gatherings. Its opulence is accentuated by a stunning crystal chandelier, complementing the exquisite cream, beige, and dark walnut furnishings that adorn the space.
+    No.149 Old Park Lane seamlessly marries classical grandeur with modern luxury, offering a distinguished living experience amidst London's prestigious locales and cultural landmarks.`,
+
+    para_4: `No.149 Old Park Lane stands as an emblem of historical splendor, meticulously renovated and redesigned to harmonize the essence of its 1908 origins with contemporary luxury. The property radiates a timeless elegance, showcasing traditional architectural elements, such as its high ceilings, spacious corridors, and meticulously preserved Art Nouveau and classical features.`,
+
+    features: [
+      {
+        icon: "flaticon-garden",
+        title: "Historic Grandeur, Modern Comfort",
+        description:
+          "Seamlessly blending historic charm with contemporary luxury, No.149 Old Park Lane stands as a meticulously renovated property, preserving its classical features while offering modern amenities for unparalleled comfort.",
+      },
+      {
+        icon: "flaticon-location",
+        title: "Breathtaking Views",
+        description:
+          "Panoramic vistas encompassing Old Park Lane, Green Park, and Hyde Park Corner create an ever-changing backdrop that enhances the allure of this prestigious residence, providing a visual feast day and night.",
+      },
+      {
+        icon: "flaticon-investment",
+        title: "Elegant Reception Hall",
+        description:
+          "The epitome of grandeur, the reception hall offers dual settings for formal and informal gatherings, boasting stunning views of London's Green Park, adorned with a magnificent crystal chandelier and opulent furnishings.",
+      },
+    ],
+  },
+  saudi_project_etoile: {
+    bread_crumb_1: "Featured Projects",
+    bread_crumb_2: "Etoile by Elie Saab",
+    title: `Embracing Elegance: Elie Saab's Iconic Residences in Saudi Arabia`,
+    subtitle: `Discover opulent living in Saudi Arabia's Sedra community, where Elie Saab's iconic design meets cultural heritage. Luxurious residences intertwine tradition and modernity, offering a prestigious lifestyle within a vibrant, integrated community.`,
+    subtitle_2: `A LEGACY OF UNTOUCHED CRAFTSMANSHIP`,
+
+    para_1: `Enter a realm where luxury meets heritage as Elie Saab, the renowned fashion luminary, extends his artistic vision into the heart of Saudi Arabia's Sedra community. These branded residences represent a testament to a sophisticated fusion—melding contemporary living with the profound historical and cultural tapestry of Saudi Arabia.`,
+
+    para_2: `Immerse yourself in the splendor of Salmani architecture, a contemporary interpretation of traditional Saudi Arabian design, meticulously crafted to reflect both the timeless essence of the region and the dynamism of modernity. These residences are more than just abodes; they are harmonious symphonies resonating with the elegant aesthetic that Elie Saab embodies.`,
+
+    para_3: `This collaboration between Elie Saab and SEDRA speaks volumes about luxury redefined—a unique partnership striving to elevate the quality of life for residents by offering not just living spaces, but an experiential journey that marries opulence with heritage. Each residence is a testament to refined living, where architectural magnificence meets the comfort of home.Nestled within this exceptional community are echoes of Saudi Arabia's architectural heritage—courtyards, intricate geometric patterns, and the subtle grace of traditional elements seamlessly woven into the fabric of modernity. This architectural symphony serves not only as a nod to the past but also as a testament to the forward-thinking essence of the nation.`,
+
+    para_4: `This collaboration between Elie Saab and SEDRA speaks volumes about luxury redefined—a unique partnership striving to elevate the quality of life for residents by offering not just living spaces, but an experiential journey that marries opulence with heritage. Each residence is a testament to refined living, where architectural magnificence meets the comfort of home.This is an investment that transcends the tangible—it's an immersion into an ethos, a celebration of heritage, and an embrace of contemporary elegance. Step into Elie Saab's world, where luxury intertwines with culture and tradition, and experience a lifestyle that harmonizes prestige, opulence, and the enduring legacy of Saudi Arabia.`,
+
+    features: [
+      {
+        icon: "flaticon-garden",
+        title: "Iconic Fusion of Tradition and Modernity",
+        description:
+          "Elie Saab's visionary touch transforms the Sedra community in Saudi Arabia, offering residences that seamlessly blend contemporary luxury with the rich heritage of Salmani architecture. This fusion creates a living experience that celebrates the nation's history while embracing cutting-edge design and technology.",
+      },
+      {
+        icon: "flaticon-location",
+        title: "Elevated Lifestyle and Prestigious Living",
+        description:
+          "These branded residences redefine opulence, providing an elevated lifestyle that reflects both Elie Saab's signature elegance and Saudi Arabia's cultural significance. Residents indulge in luxurious living spaces that harmoniously merge sophistication with a deep-rooted sense of tradition, elevating the standard of living to unparalleled heights.",
+      },
+      {
+        icon: "flaticon-investment",
+        title: "Integrated Community Excellence",
+        description:
+          "Beyond lavish accommodations, the Sedra community represents a holistic living experience. With world-class amenities, green spaces, educational and healthcare facilities, entertainment hubs, and cultural touchpoints, this investment offers a complete lifestyle package. It creates a vibrant, interconnected community that caters to diverse needs and fosters a fulfilling way of life for its residents.",
+      },
+    ],
+  },
+
   contact_page: {
     form_title: "Есть вопросы? Связаться!",
     title_part_1: "Нам бы хотелось услышать",
@@ -969,17 +1594,25 @@ export const ch_tr = {
             { href: "/cyprus/neo", label: "Neo" },
           ],
         },
-        // {
-        //   label: "Greece",
-        //   subMenuItems: [
-        //     { href: "/cyprus/minthis", label: "Minthis" },
-        //     { href: "/cyprus/one", label: "One" },
-        //     { href: "/cyprus/neo", label: "Neo" },
-        //   ],
-        // },
         {
           label: "Oman",
           subMenuItems: [{ href: "/oman/aida", label: "AIDA" }],
+        },
+        {
+          label: "Spain",
+          subMenuItems: [{ href: "/spain/marea", label: "MAREA" }],
+        },
+        {
+          label: "USA",
+          subMenuItems: [{ href: "/us/the-cove", label: "The Cove" }],
+        },
+        {
+          label: "UK",
+          subMenuItems: [{ href: "/uk/old-park-lane", label: "Old Park Lane" }],
+        },
+        {
+          label: "Saudi Arabia",
+          subMenuItems: [{ href: "/ksa/etoile", label: "Etoile" }],
         },
       ],
     },
@@ -1072,6 +1705,90 @@ export const ch_tr = {
       btn_text_1: "探索",
       btn_text_2: "特性",
       img: "/images/why-oman.webp",
+    },
+    {
+      heading: "Why Spain",
+      sub_heading:
+        "Secure Your Future: Invest confidently in Spain's thriving Costa Del Sol. Enjoy stable 7.5% annual property growth, up to 15% premium on off-plan sales, and guaranteed investment protection with DarGlobal. Turn market fluctuations into rising opportunities and secure steady returns in Spain's lucrative real estate landscape.",
+      point_1: {
+        heading: "Stable and Lucrative Real Estate Market",
+        desc: "Over the past several years, Spain, particularly the Costa Del Sol region, has showcased consistent growth in property values. For instance, the Costa Del Sol villa prices have displayed a steady 7.5% increase year-on-year for the last 6 years. Additionally, buying off-plan properties reveals a significant premium of 10% - 15% upon completion, indicating a promising market for investors seeking appreciating assets.",
+      },
+      point_2: {
+        heading: "Strategic Euro Investment Opportunity",
+        desc: "Amidst fluctuating Euro values, Spain presents an opportunity to turn a falling Euro into rising prospects. By investing in Spain, individuals can leverage the potential growth of their investments, taking advantage of market dynamics and potentially maximizing returns despite currency fluctuations.",
+      },
+      point_3: {
+        heading: "Guaranteed Investment Security",
+        desc: "DarGlobal ensures the protection of invested capital, offering a sense of security and confidence to potential investors. Highlighting Spain as a reliable market choice, the assurance of safeguarding every invested dollar underscores the commitment to secure and protect the investment, fostering trust and confidence in the investment process.",
+      },
+
+      btn_text_1: "Explore",
+      btn_text_2: "Properties",
+      img: "/images/why-spain.webp",
+    },
+    {
+      heading: "Why USA",
+      sub_heading:
+        "Prime Orlando real estate within Margaritaville Resort: next to top attractions, perpetual demand, and a sun-soaked paradise. Invest in luxury, location, and steady returns.",
+      point_1: {
+        heading: "Proximity to Renowned Attractions and Theme Parks",
+        desc: "Nestled within the highly sought-after Margaritaville Resort, this investment offers unparalleled proximity to globally recognized attractions like Walt Disney World Resort, Universal Orlando Resort, and SeaWorld Orlando. This strategic location ensures a steady flow of tourists and renters year-round, translating to consistent investment returns. The appeal lies in the perpetual demand driven by the constant influx of visitors to these iconic attractions, making it an ideal investment opportunity for consistent returns.",
+      },
+      point_2: {
+        heading: "Year-Round Desirable Climate and Lifestyle",
+        desc: "Orlando's subtropical climate, characterized by sun-drenched days and a pleasant ambiance throughout the year, provides an attractive setting for residents and vacationers alike. This aspect not only enhances the quality of life but also contributes to the allure of the real estate market. The promise of a warm escape, vibrant outdoor activities, and a paradise-like setting can significantly enhance the marketability and value of the properties.",
+      },
+      point_3: {
+        heading: "Luxurious Amenities and Thoughtful Design",
+        desc: "The development boasts meticulous curation of villas and apartments designed for comfort, privacy, and luxury living. Ranging from 3- to 4-bedroom villas, 2- to 3-bedroom apartments, and studios, this variety caters to diverse preferences. Additionally, the emphasis on exceptional amenities and a vibrant community spirit—such as retail, wellness, family-friendly entertainment options, and high-end residences—further solidifies its appeal. The promise of a luxurious lifestyle and an array of conveniences within reach elevates the investment potential.",
+      },
+
+      btn_text_1: "Explore",
+      btn_text_2: "Properties",
+      img: "/images/why-usa.webp",
+    },
+    {
+      heading: "Why UK",
+      sub_heading:
+        "Experience the epitome of London luxury at Old Park Lane. A meticulously redeveloped Grade II property steeped in history and sophistication, offering prime location, unparalleled amenities, and exquisite design. Elevate your lifestyle amidst iconic views and prestigious surroundings.",
+      point_1: {
+        heading: "Prime Location & Proximity",
+        desc: "The property's placement in the heart of London's iconic areas, such as Knightsbridge, Belgravia, and Mayfair, offers immediate access to renowned cultural landmarks, shopping districts, entertainment hubs, and esteemed hotels. With close proximity to Buckingham Palace and excellent transport links, the location maximizes convenience and potential rental demand.",
+      },
+      point_2: {
+        heading: "Luxurious Features & Amenities",
+        desc: "The meticulously redeveloped property boasts grandeur and sophistication, evident in its traditional architecture, high ceilings, and spacious corridors. Its reception hall, offering both formal and informal settings with stunning park views, creates an inviting ambiance. Additionally, amenities like an elevator, 24-hour porterage, and concierge services enhance the luxurious lifestyle for residents or potential tenants.",
+      },
+      point_3: {
+        heading: "Historical Charm & Exquisite Design",
+        desc: "The property exudes historic ambiance with intricate cornicing, bespoke joinery, and beautifully detailed finishing throughout, including a formal dining room and generously proportioned guest bedrooms with en-suite bathrooms. Notably, the views of Old Park Lane, Green Park, and Hyde Park Corner add an exclusive allure, attracting those seeking a blend of heritage charm and modern luxury.",
+      },
+
+      btn_text_1: "Explore",
+      btn_text_2: "Properties",
+      img: "/images/why-uk.webp",
+    },
+    {
+      heading: "Why Saudi Arabia",
+      sub_heading:
+        "Discover opulent living in Saudi Arabia's Sedra community, where Elie Saab's iconic design meets cultural heritage. Luxurious residences intertwine tradition and modernity, offering a prestigious lifestyle within a vibrant, integrated community.",
+      point_1: {
+        heading: "Cultural Fusion in Modern Living",
+        desc: "The investment in Saudi Arabia offers a unique blend of modern living within a culturally rich environment. Elie Saab's branded residences in the Sedra community merge contemporary architecture with Saudi Arabian heritage, celebrating the country's history and culture. The infusion of Salmani architecture, a modern interpretation of traditional styles, creates an aspirational living experience that honors the past while embracing technological advancements.",
+      },
+      point_2: {
+        heading: "Prestigious Lifestyle and Luxurious Living",
+        desc: "The collaboration between Elie Saab and the SEDRA community in Riyadh promises a first-of-its-kind living experience. It brings the iconic elegance of Elie Saab to the Kingdom, providing residents with opulent living spaces and luxurious amenities. This investment aims to enhance the quality of life by offering prestigious residences that blend aspirational living with cultural significance, elevating the standard of living for its inhabitants.",
+      },
+      point_3: {
+        heading: "Integrated Community Infrastructure",
+        desc: "The investment encompasses a comprehensive range of amenities beyond luxurious residences. The Sedra community boasts extensive facilities including sports centers, education and medical institutions, restaurants, retail stores, entertainment centers, and more. With vast green spaces and public parks, the community caters to diverse needs, fostering a holistic lifestyle that combines leisure, education, healthcare, and community engagement, making it an attractive destination for investors and residents alike.",
+      },
+
+      btn_text_1: "Explore",
+      btn_text_2: "Properties",
+      img: "/images/why-ksa.webp",
     },
   ],
   property_collections_home: {
@@ -1384,6 +2101,222 @@ Club Oman，这个特殊的封闭社区
         title: "独特的封闭社区和休闲生活方式",
         description:
           "AIDA 是一个独特的封闭社区和高尔夫目的地，承诺提供一种生活方式，让现实生活中的担忧消失，灵感开始出现。酒店周围环绕着大自然和户外活动，包括前往著名的阿曼特朗普国际高尔夫俱乐部，提供静修般的氛围，距离马斯喀特市中心仅 20 分钟路程。居民和游客可以使用优质设施、户外活动、精致的餐饮选择以及最非凡的五星级酒店的魅力，使其成为休闲和放松的中心。",
+      },
+    ],
+  },
+
+  spain_project_marea: {
+    bread_crumb_1: "Featured Projects",
+    bread_crumb_2: "MAREA",
+    title: "A Space to Pause, Breath and Reset",
+    subtitle: `Situated in the immediate
+vicinity of Finca Cortesin Resort,
+Marea, interiors by Missoni, is
+designed around the Costa Del
+Sol’s breathtaking landscape, the
+mesmerizing Mediterranean Sea,
+and a world-class golf course.`,
+    subtitle_2: `An upscale residential community at
+Finca Cortesin, offering a harmonious
+blend of refined living within the pristine
+landscapes of Costa del Sol.`,
+
+    para_1: `This exclusive gated community offers
+2-, 3- and 4-bedroom residences,
+features a private entrance and 24/7
+premium security services, to guarantee
+the highest standard in terms of security
+and privacy.`,
+
+    para_2: `Minimalist approach, simplicity and purity of lines, this
+is the idea behind the Contemporary Mediterranean
+Style. Modern elements and natural materials create
+a warm, inviting atmosphere complemented by soft,
+warm and natural lighting.`,
+
+    para_3: `Marea, interiors by Missoni, offers breathtaking
+views of the entire Costa del Sol coastline,
+stretching from Marbella all the way to Gibraltar.Luxury comes with a healthier lifestyle. At
+Marea, interiors by Missoni, the well-being
+center was specifically designed and equipped
+to satisfy every fitness enthusiast, while
+soothing into incomparable coastal views.`,
+
+    para_4: `At the core of the community is where connections sparkle
+and new ideas are born. Here are a majestic pool deck
+to unwind, indoor and outdoor kids areas, and a modern
+fitness center for residents' well-being.`,
+
+    features: [
+      {
+        icon: "flaticon-garden",
+        title: "Luxurious Amenities",
+        description:
+          "Finca Cortesín offers an array of lavish amenities, including a grand beach club, a lavish spa, four pools, and tennis facilities. This feature highlights the opulence and variety of leisure options available to guests, creating an atmosphere of relaxation and indulgence.",
+      },
+      {
+        icon: "flaticon-location",
+        title: "Golfing Excellence",
+        description:
+          "The 18-hole championship golf course at Finca Cortesín stands out as Spain's finest, providing one of Europe's most remarkable golfing experiences. Complemented by the Nicklaus Academy, it offers top-tier instruction, emphasizing the resort's commitment to delivering a premium golfing environment.",
+      },
+      {
+        icon: "flaticon-investment",
+        title: "Cultural and Natural Exploration",
+        description:
+          "Guests can immerse themselves in the beauty of the Costa Del Sol region, exploring Casares' white villages, the Mediterranean coast, and Estepona's dunes atop majestic horses. This feature emphasizes the resort's offering of unique and immersive experiences that showcase the natural beauty and cultural richness of the area.",
+      },
+    ],
+  },
+
+  us_project_the_cove: {
+    bread_crumb_1: "Featured Projects",
+    bread_crumb_2: "The Cove",
+    title: `THE COVE AT
+MARGARITAVILLE
+RESORT`,
+    subtitle: `Nestled within the highly sought-after Margaritaville
+Resort and situated just minutes away from
+renowned attractions and holiday destinations such
+as Walt Disney World Resort, Universal Orlando
+Resort, and SeaWorld Orlando, this is a rare
+investment opportunity that offers a safe haven for
+portfolio diversification.`,
+    subtitle_2: `A THRIVING CITY IN EVERY WAY`,
+
+    para_1: `Located in the heart of Florida’s subtropical terrain
+— dotted by lakes and bathed in year-round
+sunshine — and right next to iconic theme parks
+and venues, Orlando benefits from a constant stream
+of vacationers and renters year-round — translating to
+investment returns for real estate investors.`,
+
+    para_2: `Orlando’s weather is a constant delight, treating
+residents and visitors to sun-drenched days, wild
+nature, and gentle breezes. With its consistently
+pleasant climate, the city offers a warm escape
+— the perfect backdrop for outdoor activities and
+vibrant lifestyles, making every day feel like paradise.From waterparks to a beach club, diverse eateries to
+upscale retail, Margaritaville offers a wide array of
+hospitality, dining, and entertainment experiences —
+everything you need within reach`,
+
+    para_3: `Surrounded by verdant
+nature and exceptional
+amenities, destined to
+be one of Orlando’s
+most coveted addresses.This prestigious development offers
+a meticulous curation of villas and
+apartments, exquisitely designed for
+comfort and privacy. Choose from
+3- to 4-bedroom villas, 2- to 3-bedroom
+apartments, and studios.`,
+
+    para_4: `This real estate opportunity sits right next to
+Walt Disney World Resort and some of the most visited
+theme parks and attractions on the globe — solidifying
+Orlando’s position as a premier tourist hub with
+growing rental and vacation home demand yearly.Embracing a vibrant community spirit, Margaritaville Resort
+Orlando is home to a world of retail, wellness, and family-
+friendly entertainment options, as well as Margaritaville
+Hotel. The Cove is Margaritaville’s latest development,
+offering a range of high-end residences (villas and
+apartments) and a lively ever-expanding community`,
+
+    features: [
+      {
+        icon: "flaticon-garden",
+        title: "Proximity to Premier Attractions",
+        description:
+          "The property is strategically located within close proximity to renowned attractions like Walt Disney World Resort, Universal Orlando Resort, and SeaWorld Orlando. This proximity ensures a consistent stream of vacationers and renters, making it an ideal investment opportunity for real estate investors seeking high returns from rental demand and tourist footfall.",
+      },
+      {
+        icon: "flaticon-location",
+        title: "Exquisite Living Spaces and Amenities",
+        description:
+          "The development offers meticulously curated villas and apartments designed for comfort, privacy, and luxury living. Ranging from 2- to 4-bedroom residences, these units are part of a prestigious community with exceptional amenities, catering to vibrant lifestyles. The offerings include diverse entertainment experiences, upscale retail options, and a range of hospitality and dining choices, providing a comprehensive living experience within the Margaritaville Resort.",
+      },
+      {
+        icon: "flaticon-investment",
+        title: "All-Year Round Paradise-Like Environment",
+        description:
+          "Orlando's subtropical climate, characterized by year-round sunshine, gentle breezes, and natural beauty, provides residents and visitors with a constant delight. This weather creates a warm escape, fostering an ideal backdrop for outdoor activities and vibrant lifestyles. The development embraces this environment by offering a wide array of recreational facilities, from waterparks to a beach club, providing a paradise-like setting for everyday living within the community.",
+      },
+    ],
+  },
+  uk_project_old_park_lane: {
+    bread_crumb_1: "Featured Projects",
+    bread_crumb_2: "Old Park Lane",
+    title: `Timeless Elegance: No.149 Old Park Lane, London`,
+    subtitle: `No.149 Old Park Lane stands as a prestigious Grade II property, originally built in 1908 and meticulously redeveloped to exude historic charm merged with modern luxury. This residence epitomizes classical elegance, boasting traditional architecture, high ceilings, and spacious corridors that retain their original Art Nouveau and classical features.`,
+    subtitle_2: `A THRIVING CITY IN EVERY WAY`,
+
+    para_1: `A formal dining room with grand proportions and intricate detailing complements the four generously proportioned guest bedrooms, each equipped with en-suite bathrooms.
+    The residence maintains its historic ambiance with intricate cornicing, bespoke table, and joinery pieces, preserving the essence of its classical roots.
+    Enjoy panoramic vistas of Old Park Lane, Green Park, and Hyde Park Corner, offering a serene backdrop to the property's luxurious interiors.`,
+
+    para_2: `Conveniently located near Sloane Street, Buckingham Palace, and underground/overground transport links, providing easy access to Knightsbridge, Belgravia, and Mayfair's renowned attractions, hotels, dining, and shopping options.
+    The property boasts modern conveniences including an elevator, 24-hour porterage, and concierge services, ensuring a seamless blend of classical elegance and contemporary comfort.`,
+
+    para_3: `The crown jewel of this residence is its reception hall, a grand space offering breathtaking views of London's Green Park. Designed with dual settings, the hall accommodates both formal and informal gatherings. Its opulence is accentuated by a stunning crystal chandelier, complementing the exquisite cream, beige, and dark walnut furnishings that adorn the space.
+    No.149 Old Park Lane seamlessly marries classical grandeur with modern luxury, offering a distinguished living experience amidst London's prestigious locales and cultural landmarks.`,
+
+    para_4: `No.149 Old Park Lane stands as an emblem of historical splendor, meticulously renovated and redesigned to harmonize the essence of its 1908 origins with contemporary luxury. The property radiates a timeless elegance, showcasing traditional architectural elements, such as its high ceilings, spacious corridors, and meticulously preserved Art Nouveau and classical features.`,
+
+    features: [
+      {
+        icon: "flaticon-garden",
+        title: "Historic Grandeur, Modern Comfort",
+        description:
+          "Seamlessly blending historic charm with contemporary luxury, No.149 Old Park Lane stands as a meticulously renovated property, preserving its classical features while offering modern amenities for unparalleled comfort.",
+      },
+      {
+        icon: "flaticon-location",
+        title: "Breathtaking Views",
+        description:
+          "Panoramic vistas encompassing Old Park Lane, Green Park, and Hyde Park Corner create an ever-changing backdrop that enhances the allure of this prestigious residence, providing a visual feast day and night.",
+      },
+      {
+        icon: "flaticon-investment",
+        title: "Elegant Reception Hall",
+        description:
+          "The epitome of grandeur, the reception hall offers dual settings for formal and informal gatherings, boasting stunning views of London's Green Park, adorned with a magnificent crystal chandelier and opulent furnishings.",
+      },
+    ],
+  },
+  saudi_project_etoile: {
+    bread_crumb_1: "Featured Projects",
+    bread_crumb_2: "Etoile by Elie Saab",
+    title: `Embracing Elegance: Elie Saab's Iconic Residences in Saudi Arabia`,
+    subtitle: `Discover opulent living in Saudi Arabia's Sedra community, where Elie Saab's iconic design meets cultural heritage. Luxurious residences intertwine tradition and modernity, offering a prestigious lifestyle within a vibrant, integrated community.`,
+    subtitle_2: `A LEGACY OF UNTOUCHED CRAFTSMANSHIP`,
+
+    para_1: `Enter a realm where luxury meets heritage as Elie Saab, the renowned fashion luminary, extends his artistic vision into the heart of Saudi Arabia's Sedra community. These branded residences represent a testament to a sophisticated fusion—melding contemporary living with the profound historical and cultural tapestry of Saudi Arabia.`,
+
+    para_2: `Immerse yourself in the splendor of Salmani architecture, a contemporary interpretation of traditional Saudi Arabian design, meticulously crafted to reflect both the timeless essence of the region and the dynamism of modernity. These residences are more than just abodes; they are harmonious symphonies resonating with the elegant aesthetic that Elie Saab embodies.`,
+
+    para_3: `This collaboration between Elie Saab and SEDRA speaks volumes about luxury redefined—a unique partnership striving to elevate the quality of life for residents by offering not just living spaces, but an experiential journey that marries opulence with heritage. Each residence is a testament to refined living, where architectural magnificence meets the comfort of home.Nestled within this exceptional community are echoes of Saudi Arabia's architectural heritage—courtyards, intricate geometric patterns, and the subtle grace of traditional elements seamlessly woven into the fabric of modernity. This architectural symphony serves not only as a nod to the past but also as a testament to the forward-thinking essence of the nation.`,
+
+    para_4: `This collaboration between Elie Saab and SEDRA speaks volumes about luxury redefined—a unique partnership striving to elevate the quality of life for residents by offering not just living spaces, but an experiential journey that marries opulence with heritage. Each residence is a testament to refined living, where architectural magnificence meets the comfort of home.This is an investment that transcends the tangible—it's an immersion into an ethos, a celebration of heritage, and an embrace of contemporary elegance. Step into Elie Saab's world, where luxury intertwines with culture and tradition, and experience a lifestyle that harmonizes prestige, opulence, and the enduring legacy of Saudi Arabia.`,
+
+    features: [
+      {
+        icon: "flaticon-garden",
+        title: "Iconic Fusion of Tradition and Modernity",
+        description:
+          "Elie Saab's visionary touch transforms the Sedra community in Saudi Arabia, offering residences that seamlessly blend contemporary luxury with the rich heritage of Salmani architecture. This fusion creates a living experience that celebrates the nation's history while embracing cutting-edge design and technology.",
+      },
+      {
+        icon: "flaticon-location",
+        title: "Elevated Lifestyle and Prestigious Living",
+        description:
+          "These branded residences redefine opulence, providing an elevated lifestyle that reflects both Elie Saab's signature elegance and Saudi Arabia's cultural significance. Residents indulge in luxurious living spaces that harmoniously merge sophistication with a deep-rooted sense of tradition, elevating the standard of living to unparalleled heights.",
+      },
+      {
+        icon: "flaticon-investment",
+        title: "Integrated Community Excellence",
+        description:
+          "Beyond lavish accommodations, the Sedra community represents a holistic living experience. With world-class amenities, green spaces, educational and healthcare facilities, entertainment hubs, and cultural touchpoints, this investment offers a complete lifestyle package. It creates a vibrant, interconnected community that caters to diverse needs and fosters a fulfilling way of life for its residents.",
       },
     ],
   },

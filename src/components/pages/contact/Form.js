@@ -162,14 +162,74 @@ const Form = ({ lang }) => {
       ) : (
         ""
       )}
-      <form className="form-style1" id="form">
+
+      {/* <form method="POST" action="https://www.indus-inhouse.com/lead-api-v2">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="assets/img/indus-logo-2.png" />
+
+            <input value="616555fe3e944" name="campaign" type="hidden" />
+            <input value="sale" name="lead_type" type="hidden" />
+            <input value="apartment" name="property_type" type="hidden" />
+            <input value="lp" name="source" type="hidden" />
+
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="recipient-name"
+                placeholder="Name"
+                name="name"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="phone"
+                name="phone"
+                placeholder="Phone"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                id="recipient-email"
+                placeholder="Email"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="submit" class="btn btn-primary" name="submit">
+              Send message
+            </button>
+          </div>
+        </div>
+      </form> */}
+
+      <form
+        className="form-style1"
+        id="form"
+        method="POST"
+        action="https://www.indus-inhouse.com/lead-api-v2"
+      >
         <div className="row">
           <div className="col-lg-12">
             <div className="mb20">
               <label className="heading-color ff-heading fw600 mb10">
-                {lang == "en" ? "First Name" : lang == "ru" ? "Имя" : "名"}
+                {lang == "en" ? "Name" : lang == "ru" ? "Имя" : "名"}
               </label>
               <input
+                name="name"
                 type="text"
                 className={
                   ValidFirstName
@@ -184,40 +244,34 @@ const Form = ({ lang }) => {
                     : "你的名字"
                 }
                 required
-                onChange={(event) =>
-                  setFormData({ ...formData, first_name: event.target.value })
-                }
               />
             </div>
           </div>
           {/* End .col-lg-12 */}
-          <div className="col-lg-12">
+          <div className="col-md-12">
             <div className="mb20">
               <label className="heading-color ff-heading fw600 mb10">
-                {lang == "en" ? "Last Name" : lang == "ru" ? "Фамилия" : "姓"}
+                {lang == "en" ? "Phone" : lang == "ru" ? "Телефон" : "电话"}
               </label>
               <input
-                type="text"
+                name="phone"
+                type="number"
                 className={
-                  ValidLastName
+                  ValidNEmail
                     ? "form-control"
                     : "form-control border border-danger"
                 }
                 placeholder={
                   lang == "en"
-                    ? "Your last name"
+                    ? "Your Phone Number"
                     : lang == "ru"
-                    ? "Ваша фамилия"
-                    : "你的姓氏"
+                    ? "Ваш номер телефона"
+                    : "你的电话号码"
                 }
                 required
-                onChange={(event) =>
-                  setFormData({ ...formData, last_name: event.target.value })
-                }
               />
             </div>
           </div>
-          {/* End .col-lg-12 */}
           <div className="col-md-12">
             <div className="mb20">
               <label className="heading-color ff-heading fw600 mb10">
@@ -228,6 +282,7 @@ const Form = ({ lang }) => {
                   : "电子邮件"}
               </label>
               <input
+                name="email"
                 type="email"
                 className={
                   ValidNEmail
@@ -242,9 +297,6 @@ const Form = ({ lang }) => {
                     : "你的邮件"
                 }
                 required
-                onChange={(event) =>
-                  setFormData({ ...formData, email: event.target.value })
-                }
               />
             </div>
           </div>
@@ -269,11 +321,6 @@ const Form = ({ lang }) => {
                     : "告诉我们您的财产要求。"
                 }
                 defaultValue={""}
-                required
-                style={messageEmpty ? { border: "2px solid red" } : {}}
-                onChange={(event) =>
-                  setFormData({ ...formData, message: event.target.value })
-                }
               />
             </div>
           </div>
@@ -281,11 +328,7 @@ const Form = ({ lang }) => {
 
           <div className="col-md-12">
             <div className="d-grid">
-              <button
-                type="submit"
-                className="ud-btn btn-thm"
-                onClick={(event) => onSubmitForm(event)}
-              >
+              <button type="submit" className="ud-btn btn-thm" name="submit">
                 Submit
                 <i className="fal fa-arrow-right-long" />
               </button>
