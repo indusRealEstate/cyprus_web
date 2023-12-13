@@ -3,9 +3,10 @@ import { ch_tr, en_tr, ru_tr } from "@/lang";
 import { useAppSelector } from "@/redux/store";
 import Image from "next/image";
 import Link from "next/link";
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
+SwiperCore.use([Autoplay]);
 
 const ExploreCities = () => {
   const lang = useAppSelector((state) => state.langReducer);
@@ -17,24 +18,9 @@ const ExploreCities = () => {
       image: "/images/listings/muscut.webp",
     },
     {
-      id: 4,
+      id: 2,
       name: "Cyprus",
       image: "/images/listings/Paphos.webp",
-    },
-    {
-      id: 2,
-      name: "Spain",
-      image: "/images/listings/spain.webp",
-    },
-    {
-      id: 3,
-      name: "USA",
-      image: "/images/listings/usa.webp",
-    },
-    {
-      id: 3,
-      name: "UK",
-      image: "/images/listings/uk.webp",
     },
     {
       id: 3,
@@ -42,7 +28,23 @@ const ExploreCities = () => {
       image: "/images/listings/ksa.webp",
     },
     {
+      id: 4,
+      name: "Spain",
+      image: "/images/listings/spain.webp",
+    },
+    {
+      id: 5,
+      name: "USA",
+      image: "/images/listings/usa.webp",
+    },
+    {
       id: 6,
+      name: "UK",
+      image: "/images/listings/uk.webp",
+    },
+
+    {
+      id: 7,
       name: "Greece",
       image: "/images/listings/athens.webp",
     },
@@ -104,7 +106,9 @@ const ExploreCities = () => {
             <div className="property-city-slider">
               <Swiper
                 spaceBetween={30}
-                modules={[Navigation, Pagination]}
+                speed={1400} // Set the slide transition speed in milliseconds
+                autoplay={{ delay: 4000 }}
+                modules={[Navigation, Pagination, Autoplay]}
                 navigation={{
                   nextEl: ".cities_next__active",
                   prevEl: ".cities_prev__active",

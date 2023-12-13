@@ -11,7 +11,7 @@ import Hero from "@/components/home/Hero";
 import FilterWithProperties from "@/components/home/filter-with-property";
 import Footer from "@/components/home/footer";
 import WhyChoose from "@/components/home/why-choose";
-import PopupDialog from "./popup";
+import CookieConsent from "./cookies-consent";
 
 const Home = () => {
   return (
@@ -84,6 +84,7 @@ const Home = () => {
       <section className="footer-style1 at-home6 pt60 pb-0">
         <Footer />
       </section>
+      <CookieConsent />
       {/* End Our Footer */}
     </>
   );

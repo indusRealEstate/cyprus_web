@@ -9,7 +9,7 @@ export const en_tr = {
       subMenu: [
         { href: "/#main", label: "Home" },
         { href: "/#featured-listings", label: "Featured Listings" },
-        { href: "/#explore-cities", label: "Explore Cities" },
+        { href: "/#explore-cities", label: "Explore Countries" },
       ],
     },
     "All Listings",
@@ -798,7 +798,7 @@ export const ru_tr = {
       subMenu: [
         { href: "/#main", label: "Дом" },
         { href: "/#featured-listings", label: "Избранные объявления" },
-        { href: "/#explore-cities", label: "Исследуйте города" },
+        { href: "/#explore-cities", label: "Исследуйте страны" },
       ],
     },
     "Все объявления",
@@ -860,6 +860,13 @@ export const ru_tr = {
       title: "Красивая вилла на скале в Омане, AIDA Muscat",
       description: "3–7 спальных мест – 200–480 кв.м.",
       prop_id: "AIDA-01-120",
+    },
+    {
+      image: "/images/banner/DG.MAREA_Balcony+Podium.webp",
+      // price: "$986,00",
+      title: "Эксклюзивные резиденции, MAREA, Испания",
+      description: "2–3 кровати – 200–340 кв.м.",
+      prop_id: "MAREA-TYPE-A-2BD",
     },
   ],
 
@@ -931,87 +938,88 @@ export const ru_tr = {
       img: "/images/why-oman.webp",
     },
     {
-      heading: "Why Spain",
+      heading: "Почему Испания",
       sub_heading:
-        "Secure Your Future: Invest confidently in Spain's thriving Costa Del Sol. Enjoy stable 7.5% annual property growth, up to 15% premium on off-plan sales, and guaranteed investment protection with DarGlobal. Turn market fluctuations into rising opportunities and secure steady returns in Spain's lucrative real estate landscape.",
+        "Обеспечьте свое будущее: уверенно инвестируйте в процветающее испанское побережье Коста-дель-Соль. Наслаждайтесь стабильным годовым ростом недвижимости на 7,5%, премией до 15% на продажи на этапе строительства и гарантированной защитой инвестиций с DarGlobal. Превратите колебания рынка в растущие возможности и обеспечьте стабильную прибыль на прибыльном рынке недвижимости Испании.",
       point_1: {
-        heading: "Stable and Lucrative Real Estate Market",
-        desc: "Over the past several years, Spain, particularly the Costa Del Sol region, has showcased consistent growth in property values. For instance, the Costa Del Sol villa prices have displayed a steady 7.5% increase year-on-year for the last 6 years. Additionally, buying off-plan properties reveals a significant premium of 10% - 15% upon completion, indicating a promising market for investors seeking appreciating assets.",
+        heading: "Стабильный и прибыльный рынок недвижимости",
+        desc: "За последние несколько лет Испания, особенно регион Коста-дель-Соль, продемонстрировала стабильный рост стоимости недвижимости. Например, цены на виллы на Коста-дель-Соль стабильно растут на 7,5% в годовом исчислении в течение последних 6 лет. Кроме того, покупка недвижимости на стадии строительства предполагает значительную премию в размере 10–15% после завершения строительства, что указывает на перспективный рынок для инвесторов, стремящихся оценить активы.",
       },
       point_2: {
-        heading: "Strategic Euro Investment Opportunity",
-        desc: "Amidst fluctuating Euro values, Spain presents an opportunity to turn a falling Euro into rising prospects. By investing in Spain, individuals can leverage the potential growth of their investments, taking advantage of market dynamics and potentially maximizing returns despite currency fluctuations.",
+        heading: "Стратегическая инвестиционная возможность в евро",
+        desc: "На фоне колебаний курса евро Испания предоставляет возможность превратить падающий евро в перспективу роста. Инвестируя в Испанию, частные лица могут воспользоваться потенциальным ростом своих инвестиций, воспользовавшись динамикой рынка и потенциально максимизируя прибыль, несмотря на колебания валютных курсов.",
       },
       point_3: {
-        heading: "Guaranteed Investment Security",
-        desc: "DarGlobal ensures the protection of invested capital, offering a sense of security and confidence to potential investors. Highlighting Spain as a reliable market choice, the assurance of safeguarding every invested dollar underscores the commitment to secure and protect the investment, fostering trust and confidence in the investment process.",
+        heading: "Гарантированная безопасность инвестиций",
+        desc: "DarGlobal обеспечивает защиту вложенного капитала, предлагая потенциальным инвесторам чувство безопасности и уверенности. Подчеркивая, что Испания является надежным выбором на рынке, гарантия сохранности каждого вложенного доллара подчеркивает приверженность обеспечению безопасности и защиты инвестиций, укрепляя доверие и уверенность в инвестиционном процессе.",
       },
 
-      btn_text_1: "Explore",
-      btn_text_2: "Properties",
+      btn_text_1: "Исследовать",
+      btn_text_2: "Характеристики",
       img: "/images/why-spain.webp",
     },
     {
-      heading: "Why USA",
+      heading: "Почему США",
       sub_heading:
-        "Prime Orlando real estate within Margaritaville Resort: next to top attractions, perpetual demand, and a sun-soaked paradise. Invest in luxury, location, and steady returns.",
+        "Первоклассная недвижимость в Орландо на территории курорта Маргаритавилль: рядом с главными достопримечательностями, постоянный спрос и залитый солнцем рай. Инвестируйте в роскошь, местоположение и стабильную прибыль.",
       point_1: {
-        heading: "Proximity to Renowned Attractions and Theme Parks",
-        desc: "Nestled within the highly sought-after Margaritaville Resort, this investment offers unparalleled proximity to globally recognized attractions like Walt Disney World Resort, Universal Orlando Resort, and SeaWorld Orlando. This strategic location ensures a steady flow of tourists and renters year-round, translating to consistent investment returns. The appeal lies in the perpetual demand driven by the constant influx of visitors to these iconic attractions, making it an ideal investment opportunity for consistent returns.",
+        heading:
+          "Близость к известным достопримечательностям и тематическим паркам",
+        desc: "Эта инвестиция, расположенная на территории популярного курорта Маргаритавилль, предлагает беспрецедентную близость к всемирно признанным достопримечательностям, таким как Всемирный курорт Уолта Диснея, Universal Orlando Resort и SeaWorld Orlando. Это стратегическое расположение обеспечивает стабильный поток туристов и арендаторов круглый год, что приводит к стабильному доходу от инвестиций. Привлекательность заключается в постоянном спросе, обусловленном постоянным притоком посетителей к этим знаковым достопримечательностям, что делает их идеальной инвестиционной возможностью для стабильной прибыли.",
       },
       point_2: {
-        heading: "Year-Round Desirable Climate and Lifestyle",
-        desc: "Orlando's subtropical climate, characterized by sun-drenched days and a pleasant ambiance throughout the year, provides an attractive setting for residents and vacationers alike. This aspect not only enhances the quality of life but also contributes to the allure of the real estate market. The promise of a warm escape, vibrant outdoor activities, and a paradise-like setting can significantly enhance the marketability and value of the properties.",
+        heading: "Желательный климат и образ жизни круглый год",
+        desc: "Субтропический климат Орландо, характеризующийся залитыми солнцем днями и приятной атмосферой в течение всего года, обеспечивает привлекательные условия как для жителей, так и для отдыхающих. Этот аспект не только повышает качество жизни, но и способствует привлекательности рынка недвижимости. Обещание теплого отдыха, ярких развлечений на свежем воздухе и райской обстановки может значительно повысить конкурентоспособность и стоимость недвижимости.",
       },
       point_3: {
-        heading: "Luxurious Amenities and Thoughtful Design",
-        desc: "The development boasts meticulous curation of villas and apartments designed for comfort, privacy, and luxury living. Ranging from 3- to 4-bedroom villas, 2- to 3-bedroom apartments, and studios, this variety caters to diverse preferences. Additionally, the emphasis on exceptional amenities and a vibrant community spirit—such as retail, wellness, family-friendly entertainment options, and high-end residences—further solidifies its appeal. The promise of a luxurious lifestyle and an array of conveniences within reach elevates the investment potential.",
+        heading: "Роскошные удобства и продуманный дизайн",
+        desc: "Комплекс может похвастаться тщательным подбором вилл и апартаментов, спроектированных для комфорта, уединения и роскошной жизни. От вилл с 3 до 4 спальнями, квартир с 2 до 3 спальнями и студий — этот выбор удовлетворит самые разнообразные предпочтения. Кроме того, акцент на исключительных удобствах и ярком духе сообщества, таких как розничная торговля, оздоровительный центр, развлечения для всей семьи и элитные жилые дома, еще больше укрепляет его привлекательность. Обещание роскошного образа жизни и множества удобств в пределах досягаемости повышают инвестиционный потенциал.",
       },
 
-      btn_text_1: "Explore",
-      btn_text_2: "Properties",
+      btn_text_1: "Исследовать",
+      btn_text_2: "Характеристики",
       img: "/images/why-usa.webp",
     },
     {
-      heading: "Why UK",
+      heading: "Почему Великобритания",
       sub_heading:
-        "Experience the epitome of London luxury at Old Park Lane. A meticulously redeveloped Grade II property steeped in history and sophistication, offering prime location, unparalleled amenities, and exquisite design. Elevate your lifestyle amidst iconic views and prestigious surroundings.",
+        "Ощутите воплощение лондонской роскоши в Олд Парк Лейн. Тщательно реконструированный отель класса II с богатой историей и изысканностью, предлагающий превосходное расположение, непревзойденные удобства и изысканный дизайн. Поднимите свой образ жизни среди знаковых видов и престижной обстановки.",
       point_1: {
-        heading: "Prime Location & Proximity",
-        desc: "The property's placement in the heart of London's iconic areas, such as Knightsbridge, Belgravia, and Mayfair, offers immediate access to renowned cultural landmarks, shopping districts, entertainment hubs, and esteemed hotels. With close proximity to Buckingham Palace and excellent transport links, the location maximizes convenience and potential rental demand.",
+        heading: "Отличное расположение и близость",
+        desc: "Расположение отеля в самом сердце знаковых районов Лондона, таких как Найтсбридж, Белгравия и Мейфэр, обеспечивает непосредственный доступ к известным культурным достопримечательностям, торговым районам, развлекательным центрам и уважаемым отелям. Непосредственная близость к Букингемскому дворцу и отличное транспортное сообщение обеспечивают максимальное удобство и потенциальный спрос на аренду.",
       },
       point_2: {
-        heading: "Luxurious Features & Amenities",
-        desc: "The meticulously redeveloped property boasts grandeur and sophistication, evident in its traditional architecture, high ceilings, and spacious corridors. Its reception hall, offering both formal and informal settings with stunning park views, creates an inviting ambiance. Additionally, amenities like an elevator, 24-hour porterage, and concierge services enhance the luxurious lifestyle for residents or potential tenants.",
+        heading: "Роскошные характеристики и удобства",
+        desc: "Тщательно реконструированный отель может похвастаться величием и изысканностью, что проявляется в его традиционной архитектуре, высоких потолках и просторных коридорах. Зал для приемов, предлагающий как формальную, так и неформальную обстановку, с потрясающим видом на парк, создает уютную атмосферу. Кроме того, такие удобства, как лифт, круглосуточный носильщик и услуги консьержа, повышают роскошный образ жизни жильцов или потенциальных арендаторов.",
       },
       point_3: {
-        heading: "Historical Charm & Exquisite Design",
-        desc: "The property exudes historic ambiance with intricate cornicing, bespoke joinery, and beautifully detailed finishing throughout, including a formal dining room and generously proportioned guest bedrooms with en-suite bathrooms. Notably, the views of Old Park Lane, Green Park, and Hyde Park Corner add an exclusive allure, attracting those seeking a blend of heritage charm and modern luxury.",
+        heading: "Историческое очарование и изысканный дизайн",
+        desc: "Отель излучает историческую атмосферу с замысловатыми карнизами, сделанными на заказ столярными изделиями и прекрасно детализированной отделкой, включая формальную столовую и просторные гостевые спальни с ванными комнатами. Примечательно, что виды на Олд-Парк-лейн, Грин-парк и Гайд-парк-Корнер добавляют эксклюзивного очарования, привлекая тех, кто ищет сочетание очарования наследия и современной роскоши.",
       },
 
-      btn_text_1: "Explore",
-      btn_text_2: "Properties",
+      btn_text_1: "Исследовать",
+      btn_text_2: "Характеристики",
       img: "/images/why-uk.webp",
     },
     {
-      heading: "Why Saudi Arabia",
+      heading: "Почему Саудовская Аравия",
       sub_heading:
-        "Discover opulent living in Saudi Arabia's Sedra community, where Elie Saab's iconic design meets cultural heritage. Luxurious residences intertwine tradition and modernity, offering a prestigious lifestyle within a vibrant, integrated community.",
+        "Откройте для себя роскошную жизнь в районе Седра в Саудовской Аравии, где культовый дизайн Эли Сааба сочетается с культурным наследием. Роскошные резиденции сочетают в себе традиции и современность, предлагая престижный образ жизни в динамичном, интегрированном сообществе.",
       point_1: {
-        heading: "Cultural Fusion in Modern Living",
-        desc: "The investment in Saudi Arabia offers a unique blend of modern living within a culturally rich environment. Elie Saab's branded residences in the Sedra community merge contemporary architecture with Saudi Arabian heritage, celebrating the country's history and culture. The infusion of Salmani architecture, a modern interpretation of traditional styles, creates an aspirational living experience that honors the past while embracing technological advancements.",
+        heading: "Культурный синтез в современной жизни",
+        desc: "Инвестиции в Саудовскую Аравию предлагают уникальное сочетание современной жизни в богатой культуре среде. Фирменные резиденции Эли Сааба в районе Седра объединяют современную архитектуру с наследием Саудовской Аравии, прославляя историю и культуру страны. Вливание архитектуры Салмани, современной интерпретации традиционных стилей, создает вдохновляющий жизненный опыт, который чтит прошлое и одновременно использует технологические достижения.",
       },
       point_2: {
-        heading: "Prestigious Lifestyle and Luxurious Living",
-        desc: "The collaboration between Elie Saab and the SEDRA community in Riyadh promises a first-of-its-kind living experience. It brings the iconic elegance of Elie Saab to the Kingdom, providing residents with opulent living spaces and luxurious amenities. This investment aims to enhance the quality of life by offering prestigious residences that blend aspirational living with cultural significance, elevating the standard of living for its inhabitants.",
+        heading: "Престижный образ жизни и роскошная жизнь",
+        desc: "Сотрудничество Эли Сааба и сообщества SEDRA в Эр-Рияде обещает первый в своем роде жизненный опыт. Он привносит в королевство культовую элегантность Elie Saab, предоставляя жителям роскошные жилые помещения и роскошные удобства. Эти инвестиции направлены на повышение качества жизни путем предложения престижных резиденций, которые сочетают в себе желанную жизнь с культурной значимостью, повышая уровень жизни ее жителей.",
       },
       point_3: {
-        heading: "Integrated Community Infrastructure",
-        desc: "The investment encompasses a comprehensive range of amenities beyond luxurious residences. The Sedra community boasts extensive facilities including sports centers, education and medical institutions, restaurants, retail stores, entertainment centers, and more. With vast green spaces and public parks, the community caters to diverse needs, fostering a holistic lifestyle that combines leisure, education, healthcare, and community engagement, making it an attractive destination for investors and residents alike.",
+        heading: "Интегрированная общественная инфраструктура",
+        desc: "Инвестиции включают в себя широкий спектр удобств, помимо роскошных резиденций. Сообщество Седра может похвастаться обширными возможностями, включая спортивные центры, образовательные и медицинские учреждения, рестораны, розничные магазины, развлекательные центры и многое другое. Обладая обширными зелеными насаждениями и общественными парками, сообщество удовлетворяет разнообразные потребности, способствуя целостному образу жизни, сочетающему в себе отдых, образование, здравоохранение и участие в жизни общества, что делает его привлекательным местом как для инвесторов, так и для жителей.",
       },
 
-      btn_text_1: "Explore",
-      btn_text_2: "Properties",
+      btn_text_1: "Исследовать",
+      btn_text_2: "Характеристики",
       img: "/images/why-ksa.webp",
     },
   ],
@@ -1343,217 +1351,217 @@ Club Oman, этот исключительный закрытый поселок
   },
 
   spain_project_marea: {
-    bread_crumb_1: "Featured Projects",
+    bread_crumb_1: "Рекомендуемые проекты",
     bread_crumb_2: "MAREA",
-    title: "A Space to Pause, Breath and Reset",
-    subtitle: `Situated in the immediate
-vicinity of Finca Cortesin Resort,
-Marea, interiors by Missoni, is
-designed around the Costa Del
-Sol’s breathtaking landscape, the
-mesmerizing Mediterranean Sea,
-and a world-class golf course.`,
-    subtitle_2: `An upscale residential community at
-Finca Cortesin, offering a harmonious
-blend of refined living within the pristine
-landscapes of Costa del Sol.`,
+    title: "Пространство для паузы, дыхания и перезагрузки",
+    subtitle: `Расположен в непосредственной близости
+окрестности курорта Finca Cortesin,
+Marea, интерьеры от Missoni.
+спроектирован вокруг Коста Дель
+Захватывающий пейзаж Солнца,
+завораживающее Средиземное море,
+и поле для гольфа мирового класса.`,
+    subtitle_2: `Элитный жилой комплекс по адресу
+Finca Cortesin, предлагающая гармоничный
+сочетание изысканной жизни в первозданной
+пейзажи Коста дель Соль.`,
 
-    para_1: `This exclusive gated community offers
-2-, 3- and 4-bedroom residences,
-features a private entrance and 24/7
-premium security services, to guarantee
-the highest standard in terms of security
-and privacy.`,
+    para_1: `Этот эксклюзивный закрытый комплекс предлагает
+2-, 3- и 4-комнатные резиденции,
+имеет отдельный вход и работает круглосуточно.
+услуги охраны премиум-класса, чтобы гарантировать
+высочайший стандарт с точки зрения безопасности
+и конфиденциальность.`,
 
-    para_2: `Minimalist approach, simplicity and purity of lines, this
-is the idea behind the Contemporary Mediterranean
-Style. Modern elements and natural materials create
-a warm, inviting atmosphere complemented by soft,
-warm and natural lighting.`,
+    para_2: `Минималистический подход, простота и чистота линий, это
+это идея современного Средиземноморья
+Стиль. Современные элементы и натуральные материалы создают
+теплая, гостеприимная атмосфера, дополненная мягким,
+теплое и естественное освещение.`,
 
-    para_3: `Marea, interiors by Missoni, offers breathtaking
-views of the entire Costa del Sol coastline,
-stretching from Marbella all the way to Gibraltar.Luxury comes with a healthier lifestyle. At
-Marea, interiors by Missoni, the well-being
-center was specifically designed and equipped
-to satisfy every fitness enthusiast, while
-soothing into incomparable coastal views.`,
+    para_3: `Marea, интерьеры от Missoni, предлагают захватывающие дух
+вид на все побережье Коста дель Соль,
+простирается от Марбельи до Гибралтара. Роскошь связана с более здоровым образом жизни. В
+Marea, интерьеры Missoni, благополучие
+центр был специально спроектирован и оборудован
+удовлетворить каждого любителя фитнеса, в то время как
+успокаивающий несравненный вид на побережье.`,
 
-    para_4: `At the core of the community is where connections sparkle
-and new ideas are born. Here are a majestic pool deck
-to unwind, indoor and outdoor kids areas, and a modern
-fitness center for residents' well-being.`,
+    para_4: `В основе сообщества — то, где сверкают связи
+и рождаются новые идеи. Вот величественная терраса у бассейна
+для отдыха, детские площадки в помещении и на открытом воздухе, а также современный
+фитнес-центр для благополучия жителей.`,
 
     features: [
       {
         icon: "flaticon-garden",
-        title: "Luxurious Amenities",
+        title: "Роскошные удобства",
         description:
-          "Finca Cortesín offers an array of lavish amenities, including a grand beach club, a lavish spa, four pools, and tennis facilities. This feature highlights the opulence and variety of leisure options available to guests, creating an atmosphere of relaxation and indulgence.",
+          "Finca Cortesín предлагает множество роскошных удобств, в том числе клуб Grand Beach, роскошный спа, четыре бассейна и теннисные объекты. Эта функция подчеркивает богатство и разнообразие вариантов отдыха, доступных для гостей, создавая атмосферу расслабления и снисходительности.",
       },
       {
         icon: "flaticon-location",
-        title: "Golfing Excellence",
+        title: "Высокое превосходство в гольф",
         description:
-          "The 18-hole championship golf course at Finca Cortesín stands out as Spain's finest, providing one of Europe's most remarkable golfing experiences. Complemented by the Nicklaus Academy, it offers top-tier instruction, emphasizing the resort's commitment to delivering a premium golfing environment.",
+          "Поле для гольфа на 18 лунок в Finca Cortesín считается лучшим в Испании и предлагает один из самых замечательных впечатлений от игры в гольф в Европе. Дополненный Академией Никлауса, он предлагает обучение высочайшего уровня, подчеркивая приверженность курорта созданию первоклассной среды для игры в гольф.",
       },
       {
         icon: "flaticon-investment",
-        title: "Cultural and Natural Exploration",
+        title: "Культурные и природные исследования",
         description:
-          "Guests can immerse themselves in the beauty of the Costa Del Sol region, exploring Casares' white villages, the Mediterranean coast, and Estepona's dunes atop majestic horses. This feature emphasizes the resort's offering of unique and immersive experiences that showcase the natural beauty and cultural richness of the area.",
+          "Гости могут погрузиться в красоту региона Коста-дель-Соль, исследуя белые деревни Касареса, побережье Средиземного моря и дюны Эстепоны верхом на величественных лошадях. Эта особенность подчеркивает уникальные и захватывающие впечатления, которые предлагает курорт, демонстрируя природную красоту и культурное богатство региона.",
       },
     ],
   },
 
   us_project_the_cove: {
-    bread_crumb_1: "Featured Projects",
+    bread_crumb_1: "Рекомендуемые проекты",
     bread_crumb_2: "The Cove",
-    title: `THE COVE AT
-MARGARITAVILLE
-RESORT`,
-    subtitle: `Nestled within the highly sought-after Margaritaville
-Resort and situated just minutes away from
-renowned attractions and holiday destinations such
-as Walt Disney World Resort, Universal Orlando
-Resort, and SeaWorld Orlando, this is a rare
-investment opportunity that offers a safe haven for
-portfolio diversification.`,
-    subtitle_2: `A THRIVING CITY IN EVERY WAY`,
+    title: `TОН КОВ В
+МАРГАРИТАВИЛЬ
+ПРИБЕГНУТЬ`,
+    subtitle: `Расположен в популярном районе Маргаритавиля.
+Курорт, расположенный всего в нескольких минутах ходьбы от
+известные достопримечательности и места отдыха, такие как
+как Всемирный курорт Уолта Диснея, Юниверсал Орландо
+Курорт и SeaWorld Orlando — это редкость.
+инвестиционная возможность, которая предлагает безопасную гавань для
+диверсификация портфеля.`,
+    subtitle_2: `ПРОЦВЕТАЮЩИЙ ГОРОД ВО ВСЕХ УСЛОВИЯХ`,
 
-    para_1: `Located in the heart of Florida’s subtropical terrain
-— dotted by lakes and bathed in year-round
-sunshine — and right next to iconic theme parks
-and venues, Orlando benefits from a constant stream
-of vacationers and renters year-round — translating to
-investment returns for real estate investors.`,
+    para_1: `Расположен в самом сердце субтропической местности Флориды.
+— усеянный озерами и купающийся круглый год
+солнечный свет — и рядом со знаменитыми парками развлечений
+и места проведения, Орландо получает выгоду от постоянного потока
+отдыхающих и арендаторов круглый год — переводим на
+доходность инвестиций для инвесторов в недвижимость.`,
 
-    para_2: `Orlando’s weather is a constant delight, treating
-residents and visitors to sun-drenched days, wild
-nature, and gentle breezes. With its consistently
-pleasant climate, the city offers a warm escape
-— the perfect backdrop for outdoor activities and
-vibrant lifestyles, making every day feel like paradise.From waterparks to a beach club, diverse eateries to
-upscale retail, Margaritaville offers a wide array of
-hospitality, dining, and entertainment experiences —
-everything you need within reach`,
+    para_2: `Погода в Орландо всегда радует, леча
+жители и гости залитых солнцем дней, дикой
+природа и легкий ветерок. Благодаря своему последовательному
+приятный климат, город предлагает теплый отдых
+— идеальный фон для активного отдыха и
+яркий образ жизни, благодаря которому каждый день кажется раем. От аквапарков до пляжных клубов, разнообразных ресторанов и
+высококлассная розничная торговля, Маргаритавилль предлагает широкий выбор
+гостеприимство, питание и развлечения —
+все, что вам нужно, в пределах досягаемости`,
 
-    para_3: `Surrounded by verdant
-nature and exceptional
-amenities, destined to
-be one of Orlando’s
-most coveted addresses.This prestigious development offers
-a meticulous curation of villas and
-apartments, exquisitely designed for
-comfort and privacy. Choose from
-3- to 4-bedroom villas, 2- to 3-bedroom
-apartments, and studios.`,
+    para_3: `В окружении зелени
+природа и исключительный
+удобства, предназначенные для
+будь одним из Орландо
+самые желанные адреса. Этот престижный комплекс предлагает
+тщательный уход за виллами и
+апартаменты, изысканно спроектированные для
+комфорт и конфиденциальность. Выбери из
+Виллы с 3–4 спальнями, виллы с 2–3 спальнями
+квартиры и студии.`,
 
-    para_4: `This real estate opportunity sits right next to
-Walt Disney World Resort and some of the most visited
-theme parks and attractions on the globe — solidifying
-Orlando’s position as a premier tourist hub with
-growing rental and vacation home demand yearly.Embracing a vibrant community spirit, Margaritaville Resort
-Orlando is home to a world of retail, wellness, and family-
-friendly entertainment options, as well as Margaritaville
-Hotel. The Cove is Margaritaville’s latest development,
-offering a range of high-end residences (villas and
-apartments) and a lively ever-expanding community`,
+    para_4: `Эта возможность недвижимости находится рядом с
+Всемирный курорт Уолта Диснея и некоторые из самых посещаемых
+тематические парки и аттракционы по всему миру — укрепляются
+Положение Орландо как ведущего туристического центра с
+Ежегодно растущий спрос на аренду и загородное жилье. Курорт Margaritaville Resort воплощает в себе яркий общественный дух.
+Орландо является домом для мира розничной торговли, здоровья и семейного отдыха.
+дружелюбные развлечения, а также Маргаритавилль
+Гостиница. The Cove — новейшая разработка Маргаритавилля.
+предлагая широкий выбор элитных резиденций (виллы и
+квартиры) и оживленный, постоянно расширяющийся район`,
 
     features: [
       {
         icon: "flaticon-garden",
-        title: "Proximity to Premier Attractions",
+        title: "Близость к главным достопримечательностям",
         description:
-          "The property is strategically located within close proximity to renowned attractions like Walt Disney World Resort, Universal Orlando Resort, and SeaWorld Orlando. This proximity ensures a consistent stream of vacationers and renters, making it an ideal investment opportunity for real estate investors seeking high returns from rental demand and tourist footfall.",
+          "Отель стратегически расположен в непосредственной близости от таких известных достопримечательностей, как парк развлечений Walt Disney World Resort, Universal Orlando Resort и SeaWorld Orlando. Такая близость обеспечивает постоянный поток отдыхающих и арендаторов, что делает его идеальной инвестиционной возможностью для инвесторов в недвижимость, стремящихся получить высокую прибыль от спроса на аренду и туристического потока.",
       },
       {
         icon: "flaticon-location",
-        title: "Exquisite Living Spaces and Amenities",
+        title: "Изысканные жилые помещения и удобства",
         description:
-          "The development offers meticulously curated villas and apartments designed for comfort, privacy, and luxury living. Ranging from 2- to 4-bedroom residences, these units are part of a prestigious community with exceptional amenities, catering to vibrant lifestyles. The offerings include diverse entertainment experiences, upscale retail options, and a range of hospitality and dining choices, providing a comprehensive living experience within the Margaritaville Resort.",
+          "Комплекс предлагает тщательно продуманные виллы и апартаменты, предназначенные для комфорта, уединения и роскошной жизни. Эти апартаменты, от 2 до 4 спален, являются частью престижного района с исключительными удобствами, отвечающими динамичному образу жизни. Предложения включают в себя разнообразные развлекательные мероприятия, высококлассные магазины розничной торговли, а также широкий выбор отелей и ресторанов, что обеспечивает всесторонний опыт проживания на курорте Margaritaville Resort.",
       },
       {
         icon: "flaticon-investment",
-        title: "All-Year Round Paradise-Like Environment",
+        title: "Райская среда круглый год",
         description:
-          "Orlando's subtropical climate, characterized by year-round sunshine, gentle breezes, and natural beauty, provides residents and visitors with a constant delight. This weather creates a warm escape, fostering an ideal backdrop for outdoor activities and vibrant lifestyles. The development embraces this environment by offering a wide array of recreational facilities, from waterparks to a beach club, providing a paradise-like setting for everyday living within the community.",
+          "Субтропический климат Орландо, характеризующийся солнечным светом круглый год, легким бризом и природной красотой, доставляет постоянное удовольствие жителям и гостям города. Такая погода создает теплую атмосферу, создавая идеальный фон для активного отдыха и яркого образа жизни. Комплекс охватывает эту среду, предлагая широкий спектр возможностей для отдыха, от аквапарков до пляжных клубов, создавая райские условия для повседневной жизни в сообществе.",
       },
     ],
   },
   uk_project_old_park_lane: {
-    bread_crumb_1: "Featured Projects",
+    bread_crumb_1: "Рекомендуемые проекты",
     bread_crumb_2: "Old Park Lane",
-    title: `Timeless Elegance: No.149 Old Park Lane, London`,
-    subtitle: `No.149 Old Park Lane stands as a prestigious Grade II property, originally built in 1908 and meticulously redeveloped to exude historic charm merged with modern luxury. This residence epitomizes classical elegance, boasting traditional architecture, high ceilings, and spacious corridors that retain their original Art Nouveau and classical features.`,
-    subtitle_2: `A THRIVING CITY IN EVERY WAY`,
+    title: `Вечная элегантность: Олд-Парк-лейн, № 149, Лондон`,
+    subtitle: `Дом № 149 Old Park Lane представляет собой престижный отель класса II, построенный в 1908 году и тщательно реконструированный, чтобы излучать историческое очарование, объединенное с современной роскошью. Эта резиденция олицетворяет классическую элегантность, может похвастаться традиционной архитектурой, высокими потолками и просторными коридорами, сохраняющими оригинальные черты стиля модерн и классические черты.`,
+    subtitle_2: `ПРОЦВЕТАЮЩИЙ ГОРОД ВО ВСЕХ УСЛОВИЯХ`,
 
-    para_1: `A formal dining room with grand proportions and intricate detailing complements the four generously proportioned guest bedrooms, each equipped with en-suite bathrooms.
-    The residence maintains its historic ambiance with intricate cornicing, bespoke table, and joinery pieces, preserving the essence of its classical roots.
-    Enjoy panoramic vistas of Old Park Lane, Green Park, and Hyde Park Corner, offering a serene backdrop to the property's luxurious interiors.`,
+    para_1: `Официальная столовая с величественными пропорциями и замысловатыми деталями дополняет четыре просторные спальни для гостей, каждая из которых оборудована отдельной ванной комнатой.
+    Резиденция сохраняет свою историческую атмосферу благодаря замысловатым карнизам, сделанному на заказ столу и столярным изделиям, сохраняя суть своих классических корней.
+    Насладитесь панорамным видом на Олд-Парк-лейн, Грин-парк и Гайд-парк-корнер, создающими безмятежный фон для роскошных интерьеров отеля.`,
 
-    para_2: `Conveniently located near Sloane Street, Buckingham Palace, and underground/overground transport links, providing easy access to Knightsbridge, Belgravia, and Mayfair's renowned attractions, hotels, dining, and shopping options.
-    The property boasts modern conveniences including an elevator, 24-hour porterage, and concierge services, ensuring a seamless blend of classical elegance and contemporary comfort.`,
+    para_2: `Отель удобно расположен недалеко от Слоун-стрит, Букингемского дворца и линий метро и наземного транспорта, что обеспечивает легкий доступ к Найтсбриджу, Белгравии и известным достопримечательностям, отелям, ресторанам и магазинам Мейфэра.
+    Отель может похвастаться современными удобствами, включая лифт, круглосуточный носильщик и услуги консьержа, что обеспечивает гармоничное сочетание классической элегантности и современного комфорта.`,
 
-    para_3: `The crown jewel of this residence is its reception hall, a grand space offering breathtaking views of London's Green Park. Designed with dual settings, the hall accommodates both formal and informal gatherings. Its opulence is accentuated by a stunning crystal chandelier, complementing the exquisite cream, beige, and dark walnut furnishings that adorn the space.
-    No.149 Old Park Lane seamlessly marries classical grandeur with modern luxury, offering a distinguished living experience amidst London's prestigious locales and cultural landmarks.`,
+    para_3: `Жемчужиной этой резиденции является зал для приемов, большое пространство, откуда открывается захватывающий вид на лондонский Грин-парк. Зал, спроектированный с двойной обстановкой, подходит как для официальных, так и для неформальных встреч. Его роскошь подчеркивается потрясающей хрустальной люстрой, дополняющей изысканную мебель кремового, бежевого и темного ореха, украшающую пространство.
+    Дом № 149 Old Park Lane органично сочетает в себе классическое величие и современную роскошь, предлагая исключительный опыт проживания среди престижных районов Лондона и культурных достопримечательностей.`,
 
-    para_4: `No.149 Old Park Lane stands as an emblem of historical splendor, meticulously renovated and redesigned to harmonize the essence of its 1908 origins with contemporary luxury. The property radiates a timeless elegance, showcasing traditional architectural elements, such as its high ceilings, spacious corridors, and meticulously preserved Art Nouveau and classical features.`,
+    para_4: `Дом № 149 Old Park Lane является символом исторического великолепия. Он был тщательно отремонтирован и перепроектирован, чтобы гармонизировать суть своего зарождения в 1908 году с современной роскошью. Отель излучает вневременную элегантность, демонстрируя традиционные архитектурные элементы, такие как высокие потолки, просторные коридоры, а также тщательно сохраненные элементы стиля модерн и классические элементы.`,
 
     features: [
       {
         icon: "flaticon-garden",
-        title: "Historic Grandeur, Modern Comfort",
+        title: "Историческое величие, современный комфорт",
         description:
-          "Seamlessly blending historic charm with contemporary luxury, No.149 Old Park Lane stands as a meticulously renovated property, preserving its classical features while offering modern amenities for unparalleled comfort.",
+          "Отель № 149 Old Park Lane, гармонично сочетающий в себе историческое очарование и современную роскошь, представляет собой тщательно отреставрированный отель, сохраняющий свои классические черты и предлагающий современные удобства для беспрецедентного комфорта.",
       },
       {
         icon: "flaticon-location",
-        title: "Breathtaking Views",
+        title: "Захватывающие виды",
         description:
-          "Panoramic vistas encompassing Old Park Lane, Green Park, and Hyde Park Corner create an ever-changing backdrop that enhances the allure of this prestigious residence, providing a visual feast day and night.",
+          "Панорамные виды на Олд-Парк-лейн, Грин-парк и Гайд-парк-Корнер создают постоянно меняющийся фон, который усиливает очарование этой престижной резиденции, обеспечивая визуальный праздник днем ​​и ночью.",
       },
       {
         icon: "flaticon-investment",
-        title: "Elegant Reception Hall",
+        title: "Элегантный зал для приемов",
         description:
-          "The epitome of grandeur, the reception hall offers dual settings for formal and informal gatherings, boasting stunning views of London's Green Park, adorned with a magnificent crystal chandelier and opulent furnishings.",
+          "Воплощение величия, зал для приемов предлагает двойную обстановку для официальных и неформальных встреч. Из него открывается потрясающий вид на лондонский Грин-парк, он украшен великолепной хрустальной люстрой и роскошной мебелью.",
       },
     ],
   },
   saudi_project_etoile: {
-    bread_crumb_1: "Featured Projects",
-    bread_crumb_2: "Etoile by Elie Saab",
-    title: `Embracing Elegance: Elie Saab's Iconic Residences in Saudi Arabia`,
-    subtitle: `Discover opulent living in Saudi Arabia's Sedra community, where Elie Saab's iconic design meets cultural heritage. Luxurious residences intertwine tradition and modernity, offering a prestigious lifestyle within a vibrant, integrated community.`,
-    subtitle_2: `A LEGACY OF UNTOUCHED CRAFTSMANSHIP`,
+    bread_crumb_1: "Рекомендуемые проекты",
+    bread_crumb_2: "«Этуаль» от Эли Сааба",
+    title: `Обнимая элегантность: культовые резиденции Эли Сааба в Саудовской Аравии`,
+    subtitle: `Откройте для себя роскошную жизнь в районе Седра в Саудовской Аравии, где культовый дизайн Эли Сааба сочетается с культурным наследием. Роскошные резиденции сочетают в себе традиции и современность, предлагая престижный образ жизни в динамичном, интегрированном сообществе.`,
+    subtitle_2: `НАСЛЕДИЕ НЕИЗВЕСТНОГО МАСТЕРСТВА`,
 
-    para_1: `Enter a realm where luxury meets heritage as Elie Saab, the renowned fashion luminary, extends his artistic vision into the heart of Saudi Arabia's Sedra community. These branded residences represent a testament to a sophisticated fusion—melding contemporary living with the profound historical and cultural tapestry of Saudi Arabia.`,
+    para_1: `Войдите в царство, где роскошь встречается с наследием, когда Эли Сааб, известный светило моды, распространяет свое художественное видение в самое сердце сообщества Седра в Саудовской Аравии. Эти фирменные резиденции представляют собой свидетельство изысканного слияния современной жизни с глубоким историческим и культурным наследием Саудовской Аравии.`,
 
-    para_2: `Immerse yourself in the splendor of Salmani architecture, a contemporary interpretation of traditional Saudi Arabian design, meticulously crafted to reflect both the timeless essence of the region and the dynamism of modernity. These residences are more than just abodes; they are harmonious symphonies resonating with the elegant aesthetic that Elie Saab embodies.`,
+    para_2: `Погрузитесь в великолепие архитектуры Салмани, современной интерпретации традиционного саудовского дизайна, тщательно созданной, чтобы отразить как вневременную сущность региона, так и динамизм современности. Эти резиденции — больше, чем просто жилища; это гармоничные симфонии, резонирующие с элегантной эстетикой, которую воплощает Эли Сааб.`,
 
-    para_3: `This collaboration between Elie Saab and SEDRA speaks volumes about luxury redefined—a unique partnership striving to elevate the quality of life for residents by offering not just living spaces, but an experiential journey that marries opulence with heritage. Each residence is a testament to refined living, where architectural magnificence meets the comfort of home.Nestled within this exceptional community are echoes of Saudi Arabia's architectural heritage—courtyards, intricate geometric patterns, and the subtle grace of traditional elements seamlessly woven into the fabric of modernity. This architectural symphony serves not only as a nod to the past but also as a testament to the forward-thinking essence of the nation.`,
+    para_3: `Это сотрудничество между Elie Saab и SEDRA красноречиво говорит о переосмыслении роскоши — уникальном партнерстве, стремящемся повысить качество жизни жителей, предлагая не просто жилые помещения, но и увлекательное путешествие, сочетающее богатство с наследием. Каждая резиденция является свидетельством изысканной жизни, где архитектурное великолепие сочетается с домашним комфортом. В этом исключительном сообществе расположены отголоски архитектурного наследия Саудовской Аравии — внутренние дворы, замысловатые геометрические узоры и тонкое изящество традиционных элементов, плавно вплетенных в ткань современность. Эта архитектурная симфония служит не только данью прошлому, но и свидетельством дальновидной сущности нации.`,
 
-    para_4: `This collaboration between Elie Saab and SEDRA speaks volumes about luxury redefined—a unique partnership striving to elevate the quality of life for residents by offering not just living spaces, but an experiential journey that marries opulence with heritage. Each residence is a testament to refined living, where architectural magnificence meets the comfort of home.This is an investment that transcends the tangible—it's an immersion into an ethos, a celebration of heritage, and an embrace of contemporary elegance. Step into Elie Saab's world, where luxury intertwines with culture and tradition, and experience a lifestyle that harmonizes prestige, opulence, and the enduring legacy of Saudi Arabia.`,
+    para_4: `Это сотрудничество между Elie Saab и SEDRA красноречиво говорит о переосмыслении роскоши — уникальном партнерстве, стремящемся повысить качество жизни жителей, предлагая не просто жилые помещения, но и увлекательное путешествие, сочетающее богатство с наследием. Каждая резиденция является свидетельством изысканной жизни, где архитектурное великолепие сочетается с домашним комфортом. Это инвестиция, выходящая за рамки осязаемого: это погружение в дух, прославление наследия и объятие современной элегантности. Окунитесь в мир Elie Saab, где роскошь переплетается с культурой и традициями, и ощутите образ жизни, сочетающий в себе престиж, богатство и непреходящее наследие Саудовской Аравии.`,
 
     features: [
       {
         icon: "flaticon-garden",
-        title: "Iconic Fusion of Tradition and Modernity",
+        title: "Легендарное сочетание традиций и современности",
         description:
-          "Elie Saab's visionary touch transforms the Sedra community in Saudi Arabia, offering residences that seamlessly blend contemporary luxury with the rich heritage of Salmani architecture. This fusion creates a living experience that celebrates the nation's history while embracing cutting-edge design and technology.",
+          "Дальновидный подход Эли Сааба преображает сообщество Седра в Саудовской Аравии, предлагая резиденции, в которых современная роскошь органично сочетается с богатым наследием архитектуры Салмани. Это слияние создает живой опыт, который прославляет историю страны, используя при этом передовой дизайн и технологии.",
       },
       {
         icon: "flaticon-location",
-        title: "Elevated Lifestyle and Prestigious Living",
+        title: "Повышенный образ жизни и престижная жизнь",
         description:
-          "These branded residences redefine opulence, providing an elevated lifestyle that reflects both Elie Saab's signature elegance and Saudi Arabia's cultural significance. Residents indulge in luxurious living spaces that harmoniously merge sophistication with a deep-rooted sense of tradition, elevating the standard of living to unparalleled heights.",
+          "Эти фирменные резиденции дают новое определение роскоши, обеспечивая возвышенный образ жизни, который отражает как фирменную элегантность Эли Сааба, так и культурное значение Саудовской Аравии. Жители наслаждаются роскошными жилыми помещениями, в которых изысканность гармонично сочетается с глубоко укоренившимся чувством традиций, поднимая уровень жизни на беспрецедентную высоту.",
       },
       {
         icon: "flaticon-investment",
-        title: "Integrated Community Excellence",
+        title: "Интегрированное превосходство сообщества",
         description:
-          "Beyond lavish accommodations, the Sedra community represents a holistic living experience. With world-class amenities, green spaces, educational and healthcare facilities, entertainment hubs, and cultural touchpoints, this investment offers a complete lifestyle package. It creates a vibrant, interconnected community that caters to diverse needs and fosters a fulfilling way of life for its residents.",
+          "Помимо роскошных условий проживания, поселение Седра представляет собой целостный жизненный опыт. Эта инвестиция с удобствами мирового класса, зелеными насаждениями, образовательными и медицинскими учреждениями, развлекательными центрами и культурными точками предлагает полный пакет образа жизни. Он создает динамичное, взаимосвязанное сообщество, которое удовлетворяет разнообразные потребности и способствует полноценному образу жизни его жителей.",
       },
     ],
   },
@@ -1579,7 +1587,7 @@ export const ch_tr = {
       subMenu: [
         { href: "/#main", label: "家" },
         { href: "/#featured-listings", label: "精选房源" },
-        { href: "/#explore-cities", label: "探索城市" },
+        { href: "/#explore-cities", label: "探索国家" },
       ],
     },
     "所有目录",
@@ -1640,6 +1648,13 @@ export const ch_tr = {
       title: "阿曼美丽的悬崖别墅，阿伊达马斯喀特",
       description: "3 - 7 张床 - 200 - 480 平方米",
       prop_id: "AIDA-01-120",
+    },
+    {
+      image: "/images/banner/DG.MAREA_Balcony+Podium.webp",
+      // price: "$986,00",
+      title: "独家住宅，马雷亚，西班牙",
+      description: "2 - 3 床 - 200 - 340 平方米",
+      prop_id: "MAREA-TYPE-A-2BD",
     },
   ],
   why_choose: [
@@ -1707,87 +1722,87 @@ export const ch_tr = {
       img: "/images/why-oman.webp",
     },
     {
-      heading: "Why Spain",
+      heading: "为什么选择西班牙",
       sub_heading:
-        "Secure Your Future: Invest confidently in Spain's thriving Costa Del Sol. Enjoy stable 7.5% annual property growth, up to 15% premium on off-plan sales, and guaranteed investment protection with DarGlobal. Turn market fluctuations into rising opportunities and secure steady returns in Spain's lucrative real estate landscape.",
+        "确保您的未来：充满信心地投资西班牙蓬勃发展的太阳海岸。通过 DarGlobal 享受稳定的 7.5% 的年度房地产增长、高达 15% 的期房销售溢价以及有保障的投资保护。将市场波动转化为上升机会，并在西班牙利润丰厚的房地产领域确保稳定回报。",
       point_1: {
-        heading: "Stable and Lucrative Real Estate Market",
-        desc: "Over the past several years, Spain, particularly the Costa Del Sol region, has showcased consistent growth in property values. For instance, the Costa Del Sol villa prices have displayed a steady 7.5% increase year-on-year for the last 6 years. Additionally, buying off-plan properties reveals a significant premium of 10% - 15% upon completion, indicating a promising market for investors seeking appreciating assets.",
+        heading: "稳定且利润丰厚的房地产市场",
+        desc: "在过去的几年中，西班牙，特别是太阳海岸地区，房地产价值持续增长。例如，Costa Del Sol 别墅的价格在过去 6 年中同比稳定增长 7.5%。此外，购买期房在竣工后会出现 10% - 15% 的显着溢价，这对于寻求升值资产的投资者来说是一个充满希望的市场。",
       },
       point_2: {
-        heading: "Strategic Euro Investment Opportunity",
-        desc: "Amidst fluctuating Euro values, Spain presents an opportunity to turn a falling Euro into rising prospects. By investing in Spain, individuals can leverage the potential growth of their investments, taking advantage of market dynamics and potentially maximizing returns despite currency fluctuations.",
+        heading: "战略性欧元投资机会",
+        desc: "在欧元汇率波动的情况下，西班牙提供了一个将欧元贬值转为升值的机会。通过在西班牙投资，个人可以利用其投资的潜在增长，利用市场动态，并在货币波动的情况下实现潜在回报最大化。",
       },
       point_3: {
-        heading: "Guaranteed Investment Security",
-        desc: "DarGlobal ensures the protection of invested capital, offering a sense of security and confidence to potential investors. Highlighting Spain as a reliable market choice, the assurance of safeguarding every invested dollar underscores the commitment to secure and protect the investment, fostering trust and confidence in the investment process.",
+        heading: "投资安全有保障",
+        desc: "DarGlobal 确保投资资本的保护，为潜在投资者提供安全感和信心。强调西班牙是一个可靠的市场选择，确保保护每一笔投资的安全，强调了确保和保护投资的承诺，培养对投资过程的信任和信心。",
       },
 
-      btn_text_1: "Explore",
-      btn_text_2: "Properties",
+      btn_text_1: "探索",
+      btn_text_2: "特性",
       img: "/images/why-spain.webp",
     },
     {
-      heading: "Why USA",
+      heading: "为什么选择美国",
       sub_heading:
-        "Prime Orlando real estate within Margaritaville Resort: next to top attractions, perpetual demand, and a sun-soaked paradise. Invest in luxury, location, and steady returns.",
+        "玛格丽塔维尔度假村内的奥兰多优质房地产：毗邻顶级景点、永恒的需求和阳光普照的天堂。投资于豪华、位置和稳定的回报。",
       point_1: {
-        heading: "Proximity to Renowned Attractions and Theme Parks",
-        desc: "Nestled within the highly sought-after Margaritaville Resort, this investment offers unparalleled proximity to globally recognized attractions like Walt Disney World Resort, Universal Orlando Resort, and SeaWorld Orlando. This strategic location ensures a steady flow of tourists and renters year-round, translating to consistent investment returns. The appeal lies in the perpetual demand driven by the constant influx of visitors to these iconic attractions, making it an ideal investment opportunity for consistent returns.",
+        heading: "邻近著名景点和主题公园",
+        desc: "这项投资坐落在备受追捧的玛格丽塔维尔度假村内，地理位置优越，毗邻华特迪士尼世界度假区、奥兰多环球影城度假村和奥兰多海洋世界等全球知名景点。这一战略位置确保了全年稳定的游客和租房客流量，从而带来稳定的投资回报。这些标志性景点的吸引力在于不断涌入的游客所驱动的永恒需求，使其成为获得持续回报的理想投资机会。",
       },
       point_2: {
-        heading: "Year-Round Desirable Climate and Lifestyle",
-        desc: "Orlando's subtropical climate, characterized by sun-drenched days and a pleasant ambiance throughout the year, provides an attractive setting for residents and vacationers alike. This aspect not only enhances the quality of life but also contributes to the allure of the real estate market. The promise of a warm escape, vibrant outdoor activities, and a paradise-like setting can significantly enhance the marketability and value of the properties.",
+        heading: "全年适宜的气候和生活方式",
+        desc: "奥兰多的亚热带气候，全年阳光明媚，氛围宜人，为居民和度假者提供了一个极具吸引力的环境。这不仅提高了生活质量，也增强了房地产市场的吸引力。温暖的逃离、充满活力的户外活动和天堂般的环境的承诺可以显着提高房产的适销性和价值。",
       },
       point_3: {
-        heading: "Luxurious Amenities and Thoughtful Design",
-        desc: "The development boasts meticulous curation of villas and apartments designed for comfort, privacy, and luxury living. Ranging from 3- to 4-bedroom villas, 2- to 3-bedroom apartments, and studios, this variety caters to diverse preferences. Additionally, the emphasis on exceptional amenities and a vibrant community spirit—such as retail, wellness, family-friendly entertainment options, and high-end residences—further solidifies its appeal. The promise of a luxurious lifestyle and an array of conveniences within reach elevates the investment potential.",
+        heading: "豪华设施和贴心设计",
+        desc: "该开发项目拥有精心策划的别墅和公寓，旨在提供舒适、私密和奢华的生活。从 3 至 4 卧室别墅、2 至 3 卧室公寓和单间公寓，品种齐全，可满足不同的喜好。此外，对卓越设施和充满活力的社区精神（例如零售、健康、家庭友好型娱乐选择和高端住宅）的重视进一步巩固了其吸引力。奢华的生活方式和一系列触手可及的便利设施的承诺提升了投资潜力。",
       },
 
-      btn_text_1: "Explore",
-      btn_text_2: "Properties",
+      btn_text_1: "探索",
+      btn_text_2: "特性",
       img: "/images/why-usa.webp",
     },
     {
-      heading: "Why UK",
+      heading: "为什么选择英国",
       sub_heading:
-        "Experience the epitome of London luxury at Old Park Lane. A meticulously redeveloped Grade II property steeped in history and sophistication, offering prime location, unparalleled amenities, and exquisite design. Elevate your lifestyle amidst iconic views and prestigious surroundings.",
+        "在老公园巷体验伦敦奢华的缩影。这是一座经过精心重新开发的二级建筑，历史悠久，精致典雅，地理位置优越，设施无与伦比，设计精美。在标志性景观和著名环境中提升您的生活方式。",
       point_1: {
-        heading: "Prime Location & Proximity",
-        desc: "The property's placement in the heart of London's iconic areas, such as Knightsbridge, Belgravia, and Mayfair, offers immediate access to renowned cultural landmarks, shopping districts, entertainment hubs, and esteemed hotels. With close proximity to Buckingham Palace and excellent transport links, the location maximizes convenience and potential rental demand.",
+        heading: "优越的地理位置和邻近性",
+        desc: "该酒店位于伦敦标志性地区的中心地带，例如骑士桥、贝尔格莱维亚和梅菲尔区，可直接前往著名的文化地标、购物区、娱乐中心和著名酒店。该位置毗邻白金汉宫，交通便利，可最大限度地提高便利性和潜在的租赁需求。",
       },
       point_2: {
-        heading: "Luxurious Features & Amenities",
-        desc: "The meticulously redeveloped property boasts grandeur and sophistication, evident in its traditional architecture, high ceilings, and spacious corridors. Its reception hall, offering both formal and informal settings with stunning park views, creates an inviting ambiance. Additionally, amenities like an elevator, 24-hour porterage, and concierge services enhance the luxurious lifestyle for residents or potential tenants.",
+        heading: "豪华特色和设施",
+        desc: "这座经过精心重新开发的酒店拥有宏伟和精致，其传统建筑、高高的天花板和宽敞的走廊都是显而易见的。其接待大厅提供正式和非正式的环境，享有令人惊叹的公园景观，营造出温馨的氛围。此外，电梯、24 小时搬运和礼宾服务等设施为居民或潜在租户提升了奢华的生活方式。",
       },
       point_3: {
-        heading: "Historical Charm & Exquisite Design",
-        desc: "The property exudes historic ambiance with intricate cornicing, bespoke joinery, and beautifully detailed finishing throughout, including a formal dining room and generously proportioned guest bedrooms with en-suite bathrooms. Notably, the views of Old Park Lane, Green Park, and Hyde Park Corner add an exclusive allure, attracting those seeking a blend of heritage charm and modern luxury.",
+        heading: "历史韵味&精美设计",
+        desc: "该酒店散发着历史氛围，错综复杂的檐口、定制的细木工和精美的细节装饰，包括正式餐厅和宽敞的客房（带连接浴室）。值得注意的是，旧公园巷、格林公园和海德公园角的景色增添了独特的吸引力，吸引着那些寻求传统魅力与现代奢华融合的人们。",
       },
 
-      btn_text_1: "Explore",
-      btn_text_2: "Properties",
+      btn_text_1: "探索",
+      btn_text_2: "特性",
       img: "/images/why-uk.webp",
     },
     {
-      heading: "Why Saudi Arabia",
+      heading: "为什么选择沙特阿拉伯",
       sub_heading:
-        "Discover opulent living in Saudi Arabia's Sedra community, where Elie Saab's iconic design meets cultural heritage. Luxurious residences intertwine tradition and modernity, offering a prestigious lifestyle within a vibrant, integrated community.",
+        "探索沙特阿拉伯 Sedra 社区的奢华生活，在这里，Elie Saab 的标志性设计与文化遗产融为一体。豪华住宅将传统与现代融为一体，在充满活力的综合社区中提供享有盛誉的生活方式。",
       point_1: {
-        heading: "Cultural Fusion in Modern Living",
-        desc: "The investment in Saudi Arabia offers a unique blend of modern living within a culturally rich environment. Elie Saab's branded residences in the Sedra community merge contemporary architecture with Saudi Arabian heritage, celebrating the country's history and culture. The infusion of Salmani architecture, a modern interpretation of traditional styles, creates an aspirational living experience that honors the past while embracing technological advancements.",
+        heading: "现代生活中的文化融合",
+        desc: "沙特阿拉伯的投资在文化丰富的环境中提供了现代生活的独特融合。 Elie Saab 在 Sedra 社区的品牌住宅将当代建筑与沙特阿拉伯传统融为一体，颂扬该国的历史和文化。 Salmani 建筑的注入是对传统风格的现代诠释，创造了一种令人向往的生活体验，在尊重过去的同时拥抱技术进步。",
       },
       point_2: {
-        heading: "Prestigious Lifestyle and Luxurious Living",
-        desc: "The collaboration between Elie Saab and the SEDRA community in Riyadh promises a first-of-its-kind living experience. It brings the iconic elegance of Elie Saab to the Kingdom, providing residents with opulent living spaces and luxurious amenities. This investment aims to enhance the quality of life by offering prestigious residences that blend aspirational living with cultural significance, elevating the standard of living for its inhabitants.",
+        heading: "尊贵的生活方式和奢华的生活",
+        desc: "Elie Saab 与利雅得 SEDRA 社区之间的合作有望带来前所未有的生活体验。它将 Elie Saab 标志性的优雅带到了王国，为居民提供了华丽的生活空间和豪华的设施。这项投资旨在通过提供将理想生活与文化意义融为一体的著名住宅来提高生活质量，从而提高居民的生活水平。",
       },
       point_3: {
-        heading: "Integrated Community Infrastructure",
-        desc: "The investment encompasses a comprehensive range of amenities beyond luxurious residences. The Sedra community boasts extensive facilities including sports centers, education and medical institutions, restaurants, retail stores, entertainment centers, and more. With vast green spaces and public parks, the community caters to diverse needs, fostering a holistic lifestyle that combines leisure, education, healthcare, and community engagement, making it an attractive destination for investors and residents alike.",
+        heading: "综合社区基础设施",
+        desc: "这项投资还包括豪华住宅以外的一系列综合设施。 Sedra 社区拥有广泛的设施，包括体育中心、教育和医疗机构、餐厅、零售店、娱乐中心等。社区拥有广阔的绿地和公园，可满足多样化的需求，培育集休闲、教育、医疗保健和社区参与为一体的整体生活方式，使其成为对投资者和居民都有吸引力的目的地。",
       },
 
-      btn_text_1: "Explore",
-      btn_text_2: "Properties",
+      btn_text_1: "探索",
+      btn_text_2: "特性",
       img: "/images/why-ksa.webp",
     },
   ],
@@ -2106,217 +2121,217 @@ Club Oman，这个特殊的封闭社区
   },
 
   spain_project_marea: {
-    bread_crumb_1: "Featured Projects",
+    bread_crumb_1: "特色项目",
     bread_crumb_2: "MAREA",
-    title: "A Space to Pause, Breath and Reset",
-    subtitle: `Situated in the immediate
-vicinity of Finca Cortesin Resort,
-Marea, interiors by Missoni, is
-designed around the Costa Del
-Sol’s breathtaking landscape, the
-mesmerizing Mediterranean Sea,
-and a world-class golf course.`,
-    subtitle_2: `An upscale residential community at
-Finca Cortesin, offering a harmonious
-blend of refined living within the pristine
-landscapes of Costa del Sol.`,
+    title: "一个暂停、呼吸和重置的空间",
+    subtitle: `位于眼前
+Finca Cortesin 度假村附近，
+Marea 的室内设计由 Missoni 设计，
+围绕科斯塔德尔设计
+索尔令人惊叹的风景
+迷人的地中海，
+以及世界一流的高尔夫球场。`,
+    subtitle_2: `高档住宅社区位于
+Finca Cortesin，提供和谐的
+精致的生活与原始的融合
+太阳海岸的风景。`,
 
-    para_1: `This exclusive gated community offers
-2-, 3- and 4-bedroom residences,
-features a private entrance and 24/7
-premium security services, to guarantee
-the highest standard in terms of security
-and privacy.`,
+    para_1: `这个独特的封闭社区提供
+两卧室、三卧室和四卧室住宅，
+设有私人入口和 24/7
+优质安全服务，保障
+安全方面的最高标准
+和隐私。`,
 
-    para_2: `Minimalist approach, simplicity and purity of lines, this
-is the idea behind the Contemporary Mediterranean
-Style. Modern elements and natural materials create
-a warm, inviting atmosphere complemented by soft,
-warm and natural lighting.`,
+    para_2: `极简主义的方法，线条的简单和纯粹，这
+是当代地中海背后的理念
+风格。现代元素与天然材质打造
+温暖、诱人的氛围辅以柔和、
+温暖自然的灯光。`,
 
-    para_3: `Marea, interiors by Missoni, offers breathtaking
-views of the entire Costa del Sol coastline,
-stretching from Marbella all the way to Gibraltar.Luxury comes with a healthier lifestyle. At
-Marea, interiors by Missoni, the well-being
-center was specifically designed and equipped
-to satisfy every fitness enthusiast, while
-soothing into incomparable coastal views.`,
+    para_3: `Marea，Missoni 的室内设计，提供令人惊叹的
+整个太阳海岸海岸线的景色，
+从马贝拉一直延伸到直布罗陀。奢华伴随着更健康的生活方式。在
+Marea，Missoni 的室内设计，幸福感
+中心经过专门设计和配备
+满足每一位健身爱好者的同时
+欣赏无与伦比的海岸景色，令人心旷神怡。`,
 
-    para_4: `At the core of the community is where connections sparkle
-and new ideas are born. Here are a majestic pool deck
-to unwind, indoor and outdoor kids areas, and a modern
-fitness center for residents' well-being.`,
+    para_4: `社区的核心是联系闪耀的地方
+新的想法诞生了。这里有一个宏伟的泳池甲板
+放松身心的室内和室外儿童区以及现代化的
+健身中心，为居民带来健康。`,
 
     features: [
       {
         icon: "flaticon-garden",
-        title: "Luxurious Amenities",
+        title: "豪华设施",
         description:
-          "Finca Cortesín offers an array of lavish amenities, including a grand beach club, a lavish spa, four pools, and tennis facilities. This feature highlights the opulence and variety of leisure options available to guests, creating an atmosphere of relaxation and indulgence.",
+          "Finca Cortesín 提供一系列奢华的设施，包括一个豪华的海滩俱乐部、一个豪华的水疗中心、四个游泳池和网球设施。这一特色凸显了为客人提供的丰富多样的休闲选择，营造出放松和放纵的氛围。",
       },
       {
         icon: "flaticon-location",
-        title: "Golfing Excellence",
+        title: "卓越高尔夫",
         description:
-          "The 18-hole championship golf course at Finca Cortesín stands out as Spain's finest, providing one of Europe's most remarkable golfing experiences. Complemented by the Nicklaus Academy, it offers top-tier instruction, emphasizing the resort's commitment to delivering a premium golfing environment.",
+          "Finca Cortesín 的 18 洞锦标赛高尔夫球场是西班牙最好的高尔夫球场，提供欧洲最卓越的高尔夫体验之一。与尼克劳斯学院相辅相成，它提供顶级指导，强调了度假村致力于提供优质高尔夫环境的承诺。",
       },
       {
         icon: "flaticon-investment",
-        title: "Cultural and Natural Exploration",
+        title: "文化和自然探索",
         description:
-          "Guests can immerse themselves in the beauty of the Costa Del Sol region, exploring Casares' white villages, the Mediterranean coast, and Estepona's dunes atop majestic horses. This feature emphasizes the resort's offering of unique and immersive experiences that showcase the natural beauty and cultural richness of the area.",
+          "客人可以沉浸在太阳海岸地区的美景中，探索卡萨雷斯的白色村庄、地中海海岸以及骑着雄伟马匹的埃斯特波纳沙丘。这一特色强调了度假村提供独特的沉浸式体验，展示该地区的自然美景和丰富的文化。",
       },
     ],
   },
 
   us_project_the_cove: {
-    bread_crumb_1: "Featured Projects",
+    bread_crumb_1: "特色项目",
     bread_crumb_2: "The Cove",
-    title: `THE COVE AT
-MARGARITAVILLE
-RESORT`,
-    subtitle: `Nestled within the highly sought-after Margaritaville
-Resort and situated just minutes away from
-renowned attractions and holiday destinations such
-as Walt Disney World Resort, Universal Orlando
-Resort, and SeaWorld Orlando, this is a rare
-investment opportunity that offers a safe haven for
-portfolio diversification.`,
-    subtitle_2: `A THRIVING CITY IN EVERY WAY`,
+    title: `海湾在
+玛格丽塔维尔
+采取`,
+    subtitle: `坐落在备受追捧的玛格丽塔维尔 (Margaritaville) 内
+度假村距离酒店仅几分钟路程
+著名景点和度假胜地，例如
+如华特迪士尼世界度假区、奥兰多环球影城
+度假村，和奥兰多海洋世界一样，这是难得的
+为以下人士提供避风港的投资机会
+投资组合多元化。`,
+    subtitle_2: `一座各方面都蓬勃发展的城市`,
 
-    para_1: `Located in the heart of Florida’s subtropical terrain
-— dotted by lakes and bathed in year-round
-sunshine — and right next to iconic theme parks
-and venues, Orlando benefits from a constant stream
-of vacationers and renters year-round — translating to
-investment returns for real estate investors.`,
+    para_1: `位于佛罗里达州亚热带地形的中心
+— 湖泊星罗棋布，全年沐浴在水中
+阳光明媚——毗邻标志性主题公园
+和场馆，奥兰多受益于源源不断的人流
+全年度假者和租房者的数量——转化为
+房地产投资者的投资回报。`,
 
-    para_2: `Orlando’s weather is a constant delight, treating
-residents and visitors to sun-drenched days, wild
-nature, and gentle breezes. With its consistently
-pleasant climate, the city offers a warm escape
-— the perfect backdrop for outdoor activities and
-vibrant lifestyles, making every day feel like paradise.From waterparks to a beach club, diverse eateries to
-upscale retail, Margaritaville offers a wide array of
-hospitality, dining, and entertainment experiences —
-everything you need within reach`,
+    para_2: `奥兰多的天气总是令人愉悦、宜人
+居民和游客在阳光普照的日子里，狂野
+自然风光，还有微风徐徐。以其一贯的
+气候宜人，这座城市提供温暖的避世之所
+— 户外活动的完美背景
+充满活力的生活方式，让每一天都像天堂一样。从水上乐园到海滩俱乐部，从多样化的餐馆到
+玛格丽塔维尔 (Margaritaville) 的高档零售店提供各种商品
+接待、餐饮和娱乐体验 —
+您需要的一切触手可及`,
 
-    para_3: `Surrounded by verdant
-nature and exceptional
-amenities, destined to
-be one of Orlando’s
-most coveted addresses.This prestigious development offers
-a meticulous curation of villas and
-apartments, exquisitely designed for
-comfort and privacy. Choose from
-3- to 4-bedroom villas, 2- to 3-bedroom
-apartments, and studios.`,
+    para_3: `周围青翠欲滴
+自然和特殊
+便利设施，注定
+成为奥兰多的一员
+最令人垂涎​​的地址。这个享有盛誉的开发项目提供
+精心策划的别墅和
+公寓，精心设计
+舒适和隐私。从中选择
+3至4卧室别墅、2至3卧室别墅
+公寓和工作室。`,
 
-    para_4: `This real estate opportunity sits right next to
-Walt Disney World Resort and some of the most visited
-theme parks and attractions on the globe — solidifying
-Orlando’s position as a premier tourist hub with
-growing rental and vacation home demand yearly.Embracing a vibrant community spirit, Margaritaville Resort
-Orlando is home to a world of retail, wellness, and family-
-friendly entertainment options, as well as Margaritaville
-Hotel. The Cove is Margaritaville’s latest development,
-offering a range of high-end residences (villas and
-apartments) and a lively ever-expanding community`,
+    para_4: `这个房地产机会就位于
+华特迪士尼世界度假区和一些最受欢迎的景点
+全球主题公园和景点 — 巩固
+奥兰多作为首要旅游中心的地位
+每年不断增长的租赁和度假屋需求。玛格丽塔维尔度假村秉承充满活力的社区精神
+奥兰多是零售、健康和家庭世界的发源地——
+友好的娱乐选择以及玛格丽塔维尔
+酒店。 The Cove 是 Margaritaville 的最新开发项目，
+提供一系列高端住宅（别墅和
+公寓）和一个不断扩大的充满活力的社区`,
 
     features: [
       {
         icon: "flaticon-garden",
-        title: "Proximity to Premier Attractions",
+        title: "邻近主要景点",
         description:
-          "The property is strategically located within close proximity to renowned attractions like Walt Disney World Resort, Universal Orlando Resort, and SeaWorld Orlando. This proximity ensures a consistent stream of vacationers and renters, making it an ideal investment opportunity for real estate investors seeking high returns from rental demand and tourist footfall.",
+          "该酒店地理位置优越，靠近华特迪士尼世界度假区、奥兰多环球影城度假区和奥兰多海洋世界等著名景点。这种邻近性确保了度假者和租房者的源源不断，使其成为房地产投资者从租赁需求和游客人流量中寻求高回报的理想投资机会。",
       },
       {
         icon: "flaticon-location",
-        title: "Exquisite Living Spaces and Amenities",
+        title: "精致的生活空间和便利设施",
         description:
-          "The development offers meticulously curated villas and apartments designed for comfort, privacy, and luxury living. Ranging from 2- to 4-bedroom residences, these units are part of a prestigious community with exceptional amenities, catering to vibrant lifestyles. The offerings include diverse entertainment experiences, upscale retail options, and a range of hospitality and dining choices, providing a comprehensive living experience within the Margaritaville Resort.",
+          "该开发项目提供精心策划的别墅和公寓，专为舒适、私密和奢华的生活而设计。这些单元包括 2 至 4 居室住宅，属于享有盛誉的社区的一部分，拥有卓越的设施，迎合充满活力的生活方式。这些产品包括多样化的娱乐体验、高档零售选择以及一系列的接待和餐饮选择，在玛格丽塔维尔度假村内提供全面的生活体验。",
       },
       {
         icon: "flaticon-investment",
-        title: "All-Year Round Paradise-Like Environment",
+        title: "全年天堂般的环境",
         description:
-          "Orlando's subtropical climate, characterized by year-round sunshine, gentle breezes, and natural beauty, provides residents and visitors with a constant delight. This weather creates a warm escape, fostering an ideal backdrop for outdoor activities and vibrant lifestyles. The development embraces this environment by offering a wide array of recreational facilities, from waterparks to a beach club, providing a paradise-like setting for everyday living within the community.",
+          "奥兰多属亚热带气候，终年阳光明媚，微风徐徐，自然美景，为居民和游客带来源源不断的欢乐。这种天气营造出温暖的度假氛围，为户外活动和充满活力的生活方式提供了理想的背景。该开发项目通过提供从水上乐园到海滩俱乐部等各种娱乐设施来融入这一环境，为社区内的日常生活提供了天堂般的环境。",
       },
     ],
   },
   uk_project_old_park_lane: {
-    bread_crumb_1: "Featured Projects",
+    bread_crumb_1: "特色项目",
     bread_crumb_2: "Old Park Lane",
-    title: `Timeless Elegance: No.149 Old Park Lane, London`,
-    subtitle: `No.149 Old Park Lane stands as a prestigious Grade II property, originally built in 1908 and meticulously redeveloped to exude historic charm merged with modern luxury. This residence epitomizes classical elegance, boasting traditional architecture, high ceilings, and spacious corridors that retain their original Art Nouveau and classical features.`,
-    subtitle_2: `A THRIVING CITY IN EVERY WAY`,
+    title: `永恒的优雅：伦敦老公园巷 149 号`,
+    subtitle: `老公园巷 149 号是著名的二级建筑，始建于 1908 年，经过精心重新开发，散发出历史魅力与现代奢华的融合。该住宅体现了古典优雅，拥有传统的建筑、高高的天花板和宽敞的走廊，保留了原有的新艺术风格和古典特色。`,
+    subtitle_2: `一座各方面都蓬勃发展的城市`,
 
-    para_1: `A formal dining room with grand proportions and intricate detailing complements the four generously proportioned guest bedrooms, each equipped with en-suite bathrooms.
-    The residence maintains its historic ambiance with intricate cornicing, bespoke table, and joinery pieces, preserving the essence of its classical roots.
-    Enjoy panoramic vistas of Old Park Lane, Green Park, and Hyde Park Corner, offering a serene backdrop to the property's luxurious interiors.`,
+    para_1: `宽敞的正式餐厅和精致的细节与四间宽敞的客房相得益彰，每间客房均配有套间浴室。
+    该住宅通过复杂的檐口、定制的桌子和细木工件保持了其历史氛围，保留了其古典根源的精髓。
+    欣赏老公园巷、格林公园和海德公园角的全景，为酒店的豪华内饰提供宁静的背景。`,
 
-    para_2: `Conveniently located near Sloane Street, Buckingham Palace, and underground/overground transport links, providing easy access to Knightsbridge, Belgravia, and Mayfair's renowned attractions, hotels, dining, and shopping options.
-    The property boasts modern conveniences including an elevator, 24-hour porterage, and concierge services, ensuring a seamless blend of classical elegance and contemporary comfort.`,
+    para_2: `酒店位置便利，靠近斯隆街、白金汉宫和地下/地上交通网络，可轻松前往骑士桥、贝尔格莱维亚和梅菲尔的著名景点、酒店、餐饮和购物场所。
+    酒店拥有现代化的便利设施，包括电梯、24 小时搬运服务和礼宾服务，确保古典优雅与现代舒适的完美融合。`,
 
-    para_3: `The crown jewel of this residence is its reception hall, a grand space offering breathtaking views of London's Green Park. Designed with dual settings, the hall accommodates both formal and informal gatherings. Its opulence is accentuated by a stunning crystal chandelier, complementing the exquisite cream, beige, and dark walnut furnishings that adorn the space.
-    No.149 Old Park Lane seamlessly marries classical grandeur with modern luxury, offering a distinguished living experience amidst London's prestigious locales and cultural landmarks.`,
+    para_3: `该住宅皇冠上的明珠是其接待大厅，这是一个宏伟的空间，可欣赏伦敦绿色公园的壮丽景色。大厅采用双重设置设计，可容纳正式和非正式聚会。令人惊叹的水晶吊灯凸显了其华丽，与装饰空间的精致奶油色、米色和黑胡桃木家具相得益彰。
+    老公园巷 149 号将古典宏伟与现代奢华完美结合，在伦敦著名的地区和文化地标中提供尊贵的生活体验。`,
 
-    para_4: `No.149 Old Park Lane stands as an emblem of historical splendor, meticulously renovated and redesigned to harmonize the essence of its 1908 origins with contemporary luxury. The property radiates a timeless elegance, showcasing traditional architectural elements, such as its high ceilings, spacious corridors, and meticulously preserved Art Nouveau and classical features.`,
+    para_4: `老公园巷 149 号是历史辉煌的象征，经过精心翻新和重新设计，将其 1908 年起源的精髓与当代奢华融为一体。该酒店散发着永恒的优雅气息，展示了传统的建筑元素，例如高高的天花板、宽敞的走廊以及精心保存的新艺术风格和古典特色。`,
 
     features: [
       {
         icon: "flaticon-garden",
-        title: "Historic Grandeur, Modern Comfort",
+        title: "历史悠久的宏伟，现代的舒适",
         description:
-          "Seamlessly blending historic charm with contemporary luxury, No.149 Old Park Lane stands as a meticulously renovated property, preserving its classical features while offering modern amenities for unparalleled comfort.",
+          "老公园巷 149 号将历史魅力与现代奢华完美融合，是一座经过精心翻修的酒店，保留了其古典特色，同时提供现代化设施，带来无与伦比的舒适感。",
       },
       {
         icon: "flaticon-location",
-        title: "Breathtaking Views",
+        title: "令人惊叹的景观",
         description:
-          "Panoramic vistas encompassing Old Park Lane, Green Park, and Hyde Park Corner create an ever-changing backdrop that enhances the allure of this prestigious residence, providing a visual feast day and night.",
+          "包括老公园巷、格林公园和海德公园角在内的全景景观创造出不断变化的背景，增强了这座著名住宅的吸引力，白天和晚上都提供视觉盛宴。",
       },
       {
         icon: "flaticon-investment",
-        title: "Elegant Reception Hall",
+        title: "典雅的接待厅",
         description:
-          "The epitome of grandeur, the reception hall offers dual settings for formal and informal gatherings, boasting stunning views of London's Green Park, adorned with a magnificent crystal chandelier and opulent furnishings.",
+          "接待厅是宏伟的缩影，为正式和非正式聚会提供双重环境，拥有华丽的水晶吊灯和华丽的家具，可欣赏伦敦绿色公园的壮丽景色。",
       },
     ],
   },
   saudi_project_etoile: {
-    bread_crumb_1: "Featured Projects",
-    bread_crumb_2: "Etoile by Elie Saab",
-    title: `Embracing Elegance: Elie Saab's Iconic Residences in Saudi Arabia`,
-    subtitle: `Discover opulent living in Saudi Arabia's Sedra community, where Elie Saab's iconic design meets cultural heritage. Luxurious residences intertwine tradition and modernity, offering a prestigious lifestyle within a vibrant, integrated community.`,
-    subtitle_2: `A LEGACY OF UNTOUCHED CRAFTSMANSHIP`,
+    bread_crumb_1: "特色项目",
+    bread_crumb_2: "艾莉·萨博 (Elie Saab) 设计的《Etoile》",
+    title: `拥抱优雅：Elie Saab 在沙特阿拉伯的标志性住宅`,
+    subtitle: `探索沙特阿拉伯 Sedra 社区的奢华生活，在这里，Elie Saab 的标志性设计与文化遗产融为一体。豪华住宅将传统与现代融为一体，在充满活力的综合社区中提供享有盛誉的生活方式。`,
+    subtitle_2: `未经雕琢的工艺遗产`,
 
-    para_1: `Enter a realm where luxury meets heritage as Elie Saab, the renowned fashion luminary, extends his artistic vision into the heart of Saudi Arabia's Sedra community. These branded residences represent a testament to a sophisticated fusion—melding contemporary living with the profound historical and cultural tapestry of Saudi Arabia.`,
+    para_1: `著名时尚名人 Elie Saab 将其艺术视野延伸至沙特阿拉伯 Sedra 社区的中心地带，进入奢华与传统交融的境界。这些品牌住宅体现了复杂的融合——将当代生活与沙特阿拉伯深厚的历史和文化融为一体。`,
 
-    para_2: `Immerse yourself in the splendor of Salmani architecture, a contemporary interpretation of traditional Saudi Arabian design, meticulously crafted to reflect both the timeless essence of the region and the dynamism of modernity. These residences are more than just abodes; they are harmonious symphonies resonating with the elegant aesthetic that Elie Saab embodies.`,
+    para_2: `沉浸在萨尔马尼建筑的辉煌之中，这是对传统沙特阿拉伯设计的现代诠释，精心打造，反映了该地区的永恒精髓和现代活力。这些住宅不仅仅是住所，还是住宅。它们是和谐的交响乐，与 Elie Saab 所体现的优雅美学产生共鸣。`,
 
-    para_3: `This collaboration between Elie Saab and SEDRA speaks volumes about luxury redefined—a unique partnership striving to elevate the quality of life for residents by offering not just living spaces, but an experiential journey that marries opulence with heritage. Each residence is a testament to refined living, where architectural magnificence meets the comfort of home.Nestled within this exceptional community are echoes of Saudi Arabia's architectural heritage—courtyards, intricate geometric patterns, and the subtle grace of traditional elements seamlessly woven into the fabric of modernity. This architectural symphony serves not only as a nod to the past but also as a testament to the forward-thinking essence of the nation.`,
+    para_3: `Elie Saab 和 SEDRA 之间的合作充分体现了奢华的重新定义——这种独特的合作伙伴关系不仅提供居住空间，还提供将富裕与传统相结合的体验之旅，致力于提高居民的生活质量。每栋住宅都是精致生活的证明，建筑的宏伟与家的舒适相结合。这个独特的社区坐落在沙特阿拉伯的建筑遗产中，庭院、复杂的几何图案以及无缝融入建筑结构的传统元素的微妙优雅。现代性。这座建筑交响曲不仅是对过去的致敬，也是对这个国家前瞻性思维本质的证明。`,
 
-    para_4: `This collaboration between Elie Saab and SEDRA speaks volumes about luxury redefined—a unique partnership striving to elevate the quality of life for residents by offering not just living spaces, but an experiential journey that marries opulence with heritage. Each residence is a testament to refined living, where architectural magnificence meets the comfort of home.This is an investment that transcends the tangible—it's an immersion into an ethos, a celebration of heritage, and an embrace of contemporary elegance. Step into Elie Saab's world, where luxury intertwines with culture and tradition, and experience a lifestyle that harmonizes prestige, opulence, and the enduring legacy of Saudi Arabia.`,
+    para_4: `Elie Saab 和 SEDRA 之间的合作充分体现了奢华的重新定义——这种独特的合作伙伴关系不仅提供居住空间，还提供将富裕与传统相结合的体验之旅，致力于提高居民的生活质量。每套住宅都是精致生活的证明，建筑的宏伟与家居的舒适相结合。这是一项超越有形的投资——它是对一种精神的沉浸，对传统的庆祝，以及对当代优雅的拥抱。走进 Elie Saab 的世界，在这里奢华与文化和传统交织在一起，体验一种将沙特阿拉伯的声望、富裕和不朽遗产融为一体的生活方式。`,
 
     features: [
       {
         icon: "flaticon-garden",
-        title: "Iconic Fusion of Tradition and Modernity",
+        title: "传统与现代的标志性融合",
         description:
-          "Elie Saab's visionary touch transforms the Sedra community in Saudi Arabia, offering residences that seamlessly blend contemporary luxury with the rich heritage of Salmani architecture. This fusion creates a living experience that celebrates the nation's history while embracing cutting-edge design and technology.",
+          "Elie Saab 的富有远见的触感改变了沙特阿拉伯的 Sedra 社区，提供将当代奢华与 Salmani 建筑的丰富遗产无缝融合的住宅。这种融合创造了一种在庆祝国家历史的同时拥抱尖端设计和技术的生活体验。",
       },
       {
         icon: "flaticon-location",
-        title: "Elevated Lifestyle and Prestigious Living",
+        title: "提升生活方式和尊贵生活",
         description:
-          "These branded residences redefine opulence, providing an elevated lifestyle that reflects both Elie Saab's signature elegance and Saudi Arabia's cultural significance. Residents indulge in luxurious living spaces that harmoniously merge sophistication with a deep-rooted sense of tradition, elevating the standard of living to unparalleled heights.",
+          "这些品牌住宅重新定义了奢华，提供了一种高品质的生活方式，体现了 Elie Saab 标志性的优雅和沙特阿拉伯的文化意义。居民沉迷于奢华的生活空间，将精致与根深蒂固的传统感和谐地融为一体，将生活水平提升到无与伦比的高度。",
       },
       {
         icon: "flaticon-investment",
-        title: "Integrated Community Excellence",
+        title: "综合社区卓越",
         description:
-          "Beyond lavish accommodations, the Sedra community represents a holistic living experience. With world-class amenities, green spaces, educational and healthcare facilities, entertainment hubs, and cultural touchpoints, this investment offers a complete lifestyle package. It creates a vibrant, interconnected community that caters to diverse needs and fosters a fulfilling way of life for its residents.",
+          "除了豪华的住宿之外，Sedra 社区还代表着整体的生活体验。这项投资拥有世界一流的便利设施、绿地、教育和医疗保健设施、娱乐中心和文化接触点，提供了完整的生活方式。它创建了一个充满活力、相互联系的社区，满足多样化的需求，并为居民营造充实的生活方式。",
       },
     ],
   },

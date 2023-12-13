@@ -48,12 +48,12 @@ const PopupDialog = () => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      if (sessionStorage.getItem("ad") != "true") {
-        handleOpen();
-        sessionStorage.setItem("ad", "true");
-      }
-    }, 3000);
+    // setTimeout(() => {
+    //   if (sessionStorage.getItem("ad") != "true") {
+    //     handleOpen();
+    //     sessionStorage.setItem("ad", "true");
+    //   }
+    // }, 3000);
   }, []);
 
   const commonDialog = useRef();

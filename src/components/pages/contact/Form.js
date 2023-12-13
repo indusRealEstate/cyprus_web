@@ -230,7 +230,7 @@ const Form = ({ lang }) => {
           </div>
           <div class="modal-footer">
             <button type="submit" className="ud-btn btn-thm" name="submit">
-              Send message
+              Submit
             </button>
           </div>
         </div>

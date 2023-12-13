@@ -111,8 +111,31 @@ body {
   max-width: 240px !important;
 }
 
+.w-170 {
+  width: 170px !important;
+} 
+
+.cookies-dialog {
+  position: fixed;
+  bottom: 0;
+  background: #caf6ff;
+  width: 100%;
+  z-index: 9999;
+}
+
 // main mobile css
 @media (max-width: 768px) {
+  .cookies-dialog-mbl-text{
+    font-size: 12px !important;
+    padding-right: 10px;
+  }
+
+  .cookies-dialog-mbl-btn {
+    font-size: 13px !important;
+    padding: 10px 20px !important;
+  }
+
+  
   .hide-in-mobile {
     display: none !important;
   }

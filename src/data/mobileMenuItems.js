@@ -5,46 +5,56 @@ module.exports = [
     label: "Home",
     subMenu: [
       { path: "/#main", label: "Home" },
-      // { path: "/#why-cyprus", label: "Why Cyprus" },
-      { path: "/#flagship-prop", label: "Flagship Collection" },
       { path: "/#featured-listings", label: "Featured Listings" },
-      { path: "/#explore-cities", label: "Explore Cities" },
+      { path: "/#explore-cities", label: "Explore Countries" },
     ],
-  },
-  {
-    label: "Why Cyprus",
-    path: "/#why-cyprus",
   },
   {
     path: "/all-properties/",
     label: "All Listings",
     // subMenu: [{ path: '/about', label: 'About Us' }],
   },
+  // {
+  //   label: "Global Projects",
+  //   subMenu: [
+  //     {
+  //       label: "Cyprus",
+  //       subMenuItems: [
+  //         { path: "/cyprus/minthis", label: "Minthis" },
+  //         { path: "/cyprus/one", label: "One" },
+  //         { path: "/cyprus/neo", label: "Neo" },
+  //       ],
+  //     },
+  //     {
+  //       label: "Oman",
+  //       subMenuItems: [{ path: "/oman/aida", label: "AIDA" }],
+  //     },
+  //     {
+  //       label: "Spain",
+  //       subMenuItems: [{ path: "/spain/marea", label: "MAREA" }],
+  //     },
+  //     {
+  //       label: "USA",
+  //       subMenuItems: [{ path: "/us/the-cove", label: "The Cove" }],
+  //     },
+  //     {
+  //       label: "UK",
+  //       subMenuItems: [{ path: "/uk/old-park-lane", label: "Old Park Lane" }],
+  //     },
+  //     {
+  //       label: "Saudi Arabia",
+  //       subMenuItems: [{ path: "/ksa/etoile", label: "Etoile" }],
+  //     },
+  //   ],
+  // },
+
   {
-    path: "/sale-properties/",
-    label: "Buy",
-    // subMenu: [{ path: '/about', label: 'About Us' }],
-  },
-  {
-    path: "/invest-in-cyprus/",
-    label: "Invest In Cyprus",
-    // subMenu: [{ path: '/about', label: 'About Us' }],
-  },
-  {
-    label: "Pafilia Collections",
+    label: "More",
     subMenu: [
-      { path: "/featured-collections/minthis", label: "Minthis" },
-      { path: "/featured-collections/one", label: "One" },
-      { path: "/featured-collections/neo", label: "Neo" },
+      { path: "/invest-in-cyprus", label: "Invest In Cyprus" },
+      { path: "/why-cyprus", label: "Why Cyprus" },
     ],
   },
-  // {
-  // 	label: 'Blog/News',
-  // 	subMenu: [
-  // 		{ path: '/blog-list-v1/', label: 'Blog' },
-  // 		{ path: '/blog-list-v2/', label: 'News' },
-  // 	],
-  // },
 
   {
     label: "Contact Us",

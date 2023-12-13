@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { changeLang } from "../../redux/features/lang-slice";
 import { AppDispatch } from "../../redux/store";
+import { hasCookie } from "cookies-next";
 
 const useStyles: any = makeStyles({
   root: {
@@ -45,14 +46,17 @@ const SelectLanguage = ({ scrolled }: any) => {
   const handleChange = (value: any) => {
     setLang(value);
     dispatch(changeLang(value));
-    localStorage.setItem("lang", value);
+    if (hasCookie("localConsent")) {
+      localStorage.setItem("lang", value);
+    }
   };
 
   useEffect(() => {
-    const cokiesLang = localStorage.getItem("lang");
-
-    if (cokiesLang != undefined) {
-      handleChange(cokiesLang);
+    if (hasCookie("localConsent")) {
+      const cokiesLang = localStorage.getItem("lang");
+      if (cokiesLang != undefined) {
+        handleChange(cokiesLang);
+      }
     }
 
     var language = window.navigator.language;
