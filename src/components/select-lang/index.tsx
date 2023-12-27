@@ -47,13 +47,13 @@ const SelectLanguage = ({ scrolled }: any) => {
     setLang(value);
     dispatch(changeLang(value));
     if (hasCookie("localConsent")) {
-      localStorage.setItem("lang", value);
+      sessionStorage.setItem("lang", value);
     }
   };
 
   useEffect(() => {
     if (hasCookie("localConsent")) {
-      const cokiesLang = localStorage.getItem("lang");
+      const cokiesLang = sessionStorage.getItem("lang");
       if (cokiesLang != undefined) {
         handleChange(cokiesLang);
       }

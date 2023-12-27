@@ -1,11 +1,12 @@
 "use client";
 import ScrollToTop from "@/components/common/ScrollTop";
+import { ReduxProvider } from "@/redux/provider";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import "../../public/scss/main.scss";
 import { DM_Sans, Poppins } from "next/font/google";
+import Script from "next/script";
 import { useEffect } from "react";
-import { ReduxProvider } from "@/redux/provider";
+import "../../public/scss/main.scss";
 
 if (typeof window !== "undefined") {
   import("bootstrap");
@@ -35,6 +36,17 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11457016227" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'AW-11457016227');
+        `}
+      </Script>
+
       <body
         className={`body  ${poppins.className} ${dmSans.className}`}
         cz-shortcut-listen="false"
